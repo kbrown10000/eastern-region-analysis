@@ -4,14 +4,14 @@ import Link from 'next/link';
 
 /**
  * PARTNER ECOSYSTEM PAGE
- * 
+ *
  * Technology partners: AWS, Azure, Veeva, and strategic ecosystem
- * 
+ *
  * Research Sources:
  * - AWS Partner Network, Microsoft Partner Network programs
  * - Life sciences cloud adoption trends
  * - USDM service portfolio alignment
- * 
+ *
  * Last Updated: 2026-02-04
  */
 
@@ -20,7 +20,7 @@ const cloudPartners = [
   {
     name: 'Amazon Web Services',
     shortName: 'AWS',
-    logo: '☁️',
+    logo: '\u2601\uFE0F',
     currentStatus: 'Limited engagement',
     opportunitySize: '$3-5M/year',
     partnerProgram: 'AWS Partner Network (APN)',
@@ -35,10 +35,10 @@ const cloudPartners = [
       { play: 'Data Lake Compliance', fit: 'MEDIUM', notes: 'S3/Glue + data integrity' },
     ],
     EasternTargets: [
-      'Recursion (AI-native, AWS-first)',
-      'Insitro (ML platform)',
-      'Freenome (genomics)',
-      'Biotech Bay startups',
+      'Vertex Pharmaceuticals (Boston, AWS user)',
+      'Sarepta Therapeutics (Cambridge)',
+      'Biogen (Cambridge, cloud migration)',
+      'Genetown biotech startups',
     ],
     investmentRequired: '$75K/year',
     expectedReturn: '$2M pipeline',
@@ -53,7 +53,7 @@ const cloudPartners = [
   {
     name: 'Microsoft Azure',
     shortName: 'Azure',
-    logo: '🔷',
+    logo: '\uD83D\uDD37',
     currentStatus: 'Some existing projects',
     opportunitySize: '$2-4M/year',
     partnerProgram: 'Microsoft Partner Network',
@@ -68,7 +68,7 @@ const cloudPartners = [
       { play: 'Copilot Governance', fit: 'EMERGING', notes: 'AI governance for M365 Copilot' },
     ],
     EasternTargets: [
-      'Large pharma (Gilead, Amgen - existing Azure)',
+      'Large pharma (Merck, J&J - existing Azure)',
       'Enterprise biotech on M365',
       'Companies with Azure OpenAI interest',
     ],
@@ -88,7 +88,7 @@ const industryPartners = [
   {
     name: 'Veeva Systems',
     category: 'Life Sciences Platform',
-    logo: '📦',
+    logo: '\uD83D\uDCE6',
     currentStatus: 'Active relationship',
     description: 'Industry-leading cloud platform for life sciences (Vault, QMS, RIM, CRM)',
     opportunitySize: '$1.5-2.5M/year',
@@ -98,7 +98,7 @@ const industryPartners = [
       { play: 'Regulatory Compliance', fit: 'HIGH', notes: 'RIM + submissions' },
     ],
     EasternTargets: [
-      'LA BioMed large accounts already on Veeva',
+      'NJ Pharma large accounts already on Veeva',
       'New Vault implementations',
       'QMS modernization projects',
     ],
@@ -114,13 +114,13 @@ const industryPartners = [
   {
     name: 'Box',
     category: 'Content Cloud',
-    logo: '📁',
+    logo: '\uD83D\uDCC1',
     currentStatus: 'Active relationship',
     description: 'Secure content management for regulated industries',
     opportunitySize: '$500K-1M/year',
     playAlignment: [
       { play: 'Box Shield Compliance', fit: 'HIGH', notes: 'Security + compliance' },
-      { play: 'ECM Migration', fit: 'MEDIUM', notes: 'Legacy ECM → Box' },
+      { play: 'ECM Migration', fit: 'MEDIUM', notes: 'Legacy ECM \u2192 Box' },
     ],
     EasternTargets: ['Biotech companies standardizing on Box'],
     investmentRequired: '$15K/year',
@@ -131,7 +131,7 @@ const industryPartners = [
   {
     name: 'DocuSign',
     category: 'Agreement Cloud',
-    logo: '✍️',
+    logo: '\u270D\uFE0F',
     currentStatus: 'Active relationship',
     description: 'Electronic signatures and agreement workflows',
     opportunitySize: '$300-500K/year',
@@ -150,38 +150,38 @@ const industryPartners = [
 // Emerging technology partners
 const emergingPartners = [
   {
-    name: 'Cellares',
-    category: 'Cell Therapy Automation',
-    logo: '🧬',
+    name: 'IQVIA',
+    category: 'Clinical & Data Analytics',
+    logo: '\uD83E\uDDEC',
     currentStatus: 'Target partner',
-    description: 'Automated cell therapy manufacturing platform',
+    description: 'Clinical research and data analytics platform for life sciences',
     opportunitySize: '$500K-1M/year',
-    relevance: 'USDM provides QA/validation for Cellares implementations',
-    EasternPresence: 'South San Francisco HQ',
+    relevance: 'USDM provides QA/validation for IQVIA implementations',
+    EasternPresence: 'Research Triangle, NC (Durham HQ)',
     priority: 'HIGH',
     action: 'Initiate partnership discussion in Q1 2026',
   },
   {
-    name: 'Multiply Labs',
-    category: 'Robotic Manufacturing',
-    logo: '🤖',
+    name: 'Fujifilm Diosynth',
+    category: 'CDMO / Biomanufacturing',
+    logo: '\uD83E\uDD16',
     currentStatus: 'Target partner',
-    description: 'Robotic systems for pharmaceutical manufacturing',
+    description: 'Contract development and manufacturing for biologics',
     opportunitySize: '$300-500K/year',
-    relevance: 'USDM validates robotic manufacturing systems',
-    EasternPresence: 'San Francisco',
+    relevance: 'USDM validates manufacturing systems and GMP compliance',
+    EasternPresence: 'Research Triangle, NC (Holly Springs)',
     priority: 'MEDIUM',
-    action: 'Explore partnership through cell therapy cluster',
+    action: 'Explore partnership through Research Triangle cluster',
   },
   {
     name: 'Benchling',
     category: 'Life Science R&D Cloud',
-    logo: '🔬',
+    logo: '\uD83D\uDD2C',
     currentStatus: 'Aware',
     description: 'R&D platform for biotech (ELN, LIMS, registry)',
     opportunitySize: '$400-700K/year',
     relevance: 'CSV for Benchling implementations',
-    EasternPresence: 'San Francisco HQ',
+    EasternPresence: 'Boston/Cambridge presence',
     priority: 'MEDIUM',
     action: 'Partner outreach in Q2 2026',
   },
@@ -190,21 +190,21 @@ const emergingPartners = [
 // VC ecosystem partners for new logo acquisition
 const vcPartners = [
   {
-    name: 'a16z Bio',
+    name: 'Third Rock Ventures',
     type: 'Venture Capital',
-    focus: 'Bio + health tech',
+    focus: 'Life sciences (Boston)',
     portfolioCount: '40+',
-    EasternPortfolio: ['Freenome', 'Devoted Health', 'Akili'],
+    EasternPortfolio: ['Relay Therapeutics', 'Karuna', 'Celsius'],
     opportunityValue: '$500K-1M/year across portfolio',
     approach: 'Portfolio services program',
     priority: 'HIGH',
   },
   {
-    name: 'Arch Venture Partners',
+    name: 'Polaris Partners',
     type: 'Venture Capital',
-    focus: 'Life sciences',
-    portfolioCount: '100+',
-    EasternPortfolio: ['Grail', 'Beam', 'Prime Medicine'],
+    focus: 'Healthcare + tech',
+    portfolioCount: '50+',
+    EasternPortfolio: ['Various Boston biotech'],
     opportunityValue: '$300-600K/year',
     approach: 'Speaking at portfolio days',
     priority: 'HIGH',
@@ -220,11 +220,11 @@ const vcPartners = [
     priority: 'MEDIUM',
   },
   {
-    name: 'Polaris Partners',
+    name: 'OrbiMed',
     type: 'Venture Capital',
-    focus: 'Healthcare + tech',
-    portfolioCount: '50+',
-    EasternPortfolio: ['Various biotech'],
+    focus: 'Healthcare / life sciences (NYC)',
+    portfolioCount: '60+',
+    EasternPortfolio: ['Various East Coast biotech'],
     opportunityValue: '$200-400K/year',
     approach: 'Due diligence compliance services',
     priority: 'MEDIUM',
@@ -244,7 +244,7 @@ const partnerTiers = [
     tier: 'Premier',
     criteria: '$100-500K/year pipeline, active co-sell',
     benefits: ['Named contact', 'Partner pricing', 'Co-marketing eligible', 'Deal registration'],
-    examples: ['Box', 'DocuSign', 'Cellares'],
+    examples: ['Box', 'DocuSign', 'IQVIA'],
     color: 'blue',
   },
   {
@@ -263,7 +263,7 @@ export default function PartnerEcosystem() {
         {/* Header */}
         <div className="flex justify-between items-center mb-4">
           <h1 className="text-4xl md:text-5xl font-bold text-white">Technology Ecosystem</h1>
-          <Link href="/partner-overview" className="text-purple-400 hover:text-purple-300">← Partner Hub</Link>
+          <Link href="/partner-overview" className="text-purple-400 hover:text-purple-300">&larr; Partner Hub</Link>
         </div>
         <p className="text-slate-300 mb-12 max-w-3xl">
           Strategic technology partnerships that drive pipeline and enable joint solutions for the Eastern Region.
@@ -271,7 +271,7 @@ export default function PartnerEcosystem() {
 
         {/* Cloud Hyperscalers */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">☁️ Cloud Platform Partners</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">{'\u2601\uFE0F'} Cloud Platform Partners</h2>
           <div className="space-y-6">
             {cloudPartners.map((partner, idx) => (
               <div key={idx} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -292,7 +292,7 @@ export default function PartnerEcosystem() {
                     <div className="text-green-400 font-bold mt-2">{partner.opportunitySize}</div>
                   </div>
                 </div>
-                
+
                 <div className="grid md:grid-cols-2 gap-6">
                   {/* Left Column */}
                   <div>
@@ -300,18 +300,18 @@ export default function PartnerEcosystem() {
                       <span className="text-slate-500 text-sm">Current Status: </span>
                       <span className="text-yellow-400">{partner.currentStatus}</span>
                     </div>
-                    
+
                     <h4 className="text-sm font-semibold text-slate-400 mb-2">Relevant Programs</h4>
                     <ul className="space-y-1 mb-4">
                       {partner.relevantPrograms.map((prog, i) => (
-                        <li key={i} className="text-slate-300 text-sm">• {prog}</li>
+                        <li key={i} className="text-slate-300 text-sm">&bull; {prog}</li>
                       ))}
                     </ul>
 
                     <h4 className="text-sm font-semibold text-slate-400 mb-2">Eastern Targets</h4>
                     <ul className="space-y-1">
                       {partner.EasternTargets.map((target, i) => (
-                        <li key={i} className="text-blue-400 text-sm">• {target}</li>
+                        <li key={i} className="text-blue-400 text-sm">&bull; {target}</li>
                       ))}
                     </ul>
                   </div>
@@ -337,7 +337,7 @@ export default function PartnerEcosystem() {
                     <ul className="space-y-1">
                       {partner.nextSteps.map((step, i) => (
                         <li key={i} className="text-slate-300 text-sm flex items-start gap-2">
-                          <span className="text-green-400">→</span> {step}
+                          <span className="text-green-400">&rarr;</span> {step}
                         </li>
                       ))}
                     </ul>
@@ -355,7 +355,7 @@ export default function PartnerEcosystem() {
 
         {/* Industry Partners */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">🏢 Industry Technology Partners</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">{'\uD83C\uDFE2'} Industry Technology Partners</h2>
           <div className="grid md:grid-cols-3 gap-4">
             {industryPartners.map((partner, idx) => (
               <div key={idx} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -368,7 +368,7 @@ export default function PartnerEcosystem() {
                 </div>
                 <p className="text-slate-300 text-sm mb-3">{partner.description}</p>
                 <div className="text-green-400 font-bold mb-3">{partner.opportunitySize}</div>
-                
+
                 <div className="space-y-2 mb-3">
                   {partner.playAlignment.slice(0, 2).map((play, i) => (
                     <div key={i} className="flex items-center justify-between text-sm">
@@ -379,7 +379,7 @@ export default function PartnerEcosystem() {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="pt-3 border-t border-slate-700 flex justify-between text-xs">
                   <span className={`px-2 py-1 rounded ${
                     partner.priority === 'HIGH' ? 'bg-green-900/50 text-green-400' : 'bg-yellow-900/50 text-yellow-400'
@@ -393,7 +393,7 @@ export default function PartnerEcosystem() {
 
         {/* Emerging Partners */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">🚀 Emerging Technology Partners</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">{'\uD83D\uDE80'} Emerging Technology Partners</h2>
           <div className="grid md:grid-cols-3 gap-4">
             {emergingPartners.map((partner, idx) => (
               <div key={idx} className="bg-slate-800/50 rounded-xl p-5 border border-purple-700/50">
@@ -417,7 +417,7 @@ export default function PartnerEcosystem() {
 
         {/* VC Ecosystem */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">💰 VC Ecosystem Partners (New Logo Engine)</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">{'\uD83D\uDCB0'} VC Ecosystem Partners (New Logo Engine)</h2>
           <p className="text-slate-400 mb-6">
             VC partnerships unlock portfolio company referrals - warm introductions to 10-100+ biotechs per relationship.
           </p>
@@ -455,7 +455,7 @@ export default function PartnerEcosystem() {
 
         {/* Partner Tiers */}
         <section className="mb-12 bg-gradient-to-r from-slate-800/50 to-blue-800/30 rounded-xl p-8 border border-slate-700">
-          <h2 className="text-2xl font-bold text-white mb-6">🏆 Partner Tier Structure</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">{'\uD83C\uDFC6'} Partner Tier Structure</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {partnerTiers.map((tier, idx) => (
               <div key={idx} className={`rounded-xl p-6 border ${
@@ -472,7 +472,7 @@ export default function PartnerEcosystem() {
                 <h4 className="text-white text-sm font-semibold mb-2">Benefits:</h4>
                 <ul className="space-y-1 mb-4">
                   {tier.benefits.map((b, i) => (
-                    <li key={i} className="text-slate-300 text-sm">✓ {b}</li>
+                    <li key={i} className="text-slate-300 text-sm">{'\u2713'} {b}</li>
                   ))}
                 </ul>
                 <div className="pt-3 border-t border-slate-700">
@@ -488,10 +488,10 @@ export default function PartnerEcosystem() {
         <section className="text-center">
           <div className="inline-flex gap-4 flex-wrap justify-center">
             <Link href="/partner-solutions" className="px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-lg transition-colors">
-              Solutions Alignment →
+              Solutions Alignment &rarr;
             </Link>
             <Link href="/partner-plays" className="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-bold rounded-lg transition-colors">
-              Partner Plays →
+              Partner Plays &rarr;
             </Link>
           </div>
         </section>
@@ -499,5 +499,3 @@ export default function PartnerEcosystem() {
     </div>
   );
 }
-
-

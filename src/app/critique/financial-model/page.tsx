@@ -39,7 +39,7 @@ const criticalGaps = [
   {
     severity: 'MEDIUM',
     gap: 'GP Erosion Risk Not Modeled',
-    detail: 'If margin pressure continues (Gilead, Amgen at 20%), blended GP could drop. Model assumes stable GP.',
+    detail: 'If margin pressure continues (Takeda at 14.5%, Bausch at 29.4%, Spectranetics at 26.4%), blended GP could drop. Model assumes stable GP.',
     question: 'What if GP drops from 43% to 35%?',
     recommendation: 'Add GP sensitivity slider',
   },

@@ -1,55 +1,53 @@
 {
   "summary": {
-    "total_customers": 339,
-    "period": "2025-01-01 to 2026-01-01"
+    "total_customers": 36,
+    "period": "2025-01-01 to 2026-01-01",
+    "region": "East"
   },
   "key_insights": {
     "managed_services_premium": "Managed services customers average 70%+ GP vs 25% for time-based",
-    "problem_accounts_west": [
-      {"name": "Gilead Sciences", "revenue": 2129569, "gp_pct": "22.0%", "hours": 19090, "type": "time-based"},
-      {"name": "Kite Pharma", "revenue": 2084349, "gp_pct": "19.9%", "hours": 13610, "type": "time-based"},
-      {"name": "Amgen", "revenue": 1745870, "gp_pct": "21.1%", "hours": 11571, "type": "time-based"},
-      {"name": "Enovis", "revenue": 773140, "gp_pct": "18.3%", "hours": 4087, "type": "time-based"}
+    "problem_accounts_east": [
+      {"name": "Takeda Pharmaceuticals", "revenue": 701554, "gp_pct": "14.5%", "type": "time-based", "territory": "Genetown"},
+      {"name": "Spectranetics", "revenue": 242075, "gp_pct": "26.4%", "type": "staffing CBA", "territory": "Mid-Atlantic"},
+      {"name": "Formation Bio", "revenue": 30000, "gp_pct": "27.9%", "type": "mixed", "territory": "Genetown"},
+      {"name": "Bausch Health", "revenue": 738910, "gp_pct": "29.4%", "type": "mixed", "territory": "NJ Pharma"}
     ],
     "high_margin_models": [
-      {"name": "PTC Inc.", "revenue": 1265570, "gp_pct": "96.5%", "hours": 530, "type": "100% managed"},
-      {"name": "Abbott Labs", "revenue": 1937966, "gp_pct": "64.3%", "hours": 6944, "type": "99% managed"},
-      {"name": "Harmony Biosciences", "revenue": 127237, "gp_pct": "93.1%", "hours": 97, "type": "100% managed"},
-      {"name": "Catalyst Pharma", "revenue": 308226, "gp_pct": "70.0%", "hours": 925, "type": "76% managed"}
+      {"name": "Alexion Pharmaceuticals", "revenue": 33740, "gp_pct": "100.0%", "type": "100% managed", "territory": "Genetown"},
+      {"name": "Intellia Therapeutics", "revenue": 37000, "gp_pct": "96.6%", "type": "100% managed", "territory": "Genetown"},
+      {"name": "Moderna", "revenue": 37200, "gp_pct": "92.8%", "type": "100% managed", "territory": "Genetown"},
+      {"name": "Harmony Biosciences", "revenue": 127237, "gp_pct": "81.6%", "type": "100% managed", "territory": "Genetown"},
+      {"name": "Ironwood Pharmaceuticals", "revenue": 101955, "gp_pct": "79.1%", "type": "100% managed", "territory": "Genetown"},
+      {"name": "Alnylam Pharmaceuticals", "revenue": 109863, "gp_pct": "71.5%", "type": "managed services", "territory": "Genetown"},
+      {"name": "Abbott Laboratories", "revenue": 1937966, "gp_pct": "47.1%", "type": "99% managed", "territory": "Mid-Atlantic"}
     ]
   },
   "regional_breakdown": {
-    "west_top_10": [
-      {"name": "Gilead Sciences", "revenue": 2129569, "gp_pct": "22.0%"},
-      {"name": "Kite Pharma", "revenue": 2084349, "gp_pct": "19.9%"},
-      {"name": "Amgen Inc.", "revenue": 1745870, "gp_pct": "21.1%"},
-      {"name": "Crinetics Pharmaceuticals", "revenue": 976768, "gp_pct": "44.8%"},
-      {"name": "Enovis Corporation", "revenue": 773140, "gp_pct": "18.3%"},
-      {"name": "Edwards Lifesciences", "revenue": 717946, "gp_pct": "33.3%"},
-      {"name": "Ionis Pharmaceuticals", "revenue": 700531, "gp_pct": "41.9%"},
-      {"name": "STAAR Surgical", "revenue": 604270, "gp_pct": "42.8%"},
-      {"name": "Arrowhead Pharmaceuticals", "revenue": 589176, "gp_pct": "44.1%"},
-      {"name": "Halozyme", "revenue": 513922, "gp_pct": "41.5%"}
-    ],
     "east_top_10": [
-      {"name": "Abbott Labs", "revenue": 1937966, "gp_pct": "64.3%"},
-      {"name": "PTC Inc.", "revenue": 1265570, "gp_pct": "96.5%"},
-      {"name": "Takeda Pharmaceuticals", "revenue": 1041826, "gp_pct": "18.5%"},
-      {"name": "Novavax", "revenue": 798142, "gp_pct": "27.9%"},
-      {"name": "Bausch Health", "revenue": 738910, "gp_pct": "31.3%"},
-      {"name": "Shire US", "revenue": 692970, "gp_pct": "25.5%"},
-      {"name": "Becton Dickinson", "revenue": 691499, "gp_pct": "22.5%"},
-      {"name": "Loxo Oncology", "revenue": 621434, "gp_pct": "33.0%"},
-      {"name": "Kailera Therapeutics", "revenue": 499848, "gp_pct": "45.1%"},
-      {"name": "Sage Therapeutics", "revenue": 499179, "gp_pct": "42.5%"}
-    ]
+      {"name": "Abbott Laboratories", "revenue": 1937966, "gp_pct": "47.1%", "territory": "Mid-Atlantic"},
+      {"name": "Bausch Health", "revenue": 738910, "gp_pct": "29.4%", "territory": "NJ Pharma"},
+      {"name": "Takeda Pharmaceuticals", "revenue": 701554, "gp_pct": "14.5%", "territory": "Genetown"},
+      {"name": "Regeneron Pharmaceuticals", "revenue": 435511, "gp_pct": "63.0%", "territory": "NJ Pharma"},
+      {"name": "Johnson & Johnson", "revenue": 408438, "gp_pct": "32.4%", "territory": "NJ Pharma"},
+      {"name": "Integra LifeSciences", "revenue": 265680, "gp_pct": "37.0%", "territory": "NJ Pharma"},
+      {"name": "Spectranetics", "revenue": 242075, "gp_pct": "26.4%", "territory": "Mid-Atlantic"},
+      {"name": "Harmony Biosciences", "revenue": 127237, "gp_pct": "81.6%", "territory": "Genetown"},
+      {"name": "Alnylam Pharmaceuticals", "revenue": 109863, "gp_pct": "71.5%", "territory": "Genetown"},
+      {"name": "Ironwood Pharmaceuticals", "revenue": 101955, "gp_pct": "79.1%", "territory": "Genetown"}
+    ],
+    "territory_margins": {
+      "Mid-Atlantic": {"revenue": 2197835, "gp_pct": "45.2%", "accounts": 8},
+      "NJ Pharma": {"revenue": 2023598, "gp_pct": "40.7%", "accounts": 10},
+      "Genetown": {"revenue": 1352692, "gp_pct": "43.1%", "accounts": 18},
+      "Research Triangle": {"revenue": 0, "gp_pct": "N/A", "accounts": 0}
+    }
   },
   "recommendations": [
-    "Convert Gilead from T&M to fixed-fee managed services - $425K+ GP recovery potential",
-    "Negotiate 15-20% rate increase at Kite Pharma renewal",
-    "Expand PTC-style managed services model to other West accounts",
-    "Target 40%+ GP on new Eastern deals via managed services focus"
+    "Convert Takeda from T&M to managed services - $179K+ GP recovery potential",
+    "Lift Bausch Health margin from 29.4% to 40% via service mix shift",
+    "Replicate Genetown managed services model across NJ Pharma accounts",
+    "Maintain 50%+ GP threshold for all Research Triangle new business",
+    "Protect and expand high-margin Genetown cluster (Alexion, Intellia, Harmony, Moderna)"
   ],
-  "generated_at": "2026-02-03T06:25:00Z"
+  "generated_at": "2026-02-10T00:00:00Z"
 }
-

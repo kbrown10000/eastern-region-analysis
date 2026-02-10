@@ -282,17 +282,17 @@ export default function ChurnSignals() {
             <div className="bg-gradient-to-br from-red-900/30 to-orange-900/20 rounded-xl p-6 border border-red-700/30">
               <h3 className="text-red-400 font-bold mb-3">This Week</h3>
               <ul className="space-y-2 text-slate-300 text-sm">
-                <li>• Call Gilead exec - CSV extension</li>
-                <li>• Enovis stakeholder meeting</li>
-                <li>• Seagen deal rescue call</li>
+                <li>• Call Takeda exec - CSV Extension at risk</li>
+                <li>• Bausch Health competitive response</li>
+                <li>• Spectranetics renewal rescue</li>
               </ul>
             </div>
             <div className="bg-gradient-to-br from-yellow-900/30 to-amber-900/20 rounded-xl p-6 border border-yellow-700/30">
               <h3 className="text-yellow-400 font-bold mb-3">Next Week</h3>
               <ul className="space-y-2 text-slate-300 text-sm">
-                <li>• Champion replacement at Illumina</li>
-                <li>• BioMarin pricing justification</li>
-                <li>• Amgen stakeholder mapping</li>
+                <li>• Champion replacement at Integra</li>
+                <li>• Regeneron pricing justification</li>
+                <li>• J&J AI pilot re-engagement</li>
               </ul>
             </div>
             <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/20 rounded-xl p-6 border border-cyan-700/30">

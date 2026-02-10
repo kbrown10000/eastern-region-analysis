@@ -4,11 +4,11 @@ import { LineChart, Line, BarChart, Bar, AreaChart, Area, ComposedChart, XAxis, 
 
 // Data for Revenue & EGP Trend
 const revenueData = [
-  { year: '2022', revenue: 14.2, egp: 5.1, gpPercent: 36, type: 'actual' },
-  { year: '2023', revenue: 16.8, egp: 6.4, gpPercent: 38, type: 'actual' },
-  { year: '2024', revenue: 19.6, egp: 7.6, gpPercent: 39, type: 'actual' },
-  { year: '2025', revenue: 17.19, egp: 5.9, gpPercent: 34.3, type: 'actual' },
-  { year: '2026', revenue: 21.0, egp: 8.4, gpPercent: 40, type: 'target' },
+  { year: '2022', revenue: 2.8, egp: 1.1, gpPercent: 39, type: 'actual' },
+  { year: '2023', revenue: 3.4, egp: 1.4, gpPercent: 41, type: 'actual' },
+  { year: '2024', revenue: 4.0, egp: 1.7, gpPercent: 42, type: 'actual' },
+  { year: '2025', revenue: 5.57, egp: 2.4, gpPercent: 43.1, type: 'actual' },
+  { year: '2026', revenue: 7.0, egp: 3.2, gpPercent: 45, type: 'target' },
 ];
 
 // Data for Win Rate Trend
@@ -38,13 +38,13 @@ const coverageData = [
   { year: '2026', coverage: 1.5, confidenceLow: 1.3, confidenceHigh: 1.7 },
 ];
 
-// Data for Market Penetration by Region
+// Data for Market Penetration by Territory
 const marketPenetrationData = [
-  { year: '2022', bayArea: 12, sanDiego: 8, la: 6, seattle: 0 },
-  { year: '2023', bayArea: 15, sanDiego: 10, la: 8, seattle: 0 },
-  { year: '2024', bayArea: 18, sanDiego: 12, la: 10, seattle: 0.5 },
-  { year: '2025', bayArea: 16, sanDiego: 11, la: 9, seattle: 0.3 },
-  { year: '2026', bayArea: 22, sanDiego: 16, la: 14, seattle: 8 },
+  { year: '2022', genetown: 10, njPharma: 5, midAtlantic: 3, researchTriangle: 0 },
+  { year: '2023', genetown: 13, njPharma: 7, midAtlantic: 5, researchTriangle: 0 },
+  { year: '2024', genetown: 16, njPharma: 9, midAtlantic: 7, researchTriangle: 0 },
+  { year: '2025', genetown: 18, njPharma: 10, midAtlantic: 8, researchTriangle: 0 },
+  { year: '2026', genetown: 22, njPharma: 14, midAtlantic: 12, researchTriangle: 5 },
 ];
 
 // Data for Customer Acquisition vs Churn
@@ -270,28 +270,28 @@ export default function TrendsPage() {
 
         {/* Market Penetration by Region */}
         <div className="bg-slate-800 rounded-lg p-6 mb-8">
-          <h2 className="text-2xl font-bold text-white mb-4">Market Penetration by Region</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">Market Penetration by Territory</h2>
           <p className="text-slate-300 mb-6">
-            Customer count by sub-region showing Seattle as untapped opportunity (near-zero → 8 customers targeted)
+            Customer count by territory showing Research Triangle as greenfield opportunity (zero → 5 customers targeted)
           </p>
           <ResponsiveContainer width="100%" height={400}>
             <BarChart data={marketPenetrationData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#475569" />
               <XAxis dataKey="year" stroke="#94a3b8" />
               <YAxis stroke="#94a3b8" label={{ value: 'Customer Count', angle: -90, position: 'insideLeft', fill: '#94a3b8' }} />
-              <Tooltip 
+              <Tooltip
                 contentStyle={{ backgroundColor: '#1e293b', border: '1px solid #475569', borderRadius: '8px' }}
                 labelStyle={{ color: '#fff' }}
               />
               <Legend />
-              <Bar dataKey="bayArea" stackId="a" fill="#3b82f6" name="Bay Area" radius={[0, 0, 0, 0]} />
-              <Bar dataKey="sanDiego" stackId="a" fill="#8b5cf6" name="San Diego" radius={[0, 0, 0, 0]} />
-              <Bar dataKey="la" stackId="a" fill="#f59e0b" name="Los Angeles" radius={[0, 0, 0, 0]} />
-              <Bar dataKey="seattle" stackId="a" fill="#10b981" name="Seattle ⭐" radius={[8, 8, 0, 0]} />
+              <Bar dataKey="genetown" stackId="a" fill="#3b82f6" name="Genetown (Boston/Cambridge)" radius={[0, 0, 0, 0]} />
+              <Bar dataKey="njPharma" stackId="a" fill="#8b5cf6" name="NJ Pharma" radius={[0, 0, 0, 0]} />
+              <Bar dataKey="midAtlantic" stackId="a" fill="#f59e0b" name="Mid-Atlantic" radius={[0, 0, 0, 0]} />
+              <Bar dataKey="researchTriangle" stackId="a" fill="#10b981" name="Research Triangle" radius={[8, 8, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
           <p className="text-sm text-slate-400 mt-4">
-            Data Source: DIM_Account_Min.Sales_Region + geo-mapping | Seattle shows significant untapped growth opportunity
+            Data Source: DIM_Account_Min.Sales_Region + geo-mapping | Research Triangle shows significant greenfield growth opportunity
           </p>
         </div>
 
@@ -337,123 +337,113 @@ export default function TrendsPage() {
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             {/* Revenue Losers */}
             <div className="bg-red-900/20 rounded-lg p-5 border border-red-700/50">
-              <h3 className="text-lg font-bold text-red-400 mb-4">📉 Biggest Revenue Declines (2024→2025)</h3>
+              <h3 className="text-lg font-bold text-red-400 mb-4">📉 Accounts Needing Margin Recovery</h3>
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
-                  <span className="text-white">Atara Biotherapeutics</span>
-                  <span className="text-red-400 font-mono">-$1.19M <span className="text-slate-500 text-xs">(30% GP)</span></span>
+                  <span className="text-white">Takeda</span>
+                  <span className="text-red-400 font-mono">$702K <span className="text-yellow-500 text-xs">(14.5% GP ⚠️)</span></span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-white">Kite/Gilead segment</span>
-                  <span className="text-red-400 font-mono">-$931K <span className="text-yellow-500 text-xs">(6.5% GP ⚠️)</span></span>
+                  <span className="text-white">Bausch</span>
+                  <span className="text-red-400 font-mono">$739K <span className="text-yellow-500 text-xs">(29.4% GP)</span></span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-white">Takeda Pharmaceuticals</span>
-                  <span className="text-red-400 font-mono">-$436K <span className="text-slate-500 text-xs">(24.6% GP)</span></span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-white">Pfizer</span>
-                  <span className="text-red-400 font-mono">-$381K <span className="text-slate-500 text-xs">(27% GP)</span></span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-white">Fujifilm Diosynth</span>
-                  <span className="text-red-400 font-mono">-$351K <span className="text-slate-500 text-xs">(24.4% GP)</span></span>
+                  <span className="text-white">J&J</span>
+                  <span className="text-red-400 font-mono">$408K <span className="text-slate-500 text-xs">(32.4% GP)</span></span>
                 </div>
               </div>
               <p className="text-xs text-slate-400 mt-4">
-                Most declines were low-GP accounts (&lt;30%). Losing low-margin customers can improve blended GP.
+                Takeda at 14.5% GP is biggest margin concern. Rate review and service expansion needed to improve blended GP.
               </p>
             </div>
 
             {/* Revenue Gainers */}
             <div className="bg-green-900/20 rounded-lg p-5 border border-green-700/50">
-              <h3 className="text-lg font-bold text-green-400 mb-4">📈 Biggest Revenue Gains (2024→2025)</h3>
+              <h3 className="text-lg font-bold text-green-400 mb-4">📈 Top Revenue Performers (2025)</h3>
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
-                  <span className="text-white">Kite Pharma (core)</span>
-                  <span className="text-green-400 font-mono">+$952K <span className="text-slate-500 text-xs">(19.1% GP)</span></span>
+                  <span className="text-white">Abbott</span>
+                  <span className="text-green-400 font-mono">$1.94M <span className="text-green-300 text-xs">(47.1% GP ✓)</span></span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-white">Crinetics Pharmaceuticals</span>
-                  <span className="text-green-400 font-mono">+$564K <span className="text-green-300 text-xs">(40.9% GP ✓)</span></span>
+                  <span className="text-white">Bausch</span>
+                  <span className="text-green-400 font-mono">$739K <span className="text-slate-500 text-xs">(29.4% GP)</span></span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-white">Enovis Corporation</span>
-                  <span className="text-green-400 font-mono">+$552K <span className="text-yellow-500 text-xs">(11% GP ⚠️)</span></span>
+                  <span className="text-white">Takeda</span>
+                  <span className="text-green-400 font-mono">$702K <span className="text-yellow-500 text-xs">(14.5% GP ⚠️)</span></span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-white">Tarsus Pharmaceuticals</span>
-                  <span className="text-green-400 font-mono">+$240K <span className="text-green-300 text-xs">(41.5% GP ✓)</span></span>
+                  <span className="text-white">Regeneron</span>
+                  <span className="text-green-400 font-mono">$436K <span className="text-green-300 text-xs">(63% GP ✓)</span></span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-white">CG Oncology</span>
-                  <span className="text-green-400 font-mono">+$176K <span className="text-green-300 text-xs">(38.8% GP ✓)</span></span>
+                  <span className="text-white">J&J</span>
+                  <span className="text-green-400 font-mono">$408K <span className="text-green-300 text-xs">(32.4% GP ✓)</span></span>
                 </div>
               </div>
               <p className="text-xs text-slate-400 mt-4">
-                New growth includes high-GP accounts (Crinetics, Tarsus). Quality over quantity.
+                Region total: $5.57M (+39.5% YoY). Abbott and Regeneron drive strong margin performance.
               </p>
             </div>
           </div>
 
-          {/* The Gilead Story */}
-          <div className="bg-gradient-to-r from-yellow-900/30 to-orange-900/30 rounded-lg p-5 border border-yellow-700/50 mb-6">
-            <h3 className="text-lg font-bold text-yellow-400 mb-3">💡 The Gilead/Kite Story</h3>
+          {/* The Abbott Story */}
+          <div className="bg-gradient-to-r from-green-900/30 to-emerald-900/30 rounded-lg p-5 border border-green-700/50 mb-6">
+            <h3 className="text-lg font-bold text-green-400 mb-3">💡 The Abbott Success Story</h3>
             <p className="text-slate-300 text-sm mb-3">
-              Gilead and its Kite Pharma subsidiary tell an important story about revenue quality vs quantity:
+              Abbott is the East region&apos;s anchor account, demonstrating how high-GP, multi-service relationships drive profitability:
             </p>
             <div className="grid md:grid-cols-3 gap-4 text-sm">
               <div className="bg-slate-800/50 rounded p-3">
-                <div className="text-slate-400">Peak Revenue (2023)</div>
-                <div className="text-white font-bold">$2.52M</div>
-              </div>
-              <div className="bg-slate-800/50 rounded p-3">
                 <div className="text-slate-400">2025 Revenue</div>
-                <div className="text-white font-bold">$1.96M</div>
+                <div className="text-white font-bold">$1.94M</div>
               </div>
               <div className="bg-slate-800/50 rounded p-3">
                 <div className="text-slate-400">Gross Profit %</div>
-                <div className="text-red-400 font-bold">19.1% (Tier C)</div>
+                <div className="text-green-400 font-bold">47.1% (Tier A)</div>
+              </div>
+              <div className="bg-slate-800/50 rounded p-3">
+                <div className="text-slate-400">Share of Region</div>
+                <div className="text-white font-bold">34.8% of revenue</div>
               </div>
             </div>
             <p className="text-slate-400 text-xs mt-3">
-              <strong className="text-yellow-400">Takeaway:</strong> Losing $500K of 19% GP revenue hurts less than losing $500K of 50% GP revenue. 
-              The decline freed capacity for higher-margin work.
+              <strong className="text-green-400">Takeaway:</strong> Abbott&apos;s 47.1% GP at $1.94M generates $914K gross profit — more than Takeda + Bausch combined despite lower revenue.
+              Quality of margin matters more than top-line size.
             </p>
           </div>
 
           {/* Customer Journey */}
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-slate-700/30 rounded-lg p-4 border border-slate-600">
-              <h4 className="text-red-400 font-semibold mb-3">🚪 Churned (2023→2025)</h4>
+              <h4 className="text-green-400 font-semibold mb-3">💎 High-Margin Stars</h4>
               <ul className="text-sm space-y-2">
-                <li className="text-slate-300">Accumulus Synergy <span className="text-slate-500">($648K, 0% GP)</span></li>
-                <li className="text-slate-300">Vial Trials <span className="text-slate-500">($181K, 0% GP)</span></li>
-                <li className="text-slate-300">Global Blood Therapeutics <span className="text-slate-500">($169K, 0% GP)</span></li>
+                <li className="text-slate-300">Regeneron <span className="text-green-400">($436K, 63% GP)</span></li>
+                <li className="text-slate-300">Abbott <span className="text-green-400">($1.94M, 47.1% GP)</span></li>
+                <li className="text-slate-300">J&J <span className="text-green-400">($408K, 32.4% GP)</span></li>
               </ul>
-              <p className="text-xs text-slate-500 mt-2">All churned accounts had 0% GP — no profit loss</p>
+              <p className="text-xs text-slate-500 mt-2">Protect these accounts — they drive regional profitability</p>
             </div>
-            
+
             <div className="bg-slate-700/30 rounded-lg p-4 border border-slate-600">
-              <h4 className="text-green-400 font-semibold mb-3">🆕 New Logos (2025)</h4>
+              <h4 className="text-yellow-400 font-semibold mb-3">⚠️ Margin Recovery Targets</h4>
               <ul className="text-sm space-y-2">
-                <li className="text-slate-300">Enovis <span className="text-yellow-500">($711K, 11% GP)</span></li>
-                <li className="text-slate-300">Tarsus Pharma <span className="text-green-400">($366K, 41.5% GP)</span></li>
-                <li className="text-slate-300">CG Oncology <span className="text-green-400">($180K, 38.8% GP)</span></li>
-                <li className="text-slate-300">Structure Therapeutics <span className="text-green-400">($124K, 55.3% GP)</span></li>
+                <li className="text-slate-300">Takeda <span className="text-yellow-500">($702K, 14.5% GP)</span></li>
+                <li className="text-slate-300">Bausch <span className="text-yellow-500">($739K, 29.4% GP)</span></li>
               </ul>
-              <p className="text-xs text-slate-500 mt-2">Mix of volume (Enovis) and margin (Tarsus, CG)</p>
+              <p className="text-xs text-slate-500 mt-2">Service expansion + rate review needed to improve margins</p>
             </div>
-            
+
             <div className="bg-slate-700/30 rounded-lg p-4 border border-slate-600">
-              <h4 className="text-blue-400 font-semibold mb-3">🚀 3-Year Growers</h4>
+              <h4 className="text-blue-400 font-semibold mb-3">🚀 Growth Opportunities</h4>
               <ul className="text-sm space-y-2">
-                <li className="text-slate-300">Crinetics <span className="text-green-400">(+$871K, 40.9% GP)</span></li>
-                <li className="text-slate-300">STAAR Surgical <span className="text-slate-400">(+$320K, 30.9% GP)</span></li>
-                <li className="text-slate-300">Vaxcyte <span className="text-green-400">(+$288K, 39.7% GP)</span></li>
-                <li className="text-slate-300">Corcept <span className="text-green-400">(+$127K, 41.2% GP)</span></li>
+                <li className="text-slate-300">Research Triangle <span className="text-green-400">($1.1M pipeline, greenfield)</span></li>
+                <li className="text-slate-300">Genetown expansion <span className="text-green-400">(18 accts, $1.35M)</span></li>
+                <li className="text-slate-300">NJ Pharma growth <span className="text-green-400">(10 accts, $2.02M)</span></li>
+                <li className="text-slate-300">Mid-Atlantic depth <span className="text-green-400">(8 accts, $2.20M)</span></li>
               </ul>
-              <p className="text-xs text-slate-500 mt-2">Consistent growers have 30-40%+ GP</p>
+              <p className="text-xs text-slate-500 mt-2">$14.05M pipeline with 2.5x coverage ratio</p>
             </div>
           </div>
         </div>

@@ -25,7 +25,7 @@ export default function ActionPlan() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-red-400 mt-1">•</span>
-                  <span>Rate review for Gilead, Kite, Amgen, Enovis — $1.68M margin at stake</span>
+                  <span>Rate review for Takeda (14.5% GP), Bausch (29.4% GP) — margin improvement needed</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-red-400 mt-1">•</span>
@@ -38,11 +38,11 @@ export default function ActionPlan() {
               <ul className="space-y-3 text-slate-300">
                 <li className="flex items-start gap-2">
                   <span className="text-yellow-400 mt-1">•</span>
-                  <span>Build Seattle market presence — greenfield opportunity</span>
+                  <span>Build Research Triangle market presence — greenfield opportunity ($1.1M pipeline)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-yellow-400 mt-1">•</span>
-                  <span>Develop managed services offering for cell therapy</span>
+                  <span>Develop managed services offering for gene therapy / rare disease (Genetown focus)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-yellow-400 mt-1">•</span>
@@ -77,7 +77,7 @@ export default function ActionPlan() {
                   <input type="checkbox" className="mt-1.5 w-4 h-4 rounded" />
                   <div>
                     <p className="text-white font-semibold">Week 2: Margin Audit for Problem Accounts</p>
-                    <p className="text-slate-400 text-sm">Review Gilead, Kite, Amgen, Enovis contracts. Identify scope creep, underpriced services, excess hours.</p>
+                    <p className="text-slate-400 text-sm">Review Takeda, Bausch contracts. Identify scope creep, underpriced services, excess hours. Protect Abbott (47.1% GP) and Regeneron (63% GP).</p>
                     <p className="text-cyan-400 text-xs mt-1">Owner: Finance + Delivery | Due: Feb 21</p>
                   </div>
                 </div>
@@ -120,8 +120,8 @@ export default function ActionPlan() {
                 <div className="flex items-start gap-4">
                   <input type="checkbox" className="mt-1.5 w-4 h-4 rounded" />
                   <div>
-                    <p className="text-white font-semibold">Seattle Market Research</p>
-                    <p className="text-slate-400 text-sm">Map Seattle ecosystem. Identify local events, conferences. Evaluate partnership opportunities.</p>
+                    <p className="text-white font-semibold">Research Triangle Market Research</p>
+                    <p className="text-slate-400 text-sm">Map Raleigh-Durham ecosystem (IQVIA, Fujifilm Diosynth, PPD). Identify local events, conferences. Evaluate partnership opportunities.</p>
                     <p className="text-cyan-400 text-xs mt-1">Owner: Marketing | Due: Mar 31</p>
                   </div>
                 </div>
@@ -156,8 +156,8 @@ export default function ActionPlan() {
                 <div className="flex items-start gap-4">
                   <input type="checkbox" className="mt-1.5 w-4 h-4 rounded" />
                   <div>
-                    <p className="text-white font-semibold">Seattle Launch Decision</p>
-                    <p className="text-slate-400 text-sm">Based on research, make go/no-go decision on Seattle expansion. Budget, hiring plan, timeline.</p>
+                    <p className="text-white font-semibold">Research Triangle Launch Decision</p>
+                    <p className="text-slate-400 text-sm">Based on research, make go/no-go decision on Research Triangle expansion. Budget, hiring plan, timeline.</p>
                     <p className="text-cyan-400 text-xs mt-1">Owner: Leadership | Due: Apr 30</p>
                   </div>
                 </div>
@@ -178,7 +178,7 @@ export default function ActionPlan() {
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 text-center">
               <p className="text-slate-400 text-sm mb-2">East GP% Target</p>
               <p className="text-3xl font-bold text-green-400">42%</p>
-              <p className="text-slate-500 text-xs">+5.5 pts from current</p>
+              <p className="text-slate-500 text-xs">from current 43.1%</p>
             </div>
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 text-center">
               <p className="text-slate-400 text-sm mb-2">New Logo Target</p>
@@ -226,7 +226,7 @@ export default function ActionPlan() {
                   <td className="py-3 px-4 text-center text-slate-400">Solutions</td>
                 </tr>
                 <tr className="border-t border-slate-700">
-                  <td className="py-3 px-4 text-white">Seattle Expansion</td>
+                  <td className="py-3 px-4 text-white">Research Triangle Expansion</td>
                   <td className="py-3 px-4 text-center text-cyan-400">BD Lead</td>
                   <td className="py-3 px-4 text-center text-purple-400">CEO</td>
                   <td className="py-3 px-4 text-center text-slate-400">Finance, HR</td>

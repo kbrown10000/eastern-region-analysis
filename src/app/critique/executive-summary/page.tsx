@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 /**
  * CRITIQUE: EXECUTIVE SUMMARY
- * 
+ *
  * Critical analysis of the Executive Summary page claims and metrics
- * 
+ *
  * Source Page: /executive-summary
  * Validation: Sales MCP, Finance MCP queries
  */
@@ -47,8 +47,8 @@ const criticalGaps = [
   },
   {
     severity: 'MEDIUM',
-    gap: 'East vs East Comparison Missing',
-    detail: 'Eastern Region presented in isolation. No benchmark against East region (51.5% GP vs East 36.5%) or Europe.',
+    gap: 'East vs West Comparison Missing',
+    detail: 'Eastern Region presented in isolation. No benchmark against West region or Europe.',
     question: 'Is East underperforming relative to other regions?',
     recommendation: 'Add regional comparison table',
   },
@@ -63,7 +63,7 @@ const criticalGaps = [
 
 const dataValidation = [
   {
-    claim: 'Open Pipeline: $14.05M (West)',
+    claim: 'Open Pipeline: $14.05M (East)',
     mcpResult: '$14.05M (194 opps)',
     source: 'Sales MCP → DAX query with East Region filter',
     status: 'VALIDATED',
@@ -75,8 +75,8 @@ const dataValidation = [
     status: 'VALIDATED',
   },
   {
-    claim: 'East GP: ~36.5%',
-    mcpResult: 'Blended 43.6%, but LA BioMed at 23.9%',
+    claim: 'East GP: ~43.1%',
+    mcpResult: 'Blended 43.1%, but problem accounts (Takeda 14.5%, Bausch 29.4%) drag down',
     source: 'Finance MCP → analyze_customer_profitability',
     status: 'PARTIALLY VALIDATED - Territory variance needs detail',
   },
@@ -138,7 +138,7 @@ const riskAssessment = [
     risk: 'GP erosion continues',
     likelihood: 'MEDIUM',
     impact: 'HIGH',
-    mitigation: 'Show margin recovery plan for problem accounts',
+    mitigation: 'Show margin recovery plan for problem accounts (Takeda, Bausch, Spectranetics)',
   },
 ];
 
@@ -275,5 +275,3 @@ export default function CritiqueExecutiveSummary() {
     </div>
   );
 }
-
-

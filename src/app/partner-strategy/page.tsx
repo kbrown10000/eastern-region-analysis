@@ -4,25 +4,25 @@ import Link from 'next/link';
 
 /**
  * PARTNER & ALLIANCE STRATEGY PAGE
- * 
+ *
  * Data Sources:
  * - Labor MCP: get_solutions_team_roster (Growth - Partnership and Alliances department)
  * - Sales MCP: get_team_performance, get_win_rate_matrix (Q4 2025)
  * - Direct calculation from opportunity data
- * 
+ *
  * Tools Used:
  * - get_solutions_team_roster: Returns all team members with role, department, win rate, avg deal size
  *   Filter: department = "Growth - Partnership and Alliances"
  *   Fields: name, roleFunction, opportunitiesTouched, winRate, avgDealSize
- * 
+ *
  * - get_team_performance: Returns pipeline, won, EGP by seller
  *   Filter: time_period = "Q4 2025"
  *   Fields: pipeline, pipelineEGP, closedWon, closedWonEGP, deals, wonDeals
- * 
- * Known Issue: Sales MCP partner tools (get_partner_performance, get_partner_scorecard) 
- * return 400 errors due to schema-map bug using wrong table name ('dbo DIM_Opportunity' 
+ *
+ * Known Issue: Sales MCP partner tools (get_partner_performance, get_partner_scorecard)
+ * return 400 errors due to schema-map bug using wrong table name ('dbo DIM_Opportunity'
  * instead of correct schema). Use team/roster tools as workaround.
- * 
+ *
  * Last Updated: 2026-02-04
  */
 
@@ -94,7 +94,7 @@ const partnerTypes = [
     description: 'Cloud platforms and software vendors where USDM provides implementation/compliance services',
     examples: ['AWS', 'Microsoft Azure', 'Salesforce', 'Veeva', 'DocuSign'],
     currentPartners: ['Veeva', 'DocuSign', 'Box'],
-    opportunity: 'Expand cloud assurance → AI governance services on AWS/Azure',
+    opportunity: 'Expand cloud assurance \u2192 AI governance services on AWS/Azure',
     priority: 'High',
     investmentRequired: '$150K/year',
     expectedReturn: '$2-3M pipeline/year'
@@ -114,7 +114,7 @@ const partnerTypes = [
     description: 'Trade groups and professional associations for brand awareness and lead generation',
     examples: ['BIO', 'ISPE', 'DIA', 'RAPS', 'PDA'],
     currentPartners: ['ISPE (member)', 'PDA (sponsor)'],
-    opportunity: 'Thought leadership → speaking slots → lead generation',
+    opportunity: 'Thought leadership \u2192 speaking slots \u2192 lead generation',
     priority: 'Medium',
     investmentRequired: '$100K/year',
     expectedReturn: 'Brand awareness, 50-100 MQLs/year'
@@ -134,35 +134,35 @@ const partnerTypes = [
 // Territory-specific partner recommendations
 const territoryPartnerStrategy = [
   {
-    territory: 'Biotech Beach',
-    region: 'San Diego',
-    strategy: 'Technology partners for cell therapy manufacturing',
-    targetPartners: ['Cellares', 'Multiply Labs'],
-    rationale: 'Cell therapy cluster needs specialized manufacturing QA',
-    investment: 'Included in direct sales'
+    territory: 'Genetown',
+    region: 'Boston / Cambridge',
+    strategy: 'VC portfolio partnerships and biotech startup compliance',
+    targetPartners: ['Third Rock Ventures', 'Polaris Partners'],
+    rationale: 'Densest biotech cluster in the US - VC relationships unlock portfolio referrals',
+    investment: '$50K/year (events + sponsorships)'
   },
   {
-    territory: 'LA BioMed',
-    region: 'Los Angeles / Thousand Oaks',
+    territory: 'NJ Pharma',
+    region: 'New Jersey',
     strategy: 'Large pharma vendor programs',
-    targetPartners: ['Amgen preferred vendor', 'Gilead partner program'],
+    targetPartners: ['Merck preferred vendor', 'BMS partner program', 'Novo Nordisk'],
     rationale: 'Improve margin on large accounts via preferred vendor status',
     investment: '$25K/year in relationship management'
   },
   {
-    territory: 'Biotech Bay',
-    region: 'SF / South SF',
-    strategy: 'VC ecosystem partnerships',
-    targetPartners: ['a16z Bio', 'Arch Ventures', 'RA Capital'],
-    rationale: 'Portfolio company referrals at Series B+',
-    investment: '$50K/year (events + sponsorships)'
+    territory: 'Mid-Atlantic',
+    region: 'DC / Philadelphia',
+    strategy: 'Government-adjacent pharma partnerships',
+    targetPartners: ['AstraZeneca', 'GSK', 'Regional consultancies'],
+    rationale: 'Regulatory proximity to FDA; compliance-focused pharma cluster',
+    investment: '$25K/year (relationship management)'
   },
   {
-    territory: 'Cascadia',
-    region: 'Seattle / PNW',
-    strategy: 'Partner-first market entry (zero direct pipeline)',
-    targetPartners: ['Regional consultancies', 'UW research partnerships'],
-    rationale: 'Per "The Ask" - $150K partner investment → $2.5M TAM access',
+    territory: 'Research Triangle',
+    region: 'North Carolina',
+    strategy: 'Partner-first market entry (greenfield territory)',
+    targetPartners: ['IQVIA', 'Fujifilm Diosynth', 'Regional consultancies'],
+    rationale: 'Greenfield territory - use partners to establish foothold before hiring. $150K investment \u2192 $2.5M TAM access',
     investment: '$150K/year'
   }
 ];
@@ -174,7 +174,7 @@ const roadmap = [
     initiatives: [
       'Audit current partner relationships (Veeva, DocuSign, Box)',
       'Define partner tier criteria (deal volume, GP margin, engagement)',
-      'Launch Cascadia partner outreach (target: 2 signed partners)'
+      'Launch Research Triangle partner outreach (target: 2 signed partners)'
     ],
     investment: '$25K',
     targetPipeline: '$500K'
@@ -183,8 +183,8 @@ const roadmap = [
     quarter: 'Q2 2026',
     initiatives: [
       'AWS/Azure partnership formalization',
-      'Kim Guihen coaching plan (improve 7.5% → 25% win rate)',
-      'First Cascadia partner deals in pipeline'
+      'Kim Guihen coaching plan (improve 7.5% \u2192 25% win rate)',
+      'First Research Triangle partner deals in pipeline'
     ],
     investment: '$50K',
     targetPipeline: '$1M cumulative'
@@ -194,7 +194,7 @@ const roadmap = [
     initiatives: [
       'Partner portal launch (deal registration, training)',
       'Industry association speaking circuit (ISPE, BIO)',
-      'Biotech Bay VC outreach program'
+      'Genetown VC outreach program'
     ],
     investment: '$75K',
     targetPipeline: '$2M cumulative'
@@ -232,7 +232,7 @@ export default function PartnerStrategy() {
         {/* Header */}
         <div className="flex justify-between items-center mb-4">
           <h1 className="text-4xl md:text-5xl font-bold text-white">Partner & Alliance Strategy</h1>
-          <Link href="/" className="text-blue-400 hover:text-blue-300">← Back</Link>
+          <Link href="/" className="text-blue-400 hover:text-blue-300">&larr; Back</Link>
         </div>
         <p className="text-slate-300 mb-8 max-w-3xl">
           Building the partner channel from 1% to 10% of Eastern Region pipeline
@@ -240,8 +240,8 @@ export default function PartnerStrategy() {
 
         {/* Current State */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-4">📊 Current Partner Channel (Q4 2025)</h2>
-          
+          <h2 className="text-2xl font-bold text-white mb-4">{'\uD83D\uDCCA'} Current Partner Channel (Q4 2025)</h2>
+
           {/* Summary Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
             <div className="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
@@ -308,7 +308,7 @@ export default function PartnerStrategy() {
 
         {/* Partner Types */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-4">🤝 Partner Type Strategy</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">{'\uD83E\uDD1D'} Partner Type Strategy</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {partnerTypes.map((pt, idx) => (
               <div key={idx} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -344,7 +344,7 @@ export default function PartnerStrategy() {
 
         {/* Territory Strategy */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-4">🗺️ Territory-Specific Partner Strategy</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">{'\uD83D\uDDFA\uFE0F'} Territory-Specific Partner Strategy</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-slate-800/50 rounded-xl border border-slate-700">
               <thead>
@@ -377,7 +377,7 @@ export default function PartnerStrategy() {
 
         {/* 2026 Roadmap */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-4">📅 2026 Partner Program Roadmap</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">{'\uD83D\uDCC5'} 2026 Partner Program Roadmap</h2>
           <div className="grid md:grid-cols-4 gap-4">
             {roadmap.map((q, idx) => (
               <div key={idx} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -385,7 +385,7 @@ export default function PartnerStrategy() {
                 <ul className="space-y-2 mb-4">
                   {q.initiatives.map((init, i) => (
                     <li key={i} className="text-sm text-slate-300 flex items-start">
-                      <span className="text-green-400 mr-2">•</span>
+                      <span className="text-green-400 mr-2">&bull;</span>
                       {init}
                     </li>
                   ))}
@@ -407,25 +407,25 @@ export default function PartnerStrategy() {
 
         {/* Data Sources */}
         <section className="mb-12 bg-slate-900/50 rounded-xl p-6 border border-slate-600">
-          <h2 className="text-lg font-bold text-slate-400 mb-4">📋 Data Sources & Methodology</h2>
+          <h2 className="text-lg font-bold text-slate-400 mb-4">{'\uD83D\uDCCB'} Data Sources & Methodology</h2>
           <div className="grid md:grid-cols-2 gap-6 text-sm">
             <div>
               <h3 className="text-white font-semibold mb-2">Partner Team Data</h3>
               <ul className="space-y-1 text-slate-400">
-                <li>• <span className="text-blue-400">Labor MCP</span> → get_solutions_team_roster</li>
+                <li>&bull; <span className="text-blue-400">Labor MCP</span> &rarr; get_solutions_team_roster</li>
                 <li>  Filter: department = &quot;Growth - Partnership and Alliances&quot;</li>
                 <li>  Fields: opportunitiesTouched, winRate, avgDealSize</li>
-                <li>• <span className="text-blue-400">Sales MCP</span> → get_team_performance (Q4 2025)</li>
+                <li>&bull; <span className="text-blue-400">Sales MCP</span> &rarr; get_team_performance (Q4 2025)</li>
                 <li>  Fields: pipeline, closedWon, EGP, deals</li>
               </ul>
             </div>
             <div>
               <h3 className="text-white font-semibold mb-2">Known Issues</h3>
               <ul className="space-y-1 text-slate-400">
-                <li>• <span className="text-red-400">get_partner_performance</span>: 400 error (schema bug)</li>
-                <li>• <span className="text-red-400">get_partner_scorecard</span>: 400 error (schema bug)</li>
-                <li>• Root cause: schema-map.ts uses &apos;dbo DIM_Opportunity&apos; instead of correct table</li>
-                <li>• Workaround: Use get_solutions_team_roster + get_team_performance</li>
+                <li>&bull; <span className="text-red-400">get_partner_performance</span>: 400 error (schema bug)</li>
+                <li>&bull; <span className="text-red-400">get_partner_scorecard</span>: 400 error (schema bug)</li>
+                <li>&bull; Root cause: schema-map.ts uses &apos;dbo DIM_Opportunity&apos; instead of correct table</li>
+                <li>&bull; Workaround: Use get_solutions_team_roster + get_team_performance</li>
               </ul>
             </div>
           </div>
@@ -433,30 +433,30 @@ export default function PartnerStrategy() {
 
         {/* Key Recommendations */}
         <section className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-xl p-6 border border-blue-700/50">
-          <h2 className="text-xl font-bold text-white mb-4">🎯 Key Recommendations</h2>
+          <h2 className="text-xl font-bold text-white mb-4">{'\uD83C\uDFAF'} Key Recommendations</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="space-y-2">
               <h3 className="text-blue-400 font-semibold">Immediate (Q1 2026)</h3>
               <ul className="text-sm text-slate-300 space-y-1">
-                <li>• Diagnose Kim Guihen&apos;s 7.5% win rate</li>
-                <li>• Launch Cascadia partner outreach</li>
-                <li>• Define partner tier criteria</li>
+                <li>&bull; Diagnose Kim Guihen&apos;s 7.5% win rate</li>
+                <li>&bull; Launch Research Triangle partner outreach</li>
+                <li>&bull; Define partner tier criteria</li>
               </ul>
             </div>
             <div className="space-y-2">
               <h3 className="text-purple-400 font-semibold">Medium-term (Q2-Q3)</h3>
               <ul className="text-sm text-slate-300 space-y-1">
-                <li>• AWS/Azure partnership formalization</li>
-                <li>• Partner portal for deal registration</li>
-                <li>• Industry speaking circuit (ISPE, BIO)</li>
+                <li>&bull; AWS/Azure partnership formalization</li>
+                <li>&bull; Partner portal for deal registration</li>
+                <li>&bull; Industry speaking circuit (ISPE, BIO)</li>
               </ul>
             </div>
             <div className="space-y-2">
               <h3 className="text-green-400 font-semibold">2026 Target</h3>
               <ul className="text-sm text-slate-300 space-y-1">
-                <li>• Partner-sourced: 10% of East Pipeline</li>
-                <li>• $3M cumulative partner pipeline</li>
-                <li>• 5+ active partner relationships</li>
+                <li>&bull; Partner-sourced: 10% of East Pipeline</li>
+                <li>&bull; $3M cumulative partner pipeline</li>
+                <li>&bull; 5+ active partner relationships</li>
               </ul>
             </div>
           </div>
@@ -465,5 +465,3 @@ export default function PartnerStrategy() {
     </div>
   );
 }
-
-

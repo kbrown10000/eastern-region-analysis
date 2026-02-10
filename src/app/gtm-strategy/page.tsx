@@ -38,7 +38,7 @@ const gtmPillars: GTMPillar[] = [
     entryPoint: 'Platform AI Assessment',
     expansion: 'Feature Validation → AI Change Control → Ongoing Governance',
     targetCriteria: ['Veeva customers', 'Box customers', 'ServiceNow customers', 'M365 heavy users'],
-    EasternTargets: ['All existing Veeva customers', 'Gilead', 'Amgen', 'Neurocrine', 'BioMarin'],
+    EasternTargets: ['All existing Veeva customers', 'Abbott', 'Takeda', 'Regeneron', 'J&J'],
     existingCustomerPlay: 'Audit all MSA accounts for Veeva/Box/ServiceNow — high correlation with opportunity',
   },
   {
@@ -50,7 +50,7 @@ const gtmPillars: GTMPillar[] = [
     entryPoint: 'Process Assessment',
     expansion: 'Use Case ID → POC → Production → Optimization',
     targetCriteria: ['Companies with process inefficiencies', 'Prior USDM process consulting clients', 'Firms frustrated with generic AI vendors'],
-    EasternTargets: ['National Resilience', 'Cellares', '64x Bio', 'Allogene'],
+    EasternTargets: ['IQVIA', 'Fujifilm Diosynth', 'PPD', 'Sarepta'],
     existingCustomerPlay: 'Target accounts where USDM has delivered process consulting — foundation for AI enablement',
   },
   {
@@ -62,7 +62,7 @@ const gtmPillars: GTMPillar[] = [
     entryPoint: 'Advisory Engagement',
     expansion: 'Health Check → Optimization Roadmap → Retainer → Managed Services',
     targetCriteria: ['Emerging/mid-size pharma (<$1B)', '12-24 months post-implementation', 'Low module utilization'],
-    EasternTargets: ['Emerging biotechs scaling past Series C', 'Tune Therapeutics', 'Sana Biotechnology', 'Fate Therapeutics'],
+    EasternTargets: ['Emerging biotechs scaling past Series C', 'Vertex Pharmaceuticals', 'Beam Therapeutics', 'Sarepta Therapeutics'],
     existingCustomerPlay: 'Segment MSA accounts by size and Veeva footprint — identify renewal dates',
   },
   {
@@ -98,7 +98,7 @@ const gtmPillars: GTMPillar[] = [
     entryPoint: 'Oversight Assessment',
     expansion: 'Framework Design → CTMS Config → Ongoing Support',
     targetCriteria: ['Sponsors with CRO-outsourced clinical ops', 'Active clinical programs', 'Vault Clinical implementations'],
-    EasternTargets: ['Sana Biotechnology', 'Fate Therapeutics', 'Tune Therapeutics', 'Allogene', 'Artiva', 'Boundless Bio'],
+    EasternTargets: ['Regeneron', 'Sarepta Therapeutics', 'Vertex Pharmaceuticals', 'Biogen', 'BMS', 'Merck'],
     existingCustomerPlay: 'Identify MSA accounts with active clinical programs and CRO relationships',
   },
   {
@@ -122,7 +122,7 @@ const gtmPillars: GTMPillar[] = [
     entryPoint: 'Process Assessment',
     expansion: 'Single Workflow Pilot → Additional Workflows → Enterprise → MS',
     targetCriteria: ['ServiceNow deployments', 'Manual GxP IT processes', 'Upcoming computer system inspections'],
-    EasternTargets: ['Large pharma with ServiceNow (Gilead, Amgen)', 'Scale-ups building IT infrastructure'],
+    EasternTargets: ['Large pharma with ServiceNow (Merck, J&J)', 'Scale-ups building IT infrastructure'],
     existingCustomerPlay: 'Map MSA accounts with ServiceNow deployments',
   },
   {
@@ -134,7 +134,7 @@ const gtmPillars: GTMPillar[] = [
     entryPoint: 'MS Assessment',
     expansion: 'Single Platform → Portfolio → Strategic Advisory',
     targetCriteria: ['Small internal teams vs. large system portfolio', 'Retention challenges', 'Post-implementation customers'],
-    EasternTargets: ['All implementation customers', 'National Resilience', 'Cellares'],
+    EasternTargets: ['All implementation customers', 'IQVIA', 'Fujifilm Diosynth'],
     existingCustomerPlay: 'Natural extension from USDM implementation work',
   },
   {
@@ -146,7 +146,7 @@ const gtmPillars: GTMPillar[] = [
     entryPoint: 'Operating Model Assessment',
     expansion: 'Target State Design → Roadmap → Execution → Advisory',
     targetCriteria: ['Regulatory deadline exposure', 'Recent inspection observations', 'Organizational transformation'],
-    EasternTargets: ['Cell therapy companies facing complex regulatory path', 'Tune', 'Outpace', 'Umoja', 'Sana'],
+    EasternTargets: ['Cell/gene therapy companies facing complex regulatory path', 'Sarepta', 'Biogen', 'Vertex', 'Beam Therapeutics'],
     existingCustomerPlay: 'Track regulatory deadlines (ICH E6(R3), EU AI Act) against account priorities',
   },
   {
@@ -158,7 +158,7 @@ const gtmPillars: GTMPillar[] = [
     entryPoint: 'Data Foundation Assessment',
     expansion: 'Architecture → Implementation → Governance → Ongoing',
     targetCriteria: ['Manual data reconciliation', 'Multiple disconnected systems', 'UDI compliance needs'],
-    EasternTargets: ['Manufacturing scale-ups', 'National Resilience', 'Cellares', 'Companies with multi-site ops'],
+    EasternTargets: ['Manufacturing scale-ups', 'Fujifilm Diosynth', 'IQVIA', 'Companies with multi-site ops'],
     existingCustomerPlay: 'Target accounts with multiple USDM-supported systems',
   },
   {
@@ -269,11 +269,11 @@ export default function GTMStrategy() {
                 <span className="text-3xl">🤖</span>
                 <h3 className="text-xl font-bold text-white">AI Governance</h3>
               </div>
-              <p className="text-slate-300 mb-4">52% of Bay Area biotech funding goes to AI companies. Massive governance gap.</p>
+              <p className="text-slate-300 mb-4">Boston/Cambridge biotech cluster leads in AI drug discovery. Massive governance gap across Genetown.</p>
               <div className="space-y-2">
                 <p className="text-purple-400 font-semibold text-sm">Top Targets:</p>
                 <div className="flex flex-wrap gap-1">
-                  {['Numerion Labs', 'Deep Genomics', 'Anagenex', 'A-Alpha Bio'].map(t => (
+                  {['Vertex', 'Biogen', 'Beam Therapeutics', 'Sarepta'].map(t => (
                     <span key={t} className="bg-purple-900/50 text-purple-300 text-xs px-2 py-1 rounded">{t}</span>
                   ))}
                 </div>
@@ -285,11 +285,11 @@ export default function GTMStrategy() {
                 <span className="text-3xl">🔬</span>
                 <h3 className="text-xl font-bold text-white">Cell Therapy Scale-Up</h3>
               </div>
-              <p className="text-slate-300 mb-4">12+ funded cell therapy companies need GxP manufacturing support as they scale.</p>
+              <p className="text-slate-300 mb-4">Gene therapy and rare disease companies across Eastern corridor need GxP manufacturing support as they scale.</p>
               <div className="space-y-2">
                 <p className="text-green-400 font-semibold text-sm">Top Targets:</p>
                 <div className="flex flex-wrap gap-1">
-                  {['Sana Bio', 'Tune', 'Cellares', 'Fate', 'Allogene'].map(t => (
+                  {['Sarepta', 'Regeneron', 'BMS', 'Novo Nordisk', 'Merck'].map(t => (
                     <span key={t} className="bg-green-900/50 text-green-300 text-xs px-2 py-1 rounded">{t}</span>
                   ))}
                 </div>
@@ -326,16 +326,16 @@ export default function GTMStrategy() {
               </thead>
               <tbody className="text-slate-300">
                 {[
-                  { name: 'Sana Biotechnology', region: 'Seattle', primary: 'Cell Therapy Scale-Up', secondary: 'CRO Oversight', entry: 'Operating Model Assessment' },
-                  { name: 'Tune Therapeutics', region: 'Seattle', primary: 'Operating Model', secondary: 'CRO Oversight', entry: 'Regulatory Strategy' },
-                  { name: 'National Resilience', region: 'San Diego', primary: 'GxP Managed Services', secondary: 'ProcessX', entry: 'MS Assessment' },
-                  { name: 'Numerion Labs', region: 'Bay Area', primary: 'AI Governance', secondary: 'TPRM', entry: 'AI Risk Assessment (Win-Back)' },
-                  { name: 'Cellares', region: 'Bay Area', primary: 'Domain-Led AI', secondary: 'GxP MS', entry: 'Process Assessment' },
-                  { name: 'Deep Genomics', region: 'Bay Area', primary: 'AI Governance', secondary: 'Data Integration', entry: 'AI Risk Assessment' },
-                  { name: 'Fate Therapeutics', region: 'San Diego', primary: 'CRO Oversight', secondary: 'eTMF 2027', entry: 'Oversight Assessment' },
-                  { name: 'Outpace Bio', region: 'Seattle', primary: 'Operating Model', secondary: 'Veeva SME', entry: 'Regulatory Strategy' },
-                  { name: 'Boundless Bio', region: 'San Diego', primary: 'Clinical Stage Support', secondary: 'Regulatory', entry: 'QMS Assessment' },
-                  { name: 'A-Alpha Bio', region: 'Seattle', primary: 'AI Governance', secondary: 'Domain AI', entry: 'AI Risk Assessment' },
+                  { name: 'Vertex Pharmaceuticals', region: 'Genetown', primary: 'AI Governance', secondary: 'Veeva SME', entry: 'AI Risk Assessment' },
+                  { name: 'Sarepta Therapeutics', region: 'Genetown', primary: 'Operating Model', secondary: 'CRO Oversight', entry: 'Gene Therapy Regulatory Strategy' },
+                  { name: 'Biogen', region: 'Genetown', primary: 'GxP Managed Services', secondary: 'ProcessX', entry: 'MS Assessment' },
+                  { name: 'Merck', region: 'NJ Pharma', primary: 'AI Governance', secondary: 'Veeva Managed Services', entry: 'Enterprise AI Assessment' },
+                  { name: 'BMS', region: 'NJ Pharma', primary: 'Embedded AI Adoption', secondary: 'GxP MS', entry: 'Platform AI Assessment' },
+                  { name: 'Novo Nordisk', region: 'NJ Pharma', primary: 'ProcessX', secondary: 'Data Integration', entry: 'ServiceNow GxP Pilot' },
+                  { name: 'AstraZeneca', region: 'Mid-Atlantic', primary: 'CRO Oversight', secondary: 'eTMF 2027', entry: 'Oversight Assessment' },
+                  { name: 'GSK', region: 'Mid-Atlantic', primary: 'Operating Model', secondary: 'Veeva SME', entry: 'Regulatory Strategy' },
+                  { name: 'IQVIA', region: 'Research Triangle', primary: 'Domain-Led AI', secondary: 'Data Integration', entry: 'Process Assessment' },
+                  { name: 'Beam Therapeutics', region: 'Genetown', primary: 'AI Governance', secondary: 'Domain AI', entry: 'AI Risk Assessment' },
                 ].map((row, idx) => (
                   <tr key={idx} className="border-b border-slate-800 hover:bg-slate-800/30">
                     <td className="py-3 px-4 font-medium text-white">{row.name}</td>
@@ -398,7 +398,7 @@ export default function GTMStrategy() {
           <div className="space-y-4">
             <div className="bg-red-900/30 rounded-xl p-6 border border-red-700/50">
               <h3 className="text-red-400 font-bold mb-3">⚠️ Margin Recovery + Service Expansion</h3>
-              <p className="text-slate-300 mb-3">Low-margin mega-customers (Gilead, Kite, Amgen, Enovis at ~20% GP) are prime candidates for:</p>
+              <p className="text-slate-300 mb-3">Low-margin accounts (Bausch 29.4%, Takeda 14.5%) are prime candidates for:</p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-slate-800/50 rounded-lg p-4">
                   <p className="text-cyan-400 font-semibold">Veeva Managed Services</p>
@@ -417,7 +417,7 @@ export default function GTMStrategy() {
 
             <div className="bg-green-900/30 rounded-xl p-6 border border-green-700/50">
               <h3 className="text-green-400 font-bold mb-3">✅ High-Margin Expansion</h3>
-              <p className="text-slate-300 mb-3">High-margin customers (PTC 96%, Abbott 64%, Harmony 93%) — protect and expand:</p>
+              <p className="text-slate-300 mb-3">High-margin customers (Regeneron 63%, Abbott 47.1%, J&J 32.4%) — protect and expand:</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-slate-800/50 rounded-lg p-4">
                   <p className="text-cyan-400 font-semibold">Veeva AI Readiness</p>
@@ -461,15 +461,15 @@ export default function GTMStrategy() {
               <div className="flex items-start gap-4">
                 <span className="bg-cyan-500 text-slate-900 w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
                 <div>
-                  <h4 className="text-white font-semibold">Seattle market development trip Q1 2026</h4>
-                  <p className="text-slate-400 text-sm">Zero presence in fastest-growing market. Target Sana, Tune, Outpace, Umoja, A-Alpha Bio.</p>
+                  <h4 className="text-white font-semibold">Research Triangle market development trip Q1 2026</h4>
+                  <p className="text-slate-400 text-sm">Greenfield territory with $1.1M pipeline. Target IQVIA, Fujifilm Diosynth, PPD in Raleigh-Durham.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <span className="bg-cyan-500 text-slate-900 w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">5</span>
                 <div>
-                  <h4 className="text-white font-semibold">Develop cell therapy manufacturing package</h4>
-                  <p className="text-slate-400 text-sm">Bundle: Operating Model + CRO Oversight + GxP Managed Services for clinical-to-commercial scale-up.</p>
+                  <h4 className="text-white font-semibold">Develop gene therapy / rare disease manufacturing package</h4>
+                  <p className="text-slate-400 text-sm">Bundle: Operating Model + CRO Oversight + GxP Managed Services for Genetown clinical-to-commercial scale-up.</p>
                 </div>
               </div>
             </div>

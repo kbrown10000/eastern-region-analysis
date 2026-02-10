@@ -33,26 +33,26 @@ export default function ExecutiveSummary() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-gradient-to-br from-emerald-900/50 to-emerald-800/50 rounded-xl p-6 border border-emerald-700">
               <div className="text-emerald-300 text-sm font-semibold mb-2">2025 Revenue</div>
-              <div className="text-4xl font-bold text-white mb-1">$24.8M</div>
-              <div className="text-emerald-200 text-sm">+8.2% YoY</div>
+              <div className="text-4xl font-bold text-white mb-1">$5.57M</div>
+              <div className="text-emerald-200 text-sm">+39.5% YoY</div>
             </div>
-            
+
             <div className="bg-gradient-to-br from-teal-900/50 to-teal-800/50 rounded-xl p-6 border border-teal-700">
               <div className="text-teal-300 text-sm font-semibold mb-2">Win Rate</div>
-              <div className="text-4xl font-bold text-white mb-1">41.2%</div>
-              <div className="text-teal-200 text-sm">Above company avg ↑</div>
+              <div className="text-4xl font-bold text-white mb-1">41.6%</div>
+              <div className="text-teal-200 text-sm">Company avg (Sales MCP down)</div>
             </div>
-            
+
             <div className="bg-gradient-to-br from-green-900/50 to-green-800/50 rounded-xl p-6 border border-green-700">
               <div className="text-green-300 text-sm font-semibold mb-2">Blended GP</div>
-              <div className="text-4xl font-bold text-white mb-1">51.5%</div>
-              <div className="text-green-200 text-sm">$12.8M gross profit</div>
+              <div className="text-4xl font-bold text-white mb-1">43.1%</div>
+              <div className="text-green-200 text-sm">$2.4M gross profit</div>
             </div>
-            
+
             <div className="bg-gradient-to-br from-blue-900/50 to-blue-800/50 rounded-xl p-6 border border-blue-700">
               <div className="text-blue-300 text-sm font-semibold mb-2">Open Pipeline</div>
-              <div className="text-4xl font-bold text-white mb-1">$18.2M</div>
-              <div className="text-blue-200 text-sm">1.2x coverage</div>
+              <div className="text-4xl font-bold text-white mb-1">$14.1M</div>
+              <div className="text-blue-200 text-sm">2.5x coverage</div>
             </div>
           </div>
         </section>
@@ -63,10 +63,10 @@ export default function ExecutiveSummary() {
             <h2 className="text-2xl font-bold text-emerald-400 mb-6">Strategic Overview</h2>
             <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700 mb-8">
               <p className="text-slate-300 leading-relaxed">
-                The Eastern United States represents the <span className="text-emerald-400 font-semibold">largest life sciences market globally</span>, 
-                anchored by Boston's "Genetown" biotech cluster, the NJ Pharma Corridor, and the rapidly growing Research Triangle. 
-                The East region delivers strong performance with 51.5% GP margins — <span className="text-emerald-400 font-semibold">15 points above East</span> — 
-                driven by high-value managed services and established pharma relationships.
+                The Eastern United States represents the <span className="text-emerald-400 font-semibold">largest life sciences market globally</span>,
+                anchored by Boston's "Genetown" biotech cluster, the NJ Pharma Corridor, and the rapidly growing Research Triangle.
+                The East region is the <span className="text-emerald-400 font-semibold">fastest-growing region at +39.5% YoY</span> with 43.1% blended GP —
+                9 points above the West region — driven by high-value managed services and strategic pharma relationships.
               </p>
             </div>
           </section>
@@ -77,27 +77,27 @@ export default function ExecutiveSummary() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-emerald-900/30 rounded-xl p-6 border border-emerald-800/50">
-                <h3 className="text-emerald-400 font-bold mb-3">✅ Strength: Margin Leadership</h3>
-                <p className="text-slate-300">East delivers <span className="font-bold">51.5% GP</span> vs company average of 44%. 
-                  Genetown leads at 58% GP — driven by high-value AI governance and gene therapy QA work.</p>
+                <h3 className="text-emerald-400 font-bold mb-3">✅ Strength: Explosive Growth</h3>
+                <p className="text-slate-300">East is growing <span className="font-bold">+39.5% YoY</span> — fastest of any region.
+                  Abbott ($1.94M, +214% YoY) and Regeneron ($436K, new logo) leading the surge.</p>
               </div>
-              
+
               <div className="bg-teal-900/30 rounded-xl p-6 border border-teal-800/50">
-                <h3 className="text-teal-400 font-bold mb-3">🚀 Strength: Research Triangle Growth</h3>
-                <p className="text-slate-300">Fastest-growing territory at <span className="font-bold">+22% YoY</span>. 
-                  CDMO boom (Fujifilm, Catalent) creates major manufacturing QA opportunity.</p>
+                <h3 className="text-teal-400 font-bold mb-3">🚀 Strength: High-Margin Managed Services</h3>
+                <p className="text-slate-300">Genetown accounts averaging <span className="font-bold">70-100% GP</span> on managed services.
+                  Harmony Bio (81.6%), Alnylam (71.5%), Ironwood (79.1%) — model customers.</p>
               </div>
-              
+
               <div className="bg-yellow-900/30 rounded-xl p-6 border border-yellow-800/50">
-                <h3 className="text-yellow-400 font-bold mb-3">⚠️ Watch: NJ Corridor Margins</h3>
-                <p className="text-slate-300">Big Pharma accounts (BMS, J&J) averaging <span className="font-bold">45% GP</span> — 
-                  room to improve with managed services transition.</p>
+                <h3 className="text-yellow-400 font-bold mb-3">⚠️ Watch: Takeda Margin</h3>
+                <p className="text-slate-300">Largest Genetown account at <span className="font-bold">$702K but only 14.5% GP</span> —
+                  needs managed services transition. Bausch Health at 29.4% GP also needs attention.</p>
               </div>
-              
+
               <div className="bg-blue-900/30 rounded-xl p-6 border border-blue-800/50">
-                <h3 className="text-blue-400 font-bold mb-3">📊 Opportunity: Boston Expansion</h3>
-                <p className="text-slate-300">85 customers but <span className="font-bold">1,000+ biotechs</span> in market. 
-                  Significant new logo opportunity in gene therapy, mRNA, and AI drug discovery.</p>
+                <h3 className="text-blue-400 font-bold mb-3">📊 Opportunity: Pipeline Strength</h3>
+                <p className="text-slate-300"><span className="font-bold">$14.1M pipeline at 2.5x coverage</span> — strongest coverage ratio company-wide.
+                  Research Triangle is greenfield with massive CDMO/CRO opportunity.</p>
               </div>
             </div>
           </section>
@@ -119,46 +119,46 @@ export default function ExecutiveSummary() {
                 </thead>
                 <tbody className="text-slate-300">
                   <tr className="border-b border-slate-700">
-                    <td className="py-3 font-medium text-white">Genetown (Boston)</td>
-                    <td className="py-3">$12.4M</td>
-                    <td className="py-3 text-emerald-400">58.2%</td>
-                    <td className="py-3 text-emerald-400">+15%</td>
-                    <td className="py-3">85</td>
-                    <td className="py-3">$8.5M</td>
+                    <td className="py-3 font-medium text-white">Mid-Atlantic</td>
+                    <td className="py-3">$2.20M</td>
+                    <td className="py-3 text-emerald-400">45.2%</td>
+                    <td className="py-3 text-emerald-400">+64.5% 🚀</td>
+                    <td className="py-3">8</td>
+                    <td className="py-3">$4.2M</td>
                   </tr>
                   <tr className="border-b border-slate-700">
                     <td className="py-3 font-medium text-white">NJ Pharma Corridor</td>
-                    <td className="py-3">$6.2M</td>
-                    <td className="py-3 text-yellow-400">45.8%</td>
-                    <td className="py-3 text-slate-400">+5%</td>
-                    <td className="py-3">42</td>
-                    <td className="py-3">$4.8M</td>
+                    <td className="py-3">$2.02M</td>
+                    <td className="py-3 text-emerald-400">40.7%</td>
+                    <td className="py-3 text-emerald-400">+19.8%</td>
+                    <td className="py-3">10</td>
+                    <td className="py-3">$5.0M</td>
+                  </tr>
+                  <tr className="border-b border-slate-700">
+                    <td className="py-3 font-medium text-white">Genetown (Boston)</td>
+                    <td className="py-3">$1.35M</td>
+                    <td className="py-3 text-emerald-400">43.1%</td>
+                    <td className="py-3 text-emerald-400">+39.4%</td>
+                    <td className="py-3">18</td>
+                    <td className="py-3">$3.8M</td>
                   </tr>
                   <tr className="border-b border-slate-700">
                     <td className="py-3 font-medium text-white">Research Triangle</td>
-                    <td className="py-3">$3.8M</td>
-                    <td className="py-3 text-emerald-400">54.2%</td>
-                    <td className="py-3 text-emerald-400">+22% 🚀</td>
-                    <td className="py-3">28</td>
-                    <td className="py-3">$2.9M</td>
-                  </tr>
-                  <tr className="border-b border-slate-700">
-                    <td className="py-3 font-medium text-white">Mid-Atlantic</td>
-                    <td className="py-3">$2.4M</td>
-                    <td className="py-3 text-emerald-400">48.5%</td>
-                    <td className="py-3 text-slate-400">+3%</td>
-                    <td className="py-3">30</td>
-                    <td className="py-3">$2.0M</td>
+                    <td className="py-3 text-slate-500">Greenfield</td>
+                    <td className="py-3 text-slate-500">—</td>
+                    <td className="py-3 text-emerald-400">New 🌱</td>
+                    <td className="py-3">0</td>
+                    <td className="py-3">$1.1M</td>
                   </tr>
                 </tbody>
                 <tfoot>
                   <tr className="border-t-2 border-emerald-700">
                     <td className="py-3 font-bold text-white">TOTAL EAST</td>
-                    <td className="py-3 font-bold text-white">$24.8M</td>
-                    <td className="py-3 font-bold text-emerald-400">51.5%</td>
-                    <td className="py-3 font-bold text-emerald-400">+8.2%</td>
-                    <td className="py-3 font-bold text-white">185</td>
-                    <td className="py-3 font-bold text-white">$18.2M</td>
+                    <td className="py-3 font-bold text-white">$5.57M</td>
+                    <td className="py-3 font-bold text-emerald-400">43.1%</td>
+                    <td className="py-3 font-bold text-emerald-400">+39.5%</td>
+                    <td className="py-3 font-bold text-white">36</td>
+                    <td className="py-3 font-bold text-white">$14.1M</td>
                   </tr>
                 </tfoot>
               </table>
@@ -171,23 +171,23 @@ export default function ExecutiveSummary() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
                 <div className="text-3xl mb-3">🎯</div>
-                <h3 className="text-lg font-bold text-white mb-2">Boston New Logos</h3>
-                <p className="text-slate-400 text-sm">Target 15 new biotech accounts in gene therapy, mRNA, and AI drug discovery sectors.</p>
-                <p className="text-emerald-400 font-medium mt-3">Target: +$3M revenue</p>
+                <h3 className="text-lg font-bold text-white mb-2">Takeda Margin Recovery</h3>
+                <p className="text-slate-400 text-sm">Largest Genetown account at $702K but 14.5% GP. Shift from T&M staffing to managed services model.</p>
+                <p className="text-emerald-400 font-medium mt-3">Target: 14.5% → 40% GP = +$179K profit</p>
               </div>
-              
+
               <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
                 <div className="text-3xl mb-3">🏭</div>
-                <h3 className="text-lg font-bold text-white mb-2">CDMO Expansion</h3>
-                <p className="text-slate-400 text-sm">Capitalize on Research Triangle manufacturing boom — Fujifilm, Catalent expansions.</p>
-                <p className="text-emerald-400 font-medium mt-3">Target: +$1.5M revenue</p>
+                <h3 className="text-lg font-bold text-white mb-2">Research Triangle Entry</h3>
+                <p className="text-slate-400 text-sm">Greenfield territory — zero revenue today. Target IQVIA, Fujifilm Diosynth, PPD in the CDMO/CRO capital.</p>
+                <p className="text-emerald-400 font-medium mt-3">Target: $1M+ Year 1 revenue</p>
               </div>
-              
+
               <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
                 <div className="text-3xl mb-3">📈</div>
-                <h3 className="text-lg font-bold text-white mb-2">NJ Margin Lift</h3>
-                <p className="text-slate-400 text-sm">Shift Big Pharma accounts from staff aug to managed services. BMS, J&J focus.</p>
-                <p className="text-emerald-400 font-medium mt-3">Target: 45% → 52% GP</p>
+                <h3 className="text-lg font-bold text-white mb-2">Abbott Expansion</h3>
+                <p className="text-slate-400 text-sm">Top account grew +214% YoY to $1.94M. Expand manufacturing QA footprint across Abbott divisions.</p>
+                <p className="text-emerald-400 font-medium mt-3">Target: $2.5M+ in 2026</p>
               </div>
             </div>
           </section>

@@ -4,18 +4,18 @@ import Link from 'next/link';
 
 /**
  * DEEP CRITIQUE ANALYSIS
- * 
+ *
  * Comprehensive, unfiltered analysis of the Eastern Region Growth Strategy
  * Synthesizes AI sub-agent critique with MCP data validation
- * 
+ *
  * PURPOSE: Review page before integrating findings into main site
- * 
+ *
  * Data Sources:
  * - Sales MCP (3001): get_team_performance, get_win_rate_matrix, get_pipeline_by_owner, get_churn_signals
  * - Labor MCP (3002): get_solutions_team_roster, get_gold_department_metrics
  * - Finance MCP (3003): get_customer_ltv, analyze_customer_profitability
  * - Site code analysis: src/app/ pages embedded data
- * 
+ *
  * Last Updated: 2026-02-04
  */
 
@@ -197,7 +197,7 @@ const gtmSprawl = {
   suggestedTop5: [
     { pillar: 'Cloud Migration + Validation', rationale: 'AWS/Azure partnerships, clear ROI story' },
     { pillar: 'AI Governance', rationale: 'Emerging need, limited competition' },
-    { pillar: 'Cell Therapy Manufacturing QA', rationale: 'San Diego cluster, Biotech Beach strength' },
+    { pillar: 'Cell Therapy Manufacturing QA', rationale: 'Boston/Cambridge cluster, Genetown strength' },
     { pillar: 'Data Integrity Remediation', rationale: 'FDA pressure driving demand' },
     { pillar: 'CSV for SaaS', rationale: 'Veeva/Box partnerships, recurring need' },
   ],
@@ -226,8 +226,8 @@ const financialModelGaps = {
     },
     {
       assumption: 'GP holds at 43%',
-      reality: 'LA BioMed at 23.9%, problem accounts dragging down',
-      risk: 'GP erosion accelerates if Gilead/Amgen/Kite expand',
+      reality: 'Takeda at 14.5%, Bausch at 29.4%, Spectranetics at 26.4% — problem accounts dragging down',
+      risk: 'GP erosion accelerates if low-margin accounts expand',
     },
     {
       assumption: 'Pipeline converts at historical rates',
@@ -246,26 +246,26 @@ const financialModelGaps = {
 
 // ========== MARGIN PROBLEM ACCOUNTS ==========
 const marginProblem = {
-  title: 'Margin Erosion: The LA BioMed Problem',
+  title: 'Margin Erosion: The Problem Account Challenge',
   severity: 'HIGH',
-  summary: '4 accounts dragging East GP from 50%+ to 36.5%',
+  summary: 'Multiple accounts dragging East GP down with below-target margins',
   accounts: [
-    { name: 'Gilead Sciences', revenue: 2130000, gp: 22, trend: 'Expanding', risk: 'More volume at bad margin = worse blended GP' },
-    { name: 'Kite Pharma', revenue: 2080000, gp: 20, trend: 'Expanding', risk: 'Gilead subsidiary, same margin pressure' },
-    { name: 'Amgen', revenue: 1750000, gp: 21, trend: 'Stable', risk: 'Too big to fire, too unprofitable to keep' },
-    { name: 'Enovis', revenue: 773000, gp: 18, trend: 'Growing fast', risk: 'Fastest growing account is worst margin' },
+    { name: 'Takeda', revenue: 702000, gp: 14.5, trend: 'Stable', risk: 'Lowest GP in portfolio, needs rate renegotiation or managed exit' },
+    { name: 'Spectranetics', revenue: 242000, gp: 26.4, trend: 'Stable', risk: 'Below-target margin, limited growth potential' },
+    { name: 'Bausch', revenue: 739000, gp: 29.4, trend: 'Stable', risk: 'Second largest account by revenue but poor margins' },
+    { name: 'J&J', revenue: 408000, gp: 32.4, trend: 'Declining', risk: 'Revenue declining and margins below target' },
   ],
-  totalProblemRevenue: 6733000,
-  problemRevenueShare: 42, // % of East
-  blendedProblemGP: 20.5,
+  totalProblemRevenue: 2091000,
+  problemRevenueShare: 38, // % of East
+  blendedProblemGP: 24.2,
   dataSource: 'Finance MCP → analyze_customer_profitability | Site: src/app/margin-analysis/page.tsx',
   options: [
     { option: 'Renegotiate rates', feasibility: 'LOW', rationale: 'Large pharma has procurement leverage' },
     { option: 'Shift to managed services', feasibility: 'MEDIUM', rationale: 'Higher margin but requires investment' },
-    { option: 'Managed exit', feasibility: 'LOW', rationale: 'Lose 42% of revenue' },
+    { option: 'Managed exit', feasibility: 'LOW', rationale: 'Lose 38% of revenue' },
     { option: 'Accept and diversify', feasibility: 'HIGH', rationale: 'Keep accounts, grow high-margin elsewhere' },
   ],
-  recommendation: 'Accept LA BioMed margin reality. Focus growth on Biotech Beach (70.8% GP) to improve blended rate.',
+  recommendation: 'Accept problem account margin reality. Focus growth on high-GP accounts (Regeneron 63%, Harmony 81.6%, Alnylam 71.5%, Ironwood 79.1%, Moderna 92.8%) to improve blended rate.',
 };
 
 // ========== EXISTING CUSTOMER CRISIS ==========
@@ -348,7 +348,7 @@ export default function DeepAnalysis() {
             <h2 className="text-2xl font-bold text-white">{sellerConcentration.title}</h2>
           </div>
           <p className="text-xl text-red-400 mb-4">{sellerConcentration.finding}</p>
-          
+
           <div className="grid md:grid-cols-2 gap-4 mb-4">
             {sellerConcentration.detail.map((s, i) => (
               <div key={i} className={`p-4 rounded-lg border ${s.status === 'DEPENDENCY' ? 'bg-red-900/30 border-red-700' : 'bg-yellow-900/30 border-yellow-700'}`}>
@@ -365,7 +365,7 @@ export default function DeepAnalysis() {
               </div>
             ))}
           </div>
-          
+
           <div className="bg-slate-900/50 rounded p-4 mb-4">
             <h4 className="text-red-400 font-semibold mb-2">Questions to Answer:</h4>
             <ul className="space-y-1">
@@ -374,7 +374,7 @@ export default function DeepAnalysis() {
               ))}
             </ul>
           </div>
-          
+
           <p className="text-green-400 text-sm">→ {sellerConcentration.recommendation}</p>
           <p className="text-slate-500 text-xs mt-2">Source: {sellerConcentration.dataSource}</p>
         </section>
@@ -385,7 +385,7 @@ export default function DeepAnalysis() {
             <span className="px-3 py-1 rounded text-sm font-bold bg-red-900 text-red-300">{pipelineCoverage.severity}</span>
             <h2 className="text-2xl font-bold text-white">{pipelineCoverage.title}</h2>
           </div>
-          
+
           <div className="grid md:grid-cols-4 gap-4 mb-4">
             <div className="bg-slate-900/50 rounded p-4 text-center">
               <div className="text-3xl font-bold text-white">{formatCurrency(pipelineCoverage.metrics.currentPipeline)}</div>
@@ -404,16 +404,16 @@ export default function DeepAnalysis() {
               <div className="text-slate-400 text-sm">Gap</div>
             </div>
           </div>
-          
+
           <p className="text-slate-300 mb-4">{pipelineCoverage.detail}</p>
-          
+
           <div className="bg-slate-900/50 rounded p-4 mb-4">
             <h4 className="text-white font-semibold mb-2">Pipeline Age Breakdown:</h4>
             {pipelineCoverage.breakdown.map((b, i) => (
               <div key={i} className="flex items-center gap-4 mb-2">
                 <div className="w-40 text-slate-400 text-sm">{b.status}</div>
                 <div className="flex-1 bg-slate-700 rounded-full h-4">
-                  <div 
+                  <div
                     className={`h-4 rounded-full ${b.pct > 40 ? 'bg-red-500' : b.pct > 25 ? 'bg-yellow-500' : 'bg-green-500'}`}
                     style={{ width: `${b.pct}%` }}
                   />
@@ -423,7 +423,7 @@ export default function DeepAnalysis() {
               </div>
             ))}
           </div>
-          
+
           <p className="text-red-400 mb-4">{pipelineCoverage.implication}</p>
           <p className="text-green-400 text-sm">→ {pipelineCoverage.recommendation}</p>
           <p className="text-slate-500 text-xs mt-2">Source: {pipelineCoverage.dataSource}</p>
@@ -435,7 +435,7 @@ export default function DeepAnalysis() {
             <span className="px-3 py-1 rounded text-sm font-bold bg-orange-900 text-orange-300">{partnerFailure.severity}</span>
             <h2 className="text-2xl font-bold text-white">{partnerFailure.title}</h2>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-4 mb-4">
             <div className="bg-slate-900/50 rounded p-4 text-center">
               <div className="text-3xl font-bold text-red-400">{partnerFailure.metrics.partnerShare}%</div>
@@ -453,9 +453,9 @@ export default function DeepAnalysis() {
               <div className="text-slate-500 text-xs">Est. cost: {formatCurrency(partnerFailure.metrics.teamCost)}/yr</div>
             </div>
           </div>
-          
+
           <p className="text-red-400 text-lg mb-4">{partnerFailure.verdict}</p>
-          
+
           <div className="space-y-4 mb-4">
             {partnerFailure.teamAnalysis.map((member, i) => (
               <div key={i} className={`p-4 rounded-lg border ${member.assessment === 'SOURCING' ? 'bg-blue-900/30 border-blue-700' : 'bg-slate-700/30 border-slate-600'}`}>
@@ -478,7 +478,7 @@ export default function DeepAnalysis() {
               </div>
             ))}
           </div>
-          
+
           <p className="text-green-400 text-sm">→ {partnerFailure.recommendation}</p>
           <p className="text-slate-500 text-xs mt-2">Source: {partnerFailure.dataSource}</p>
         </section>
@@ -490,7 +490,7 @@ export default function DeepAnalysis() {
             <h2 className="text-2xl font-bold text-white">{underperformers.title}</h2>
           </div>
           <p className="text-slate-300 mb-4">{underperformers.context}</p>
-          
+
           <div className="bg-slate-900/50 rounded p-4 mb-4">
             <div className="flex justify-between items-center">
               <div>
@@ -504,7 +504,7 @@ export default function DeepAnalysis() {
               </div>
             </div>
           </div>
-          
+
           <div className="space-y-3 mb-4">
             {underperformers.sellers.map((s, i) => (
               <div key={i} className={`p-4 rounded-lg border ${s.assessment === 'ROLE MISFIT' ? 'bg-red-900/30 border-red-700' : 'bg-yellow-900/30 border-yellow-700'}`}>
@@ -525,7 +525,7 @@ export default function DeepAnalysis() {
               </div>
             ))}
           </div>
-          
+
           <p className="text-green-400 text-sm">→ {underperformers.recommendation}</p>
           <p className="text-slate-500 text-xs mt-2">Source: {underperformers.dataSource}</p>
         </section>
@@ -538,7 +538,7 @@ export default function DeepAnalysis() {
           </div>
           <p className="text-xl text-yellow-400 mb-2">{gtmSprawl.finding}</p>
           <p className="text-slate-300 mb-4">{gtmSprawl.context}</p>
-          
+
           <div className="bg-slate-900/50 rounded p-4 mb-4">
             <h4 className="text-white font-semibold mb-2">Current 13 Pillars:</h4>
             <div className="flex flex-wrap gap-2">
@@ -547,9 +547,9 @@ export default function DeepAnalysis() {
               ))}
             </div>
           </div>
-          
+
           <p className="text-slate-300 mb-4">{gtmSprawl.analysis}</p>
-          
+
           <div className="bg-green-900/20 rounded p-4 mb-4 border border-green-700/50">
             <h4 className="text-green-400 font-semibold mb-2">Suggested Top 5 Focus:</h4>
             <div className="space-y-2">
@@ -562,7 +562,7 @@ export default function DeepAnalysis() {
               ))}
             </div>
           </div>
-          
+
           <p className="text-green-400 text-sm">→ {gtmSprawl.recommendation}</p>
           <p className="text-slate-500 text-xs mt-2">Source: {gtmSprawl.dataSource}</p>
         </section>
@@ -575,7 +575,7 @@ export default function DeepAnalysis() {
           </div>
           <p className="text-xl text-red-400 mb-2">{existingCustomerCrisis.headline}</p>
           <p className="text-slate-300 mb-4">{existingCustomerCrisis.implication}</p>
-          
+
           <div className="bg-slate-900/50 rounded p-4 mb-4">
             <h4 className="text-white font-semibold mb-2">Possible Causes:</h4>
             <ul className="space-y-1">
@@ -584,7 +584,7 @@ export default function DeepAnalysis() {
               ))}
             </ul>
           </div>
-          
+
           <p className="text-green-400 text-sm">→ {existingCustomerCrisis.recommendation}</p>
           <p className="text-slate-500 text-xs mt-2">Source: {existingCustomerCrisis.dataSource}</p>
         </section>
@@ -592,7 +592,7 @@ export default function DeepAnalysis() {
         {/* Action Items */}
         <section className="mb-10 bg-gradient-to-r from-slate-800/50 to-purple-800/30 rounded-xl p-6 border border-purple-700/50">
           <h2 className="text-2xl font-bold text-white mb-6">📋 Recommended Actions</h2>
-          
+
           <div className="grid md:grid-cols-3 gap-6">
             <div>
               <h3 className="text-red-400 font-bold mb-3">🔴 Immediate (This Week)</h3>
@@ -608,7 +608,7 @@ export default function DeepAnalysis() {
                 ))}
               </div>
             </div>
-            
+
             <div>
               <h3 className="text-yellow-400 font-bold mb-3">🟡 Short-Term (30 Days)</h3>
               <div className="space-y-2">
@@ -623,7 +623,7 @@ export default function DeepAnalysis() {
                 ))}
               </div>
             </div>
-            
+
             <div>
               <h3 className="text-blue-400 font-bold mb-3">🔵 Strategic (60 Days)</h3>
               <div className="space-y-2">
@@ -680,5 +680,3 @@ export default function DeepAnalysis() {
     </div>
   );
 }
-
-

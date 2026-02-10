@@ -50,27 +50,27 @@ const tierColors: Record<string, string> = {
 };
 
 const regionCenters: Record<string, [number, number]> = {
-  'All': [36.5, -119.5],
-  'NorCal': [37.65, -122.35],
-  'LA': [34.0, -118.2],
-  'SanDiego': [32.88, -117.23],
-  'PNW': [47.62, -122.34],
+  'All': [39.5, -74.5],
+  'Genetown': [42.36, -71.06],
+  'NJPharma': [40.49, -74.45],
+  'MidAtlantic': [39.95, -75.17],
+  'ResearchTriangle': [35.78, -78.64],
 };
 
 const regionZooms: Record<string, number> = {
   'All': 6,
-  'NorCal': 10,
-  'LA': 9,
-  'SanDiego': 10,
-  'PNW': 10,
+  'Genetown': 10,
+  'NJPharma': 10,
+  'MidAtlantic': 9,
+  'ResearchTriangle': 10,
 };
 
 const regionLabels: Record<string, string> = {
   'All': 'All Regions',
-  'NorCal': 'Biotech Bay',
-  'LA': 'LA BioMed',
-  'SanDiego': 'Biotech Beach',
-  'PNW': 'Cascadia',
+  'Genetown': 'Genetown',
+  'NJPharma': 'NJ Pharma',
+  'MidAtlantic': 'Mid-Atlantic',
+  'ResearchTriangle': 'Research Triangle',
 };
 
 export default function MapPage() {
@@ -123,7 +123,7 @@ export default function MapPage() {
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-6">
           <div>
             <h1 className="text-4xl font-bold text-white mb-2">Eastern Region Map</h1>
-            <p className="text-slate-400">55+ biotech target companies across NorCal, SoCal & PNW</p>
+            <p className="text-slate-400">36 accounts & target companies across Boston, NJ, Mid-Atlantic & Research Triangle</p>
           </div>
           
           <div className="flex flex-wrap gap-3">
@@ -133,9 +133,10 @@ export default function MapPage() {
               className="px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
             >
               <option value="All">All Regions</option>
-              <option value="NorCal">NorCal (Bay Area)</option>
-              <option value="SoCal">SoCal (San Diego)</option>
-              <option value="PNW">PNW (Seattle)</option>
+              <option value="Genetown">Genetown (Boston)</option>
+              <option value="NJPharma">NJ Pharma (New Jersey)</option>
+              <option value="MidAtlantic">Mid-Atlantic (DC/Philly)</option>
+              <option value="ResearchTriangle">Research Triangle (NC)</option>
             </select>
             
             <select 
@@ -251,10 +252,10 @@ export default function MapPage() {
               ))}
 
               {/* Existing Customer Markers with tier-based coloring */}
-              {showCustomers && filteredCustomers.map((customer, idx) => (
+              {showCustomers && filteredCustomers.filter(c => c.lat && c.lng).map((customer, idx) => (
                 <Marker
                   key={`customer-${idx}`}
-                  position={[customer.lat, customer.lng]}
+                  position={[customer.lat!, customer.lng!]}
                   icon={createCustomerIcon(tierColors[customer.tier])}
                 >
                   <Popup>

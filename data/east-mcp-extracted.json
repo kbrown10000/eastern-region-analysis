@@ -1,0 +1,438 @@
+{
+  "summary": {
+    "totalAccounts": 36,
+    "totalAccountsInSystem": 375,
+    "totalRev2025": 5574125.39,
+    "totalRev2024": 3994939.2399999993,
+    "yoyGrowth": 39.529666288491555,
+    "totalLTV": 12144687.669999998,
+    "weightedGP": 43.05619778675269
+  },
+  "territories": {
+    "Mid-Atlantic": {
+      "rev2025": 2197835.1,
+      "rev2024": 1335774.96,
+      "ltv": 4018179.03,
+      "count": 8,
+      "gpWeighted": 99253002.717,
+      "avgGP": 45.15944017683583,
+      "yoy": 64.53633028126235
+    },
+    "NJ Pharma": {
+      "rev2025": 2023598.3099999998,
+      "rev2024": 1688987.4200000002,
+      "ltv": 5007341.06,
+      "count": 10,
+      "gpWeighted": 82402878.99200001,
+      "avgGP": 40.72096650051068,
+      "yoy": 19.81133109919786
+    },
+    "Genetown": {
+      "rev2025": 1352691.98,
+      "rev2024": 970176.8600000001,
+      "ltv": 3119167.5800000005,
+      "count": 18,
+      "gpWeighted": 58344763.571,
+      "avgGP": 43.13233495403736,
+      "yoy": 39.42735966718479
+    }
+  },
+  "eastAccounts": [
+    {
+      "name": "Abbott Laboratories Pacific",
+      "territory": "Mid-Atlantic",
+      "ltv": 2555622.4399999995,
+      "rev2025": 1937965.7499999998,
+      "rev2024": 617656.69,
+      "rev2023": 0,
+      "gp": 47.1,
+      "yoy": 213.8,
+      "qoq": -35.5
+    },
+    {
+      "name": "Bausch Health US, LLC",
+      "territory": "NJ Pharma",
+      "ltv": 1303130,
+      "rev2025": 738910,
+      "rev2024": 505730,
+      "rev2023": 58490,
+      "gp": 29.4,
+      "yoy": 46.1,
+      "qoq": 0.7
+    },
+    {
+      "name": "Takeda Pharmaceuticals U.S.A.",
+      "territory": "Genetown",
+      "ltv": 1217007.22,
+      "rev2025": 701554.12,
+      "rev2024": 372853.1,
+      "rev2023": 142600,
+      "gp": 14.5,
+      "yoy": 88.2,
+      "qoq": 0.7
+    },
+    {
+      "name": "Regeneron Pharmaceuticals Inc",
+      "territory": "NJ Pharma",
+      "ltv": 435511.11,
+      "rev2025": 435511.11,
+      "rev2024": 0,
+      "rev2023": 0,
+      "gp": 63,
+      "yoy": 0,
+      "qoq": 23.1
+    },
+    {
+      "name": "Johnson & Johnson",
+      "territory": "NJ Pharma",
+      "ltv": 1533746.82,
+      "rev2025": 408437.82,
+      "rev2024": 500005.49,
+      "rev2023": 625303.5100000001,
+      "gp": 32.4,
+      "yoy": -18.3,
+      "qoq": -7.9
+    },
+    {
+      "name": "Integra Lifesciences Holdings Corporation",
+      "territory": "NJ Pharma",
+      "ltv": 1287156.25,
+      "rev2025": 265680,
+      "rev2024": 516841.25,
+      "rev2023": 504635,
+      "gp": 37,
+      "yoy": -48.6,
+      "qoq": -11.8
+    },
+    {
+      "name": "Spectranetics Corporation",
+      "territory": "Mid-Atlantic",
+      "ltv": 806924.76,
+      "rev2025": 242074.97000000003,
+      "rev2024": 496460.29,
+      "rev2023": 68389.5,
+      "gp": 26.4,
+      "yoy": -51.2,
+      "qoq": -4.2
+    },
+    {
+      "name": "Harmony Biosciences Management, Inc.",
+      "territory": "Genetown",
+      "ltv": 399563.12,
+      "rev2025": 127236.83000000002,
+      "rev2024": 124153.4,
+      "rev2023": 148172.88999999998,
+      "gp": 81.6,
+      "yoy": 2.5,
+      "qoq": 0
+    },
+    {
+      "name": "Alnylam Pharmaceuticals",
+      "territory": "Genetown",
+      "ltv": 250703.01,
+      "rev2025": 109863.01000000001,
+      "rev2024": 100845.98999999999,
+      "rev2023": 39994.01,
+      "gp": 71.5,
+      "yoy": 8.9,
+      "qoq": 242.2
+    },
+    {
+      "name": "Ironwood Pharmaceuticals",
+      "territory": "Genetown",
+      "ltv": 199455.47999999998,
+      "rev2025": 101955.48,
+      "rev2024": 52579.049999999996,
+      "rev2023": 44920.95,
+      "gp": 79.1,
+      "yoy": 93.9,
+      "qoq": 260.5
+    },
+    {
+      "name": "Astellas Gene Therapies",
+      "territory": "Genetown",
+      "ltv": 260600.66999999998,
+      "rev2025": 93001.25,
+      "rev2024": 82832.5,
+      "rev2023": 84766.92,
+      "gp": 40.2,
+      "yoy": 12.3,
+      "qoq": 104.3
+    },
+    {
+      "name": "Direct Biologics",
+      "territory": "NJ Pharma",
+      "ltv": 185598.46000000002,
+      "rev2025": 83085.96,
+      "rev2024": 92018.61000000002,
+      "rev2023": 10493.89,
+      "gp": 56.3,
+      "yoy": -9.7,
+      "qoq": 2111.1
+    },
+    {
+      "name": "Boehringer Ingelheim GmbH",
+      "territory": "NJ Pharma",
+      "ltv": 132000,
+      "rev2025": 44000,
+      "rev2024": 44000.00000000001,
+      "rev2023": 44000.00000000001,
+      "gp": 53.1,
+      "yoy": 0,
+      "qoq": 0
+    },
+    {
+      "name": "Moderna",
+      "territory": "Genetown",
+      "ltv": 74200,
+      "rev2025": 37200,
+      "rev2024": 37000,
+      "rev2023": 0,
+      "gp": 92.8,
+      "yoy": 0.5,
+      "qoq": -100
+    },
+    {
+      "name": "Intellia Therapeutics, Inc.",
+      "territory": "Genetown",
+      "ltv": 126600,
+      "rev2025": 37000,
+      "rev2024": 37026.28,
+      "rev2023": 52573.72,
+      "gp": 96.6,
+      "yoy": -0.1,
+      "qoq": 0
+    },
+    {
+      "name": "Alexion Pharmaceuticals, Inc.",
+      "territory": "Genetown",
+      "ltv": 99242.06,
+      "rev2025": 33740.47,
+      "rev2024": 33272.26,
+      "rev2023": 32229.33,
+      "gp": 100,
+      "yoy": 1.4,
+      "qoq": -2.9
+    },
+    {
+      "name": "Formation Bio",
+      "territory": "Genetown",
+      "ltv": 142388.56,
+      "rev2025": 30000,
+      "rev2024": 17180,
+      "rev2023": 95208.56,
+      "gp": 27.9,
+      "yoy": 74.6,
+      "qoq": 0
+    },
+    {
+      "name": "Ipsen Pharma",
+      "territory": "Genetown",
+      "ltv": 99820.5,
+      "rev2025": 25999.999999999993,
+      "rev2024": 26000.000000000004,
+      "rev2023": 47820.49999999999,
+      "gp": 88.6,
+      "yoy": 0,
+      "qoq": 0
+    },
+    {
+      "name": "Johnson & Johnson Medical Inc.",
+      "territory": "NJ Pharma",
+      "ltv": 24220,
+      "rev2025": 24220,
+      "rev2024": 0,
+      "rev2023": 0,
+      "gp": 46,
+      "yoy": 0,
+      "qoq": 0
+    },
+    {
+      "name": "Provention Bio, Inc., a Sanofi Company",
+      "territory": "NJ Pharma",
+      "ltv": 99353.42,
+      "rev2025": 23753.42,
+      "rev2024": 30017.070000000003,
+      "rev2023": 45582.93,
+      "gp": 86.3,
+      "yoy": -20.9,
+      "qoq": 0
+    },
+    {
+      "name": "Caribou Biosciences",
+      "territory": "Genetown",
+      "ltv": 35000,
+      "rev2025": 21500,
+      "rev2024": 13500,
+      "rev2023": 0,
+      "gp": 72.5,
+      "yoy": 59.3,
+      "qoq": 70.4
+    },
+    {
+      "name": "Disc Medicine, Inc.",
+      "territory": "Genetown",
+      "ltv": 53667.12,
+      "rev2025": 16640.82,
+      "rev2024": 29055.350000000002,
+      "rev2023": 7970.949999999999,
+      "gp": 88.5,
+      "yoy": -42.7,
+      "qoq": 0
+    },
+    {
+      "name": "ASTRAZENECA UK LIMITED",
+      "territory": "Mid-Atlantic",
+      "ltv": 45969.17999999999,
+      "rev2025": 15969.179999999997,
+      "rev2024": 15000,
+      "rev2023": 14999.999999999998,
+      "gp": 93.8,
+      "yoy": 6.5,
+      "qoq": 0
+    },
+    {
+      "name": "Lyra Therapeutics Inc",
+      "territory": "Genetown",
+      "ltv": 28640.489999999998,
+      "rev2025": 9000,
+      "rev2024": 9004.18,
+      "rev2023": 10636.309999999998,
+      "gp": 95.5,
+      "yoy": 0,
+      "qoq": 0
+    },
+    {
+      "name": "Bioatla",
+      "territory": "Genetown",
+      "ltv": 35520.409999999996,
+      "rev2025": 7999.999999999999,
+      "rev2024": 20733.52,
+      "rev2023": 6786.89,
+      "gp": 87.4,
+      "yoy": -61.4,
+      "qoq": 0
+    },
+    {
+      "name": "Mallinckrodt, LLC dba ST Shared Services",
+      "territory": "Mid-Atlantic",
+      "ltv": 29075,
+      "rev2025": 7800,
+      "rev2024": 13075,
+      "rev2023": 8200,
+      "gp": 59.3,
+      "yoy": -40.3,
+      "qoq": -93.5
+    },
+    {
+      "name": "ZimVie, Inc.",
+      "territory": "Mid-Atlantic",
+      "ltv": 222866.37000000002,
+      "rev2025": 0,
+      "rev2024": 0,
+      "rev2023": 222866.37000000002,
+      "gp": 4.7,
+      "yoy": 0,
+      "qoq": 0
+    },
+    {
+      "name": "Takeda Pharmaceuticals International AG",
+      "territory": "Genetown",
+      "ltv": 50600,
+      "rev2025": 0,
+      "rev2024": 0,
+      "rev2023": 50600,
+      "gp": 17.4,
+      "yoy": 0,
+      "qoq": 0
+    },
+    {
+      "name": "Verax Biomedical Incorporated",
+      "territory": "Genetown",
+      "ltv": 36200.03999999999,
+      "rev2025": 0,
+      "rev2024": 11715,
+      "rev2023": 24485.039999999997,
+      "gp": 56,
+      "yoy": -100,
+      "qoq": 0
+    },
+    {
+      "name": "Astrazeneca LP",
+      "territory": "Mid-Atlantic",
+      "ltv": 20112.079999999998,
+      "rev2025": 0,
+      "rev2024": 0,
+      "rev2023": 20112.079999999998,
+      "gp": 95.3,
+      "yoy": 0,
+      "qoq": 0
+    },
+    {
+      "name": "CSL Plasma Inc.",
+      "territory": "Mid-Atlantic",
+      "ltv": 17817.5,
+      "rev2025": 0,
+      "rev2024": 0,
+      "rev2023": 17817.5,
+      "gp": 43.5,
+      "yoy": 0,
+      "qoq": 0
+    },
+    {
+      "name": "Ipsen Pharma",
+      "territory": "Genetown",
+      "ltv": 9958.900000000001,
+      "rev2025": 0,
+      "rev2024": 2426.23,
+      "rev2023": 7532.670000000001,
+      "gp": 96.7,
+      "yoy": -100,
+      "qoq": 0
+    },
+    {
+      "name": "Bausch & Lomb",
+      "territory": "NJ Pharma",
+      "ltv": 6250,
+      "rev2025": 0,
+      "rev2024": 0,
+      "rev2023": 6250,
+      "gp": 59.3,
+      "yoy": 0,
+      "qoq": 0
+    },
+    {
+      "name": "Bausch & Lomb",
+      "territory": "NJ Pharma",
+      "ltv": 375,
+      "rev2025": 0,
+      "rev2024": 375,
+      "rev2023": 0,
+      "gp": 58.8,
+      "yoy": -100,
+      "qoq": 0
+    },
+    {
+      "name": "Takeda Pharmaceuticals International AG",
+      "territory": "Genetown",
+      "ltv": 0,
+      "rev2025": 0,
+      "rev2024": 0,
+      "rev2023": 0,
+      "gp": 0,
+      "yoy": 0,
+      "qoq": 0
+    },
+    {
+      "name": "LivaNova USA",
+      "territory": "Mid-Atlantic",
+      "ltv": 319791.7,
+      "rev2025": -5974.8,
+      "rev2024": 193582.98,
+      "rev2023": 132183.52000000002,
+      "gp": 63,
+      "yoy": -103.1,
+      "qoq": 0
+    }
+  ]
+}

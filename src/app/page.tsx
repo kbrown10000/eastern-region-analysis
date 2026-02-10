@@ -40,31 +40,31 @@ export default function Home() {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-4">2025 East Region Performance</h2>
-          <p className="text-slate-500 text-center mb-12 text-sm">Source: Finance MCP + Sales MCP | EVP: Lisa Fry</p>
+          <p className="text-slate-500 text-center mb-12 text-sm">Source: Finance MCP (get_customer_ltv) + Sales MCP | EVP: Lisa Fry | Live from Fabric Lakehouse</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <MetricCard 
-              title="2025 Revenue" 
-              value="$24.8M" 
+            <MetricCard
+              title="2025 Revenue"
+              value="$5.57M"
               trend="up"
-              description="+8.2% YoY"
+              description="+39.5% YoY"
             />
-            <MetricCard 
-              title="Blended GP%" 
-              value="51.5%" 
+            <MetricCard
+              title="Blended GP%"
+              value="43.1%"
               trend="up"
-              description="$12.8M gross profit"
+              description="$2.4M gross profit"
             />
-            <MetricCard 
-              title="East Customers" 
-              value="185" 
+            <MetricCard
+              title="East Customers"
+              value="36"
               trend="up"
               description="Active accounts"
             />
-            <MetricCard 
-              title="Open Pipeline" 
-              value="$18.2M" 
+            <MetricCard
+              title="Open Pipeline"
+              value="$14.1M"
               trend="up"
-              description="Coverage: 1.2x"
+              description="Coverage: 2.5x"
             />
           </div>
         </div>

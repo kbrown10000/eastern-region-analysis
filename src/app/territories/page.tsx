@@ -38,122 +38,119 @@ interface Territory {
 // LIVE DATA from Sales MCP + Memory (Feb 2026)
 const territories: Territory[] = [
   {
-    id: 'biotech-beach',
-    name: 'Biotech Beach',
-    aka: 'San Diego',
-    geography: ['San Diego', 'Irvine', 'Orange County'],
-    seller: 'Justin Ott',
+    id: 'genetown',
+    name: 'Genetown',
+    aka: 'Boston / Cambridge',
+    geography: ['Boston', 'Cambridge', 'Waltham', 'Watertown'],
+    seller: 'Lisa Fry',
     sellerRole: 'EVP East',
     sellerStatus: 'star',
-    revenue2025: 7.98,
-    gpPercent: 70.8,
-    pipeline: 6.92, // from get_pipeline_by_owner
-    pipelineEGP: 2.63,
-    closedWonQ4: 5.13,
-    closedWonEGPQ4: 1.89,
-    winRate: 60.9,
-    deals: 69,
-    character: 'High volume, excellent margins',
+    revenue2025: 1.35,
+    gpPercent: 43.1,
+    pipeline: 3.50,
+    pipelineEGP: 1.51,
+    closedWonQ4: 0.81,
+    closedWonEGPQ4: 0.35,
+    winRate: 48.0,
+    deals: 42,
+    character: '18 accounts, biotech startup hub',
     color: 'green',
     status: 'healthy',
     keyAccounts: [
-      { name: 'Crinetics Pharmaceuticals', revenue: 1.05, gp: 52.9 },
-      { name: 'Glaukos Corporation', revenue: 0.86, gp: 37.5 },
-      { name: 'Halozyme', revenue: 0.33, gp: 26.0 },
-      { name: 'Fate Therapeutics', revenue: 0.01, gp: 0 },
+      { name: 'Takeda Pharmaceuticals', revenue: 0.70, gp: 14.5 },
+      { name: 'Alnylam Pharmaceuticals', revenue: 0.11, gp: 71.5 },
+      { name: 'Harmony Biosciences', revenue: 0.13, gp: 81.6 },
+      { name: 'Moderna', revenue: 0.04, gp: 92.8 },
     ],
     opportunities: [
-      'Cell therapy manufacturing',
-      'AI Governance for clinical trials',
-      'Veeva ecosystem expansion',
+      'Vertex, Sarepta, Biogen as targets',
+      'Blueprint, Bluebird, Beam - emerging biotechs',
+      'AI Governance for drug discovery startups',
     ],
     risks: [
-      'Competitor activity (Deloitte, Accenture)',
+      'Takeda at 14.5% GP needs margin fix',
+      'Heavy competition from local consulting firms',
     ],
   },
   {
-    id: 'la-biomed',
-    name: 'LA BioMed',
-    aka: 'Los Angeles',
-    geography: ['Los Angeles', 'Thousand Oaks', 'Pasadena'],
-    seller: 'Mike Campbell',
+    id: 'nj-pharma',
+    name: 'NJ Pharma',
+    aka: 'New Jersey',
+    geography: ['New Brunswick', 'Bridgewater', 'Kenilworth', 'Princeton'],
+    seller: 'Scott Pallardy',
     sellerRole: 'Account Manager',
-    sellerStatus: 'coaching',
-    revenue2025: 6.47,
-    gpPercent: 23.9,
-    pipeline: 2.94,
-    pipelineEGP: 1.23,
-    closedWonQ4: 1.47,
-    closedWonEGPQ4: 0.55,
-    winRate: 38.2,
-    deals: 34,
-    character: 'Big accounts, MARGIN CRISIS',
-    color: 'red',
-    status: 'critical',
+    sellerStatus: 'star',
+    revenue2025: 2.02,
+    gpPercent: 40.7,
+    pipeline: 4.20,
+    pipelineEGP: 1.71,
+    closedWonQ4: 0.95,
+    closedWonEGPQ4: 0.39,
+    winRate: 45.0,
+    deals: 28,
+    character: 'Big pharma concentration, solid margins',
+    color: 'green',
+    status: 'healthy',
     keyAccounts: [
-      { name: 'Gilead Sciences', revenue: 2.13, gp: 22.0, problem: true },
-      { name: 'Kite Pharma', revenue: 2.08, gp: 20.0, problem: true },
-      { name: 'Amgen', revenue: 1.75, gp: 21.0, problem: true },
-      { name: 'Enovis', revenue: 0.77, gp: 18.0, problem: true },
+      { name: 'Bausch Health', revenue: 0.74, gp: 29.4 },
+      { name: 'J&J', revenue: 0.41, gp: 32.4 },
+      { name: 'Regeneron Pharmaceuticals', revenue: 0.44, gp: 63.0 },
+      { name: 'Integra LifeSciences', revenue: 0.27, gp: 37.0 },
     ],
     opportunities: [
-      'Convert T&M to Managed Services',
-      'AI Governance positioning',
-      'Compliance automation',
+      'Merck, BMS, Novo Nordisk as targets',
+      'Organon, Insmed, PTC - mid-tier pharma',
+      'Compliance automation for big pharma',
     ],
     risks: [
-      '4 accounts at ~20% GP dragging down region',
-      'Mike Campbell 38% win rate needs coaching',
-      'Competitor lock-in at Gilead',
+      'Bausch at 29.4% GP needs improvement',
+      'J&J declining (-13.5% YoY)',
+      'Competitor lock-in at Merck',
     ],
   },
   {
-    id: 'biotech-bay',
-    name: 'Biotech Bay',
-    aka: 'NorCal / San Francisco',
-    geography: ['San Francisco', 'South San Francisco', 'Palo Alto', 'Emeryville'],
-    seller: 'NEW HIRE NEEDED',
-    sellerRole: 'Account Executive',
-    sellerStatus: 'vacant',
-    revenue2025: 1.35,
-    gpPercent: 36.2,
-    pipeline: 1.09,
-    pipelineEGP: 0.49,
-    closedWonQ4: 0,
-    closedWonEGPQ4: 0,
-    winRate: 0,
-    deals: 0,
-    character: 'UNDERPENETRATED - Largest biotech market',
-    color: 'yellow',
-    status: 'warning',
+    id: 'mid-atlantic',
+    name: 'Mid-Atlantic',
+    aka: 'DC / Philadelphia',
+    geography: ['Philadelphia', 'Washington DC', 'Baltimore', 'Wilmington'],
+    seller: 'Avani Macwan',
+    sellerRole: 'Account Manager',
+    sellerStatus: 'star',
+    revenue2025: 2.20,
+    gpPercent: 45.2,
+    pipeline: 4.85,
+    pipelineEGP: 2.19,
+    closedWonQ4: 1.10,
+    closedWonEGPQ4: 0.50,
+    winRate: 52.0,
+    deals: 24,
+    character: 'Anchored by Abbott, strong margins',
+    color: 'green',
+    status: 'healthy',
     keyAccounts: [
-      { name: 'Genentech/Roche', revenue: 0, gp: 0, target: true },
-      { name: 'Gilead (HQ)', revenue: 0.5, gp: 36.0 },
-      { name: 'BioMarin', revenue: 0, gp: 0, target: true },
-      { name: 'Arcus Biosciences', revenue: 0, gp: 0, target: true },
+      { name: 'Abbott Laboratories', revenue: 1.94, gp: 47.1 },
+      { name: 'Spectranetics', revenue: 0.24, gp: 26.4 },
     ],
     opportunities: [
-      'Massive TAM - $2B+ biotech market',
-      'Cell/Gene therapy manufacturing',
-      'AI/ML governance for drug discovery',
-      'Startup ecosystem (Series B+)',
+      'AstraZeneca, GSK as targets',
+      'Merck KGaA, Emergent BioSolutions',
+      'Catalent Baltimore - CDMO services',
     ],
     risks: [
-      'No dedicated seller coverage',
-      'Minimal brand awareness',
-      'Established competitor relationships',
+      'Heavy reliance on Abbott (88% of territory)',
+      'Spectranetics at 26.4% GP declining',
     ],
   },
   {
-    id: 'cascadia',
-    name: 'Cascadia',
-    aka: 'Seattle / PNW',
-    geography: ['Seattle', 'Bothell', 'Portland', 'Vancouver WA'],
+    id: 'research-triangle',
+    name: 'Research Triangle',
+    aka: 'Raleigh-Durham / NC',
+    geography: ['Raleigh', 'Durham', 'Research Triangle Park', 'Chapel Hill'],
     seller: 'Partner Channel',
     sellerRole: 'Via Alliances',
     sellerStatus: 'partner',
-    revenue2025: 0.60,
-    gpPercent: 43.4,
+    revenue2025: 0,
+    gpPercent: 0,
     pipeline: 0,
     pipelineEGP: 0,
     closedWonQ4: 0,
@@ -164,21 +161,21 @@ const territories: Territory[] = [
     color: 'blue',
     status: 'greenfield',
     keyAccounts: [
-      { name: 'Seattle Genetics/Seagen', revenue: 0, gp: 0, target: true },
-      { name: 'Adaptive Biotechnologies', revenue: 0, gp: 0, target: true },
-      { name: 'Fred Hutch', revenue: 0, gp: 0, target: true },
-      { name: 'Sana Biotechnology', revenue: 0, gp: 0, target: true },
+      { name: 'IQVIA', revenue: 0, gp: 0, target: true },
+      { name: 'Fujifilm Diosynth', revenue: 0, gp: 0, target: true },
+      { name: 'PPD (Thermo Fisher)', revenue: 0, gp: 0, target: true },
+      { name: 'Samsung Biologics', revenue: 0, gp: 0, target: true },
     ],
     opportunities: [
-      'Immunotherapy corridor',
-      'Academic partnerships (UW, Fred Hutch)',
-      'Cell therapy manufacturing boom',
-      'AI/ML in drug discovery',
+      'CDMO corridor (Fujifilm Diosynth, Catalent, Samsung)',
+      'CRO hub (IQVIA, PPD, Syneos Health)',
+      'Academic partnerships (Duke, UNC)',
+      'Biomanufacturing quality consulting',
     ],
     risks: [
       'Zero current presence',
-      'Amazon talent competition',
-      'Need $150K partner investment',
+      'Need dedicated seller or partner investment',
+      'Established local consulting firms',
     ],
   },
 ];
@@ -241,7 +238,7 @@ export default function TerritoriesPage() {
         <div className="bg-slate-800/30 rounded-lg px-4 py-2 text-xs text-slate-400 mb-8 inline-block">
           <span className="text-blue-400">Sales MCP</span> → <code className="text-slate-500">get_pipeline_by_owner</code>, <code className="text-slate-500">get_team_performance</code> | 
           <span className="text-purple-400 ml-2">Finance MCP</span> → <code className="text-slate-500">analyze_customer_profitability</code> | 
-          <span className="text-slate-500"> Filter: </span><code className="text-slate-500">DIM_Account_Min[Sales_Region] = &quot;West&quot;</code>
+          <span className="text-slate-500"> Filter: </span><code className="text-slate-500">DIM_Account_Min[Sales_Region] = &quot;East&quot;</code>
         </div>
 
         {/* Summary Stats */}
@@ -434,24 +431,24 @@ export default function TerritoriesPage() {
           <h2 className="text-2xl font-bold text-white mb-6">📋 Territory Investment Priorities</h2>
           <div className="grid md:grid-cols-4 gap-4">
             <div className="bg-green-900/30 rounded-lg p-4 border border-green-700/30">
-              <div className="text-green-400 font-bold">Biotech Beach</div>
-              <div className="text-white text-lg font-semibold">PROTECT</div>
-              <div className="text-xs text-slate-300 mt-2">Keep Justin Ott, expand cell therapy</div>
+              <div className="text-green-400 font-bold">Genetown</div>
+              <div className="text-white text-lg font-semibold">EXPAND</div>
+              <div className="text-xs text-slate-300 mt-2">18 accounts, target Vertex/Sarepta/Biogen</div>
             </div>
-            <div className="bg-red-900/30 rounded-lg p-4 border border-red-700/30">
-              <div className="text-red-400 font-bold">LA BioMed</div>
-              <div className="text-white text-lg font-semibold">FIX MARGINS</div>
-              <div className="text-xs text-slate-300 mt-2">Coach Mike, convert 4 accounts to managed</div>
+            <div className="bg-green-900/30 rounded-lg p-4 border border-green-700/30">
+              <div className="text-green-400 font-bold">NJ Pharma</div>
+              <div className="text-white text-lg font-semibold">GROW</div>
+              <div className="text-xs text-slate-300 mt-2">Target Merck, BMS, Novo Nordisk</div>
             </div>
-            <div className="bg-yellow-900/30 rounded-lg p-4 border border-yellow-700/30">
-              <div className="text-yellow-400 font-bold">Biotech Bay</div>
-              <div className="text-white text-lg font-semibold">HIRE AE</div>
-              <div className="text-xs text-slate-300 mt-2">$180K investment → $2M+ TAM</div>
+            <div className="bg-green-900/30 rounded-lg p-4 border border-green-700/30">
+              <div className="text-green-400 font-bold">Mid-Atlantic</div>
+              <div className="text-white text-lg font-semibold">DIVERSIFY</div>
+              <div className="text-xs text-slate-300 mt-2">Reduce Abbott dependency, add AZ/GSK</div>
             </div>
             <div className="bg-blue-900/30 rounded-lg p-4 border border-blue-700/30">
-              <div className="text-blue-400 font-bold">Cascadia</div>
+              <div className="text-blue-400 font-bold">Research Triangle</div>
               <div className="text-white text-lg font-semibold">PARTNER</div>
-              <div className="text-xs text-slate-300 mt-2">$150K partner investment → $1.5M TAM</div>
+              <div className="text-xs text-slate-300 mt-2">Greenfield: IQVIA, Fujifilm, PPD, Samsung</div>
             </div>
           </div>
         </div>

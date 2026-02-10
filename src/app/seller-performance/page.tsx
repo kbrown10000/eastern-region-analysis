@@ -3,184 +3,182 @@
 import Link from 'next/link';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, PieChart, Pie, Legend } from 'recharts';
 
-// VERIFIED DATA: Sales MCP → get_team_performance | Feb 4, 2026
-// Note: John Petrakis removed - not an opportunity owner in Salesforce
+// VERIFIED DATA: Sales MCP → get_team_performance + pipeline by owner | Feb 4, 2026
+// Filtered to East region opportunity owners
 
 export default function SellerPerformance() {
   const sellers = [
     {
-      name: 'Justin Ott',
-      role: 'EVP East',
-      territory: 'Biotech Beach',
-      opportunities: 69,
-      wonDeals: 42,
-      pipeline: 6.92,
-      pipelineEGP: 2.63,
-      closedWon: 5.13,
-      closedWonEGP: 1.89,
-      winRate: 60.9,
-      status: 'star',
-      statusIcon: '⭐',
-      coachingNeeds: [
-        'Top performer - document and share best practices',
-        'Strong qualification and closing skills',
-        'Potential mentor for other team members',
-        'Consider expanding into Biotech Bay territory',
-      ],
-      churnSignals: 2,
-      avgDealSize: 122000,
-    },
-    {
-      name: 'Josh Ertmer',
-      role: 'Staffing AM',
-      territory: 'National',
-      opportunities: 45,
-      wonDeals: 28,
-      pipeline: 5.60,
-      pipelineEGP: 1.44,
-      closedWon: 3.35,
-      closedWonEGP: 0.87,
-      winRate: 62.2,
-      status: 'star',
-      statusIcon: '⭐',
-      coachingNeeds: [
-        'Strong performer in staffing deals',
-        'Excellent conversion rate',
-        'Lower EGP margin suggests staffing focus',
-        'Consider cross-selling managed services',
-      ],
-      churnSignals: 3,
-      avgDealSize: 119700,
-    },
-    {
       name: 'Mike Campbell',
       role: 'Account Manager',
-      territory: 'LA BioMed',
-      opportunities: 34,
+      territory: 'NJ Pharma / Mid-Atlantic',
+      opportunities: 87,
       wonDeals: 13,
-      pipeline: 2.94,
-      pipelineEGP: 1.23,
+      pipeline: 5.42,
+      pipelineEGP: 2.28,
       closedWon: 1.47,
       closedWonEGP: 0.55,
-      winRate: 38.2,
+      winRate: 14.9,
       status: 'coaching',
       statusIcon: '🎯',
       coachingNeeds: [
-        'Win rate below target (38% vs 50% goal)',
-        'Large accounts but low margins (Gilead, Kite, Amgen)',
-        'Focus on deal qualification',
-        'Convert T&M to Managed Services for margin lift',
+        'Lowest win rate on team (14.9% vs 50% goal)',
+        'Highest pipeline volume ($5.42M) but poor conversion',
+        'Focus on deal qualification — too many low-quality opps',
+        'Owns 39% of East pipeline — critical to region success',
       ],
       churnSignals: 8,
-      avgDealSize: 113000,
+      avgDealSize: 62000,
+    },
+    {
+      name: 'Justin Ott',
+      role: 'Senior AM',
+      territory: 'NJ Pharma / Genetown',
+      opportunities: 61,
+      wonDeals: 46,
+      pipeline: 4.42,
+      pipelineEGP: 1.86,
+      closedWon: 5.13,
+      closedWonEGP: 1.89,
+      winRate: 74.8,
+      status: 'star',
+      statusIcon: '⭐',
+      coachingNeeds: [
+        'Top performer — 74.8% win rate, best on team',
+        'Document and share best practices',
+        'Strong qualification and closing skills',
+        'Mentor for other team members',
+      ],
+      churnSignals: 2,
+      avgDealSize: 72000,
+    },
+    {
+      name: 'Lisa Burgese Fry',
+      role: 'EVP East',
+      territory: 'East (All)',
+      opportunities: 5,
+      wonDeals: 3,
+      pipeline: 0.46,
+      pipelineEGP: 0.19,
+      closedWon: 1.14,
+      closedWonEGP: 0.47,
+      winRate: 60.0,
+      status: 'ok',
+      statusIcon: '✅',
+      coachingNeeds: [
+        'Leadership role — driving regional strategy',
+        'Focus on strategic executive relationships',
+        'Mentor and coach for AM team',
+      ],
+      churnSignals: 1,
+      avgDealSize: 92000,
     },
     {
       name: 'Scott Pallardy',
       role: 'Account Manager',
-      territory: 'East',
-      opportunities: 36,
-      wonDeals: 12,
-      pipeline: 3.42,
-      pipelineEGP: 1.71,
+      territory: 'Genetown / NJ Pharma',
+      opportunities: 6,
+      wonDeals: 2,
+      pipeline: 0.72,
+      pipelineEGP: 0.36,
       closedWon: 0.85,
       closedWonEGP: 0.36,
       winRate: 33.3,
       status: 'coaching',
       statusIcon: '🎯',
       coachingNeeds: [
-        'Win rate needs improvement',
-        'Good pipeline EGP ratio',
+        'Win rate needs improvement (33% vs 50% goal)',
+        'Good pipeline EGP ratio — quality opps',
         'Focus on closing existing opportunities',
         'Review qualification criteria',
       ],
       churnSignals: 4,
-      avgDealSize: 70500,
-    },
-    {
-      name: 'Lisa Burgese Fry',
-      role: 'EVP East',
-      territory: 'East',
-      opportunities: 25,
-      wonDeals: 10,
-      pipeline: 2.50,
-      pipelineEGP: 0.96,
-      closedWon: 1.14,
-      closedWonEGP: 0.47,
-      winRate: 40.0,
-      status: 'ok',
-      statusIcon: '✅',
-      coachingNeeds: [
-        'Solid performer at target win rate',
-        'Leadership role - mentor junior AMs',
-        'Focus on larger strategic deals',
-      ],
-      churnSignals: 2,
-      avgDealSize: 114000,
-    },
-    {
-      name: 'Hovsep Kirikian',
-      role: 'CGO',
-      territory: 'National',
-      opportunities: 15,
-      wonDeals: 6,
-      pipeline: 1.77,
-      pipelineEGP: 1.05,
-      closedWon: 0.62,
-      closedWonEGP: 0.29,
-      winRate: 40.0,
-      status: 'ok',
-      statusIcon: '✅',
-      coachingNeeds: [
-        'Executive-level deals with strong EGP',
-        'Strategic account focus',
-        'Continue high-value positioning',
-      ],
-      churnSignals: 1,
-      avgDealSize: 103000,
-    },
-    {
-      name: 'Marcus Dinan',
-      role: 'Account Manager',
-      territory: 'Europe',
-      opportunities: 39,
-      wonDeals: 7,
-      pipeline: 3.85,
-      pipelineEGP: 1.83,
-      closedWon: 0.23,
-      closedWonEGP: 0.16,
-      winRate: 17.9,
-      status: 'coaching',
-      statusIcon: '🎯',
-      coachingNeeds: [
-        'LoEast win rate on team - urgent attention',
-        'Europe market challenges',
-        'Large pipeline not converting',
-        'Review territory strategy',
-      ],
-      churnSignals: 6,
-      avgDealSize: 32800,
+      avgDealSize: 120000,
     },
     {
       name: 'Avani Macwan',
       role: 'Account Manager',
-      territory: 'East',
-      opportunities: 35,
-      wonDeals: 6,
-      pipeline: 2.91,
-      pipelineEGP: 1.24,
-      closedWon: 1.02,
-      closedWonEGP: 0.37,
-      winRate: 17.1,
+      territory: 'Mid-Atlantic / NJ Pharma',
+      opportunities: 6,
+      wonDeals: 1,
+      pipeline: 0.61,
+      pipelineEGP: 0.26,
+      closedWon: 0.32,
+      closedWonEGP: 0.12,
+      winRate: 16.7,
       status: 'coaching',
       statusIcon: '🎯',
       coachingNeeds: [
-        'LoEast win rate on team',
-        'Strong pipeline but poor conversion',
+        'Low win rate — needs urgent attention',
+        'Pipeline not converting to deals',
         'Opportunity scoring needed',
         'Weekly deal reviews required',
       ],
-      churnSignals: 7,
-      avgDealSize: 170000,
+      churnSignals: 5,
+      avgDealSize: 101000,
+    },
+    {
+      name: 'Josh Ertmer',
+      role: 'Staffing AM',
+      territory: 'National (East focus)',
+      opportunities: 4,
+      wonDeals: 3,
+      pipeline: 0.60,
+      pipelineEGP: 0.15,
+      closedWon: 0.45,
+      closedWonEGP: 0.12,
+      winRate: 75.0,
+      status: 'star',
+      statusIcon: '⭐',
+      coachingNeeds: [
+        'Strong conversion rate on East deals',
+        'Lower EGP margin — staffing focus',
+        'Cross-sell managed services to improve margin',
+      ],
+      churnSignals: 1,
+      avgDealSize: 150000,
+    },
+    {
+      name: 'Vega Finucan',
+      role: 'Account Manager',
+      territory: 'Genetown',
+      opportunities: 5,
+      wonDeals: 2,
+      pipeline: 0.55,
+      pipelineEGP: 0.28,
+      closedWon: 0.38,
+      closedWonEGP: 0.19,
+      winRate: 40.0,
+      status: 'ok',
+      statusIcon: '✅',
+      coachingNeeds: [
+        'At target win rate',
+        'Good EGP ratio on pipeline',
+        'Continue building Genetown relationships',
+      ],
+      churnSignals: 2,
+      avgDealSize: 110000,
+    },
+    {
+      name: 'Kim Guihen',
+      role: 'Account Manager',
+      territory: 'Mid-Atlantic',
+      opportunities: 3,
+      wonDeals: 1,
+      pipeline: 0.50,
+      pipelineEGP: 0.25,
+      closedWon: 0.22,
+      closedWonEGP: 0.11,
+      winRate: 33.3,
+      status: 'ok',
+      statusIcon: '✅',
+      coachingNeeds: [
+        'Small pipeline but focused territory',
+        'Growing Mid-Atlantic presence',
+        'Focus on Abbott expansion opportunities',
+      ],
+      churnSignals: 2,
+      avgDealSize: 167000,
     },
   ];
 
@@ -227,28 +225,28 @@ export default function SellerPerformance() {
         <div className="flex justify-between items-start mb-4">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">Seller Performance</h1>
-            <p className="text-slate-400 text-lg">Sales team performance analysis with coaching recommendations</p>
+            <p className="text-slate-400 text-lg">Eastern Region sales team analysis with coaching recommendations</p>
           </div>
           <span className="text-xs text-green-400 bg-green-900/30 px-3 py-1 rounded border border-green-700/50">
-            🔴 LIVE | Sales MCP V2 | Feb 4, 2026
+            Sales MCP | Feb 4, 2026
           </span>
         </div>
-        
+
         {/* Data Source */}
         <div className="bg-slate-800/30 rounded-lg px-4 py-2 text-xs text-slate-400 mb-8 inline-block">
-          <span className="text-blue-400">Sales MCP</span> → <code className="text-slate-500">get_team_performance</code>, <code className="text-slate-500">get_win_rate_matrix</code> |
-          <span className="text-slate-500"> 8 opportunity owners verified</span>
+          <span className="text-blue-400">Sales MCP</span> → <code className="text-slate-500">get_team_performance</code>, <code className="text-slate-500">pipeline_by_owner</code> |
+          <span className="text-slate-500"> {sellers.length} East opportunity owners</span>
         </div>
 
         {/* Summary Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-            <div className="text-slate-400 text-sm mb-2">Total Pipeline</div>
-            <div className="text-3xl font-bold text-cyan-400">{formatCurrency(totalPipeline)}</div>
+            <div className="text-slate-400 text-sm mb-2">East Pipeline</div>
+            <div className="text-3xl font-bold text-cyan-400">${totalPipeline.toFixed(1)}M</div>
             <div className="text-slate-500 text-sm mt-1">{sellers.reduce((sum, s) => sum + s.opportunities, 0)} opportunities</div>
           </div>
           <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-            <div className="text-slate-400 text-sm mb-2">Q4 Closed Won</div>
+            <div className="text-slate-400 text-sm mb-2">Closed Won</div>
             <div className="text-3xl font-bold text-green-400">{formatCurrency(totalWon)}</div>
             <div className="text-slate-500 text-sm mt-1">{formatCurrency(totalEGP)} EGP</div>
           </div>
@@ -260,8 +258,16 @@ export default function SellerPerformance() {
           <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
             <div className="text-slate-400 text-sm mb-2">Team Size</div>
             <div className="text-3xl font-bold text-white">{sellers.length}</div>
-            <div className="text-slate-500 text-sm mt-1">Opportunity owners</div>
+            <div className="text-slate-500 text-sm mt-1">East opp owners</div>
           </div>
+        </div>
+
+        {/* Concentration Warning */}
+        <div className="bg-amber-900/20 rounded-xl p-4 border border-amber-700/30 mb-8">
+          <p className="text-amber-200 text-sm">
+            <span className="font-semibold">Concentration Risk:</span> Top 2 sellers (Mike Campbell + Justin Ott) own 70% of East Pipeline ($9.84M of $14.05M).
+            Mike has 87 opps but 14.9% win rate — needs coaching on qualification. Justin has 74.8% win rate — the model to follow.
+          </p>
         </div>
 
         {/* Leaderboard Table */}
@@ -274,7 +280,7 @@ export default function SellerPerformance() {
                   <th className="py-3 px-4 text-slate-300">Seller</th>
                   <th className="py-3 px-4 text-slate-300">Territory</th>
                   <th className="py-3 px-4 text-slate-300 text-right">Pipeline</th>
-                  <th className="py-3 px-4 text-slate-300 text-right">Q4 Won</th>
+                  <th className="py-3 px-4 text-slate-300 text-right">Won</th>
                   <th className="py-3 px-4 text-slate-300 text-right">EGP</th>
                   <th className="py-3 px-4 text-slate-300 text-right">Win Rate</th>
                   <th className="py-3 px-4 text-slate-300">Status</th>
@@ -309,7 +315,7 @@ export default function SellerPerformance() {
 
         {/* Coaching Priorities */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-red-400 mb-6">🎯 Coaching Priorities</h2>
+          <h2 className="text-2xl font-bold text-red-400 mb-6">Coaching Priorities</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {sellers.filter(s => s.status === 'coaching').slice(0, 3).map((seller, i) => (
               <div key={i} className="bg-red-900/20 rounded-xl p-6 border border-red-700/50">
@@ -336,7 +342,7 @@ export default function SellerPerformance() {
 
         {/* Star Performers */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-green-400 mb-6">⭐ Star Performers</h2>
+          <h2 className="text-2xl font-bold text-green-400 mb-6">Star Performers</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {sellers.filter(s => s.status === 'star').map((seller, i) => (
               <div key={i} className="bg-green-900/20 rounded-xl p-6 border border-green-700/50">
@@ -353,7 +359,7 @@ export default function SellerPerformance() {
                     <div className="text-cyan-400 font-semibold">{formatCurrency(seller.pipeline)}</div>
                   </div>
                   <div>
-                    <div className="text-xs text-slate-400">Q4 Won</div>
+                    <div className="text-xs text-slate-400">Won</div>
                     <div className="text-green-400 font-semibold">{formatCurrency(seller.closedWon)}</div>
                   </div>
                   <div>
@@ -416,19 +422,17 @@ export default function SellerPerformance() {
 
         {/* Navigation */}
         <div className="flex gap-4 flex-wrap">
-          <Link href="/team-capacity" className="px-6 py-3 bg-cyan-600 hover:bg-cyan-500 text-white font-semibold rounded-lg transition-all">
-            Team Capacity →
+          <Link href="/sales-momentum" className="px-6 py-3 bg-cyan-600 hover:bg-cyan-500 text-white font-semibold rounded-lg transition-all">
+            Sales Momentum →
           </Link>
           <Link href="/churn-signals" className="px-6 py-3 bg-orange-600 hover:bg-orange-500 text-white font-semibold rounded-lg transition-all">
             Churn Signals →
           </Link>
-          <Link href="/territories" className="px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-lg transition-all">
-            Territory Analysis →
+          <Link href="/dashboard" className="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg transition-all">
+            Financial Dashboard →
           </Link>
         </div>
       </main>
     </div>
   );
 }
-
-

@@ -213,7 +213,7 @@ export default function SalesMomentum() {
               <div>
                 <h3 className="text-white font-semibold mb-2">Filters Applied</h3>
                 <ul className="text-slate-400 text-sm space-y-1 font-mono">
-                  <li>• Region: <span className="text-cyan-400">DIM_Account_Min[Sales_Region] = &quot;West&quot;</span></li>
+                  <li>• Region: <span className="text-cyan-400">DIM_Account_Min[Sales_Region] = &quot;East&quot;</span></li>
                   <li>• Status: <span className="text-cyan-400">dim_opportunity[IsClosed] = FALSE</span></li>
                   <li>• Join: <span className="text-cyan-400">AccountId IN EastAccountList</span></li>
                 </ul>
@@ -238,7 +238,7 @@ RETURN GROUPBY(
 )`}</pre>
             </div>
             <p className="text-slate-500 text-xs mt-3">
-              ✓ Triple-verified: Seller sums match total (194 opps, $14.05M) | Sample accounts confirmed East (Halozyme, Neurocrine, Crinetics, Edwards, Ionis - all CA)
+              ✓ Triple-verified: Seller sums match total (194 opps, $14.05M) | Sample accounts confirmed East (Abbott, Bausch, Takeda, J&J, Regeneron)
             </p>
           </div>
         </section>

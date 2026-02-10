@@ -4,14 +4,14 @@ import Link from 'next/link';
 
 /**
  * PARTNER PLAYS PAGE
- * 
+ *
  * Joint solution plays, co-sell motions, and deal origination strategies
- * 
+ *
  * Research Sources:
  * - Partner2B: Partner-Sourced Pipeline, Co-Selling Best Practices
  * - Ebsta 2024: Win rates, deal velocity with partners
  * - Industry playbook templates for life sciences
- * 
+ *
  * Last Updated: 2026-02-04
  */
 
@@ -50,9 +50,9 @@ const partnerPlays = [
     partnerValue: '$50-200K/year ARR',
     targetCustomer: 'Mid-size biotech moving from on-prem',
     winRate: '65%',
-    icon: '☁️',
+    icon: '\u2601\uFE0F',
     priority: 'HIGH',
-    EasternOpportunity: 'Biotech Bay + Biotech Beach - 50+ targets with legacy on-prem systems'
+    EasternOpportunity: 'Genetown + NJ Pharma - 50+ targets with legacy on-prem systems'
   },
   {
     play: 'Veeva Implementation + CSV',
@@ -62,9 +62,9 @@ const partnerPlays = [
     partnerValue: '$200K+ license',
     targetCustomer: 'Any biotech implementing Veeva Vault, QMS, or RIM',
     winRate: '70%',
-    icon: '📦',
+    icon: '\uD83D\uDCE6',
     priority: 'HIGH',
-    EasternOpportunity: 'LA BioMed large pharma accounts already on Veeva'
+    EasternOpportunity: 'NJ Pharma large pharma accounts already on Veeva (Merck, BMS, Novo Nordisk)'
   },
   {
     play: 'AI Governance Framework',
@@ -74,21 +74,21 @@ const partnerPlays = [
     partnerValue: '$100K+ platform',
     targetCustomer: 'Pharma/biotech using AI/ML in drug development',
     winRate: '50%',
-    icon: '🤖',
+    icon: '\uD83E\uDD16',
     priority: 'EMERGING',
-    EasternOpportunity: 'Recursion, Insitro, 64x Bio - AI-native biotechs'
+    EasternOpportunity: 'Vertex, Sarepta, Biogen - AI-forward biotechs in Genetown'
   },
   {
-    play: 'Cell Therapy Manufacturing QA',
-    partner: 'Cellares / Multiply Labs',
-    description: 'Partner provides automation, USDM provides manufacturing QA, validation, and compliance.',
+    play: 'CDMO Manufacturing QA',
+    partner: 'IQVIA / Fujifilm Diosynth',
+    description: 'Partner provides manufacturing or analytics, USDM provides manufacturing QA, validation, and compliance.',
     usdmValue: '$200-500K',
     partnerValue: 'Equipment/platform',
-    targetCustomer: 'Cell therapy companies scaling manufacturing',
+    targetCustomer: 'Pharma companies scaling manufacturing',
     winRate: '60%',
-    icon: '🧬',
+    icon: '\uD83E\uDDEC',
     priority: 'HIGH',
-    EasternOpportunity: 'San Diego cluster - Poseida, Fate, Kite'
+    EasternOpportunity: 'Research Triangle cluster - IQVIA, Fujifilm Diosynth, emerging CDMO presence'
   },
   {
     play: 'Data Integrity Remediation',
@@ -98,9 +98,9 @@ const partnerPlays = [
     partnerValue: 'QMS license + implementation',
     targetCustomer: 'Companies with FDA observations (483s, warning letters)',
     winRate: '80%',
-    icon: '⚠️',
+    icon: '\u26A0\uFE0F',
     priority: 'MEDIUM',
-    EasternOpportunity: 'LA BioMed large accounts with compliance issues'
+    EasternOpportunity: 'NJ Pharma and Mid-Atlantic large accounts with compliance issues'
   },
   {
     play: 'VC Portfolio Services',
@@ -110,9 +110,9 @@ const partnerPlays = [
     partnerValue: 'Portfolio company success',
     targetCustomer: 'Series A-C biotechs in VC portfolio',
     winRate: '75%',
-    icon: '💰',
+    icon: '\uD83D\uDCB0',
     priority: 'HIGH',
-    EasternOpportunity: 'Biotech Bay VC ecosystem - a16z, Arch, RA Capital'
+    EasternOpportunity: 'Genetown VC ecosystem - Third Rock, Polaris, RA Capital'
   },
 ];
 
@@ -160,10 +160,10 @@ const originationStrategies = [
   {
     strategy: 'Deal Registration Program',
     description: 'Partners register leads first, get protection and higher margins',
-    howItWorks: 'Partner logs lead in portal → 30-day exclusivity → guaranteed 15% referral fee on close',
+    howItWorks: 'Partner logs lead in portal \u2192 30-day exclusivity \u2192 guaranteed 15% referral fee on close',
     investment: '$10K (portal setup)',
     expectedDeals: '5-10/quarter',
-    icon: '📝'
+    icon: '\uD83D\uDCDD'
   },
   {
     strategy: 'Partner Enablement Training',
@@ -171,7 +171,7 @@ const originationStrategies = [
     howItWorks: 'Quarterly lunch & learns, cheat sheets, co-branded materials, certification program',
     investment: '$25K/quarter',
     expectedDeals: '10-15/quarter',
-    icon: '📚'
+    icon: '\uD83D\uDCDA'
   },
   {
     strategy: 'MDF / Co-Marketing',
@@ -179,7 +179,7 @@ const originationStrategies = [
     howItWorks: 'Joint webinars, co-sponsored events, content syndication, partner email campaigns',
     investment: '$50K/year',
     expectedDeals: '15-20/quarter',
-    icon: '📣'
+    icon: '\uD83D\uDCE3'
   },
   {
     strategy: 'VC Portfolio Program',
@@ -187,7 +187,7 @@ const originationStrategies = [
     howItWorks: 'Partner with 3-5 life science VCs, offer portfolio discounts, attend portfolio days',
     investment: '$30K/year',
     expectedDeals: '5-10/quarter',
-    icon: '🏦'
+    icon: '\uD83C\uDFE6'
   },
   {
     strategy: 'Partner SPIFFs',
@@ -195,7 +195,7 @@ const originationStrategies = [
     howItWorks: '$500-2K per qualified meeting, $2-5K per closed deal to referring rep',
     investment: '$40K/year',
     expectedDeals: '15-25/quarter',
-    icon: '💵'
+    icon: '\uD83D\uDCB5'
   }
 ];
 
@@ -214,7 +214,7 @@ export default function PartnerPlays() {
         {/* Header */}
         <div className="flex justify-between items-center mb-4">
           <h1 className="text-4xl md:text-5xl font-bold text-white">Partner Plays</h1>
-          <Link href="/partner-overview" className="text-purple-400 hover:text-purple-300">← Partner Hub</Link>
+          <Link href="/partner-overview" className="text-purple-400 hover:text-purple-300">&larr; Partner Hub</Link>
         </div>
         <p className="text-slate-300 mb-12 max-w-3xl">
           Joint solution plays, co-sell motions, and strategies to drive partner-originated revenue in the Eastern Region.
@@ -222,22 +222,22 @@ export default function PartnerPlays() {
 
         {/* Deal Type Definitions */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">🎯 Partner Deal Types</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">{'\uD83C\uDFAF'} Partner Deal Types</h2>
           <div className="grid md:grid-cols-3 gap-4">
             {Object.entries(dealTypes).map(([key, type]) => (
               <div key={key} className={`bg-slate-800/50 rounded-xl p-6 border ${
-                key === 'originated' ? 'border-green-700' : 
-                key === 'coSell' ? 'border-purple-700' : 
+                key === 'originated' ? 'border-green-700' :
+                key === 'coSell' ? 'border-purple-700' :
                 'border-slate-700'
               }`}>
                 <h3 className={`text-lg font-bold mb-2 ${
-                  key === 'originated' ? 'text-green-400' : 
-                  key === 'coSell' ? 'text-purple-400' : 
+                  key === 'originated' ? 'text-green-400' :
+                  key === 'coSell' ? 'text-purple-400' :
                   'text-blue-400'
                 }`}>
-                  {key === 'originated' ? '🌟 Partner-Originated' : 
-                   key === 'coSell' ? '🤝 Co-Sell' : 
-                   '📈 Partner-Influenced'}
+                  {key === 'originated' ? '\uD83C\uDF1F Partner-Originated' :
+                   key === 'coSell' ? '\uD83E\uDD1D Co-Sell' :
+                   '\uD83D\uDCC8 Partner-Influenced'}
                 </h3>
                 <p className="text-slate-300 text-sm mb-3">{type.definition}</p>
                 <div className="space-y-2 text-sm">
@@ -248,7 +248,7 @@ export default function PartnerPlays() {
                 <div className="mt-3 pt-3 border-t border-slate-700">
                   <div className="text-slate-500 text-xs mb-1">Examples:</div>
                   <ul className="text-xs text-slate-400 space-y-1">
-                    {type.examples.map((ex, i) => <li key={i}>• {ex}</li>)}
+                    {type.examples.map((ex, i) => <li key={i}>&bull; {ex}</li>)}
                   </ul>
                 </div>
               </div>
@@ -258,7 +258,7 @@ export default function PartnerPlays() {
 
         {/* Core Partner Plays */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">🎮 Core Partner Plays (Eastern Region)</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">{'\uD83C\uDFAE'} Core Partner Plays (Eastern Region)</h2>
           <div className="space-y-4">
             {partnerPlays.map((play, idx) => (
               <div key={idx} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-colors">
@@ -298,7 +298,7 @@ export default function PartnerPlays() {
                   </div>
                 </div>
                 <div className="mt-3 pt-3 border-t border-slate-700">
-                  <span className="text-slate-500 text-sm">🗺️ Eastern Opportunity: </span>
+                  <span className="text-slate-500 text-sm">{'\uD83D\uDDFA\uFE0F'} Eastern Opportunity: </span>
                   <span className="text-purple-300 text-sm">{play.EasternOpportunity}</span>
                 </div>
               </div>
@@ -308,7 +308,7 @@ export default function PartnerPlays() {
 
         {/* Co-Sell Motion */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">🤝 Co-Sell Motion: Stage-by-Stage</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">{'\uD83E\uDD1D'} Co-Sell Motion: Stage-by-Stage</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-slate-800/50 rounded-xl border border-slate-700">
               <thead>
@@ -337,9 +337,9 @@ export default function PartnerPlays() {
 
         {/* Origination Strategies */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">🚀 Driving Partner-Originated Deals</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">{'\uD83D\uDE80'} Driving Partner-Originated Deals</h2>
           <p className="text-slate-400 mb-6">
-            Partner-originated deals are the gold standard - pure new business from your partner network. 
+            Partner-originated deals are the gold standard - pure new business from your partner network.
             Here&apos;s how to build a pipeline of partner-sourced opportunities:
           </p>
           <div className="grid md:grid-cols-2 gap-4">
@@ -371,7 +371,7 @@ export default function PartnerPlays() {
 
         {/* Target Metrics */}
         <section className="mb-12 bg-gradient-to-r from-purple-900/50 to-blue-900/50 rounded-xl p-8 border border-purple-700/50">
-          <h2 className="text-2xl font-bold text-white mb-6">📊 Partner Play Success Metrics</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">{'\uD83D\uDCCA'} Partner Play Success Metrics</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="text-4xl font-bold text-green-400">{partnerPlayMetrics.targetOriginatedShare}%</div>
@@ -400,13 +400,13 @@ export default function PartnerPlays() {
         <section className="text-center">
           <div className="inline-flex gap-4 flex-wrap justify-center">
             <Link href="/partner-ecosystem" className="px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-lg transition-colors">
-              Technology Partners →
+              Technology Partners &rarr;
             </Link>
             <Link href="/partner-solutions" className="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-bold rounded-lg transition-colors">
-              Solutions Alignment →
+              Solutions Alignment &rarr;
             </Link>
             <Link href="/partner-west" className="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-bold rounded-lg transition-colors">
-              Eastern Plan →
+              Eastern Plan &rarr;
             </Link>
           </div>
         </section>
@@ -414,5 +414,3 @@ export default function PartnerPlays() {
     </div>
   );
 }
-
-

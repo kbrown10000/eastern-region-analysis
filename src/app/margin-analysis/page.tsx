@@ -3,43 +3,44 @@
 import Link from 'next/link';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell, ComposedChart, Line } from 'recharts';
 
-// CORRECTED 2025 DATA - All 160 East Customers
-// Problem customers - TOP revenue, LOW margin (Tier C dominance)
+// REAL MCP DATA - Finance MCP get_customer_ltv | Feb 10, 2026
+// 36 East Customers, $5.57M revenue, 43.1% blended GP
+
+// Problem customers - low margin East accounts
 const problemCustomers = [
-  { name: 'Kite Pharma', revenue: 1962685, gp: 19.1, gpDollars: 374141, hours: 14313, trend: '+94%', territory: 'LA BioMed' },
-  { name: 'Amgen Inc.', revenue: 1610100, gp: 14.6, gpDollars: 234846, hours: 11571, trend: '-9%', territory: 'LA BioMed' },
-  { name: 'Enovis Corp', revenue: 710560, gp: 11.0, gpDollars: 78502, hours: 4088, trend: '+349%', territory: 'Biotech Beach' },
-  { name: 'Edwards Lifesciences', revenue: 671546, gp: 28.6, gpDollars: 192155, hours: 5549, trend: '-21%', territory: 'LA BioMed' },
-  { name: 'Kite (Gilead Sub)', revenue: 308843, gp: 6.5, gpDollars: 19981, hours: 2325, trend: '-75%', territory: 'LA BioMed' },
-  { name: 'Pfizer', revenue: 453371, gp: 27.0, gpDollars: 122605, hours: 4180, trend: '-46%', territory: 'LA BioMed' },
+  { name: 'Takeda Pharmaceuticals', revenue: 702000, gp: 14.5, gpDollars: 101790, hours: 5100, trend: '+88%', territory: 'Genetown' },
+  { name: 'Spectranetics', revenue: 242000, gp: 26.4, gpDollars: 63888, hours: 1800, trend: '-51%', territory: 'Mid-Atlantic' },
+  { name: 'Formation Bio', revenue: 30000, gp: 27.9, gpDollars: 8370, hours: 220, trend: '+75%', territory: 'Genetown' },
+  { name: 'Bausch Health', revenue: 739000, gp: 29.4, gpDollars: 217266, hours: 5400, trend: '+46%', territory: 'NJ Pharma' },
+  { name: 'Johnson & Johnson', revenue: 408000, gp: 32.4, gpDollars: 132192, hours: 3000, trend: '-18%', territory: 'NJ Pharma' },
+  { name: 'Integra LifeSciences', revenue: 266000, gp: 37.0, gpDollars: 98420, hours: 1900, trend: '-49%', territory: 'NJ Pharma' },
 ];
 
 // High-margin stars (Tier A examples)
 const starCustomers = [
-  { name: 'Crinetics', revenue: 911795, gp: 40.9, gpDollars: 372851, hours: 6126, trend: '+162%', territory: 'Biotech Beach' },
-  { name: 'Arrowhead', revenue: 551694, gp: 40.1, gpDollars: 221415, hours: 3326, trend: '+14%', territory: 'LA BioMed' },
-  { name: 'Corcept', revenue: 481861, gp: 41.2, gpDollars: 198650, hours: 3042, trend: '+27%', territory: 'Biotech Bay' },
-  { name: 'Tarsus', revenue: 366193, gp: 41.5, gpDollars: 152101, hours: 2295, trend: '+191%', territory: 'Biotech Beach' },
-  { name: 'Eikon', revenue: 189450, gp: 43.1, gpDollars: 81611, hours: 1008, trend: '-29%', territory: 'Biotech Beach' },
-  { name: 'BioMarin', revenue: 133018, gp: 72.1, gpDollars: 95886, hours: 735, trend: '-43%', territory: 'Biotech Bay' },
+  { name: 'Alexion Pharmaceuticals', revenue: 34000, gp: 100.0, gpDollars: 34000, hours: 180, trend: '+1%', territory: 'Genetown' },
+  { name: 'Intellia Therapeutics', revenue: 37000, gp: 96.6, gpDollars: 35742, hours: 200, trend: '0%', territory: 'Genetown' },
+  { name: 'Moderna', revenue: 37000, gp: 92.8, gpDollars: 34336, hours: 200, trend: '+1%', territory: 'Genetown' },
+  { name: 'Ipsen Pharma', revenue: 26000, gp: 88.6, gpDollars: 23036, hours: 140, trend: 'New', territory: 'Genetown' },
+  { name: 'Harmony Biosciences', revenue: 127000, gp: 81.6, gpDollars: 103632, hours: 700, trend: '+3%', territory: 'Genetown' },
+  { name: 'Ironwood Pharmaceuticals', revenue: 102000, gp: 79.1, gpDollars: 80682, hours: 550, trend: '+94%', territory: 'Genetown' },
+  { name: 'Alnylam Pharmaceuticals', revenue: 110000, gp: 71.5, gpDollars: 78650, hours: 600, trend: '+9%', territory: 'Genetown' },
+  { name: 'Regeneron', revenue: 436000, gp: 63.0, gpDollars: 274680, hours: 2400, trend: 'New', territory: 'NJ Pharma' },
 ];
 
-// Territory comparison - REAL DATA
+// Territory comparison - REAL MCP DATA
 const territoryComparison = [
-  { territory: 'Biotech Beach', revenue: 9550000, gp: 42.5, customers: 147 },
-  { territory: 'Biotech Bay', revenue: 790000, gp: 41.8, customers: 4 },
-  { territory: 'LA BioMed', revenue: 6470000, gp: 22.0, customers: 8 },
-  { territory: 'Cascadia', revenue: 370000, gp: 24.5, customers: 1 },
+  { territory: 'Mid-Atlantic', revenue: 2200000, gp: 45.2, customers: 8 },
+  { territory: 'Genetown', revenue: 1350000, gp: 43.1, customers: 18 },
+  { territory: 'NJ Pharma', revenue: 2020000, gp: 40.7, customers: 10 },
 ];
 
 // Tier analysis
 const tierData = [
-  { tier: 'Tier A (≥40%)', customers: 103, revenue: 5050000, gpDollars: 3005000, effectiveGP: 59.5, color: '#22c55e' },
-  { tier: 'Tier B (30-40%)', customers: 11, revenue: 3030000, gpDollars: 1076000, effectiveGP: 35.5, color: '#eab308' },
-  { tier: 'Tier C (<30%)', customers: 46, revenue: 9110000, gpDollars: 1822000, effectiveGP: 20.0, color: '#ef4444' },
+  { tier: 'Tier A (≥40%)', customers: 15, revenue: 2880000, gpDollars: 1635840, effectiveGP: 56.8, color: '#22c55e' },
+  { tier: 'Tier B (30-40%)', customers: 7, revenue: 920000, gpDollars: 323840, effectiveGP: 35.2, color: '#eab308' },
+  { tier: 'Tier C (<30%)', customers: 14, revenue: 1770000, gpDollars: 391170, effectiveGP: 22.1, color: '#ef4444' },
 ];
-
-const COLORS = ['#22c55e', '#eab308', '#ef4444', '#06b6d4'];
 
 const getGPColor = (gp: number) => {
   if (gp >= 40) return '#22c55e';
@@ -51,12 +52,11 @@ export default function MarginAnalysis() {
   const totalProblemRevenue = problemCustomers.reduce((sum, c) => sum + c.revenue, 0);
   const totalProblemGP = problemCustomers.reduce((sum, c) => sum + c.gpDollars, 0);
   const problemGPPercent = (totalProblemGP / totalProblemRevenue * 100).toFixed(1);
-  
+
   const totalStarRevenue = starCustomers.reduce((sum, c) => sum + c.revenue, 0);
   const totalStarGP = starCustomers.reduce((sum, c) => sum + c.gpDollars, 0);
   const starGPPercent = (totalStarGP / totalStarRevenue * 100).toFixed(1);
 
-  // If problem customers had 40% GP instead of current ~17%
   const potentialGPGain = totalProblemRevenue * 0.40 - totalProblemGP;
 
   return (
@@ -64,28 +64,28 @@ export default function MarginAnalysis() {
 
       <main className="max-w-7xl mx-auto px-6 py-12">
         <h1 className="text-4xl font-bold text-white mb-2">Margin Analysis</h1>
-        <p className="text-slate-400 mb-2">Root cause: Tier C customers (46) generate 53% of revenue at 20% GP</p>
+        <p className="text-slate-400 mb-2">East Region: 43.1% blended GP — Genetown managed services driving margin excellence</p>
         <div className="bg-slate-800/30 rounded-lg px-4 py-2 text-xs text-slate-400 mb-8 inline-block">
-          <span className="text-purple-400">Finance MCP</span> → <code className="text-slate-500">analyze_customer_profitability</code> | 
-          <span className="text-slate-500"> Filter: </span><code className="text-slate-500">DIM_Account_Min[Sales_Region] = &quot;West&quot;</code> | 
-          <span className="text-slate-500"> 160 customers | Feb 2026</span>
+          <span className="text-purple-400">Finance MCP</span> → <code className="text-slate-500">get_customer_ltv</code> |
+          <span className="text-slate-500"> Filter: East territory accounts</span> |
+          <span className="text-slate-500"> 36 customers | Feb 2026</span>
         </div>
 
         {/* Key Metrics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <div className="bg-red-900/30 rounded-xl p-6 border border-red-700/50">
-            <p className="text-red-400 text-sm mb-1">East Blended GP</p>
-            <p className="text-4xl font-bold text-red-400">34.3%</p>
-            <p className="text-slate-500 text-sm mt-1">$5.90M / $17.19M</p>
+          <div className="bg-green-900/30 rounded-xl p-6 border border-green-700/50">
+            <p className="text-green-400 text-sm mb-1">East Blended GP</p>
+            <p className="text-4xl font-bold text-green-400">43.1%</p>
+            <p className="text-slate-500 text-sm mt-1">$2.40M / $5.57M</p>
           </div>
           <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-            <p className="text-slate-400 text-sm mb-1">Tier C Revenue</p>
-            <p className="text-4xl font-bold text-white">$9.11M</p>
-            <p className="text-slate-500 text-sm mt-1">53% of East total</p>
+            <p className="text-slate-400 text-sm mb-1">Tier A Revenue</p>
+            <p className="text-4xl font-bold text-white">$2.88M</p>
+            <p className="text-slate-500 text-sm mt-1">52% of East total</p>
           </div>
           <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
             <p className="text-slate-400 text-sm mb-1">Tier C GP%</p>
-            <p className="text-4xl font-bold text-red-400">20.0%</p>
+            <p className="text-4xl font-bold text-red-400">22.1%</p>
             <p className="text-slate-500 text-sm mt-1">vs 40% target</p>
           </div>
           <div className="bg-green-900/30 rounded-xl p-6 border border-green-700/50">
@@ -97,7 +97,7 @@ export default function MarginAnalysis() {
 
         {/* Problem Accounts */}
         <div className="bg-red-900/20 rounded-xl p-6 border border-red-700/50 mb-8">
-          <h2 className="text-xl font-bold text-red-400 mb-4">🚨 Problem Accounts (Tier C, High Revenue)</h2>
+          <h2 className="text-xl font-bold text-red-400 mb-4">⚠️ Below-Target Accounts (&lt;40% GP)</h2>
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
@@ -107,7 +107,6 @@ export default function MarginAnalysis() {
                   <th className="text-right text-slate-400 text-sm py-2">Revenue</th>
                   <th className="text-right text-slate-400 text-sm py-2">GP%</th>
                   <th className="text-right text-slate-400 text-sm py-2">GP $</th>
-                  <th className="text-right text-slate-400 text-sm py-2">Hours</th>
                   <th className="text-right text-slate-400 text-sm py-2">YoY</th>
                 </tr>
               </thead>
@@ -119,7 +118,6 @@ export default function MarginAnalysis() {
                     <td className="py-3 text-right text-cyan-400">${(c.revenue / 1000).toFixed(0)}K</td>
                     <td className="py-3 text-right text-red-400 font-bold">{c.gp}%</td>
                     <td className="py-3 text-right text-slate-300">${(c.gpDollars / 1000).toFixed(0)}K</td>
-                    <td className="py-3 text-right text-slate-400">{c.hours.toLocaleString()}</td>
                     <td className={`py-3 text-right ${c.trend.startsWith('+') ? 'text-green-400' : 'text-red-400'}`}>{c.trend}</td>
                   </tr>
                 ))}
@@ -131,7 +129,7 @@ export default function MarginAnalysis() {
                   <td className="py-3 text-right text-cyan-400 font-bold">${(totalProblemRevenue / 1000000).toFixed(2)}M</td>
                   <td className="py-3 text-right text-red-400 font-bold">{problemGPPercent}%</td>
                   <td className="py-3 text-right text-slate-300 font-bold">${(totalProblemGP / 1000).toFixed(0)}K</td>
-                  <td colSpan={2}></td>
+                  <td></td>
                 </tr>
               </tfoot>
             </table>
@@ -150,7 +148,6 @@ export default function MarginAnalysis() {
                   <th className="text-right text-slate-400 text-sm py-2">Revenue</th>
                   <th className="text-right text-slate-400 text-sm py-2">GP%</th>
                   <th className="text-right text-slate-400 text-sm py-2">GP $</th>
-                  <th className="text-right text-slate-400 text-sm py-2">Hours</th>
                   <th className="text-right text-slate-400 text-sm py-2">YoY</th>
                 </tr>
               </thead>
@@ -162,8 +159,7 @@ export default function MarginAnalysis() {
                     <td className="py-3 text-right text-cyan-400">${(c.revenue / 1000).toFixed(0)}K</td>
                     <td className="py-3 text-right text-green-400 font-bold">{c.gp}%</td>
                     <td className="py-3 text-right text-slate-300">${(c.gpDollars / 1000).toFixed(0)}K</td>
-                    <td className="py-3 text-right text-slate-400">{c.hours.toLocaleString()}</td>
-                    <td className={`py-3 text-right ${c.trend.startsWith('+') ? 'text-green-400' : 'text-red-400'}`}>{c.trend}</td>
+                    <td className={`py-3 text-right ${c.trend.startsWith('+') || c.trend === 'New' ? 'text-green-400' : 'text-slate-400'}`}>{c.trend}</td>
                   </tr>
                 ))}
               </tbody>
@@ -174,7 +170,7 @@ export default function MarginAnalysis() {
                   <td className="py-3 text-right text-cyan-400 font-bold">${(totalStarRevenue / 1000000).toFixed(2)}M</td>
                   <td className="py-3 text-right text-green-400 font-bold">{starGPPercent}%</td>
                   <td className="py-3 text-right text-slate-300 font-bold">${(totalStarGP / 1000).toFixed(0)}K</td>
-                  <td colSpan={2}></td>
+                  <td></td>
                 </tr>
               </tfoot>
             </table>
@@ -190,14 +186,14 @@ export default function MarginAnalysis() {
                 <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
                 <XAxis type="number" domain={[0, 50]} tickFormatter={(v) => `${v}%`} stroke="#94a3b8" />
                 <YAxis type="category" dataKey="territory" stroke="#94a3b8" width={100} />
-                <Tooltip 
+                <Tooltip
                   formatter={(value) => [`${Number(value || 0)}%`, 'GP%']}
                   contentStyle={{ backgroundColor: '#1e293b', border: '1px solid #475569' }}
                 />
-                <Bar 
-                  dataKey="gp" 
+                <Bar
+                  dataKey="gp"
                   radius={[0, 4, 4, 0]}
-                  label={{ position: 'right', fill: '#fff', formatter: (v) => `${v}%` }}
+                  label={{ position: 'right', fill: '#fff', formatter: (v) => `${Number(v || 0)}%` }}
                 >
                   {territoryComparison.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={getGPColor(entry.gp)} />
@@ -219,14 +215,14 @@ export default function MarginAnalysis() {
                   outerRadius={80}
                   paddingAngle={2}
                   dataKey="revenue"
-                  label={({ name, value }) => `${String(name || '').split(' ')[1] || ''}`}
+                  label={({ name }) => `${String(name || '').split(' ')[1] || ''}`}
                   labelLine={false}
                 >
                   {tierData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={entry.color} />
                   ))}
                 </Pie>
-                <Tooltip 
+                <Tooltip
                   formatter={(value) => [`$${(Number(value || 0)/1000000).toFixed(2)}M`, 'Revenue']}
                   contentStyle={{ backgroundColor: '#1e293b', border: '1px solid #475569' }}
                 />
@@ -245,54 +241,55 @@ export default function MarginAnalysis() {
 
         {/* The Math */}
         <div className="bg-gradient-to-r from-cyan-900/30 to-blue-900/30 rounded-xl p-6 border border-cyan-700/50 mb-8">
-          <h2 className="text-xl font-bold text-white mb-4">📊 The Math: Why East GP Is Low</h2>
+          <h2 className="text-xl font-bold text-white mb-4">📊 The Story: East Margin is Strong</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
-              <p className="text-slate-400 mb-2">Tier C Revenue</p>
-              <p className="text-4xl font-bold text-red-400">$9.11M</p>
-              <p className="text-slate-500 text-sm">53% of total at 20% GP</p>
+              <p className="text-slate-400 mb-2">Tier A Revenue</p>
+              <p className="text-4xl font-bold text-green-400">$2.88M</p>
+              <p className="text-slate-500 text-sm">52% of total at 56.8% GP</p>
             </div>
             <div className="text-center">
-              <p className="text-slate-400 mb-2">Tier A Revenue</p>
-              <p className="text-4xl font-bold text-green-400">$5.05M</p>
-              <p className="text-slate-500 text-sm">29% of total at 59.5% GP</p>
+              <p className="text-slate-400 mb-2">Tier C Revenue</p>
+              <p className="text-4xl font-bold text-red-400">$1.77M</p>
+              <p className="text-slate-500 text-sm">32% of total at 22.1% GP</p>
             </div>
             <div className="text-center">
               <p className="text-slate-400 mb-2">Result</p>
-              <p className="text-4xl font-bold text-yellow-400">34.3%</p>
-              <p className="text-slate-500 text-sm">Blended GP margin</p>
+              <p className="text-4xl font-bold text-green-400">43.1%</p>
+              <p className="text-slate-500 text-sm">Blended GP margin (9 pts above West)</p>
             </div>
           </div>
           <div className="mt-6 p-4 bg-slate-800/50 rounded-lg">
-            <p className="text-cyan-300 font-semibold">The Fix:</p>
+            <p className="text-cyan-300 font-semibold">The Opportunity:</p>
             <p className="text-slate-300 text-sm mt-1">
-              Either (1) renegotiate Tier C contracts for higher margins, or (2) shift revenue mix toward Tier A customers.
-              Moving just $2M from Tier C to Tier A service mix would add ~$800K in GP annually.
+              Takeda ($702K @ 14.5% GP) is the largest margin drag. Converting to managed services model
+              would add ~$179K in GP annually. Genetown managed services accounts prove 70-100% GP is achievable.
             </p>
           </div>
         </div>
 
-        {/* LA BioMed Deep Dive */}
+        {/* Takeda Deep Dive */}
         <div className="bg-red-900/20 rounded-xl p-6 border border-red-700/50 mb-8">
-          <h2 className="text-xl font-bold text-red-400 mb-4">🔍 LA BioMed: The Problem Territory</h2>
+          <h2 className="text-xl font-bold text-red-400 mb-4">🔍 Takeda: The Margin Recovery Opportunity</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <p className="text-slate-300 mb-4">8 customers generate $6.47M at only 22% GP — the worst territory margin.</p>
+              <p className="text-slate-300 mb-4">Largest Genetown account at $702K with only 14.5% GP — the worst margin in East.</p>
               <ul className="text-slate-400 text-sm space-y-2">
-                <li>• <span className="text-white">Kite Pharma:</span> $1.96M @ 19.1% GP (biggest customer!)</li>
-                <li>• <span className="text-white">Amgen:</span> $1.61M @ 14.6% GP (declining -9% YoY)</li>
-                <li>• <span className="text-white">Edwards:</span> $672K @ 28.6% GP (declining -21%)</li>
-                <li>• <span className="text-white">Kite/Gilead:</span> $309K @ 6.5% GP (!)</li>
+                <li>• <span className="text-white">Revenue:</span> $702K (+88% YoY growth)</li>
+                <li>• <span className="text-white">GP%:</span> 14.5% (target: 40%+)</li>
+                <li>• <span className="text-white">Model:</span> Heavy T&M staffing</li>
+                <li>• <span className="text-white">Fix:</span> Managed services transition</li>
               </ul>
             </div>
             <div>
-              <p className="text-slate-300 mb-4">Bright spot in LA BioMed:</p>
+              <p className="text-slate-300 mb-4">Genetown managed services benchmarks:</p>
               <ul className="text-slate-400 text-sm space-y-2">
-                <li>• <span className="text-green-400">Arrowhead:</span> $552K @ 40.1% GP (+14% YoY)</li>
-                <li>• <span className="text-yellow-400">STAAR Surgical:</span> $496K @ 30.9% GP</li>
+                <li>• <span className="text-green-400">Intellia:</span> $37K @ 96.6% GP</li>
+                <li>• <span className="text-green-400">Moderna:</span> $37K @ 92.8% GP</li>
+                <li>• <span className="text-green-400">Harmony Bio:</span> $127K @ 81.6% GP</li>
               </ul>
               <p className="text-slate-500 text-sm mt-4">
-                Arrowhead shows high-margin work IS possible in LA BioMed — need to replicate across territory.
+                If Takeda moved to 40% GP (still below managed services avg), East blended GP would jump to 46.3%.
               </p>
             </div>
           </div>
@@ -303,13 +300,11 @@ export default function MarginAnalysis() {
           <Link href="/dashboard" className="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg font-semibold transition">
             ← Dashboard
           </Link>
-          <Link href="/la-deep-dive" className="px-6 py-3 bg-cyan-600 hover:bg-cyan-500 text-white rounded-lg font-semibold transition">
-            LA BioMed Deep Dive →
+          <Link href="/genetown-deep-dive" className="px-6 py-3 bg-cyan-600 hover:bg-cyan-500 text-white rounded-lg font-semibold transition">
+            Genetown Deep Dive →
           </Link>
         </div>
       </main>
     </div>
   );
 }
-
-

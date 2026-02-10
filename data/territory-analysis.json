@@ -1,62 +1,62 @@
 {
-  "generated": "2026-02-04",
-  "source": "MCP Sales/Finance + manual territory correction",
+  "generated": "2026-02-10",
+  "source": "MCP Finance (get_customer_ltv) + Sales MCP pipeline data",
   "territories": [
     {
-      "name": "Biotech Beach",
-      "aka": "San Diego",
-      "states": ["CA (San Diego, Irvine, OC)"],
-      "accounts": 129,
-      "revenue2025M": 7.98,
-      "gpDollarsM": 3.52,
-      "avgGpPct": 70.8,
-      "pipelineM": 7.9,
-      "character": "High volume, excellent margins, healthy growth",
-      "topAccounts": ["Crinetics", "Ionis", "Halozyme", "Santen", "Terumo"],
-      "risks": ["Enovis at 11% GP needs fixing"],
-      "opportunities": ["Cell therapy manufacturing surge", "San Diego biotech boom"]
-    },
-    {
-      "name": "LA BioMed",
-      "aka": "Los Angeles / Thousand Oaks",
-      "states": ["CA (Los Angeles, Thousand Oaks)"],
+      "name": "Mid-Atlantic",
+      "aka": "DC / Philadelphia / Baltimore",
+      "states": ["PA", "MD", "DE", "VA", "DC"],
       "accounts": 8,
-      "revenue2025M": 6.47,
-      "gpDollarsM": 1.42,
-      "avgGpPct": 23.9,
-      "pipelineM": 1.61,
-      "character": "Big accounts, MARGIN CRISIS",
-      "topAccounts": ["Amgen", "Kite Pharma", "Edwards Lifesciences", "Takeda"],
-      "risks": ["Amgen 14.6% GP", "Kite 19.1% GP", "Edwards 28.6% GP declining"],
-      "opportunities": ["Convert to managed services for margin lift", "Renegotiate T&M rates"]
+      "revenue2025M": 2.20,
+      "gpDollarsM": 0.99,
+      "avgGpPct": 45.2,
+      "pipelineM": 4.2,
+      "character": "Abbott-driven explosive growth, fastest in region",
+      "topAccounts": ["Abbott Laboratories", "Spectranetics", "AstraZeneca UK", "Mallinckrodt"],
+      "risks": ["88% revenue concentration in Abbott", "Spectranetics declining -51%", "LivaNova churned"],
+      "opportunities": ["Abbott expansion to $2.5M+", "AstraZeneca expansion (93.8% GP)", "GSK Philly new logo"]
     },
     {
-      "name": "Biotech Bay",
-      "aka": "San Francisco / NorCal",
-      "states": ["CA (SF, South SF, Emeryville, Berkeley, Palo Alto, Redwood City)"],
-      "accounts": 17,
+      "name": "NJ Pharma Corridor",
+      "aka": "New Brunswick → Princeton",
+      "states": ["NJ"],
+      "accounts": 10,
+      "revenue2025M": 2.02,
+      "gpDollarsM": 0.82,
+      "avgGpPct": 40.7,
+      "pipelineM": 5.0,
+      "character": "Big Pharma anchors, mixed margins, strong pipeline",
+      "topAccounts": ["Bausch Health", "Regeneron", "Johnson & Johnson", "Integra LifeSciences"],
+      "risks": ["J&J declining -18%", "Integra declining -49%", "Bausch 29.4% GP needs improvement"],
+      "opportunities": ["Regeneron expansion (63% GP new logo)", "Merck & BMS new logos", "Novo Nordisk new logo"]
+    },
+    {
+      "name": "Genetown",
+      "aka": "Boston / Cambridge",
+      "states": ["MA", "CT", "RI"],
+      "accounts": 18,
       "revenue2025M": 1.35,
-      "gpDollarsM": 0.47,
-      "avgGpPct": 36.2,
-      "pipelineM": 1.09,
-      "character": "UNDERPENETRATED - Huge opportunity",
-      "topAccounts": ["Vaxcyte", "Benchling", "Apple", "Allogene", "Eikon"],
-      "risks": ["Low coverage in world's biggest biotech hub"],
-      "opportunities": ["AI governance plays (tech + biotech)", "10x market size vs current presence"]
+      "gpDollarsM": 0.58,
+      "avgGpPct": 43.1,
+      "pipelineM": 3.8,
+      "character": "High-margin managed services, Takeda margin drag",
+      "topAccounts": ["Takeda", "Harmony Biosciences", "Alnylam", "Ironwood", "Moderna"],
+      "risks": ["Takeda at 14.5% GP drags blended margin", "Only 18 of 1000+ biotechs penetrated"],
+      "opportunities": ["Takeda margin recovery ($179K profit swing)", "Moderna expansion", "Vertex/Sarepta/Biogen new logos"]
     },
     {
-      "name": "Cascadia",
-      "aka": "Seattle / Pacific Northwest",
-      "states": ["WA", "OR"],
-      "accounts": 3,
-      "revenue2025M": 0.60,
-      "gpDollarsM": 0.16,
-      "avgGpPct": 43.4,
-      "pipelineM": 0,
-      "character": "GREENFIELD - Almost no presence",
-      "topAccounts": ["Adaptive Biotechnologies", "Juno Therapeutics"],
-      "risks": ["Zero pipeline = no future revenue", "Seattle biotech growing fast without us"],
-      "opportunities": ["$150K investment in 'The Ask'", "Fred Hutch, Sana, Nautilus targets"]
+      "name": "Research Triangle",
+      "aka": "Raleigh-Durham, NC",
+      "states": ["NC"],
+      "accounts": 0,
+      "revenue2025M": 0,
+      "gpDollarsM": 0,
+      "avgGpPct": 0,
+      "pipelineM": 1.1,
+      "character": "GREENFIELD — Zero revenue, massive CDMO/CRO opportunity",
+      "topAccounts": [],
+      "risks": ["Zero penetration in major life sciences hub", "No dedicated seller"],
+      "opportunities": ["IQVIA, Fujifilm Diosynth, PPD targets", "CDMO expansion wave", "$1M+ Year 1 target"]
     }
   ],
   "currentSellerAssignments": {
@@ -65,41 +65,40 @@
       "opps": 87,
       "winRate": 14.9,
       "status": "NEEDS_COACHING",
-      "currentTerritory": "Mixed (all West)"
+      "currentTerritory": "NJ Pharma / Mid-Atlantic"
     },
     "Justin Ott": {
       "pipeline": 4.42,
       "opps": 61,
       "winRate": 74.8,
       "status": "STAR_PERFORMER",
-      "currentTerritory": "Mixed (all West)"
+      "currentTerritory": "NJ Pharma / Genetown"
     }
   },
   "recommendedAlignment": {
-    "Biotech Beach": {
-      "primarySeller": "Justin Ott",
-      "rationale": "Keep star performer on highest-volume, best-margin territory",
-      "expectedOutcome": "Maintain 70%+ GP, grow pipeline"
+    "Mid-Atlantic": {
+      "primarySeller": "Dedicated AM (Abbott focus)",
+      "rationale": "Abbott at $1.94M needs dedicated attention + expansion across divisions",
+      "expectedOutcome": "Grow Abbott to $2.5M+, add 3 new logos"
     },
-    "LA BioMed": {
-      "primarySeller": "Mike Campbell + Coaching",
-      "rationale": "Focus coaching on margin recovery with 8 key accounts",
-      "expectedOutcome": "Lift GP from 24% → 35% = $700K+ additional profit"
+    "NJ Pharma": {
+      "primarySeller": "Justin Ott (star performer)",
+      "rationale": "Highest win rate (74.8%) on highest-value targets (Regeneron, J&J, Bausch)",
+      "expectedOutcome": "Expand Regeneron, save J&J/Integra, new Merck/BMS logos"
     },
-    "Biotech Bay": {
-      "primarySeller": "NEW HIRE NEEDED",
-      "rationale": "SF is the largest biotech market with minimal USDM presence",
-      "expectedOutcome": "$2-3M new revenue at 50%+ GP within 24 months"
+    "Genetown": {
+      "primarySeller": "Scott Pallardy + Vega Finucan",
+      "rationale": "Dense territory with 18 accounts needing managed services focus",
+      "expectedOutcome": "Takeda margin recovery, Moderna expansion, 5+ new logos"
     },
-    "Cascadia": {
-      "primarySeller": "Partner Channel Focus",
-      "rationale": "$150K investment per 'The Ask' for Seattle market entry",
-      "expectedOutcome": "Build $500K pipeline in Year 1, $1M+ Year 2"
+    "Research Triangle": {
+      "primarySeller": "Partner Channel + Part-time AM",
+      "rationale": "Greenfield territory needs investment before dedicated seller",
+      "expectedOutcome": "$1M+ Year 1 revenue from CDMO/CRO targets"
     }
   },
   "terminology": {
-    "territory": "Geographic zone grouping accounts by regional biotech ecosystem (city clusters, not states)",
-    "piston": "Territory as revenue engine component - each fires in sequence to drive regional growth",
+    "territory": "Geographic zone grouping accounts by regional life sciences ecosystem",
     "pipeline": "Open opportunity amount (not yet won)",
     "bookings": "Won opportunity amount (contract value at close)",
     "revenue": "GAAP recognized (when billed/delivered)",

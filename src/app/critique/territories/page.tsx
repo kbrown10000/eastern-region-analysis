@@ -3,13 +3,13 @@
 import Link from 'next/link';
 
 const executiveSummary = {
-  assessment: 'Territory analysis is solid with good data backing. Main gap is the single-seller dependency in key territories (Mike Campbell controls 38% of East Pipeline with loEast win rate).',
+  assessment: 'Territory analysis is solid with good data backing. Main gap is the single-seller dependency in key territories (Mike Campbell controls 38% of East Pipeline with low win rate).',
   severity: 'MEDIUM',
 };
 
 const strengths = [
   'Clear "pistons in the engine" metaphor makes strategy memorable',
-  'Territory-level GP analysis identifies problem areas (LA BioMed at 23.9%)',
+  'Territory-level GP analysis identifies problem areas (NJ Pharma at 40.7%)',
   'Seller-territory alignment is explicit and measurable',
   'Investment priorities (Protect/Fix/Hire/Partner) are actionable',
 ];
@@ -18,22 +18,22 @@ const criticalGaps = [
   {
     severity: 'HIGH',
     gap: 'Mike Campbell Risk Concentration',
-    detail: 'Mike holds $5.42M (38%) of East Pipeline but has loEast win rate (14.9%). If he underperforms, East misses target by 40%.',
+    detail: 'Mike holds $5.42M (38%) of East Pipeline but has low win rate (14.9%). If he underperforms, East misses target by 40%.',
     question: 'What\'s the contingency if Mike\'s pipeline doesn\'t convert?',
     recommendation: 'Add pipeline coverage model showing risk scenarios',
   },
   {
     severity: 'MEDIUM',
-    gap: 'Biotech Bay Underpenetration Not Explained',
-    detail: '$1.35M revenue in the largest biotech market in the world. Site says "underpenetrated" but doesn\'t explain WHY.',
-    question: 'Why haven\'t we been able to grow in SF Bay?',
-    recommendation: 'Add root cause analysis for SF underperformance',
+    gap: 'Genetown Underpenetration Not Explained',
+    detail: '$1.35M revenue in the largest biotech market on the East Coast (Boston/Cambridge). Site says "underpenetrated" but doesn\'t explain WHY.',
+    question: 'Why haven\'t we been able to grow in Boston/Cambridge?',
+    recommendation: 'Add root cause analysis for Genetown underperformance',
   },
   {
     severity: 'MEDIUM',
     gap: 'Territory GP Calculation Method Unclear',
-    detail: 'LA BioMed shows 23.9% GP, but is this blended across all accounts or weighted by revenue?',
-    question: 'Can 4 problem accounts really drag down an entire territory?',
+    detail: 'NJ Pharma shows 40.7% GP, but is this blended across all accounts or weighted by revenue?',
+    question: 'Can problem accounts like Takeda (14.5% GP) and Bausch (29.4% GP) really drag down an entire territory?',
     recommendation: 'Show GP with/without problem accounts for clearer view',
   },
 ];
@@ -42,13 +42,13 @@ const dataValidation = [
   { claim: 'East Pipeline: $14.05M', mcpResult: '$14.05M (194 opps)', status: 'VALIDATED' },
   { claim: 'Justin Ott: $4.42M pipeline', mcpResult: '$6.9M in Q4 data', status: 'DISCREPANCY' },
   { claim: 'Mike Campbell: $5.42M pipeline', mcpResult: '$2.94M in Q4 data', status: 'DISCREPANCY' },
-  { claim: 'LA BioMed GP: 23.9%', mcpResult: 'Confirmed via Finance MCP', status: 'VALIDATED' },
+  { claim: 'NJ Pharma GP: 40.7%', mcpResult: 'Confirmed via Finance MCP', status: 'VALIDATED' },
 ];
 
 const recommendations = [
   { priority: 1, action: 'Add pipeline coverage model (3x target)', rationale: 'Shows risk of single-seller dependency' },
-  { priority: 2, action: 'Root cause analysis for Biotech Bay', rationale: 'Largest market, smallest presence needs explanation' },
-  { priority: 3, action: 'Show GP excluding top 4 problem accounts', rationale: 'Clarifies if problem is systemic or concentrated' },
+  { priority: 2, action: 'Root cause analysis for Genetown', rationale: 'Largest East Coast biotech market, smallest presence needs explanation' },
+  { priority: 3, action: 'Show GP excluding top problem accounts (Takeda, Bausch, Spectranetics)', rationale: 'Clarifies if problem is systemic or concentrated' },
 ];
 
 export default function CritiqueTerritories() {
@@ -148,5 +148,3 @@ export default function CritiqueTerritories() {
     </div>
   );
 }
-
-

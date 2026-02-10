@@ -20,94 +20,79 @@ interface CustomerService {
 
 const existingCustomers: CustomerService[] = [
   {
-    name: 'Gilead Sciences',
-    region: 'San Diego',
-    revenue: '$2.13M',
-    gp: '22%',
-    services: ['Staffing'],
-    serviceCount: 1,
-    primaryService: 'Staffing (T&M)',
-    expansionOpportunities: ['Veeva Managed Services', 'ProcessX', 'AI Governance', 'Quality Assurance'],
+    name: 'Abbott',
+    region: 'Mid-Atlantic',
+    revenue: '$1.94M',
+    gp: '47.1%',
+    services: ['CSV', 'Quality Consulting', 'Staffing'],
+    serviceCount: 3,
+    primaryService: 'Mixed (healthy)',
+    expansionOpportunities: ['Veeva Managed Services', 'AI Governance', 'ProcessX', 'Data Integration'],
     gtmTriggers: ['Veeva platform customer', 'Large IT footprint = ServiceNow likely', 'AI initiatives in R&D'],
     staffingPotential: 'High',
     projectPotential: 'High',
     managedServicesPotential: 'High',
-    notes: '🔴 ONE TRICK PONY — $2.13M revenue but only staffing at 22% GP. Massive expansion potential.',
+    notes: '✅ TOP ACCOUNT — $1.94M revenue with strong 47.1% GP. Multi-service, protect and expand.',
   },
   {
-    name: 'Kite Pharma',
-    region: 'LA',
-    revenue: '$2.08M',
-    gp: '20%',
+    name: 'Bausch',
+    region: 'NJ Pharma',
+    revenue: '$739K',
+    gp: '29.4%',
     services: ['Staffing'],
     serviceCount: 1,
     primaryService: 'Staffing (T&M)',
-    expansionOpportunities: ['CAR-T Manufacturing QA', 'Veeva Clinical', 'CRO Oversight', 'eTMF'],
-    gtmTriggers: ['Cell therapy manufacturing', 'Gilead subsidiary = enterprise alignment', 'Active clinical programs'],
+    expansionOpportunities: ['Quality Consulting', 'Veeva Managed Services', 'CRO Oversight', 'Validation Services'],
+    gtmTriggers: ['Large pharma footprint', 'Commercial operations', 'Active clinical programs'],
     staffingPotential: 'High',
     projectPotential: 'High',
     managedServicesPotential: 'Medium',
-    notes: '🔴 ONE TRICK PONY — CAR-T leader stuck in staffing. Cell therapy GTM is perfect fit.',
+    notes: '🔴 ONE TRICK PONY — $739K revenue but only staffing at 29.4% GP. Service expansion needed.',
   },
   {
-    name: 'Amgen',
-    region: 'LA',
-    revenue: '$1.75M',
-    gp: '21%',
-    services: ['Staffing', 'CSV'],
-    serviceCount: 2,
-    primaryService: 'Staffing (80%)',
+    name: 'Takeda',
+    region: 'Genetown',
+    revenue: '$702K',
+    gp: '14.5%',
+    services: ['Staffing'],
+    serviceCount: 1,
+    primaryService: 'Staffing (T&M)',
     expansionOpportunities: ['ProcessX', 'Veeva Managed Services', 'AI Governance', 'Data Integration'],
     gtmTriggers: ['Large ServiceNow deployment', 'Veeva enterprise customer', 'AI/ML in drug discovery'],
     staffingPotential: 'High',
     projectPotential: 'Medium',
     managedServicesPotential: 'High',
-    notes: '🟡 TWO SERVICES but still mostly staffing. ProcessX is ideal entry for ServiceNow.',
+    notes: '🔴 ONE TRICK PONY — Low margin at 14.5% GP. Urgent rate review AND service expansion needed.',
   },
   {
-    name: 'Genentech',
-    region: 'Bay Area',
-    revenue: '$1.8M',
-    gp: '42%',
+    name: 'Regeneron',
+    region: 'Mid-Atlantic',
+    revenue: '$436K',
+    gp: '63%',
     services: ['CSV', 'Quality Consulting', 'Staffing'],
     serviceCount: 3,
     primaryService: 'Mixed (healthy)',
     expansionOpportunities: ['AI Governance', 'Veeva AI Readiness', 'Domain AI'],
-    gtmTriggers: ['Roche subsidiary = enterprise scale', 'AI-heavy R&D', 'Embedded AI in platforms'],
+    gtmTriggers: ['Major biotech = enterprise scale', 'AI-heavy R&D', 'Embedded AI in platforms'],
     staffingPotential: 'Medium',
     projectPotential: 'High',
     managedServicesPotential: 'Medium',
-    notes: '✅ HEALTHY MIX — Good GP, multiple services. Focus on AI GTM expansion.',
+    notes: '✅ HEALTHY MIX — Excellent 63% GP across multiple services. Focus on AI GTM expansion.',
   },
   {
-    name: 'Neurocrine Biosciences',
-    region: 'San Diego',
-    revenue: '$890K',
-    gp: '48%',
+    name: 'J&J',
+    region: 'NJ Pharma',
+    revenue: '$408K',
+    gp: '32.4%',
     services: ['Quality Consulting', 'Validation'],
     serviceCount: 2,
     primaryService: 'Project-based',
-    expansionOpportunities: ['Veeva Managed Services', 'GxP Managed Services', 'CRO Oversight'],
-    gtmTriggers: ['Growing clinical pipeline', 'Commercial expansion', 'Veeva customer'],
+    expansionOpportunities: ['Veeva Managed Services', 'GxP Managed Services', 'ProcessX', 'AI Governance'],
+    gtmTriggers: ['Growing clinical pipeline', 'Commercial expansion', 'Veeva customer', 'Large ServiceNow footprint'],
     staffingPotential: 'Medium',
     projectPotential: 'High',
     managedServicesPotential: 'High',
-    notes: '✅ GOOD GP — Project-based at 48% margin. Convert to managed services for recurring revenue.',
-  },
-  {
-    name: 'Enovis Corp',
-    region: 'San Diego',
-    revenue: '$773K',
-    gp: '18%',
-    services: ['Staffing'],
-    serviceCount: 1,
-    primaryService: 'Staffing (T&M)',
-    expansionOpportunities: ['Quality Consulting', 'Validation Services', 'Managed Services'],
-    gtmTriggers: ['Medical devices = different regulatory path', 'Growing company'],
-    staffingPotential: 'Medium',
-    projectPotential: 'Medium',
-    managedServicesPotential: 'Medium',
-    notes: '🔴 ONE TRICK PONY — Low margin staffing only. Need rate review AND service expansion.',
+    notes: '🟡 GOOD POTENTIAL — Project-based at 32.4% margin. Massive enterprise, expand service portfolio.',
   },
 ];
 
@@ -169,14 +154,14 @@ const gtmServiceMapping = [
 // Revenue mix analysis
 const revenueMixAnalysis = {
   current: {
-    staffing: { pct: 65, revenue: '$5.8M', avgGP: '22%' },
-    project: { pct: 25, revenue: '$2.2M', avgGP: '42%' },
-    managed: { pct: 10, revenue: '$0.9M', avgGP: '55%' },
+    staffing: { pct: 55, revenue: '$3.06M', avgGP: '28%' },
+    project: { pct: 30, revenue: '$1.67M', avgGP: '45%' },
+    managed: { pct: 15, revenue: '$0.84M', avgGP: '55%' },
   },
   target: {
-    staffing: { pct: 40, revenue: '$4.5M', avgGP: '28%' },
-    project: { pct: 30, revenue: '$3.4M', avgGP: '45%' },
-    managed: { pct: 30, revenue: '$3.4M', avgGP: '55%' },
+    staffing: { pct: 35, revenue: '$2.45M', avgGP: '35%' },
+    project: { pct: 35, revenue: '$2.45M', avgGP: '48%' },
+    managed: { pct: 30, revenue: '$2.10M', avgGP: '55%' },
   },
 };
 
@@ -237,7 +222,7 @@ export default function ServiceExpansion() {
                   </div>
                 </div>
               </div>
-              <p className="text-slate-500 text-sm mt-4">Blended GP: ~34%</p>
+              <p className="text-slate-500 text-sm mt-4">Blended GP: ~43.1%</p>
             </div>
 
             <div className="bg-gradient-to-br from-green-900/30 to-emerald-900/20 rounded-xl p-6 border border-green-700/30">
@@ -487,8 +472,8 @@ export default function ServiceExpansion() {
               <div className="flex items-center gap-4 mb-4">
                 <span className="text-3xl">1️⃣</span>
                 <div>
-                  <h3 className="text-white font-bold">Gilead Sciences → Multi-Service Enterprise</h3>
-                  <p className="text-slate-400 text-sm">Current: $2.13M Staffing @ 22% GP</p>
+                  <h3 className="text-white font-bold">Takeda → Multi-Service Enterprise</h3>
+                  <p className="text-slate-400 text-sm">Current: $702K Staffing @ 14.5% GP</p>
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -500,43 +485,43 @@ export default function ServiceExpansion() {
                 <div className="bg-cyan-900/30 rounded-lg p-4 border border-cyan-700/30">
                   <p className="text-cyan-400 font-semibold mb-2">Phase 2: Veeva MS</p>
                   <p className="text-slate-300 text-sm">Convert Veeva support from internal to USDM managed. Recurring revenue.</p>
-                  <p className="text-green-400 text-xs mt-2">+$400K ARR @ 55% GP</p>
+                  <p className="text-green-400 text-xs mt-2">+$300K ARR @ 55% GP</p>
                 </div>
                 <div className="bg-cyan-900/30 rounded-lg p-4 border border-cyan-700/30">
                   <p className="text-cyan-400 font-semibold mb-2">Phase 3: AI Governance</p>
                   <p className="text-slate-300 text-sm">AI/ML validation framework for R&D platforms. Strategic advisory.</p>
-                  <p className="text-green-400 text-xs mt-2">+$300K @ 48% GP</p>
+                  <p className="text-green-400 text-xs mt-2">+$250K @ 48% GP</p>
                 </div>
               </div>
-              <p className="text-green-400 font-semibold mt-4">Result: $3.0M+ revenue @ 38% blended GP (+16 pts)</p>
+              <p className="text-green-400 font-semibold mt-4">Result: $1.45M+ revenue @ 38% blended GP (+23.5 pts)</p>
             </div>
 
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
               <div className="flex items-center gap-4 mb-4">
                 <span className="text-3xl">2️⃣</span>
                 <div>
-                  <h3 className="text-white font-bold">Kite Pharma → Cell Therapy Center of Excellence</h3>
-                  <p className="text-slate-400 text-sm">Current: $2.08M Staffing @ 20% GP</p>
+                  <h3 className="text-white font-bold">Bausch → Multi-Service Pharma Partner</h3>
+                  <p className="text-slate-400 text-sm">Current: $739K Staffing @ 29.4% GP</p>
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-cyan-900/30 rounded-lg p-4 border border-cyan-700/30">
-                  <p className="text-cyan-400 font-semibold mb-2">Phase 1: QA Expansion</p>
-                  <p className="text-slate-300 text-sm">Cell therapy manufacturing QA project. Audit readiness, GMP gap assessment.</p>
-                  <p className="text-green-400 text-xs mt-2">+$250K @ 45% GP</p>
+                  <p className="text-cyan-400 font-semibold mb-2">Phase 1: Quality Consulting</p>
+                  <p className="text-slate-300 text-sm">Quality system assessment and audit readiness. GMP gap assessment.</p>
+                  <p className="text-green-400 text-xs mt-2">+$200K @ 45% GP</p>
                 </div>
                 <div className="bg-cyan-900/30 rounded-lg p-4 border border-cyan-700/30">
                   <p className="text-cyan-400 font-semibold mb-2">Phase 2: CRO Oversight</p>
                   <p className="text-slate-300 text-sm">ICH E6(R3) framework for clinical programs. CTMS configuration.</p>
-                  <p className="text-green-400 text-xs mt-2">+$350K @ 48% GP</p>
+                  <p className="text-green-400 text-xs mt-2">+$300K @ 48% GP</p>
                 </div>
                 <div className="bg-cyan-900/30 rounded-lg p-4 border border-cyan-700/30">
-                  <p className="text-cyan-400 font-semibold mb-2">Phase 3: Premium Staffing</p>
-                  <p className="text-slate-300 text-sm">Convert commodity staff to cell therapy specialists at premium rates.</p>
-                  <p className="text-green-400 text-xs mt-2">Existing $2M @ 28% GP (+8 pts)</p>
+                  <p className="text-cyan-400 font-semibold mb-2">Phase 3: Veeva Managed Services</p>
+                  <p className="text-slate-300 text-sm">Convert Veeva support to managed model. Premium staffing at better rates.</p>
+                  <p className="text-green-400 text-xs mt-2">+$250K ARR @ 55% GP</p>
                 </div>
               </div>
-              <p className="text-green-400 font-semibold mt-4">Result: $2.6M+ revenue @ 35% blended GP (+15 pts)</p>
+              <p className="text-green-400 font-semibold mt-4">Result: $1.49M+ revenue @ 42% blended GP (+12.6 pts)</p>
             </div>
           </div>
         </section>
@@ -552,12 +537,12 @@ export default function ServiceExpansion() {
             </div>
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 text-center">
               <p className="text-slate-400 text-sm mb-1">Pony Revenue</p>
-              <p className="text-4xl font-bold text-yellow-400">$5.0M</p>
+              <p className="text-4xl font-bold text-yellow-400">$1.44M</p>
               <p className="text-slate-500 text-xs">at risk of margin erosion</p>
             </div>
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 text-center">
               <p className="text-slate-400 text-sm mb-1">Expansion Potential</p>
-              <p className="text-4xl font-bold text-green-400">$1.5M</p>
+              <p className="text-4xl font-bold text-green-400">$1.0M</p>
               <p className="text-slate-500 text-xs">new services to ponies</p>
             </div>
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 text-center">

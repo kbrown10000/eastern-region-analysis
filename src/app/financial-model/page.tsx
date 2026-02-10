@@ -3,32 +3,34 @@
 import { useState, useMemo } from 'react';
 
 // 2025 BASELINE DATA (from MCP - Feb 2026)
+// Finance MCP: get_customer_ltv | Labor MCP: get_gold_department_metrics
+// Sales MCP: pipeline_by_owner (verified 2026-02-04)
 const baseline2025 = {
-  // Labor metrics
+  // Labor metrics (from Labor MCP get_gold_department_metrics)
   deliveryResources: 680,
   deliveryUtilization: 83.3,
   billableHours: 2698514,
   avgBillRate: 175, // $/hr blended
-  
+
   // Capacity constraints
   capacityResources: 50,
   overloadedPct: 80,
   avgCapacityUtil: 118.4,
-  
-  // Sales metrics
-  totalPipeline: 54.8, // $M
+
+  // Sales metrics (East region from Sales MCP)
+  totalPipeline: 14.05, // $M - East pipeline (194 opps, verified)
   winRate: 41.6,
-  avgDealSize: 127, // $K
-  closedWonQ4: 6.76, // $M
-  
-  // Revenue & GP
-  EastRevenue: 17.19, // $M
-  EastGP: 6.19, // $M (36% margin)
+  avgDealSize: 72, // $K - East avg deal
+  closedWonQ4: 2.1, // $M estimated
+
+  // Revenue & GP (from Finance MCP get_customer_ltv)
+  EastRevenue: 5.57, // $M - 36 East accounts
+  EastGP: 2.40, // $M (43.1% margin)
   companyRevenue: 50.0, // $M (estimated)
-  
+
   // Ratios
-  gpMargin: 36.0, // % current
-  targetGpMargin: 45.0, // % target
+  gpMargin: 43.1, // % current (East weighted avg from MCP)
+  targetGpMargin: 48.0, // % target
   revenuePerResource: 25.3, // $K per delivery FTE
 };
 
@@ -469,23 +471,23 @@ export default function FinancialModelPage() {
 
             {/* Problem Accounts */}
             <div className="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
-              <div className="text-red-400 font-bold mb-3">🔴 Problem Accounts (West)</div>
+              <div className="text-red-400 font-bold mb-3">🔴 Problem Accounts (East)</div>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-slate-300">Gilead</span>
-                  <span className="text-red-400">22% GP</span>
+                  <span className="text-slate-300">Takeda</span>
+                  <span className="text-red-400">14.5% GP</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-300">Kite Pharma</span>
-                  <span className="text-red-400">20% GP</span>
+                  <span className="text-slate-300">Spectranetics</span>
+                  <span className="text-red-400">26.4% GP</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-300">Amgen</span>
-                  <span className="text-red-400">21% GP</span>
+                  <span className="text-slate-300">Formation Bio</span>
+                  <span className="text-red-400">27.9% GP</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-300">Enovis</span>
-                  <span className="text-red-400">18% GP</span>
+                  <span className="text-slate-300">Bausch Health</span>
+                  <span className="text-red-400">29.4% GP</span>
                 </div>
               </div>
               <div className="mt-3 text-xs text-slate-400">
@@ -495,23 +497,27 @@ export default function FinancialModelPage() {
 
             {/* High Margin Accounts */}
             <div className="bg-green-900/20 rounded-lg p-4 border border-green-700/30">
-              <div className="text-green-400 font-bold mb-3">🟢 High Margin Models</div>
+              <div className="text-green-400 font-bold mb-3">🟢 High Margin Models (East)</div>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-slate-300">PTC (Managed)</span>
-                  <span className="text-green-400">96.5% GP</span>
+                  <span className="text-slate-300">Intellia (Managed)</span>
+                  <span className="text-green-400">96.6% GP</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-slate-300">Moderna (Managed)</span>
+                  <span className="text-green-400">92.8% GP</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-300">Harmony Bio (Managed)</span>
-                  <span className="text-green-400">93.1% GP</span>
+                  <span className="text-green-400">81.6% GP</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-300">Abbott (Managed)</span>
-                  <span className="text-green-400">64.3% GP</span>
+                  <span className="text-slate-300">Ironwood (Managed)</span>
+                  <span className="text-green-400">79.1% GP</span>
                 </div>
               </div>
               <div className="mt-3 text-xs text-slate-400">
-                100% managed services = 65-96% GP
+                Managed services = 65-97% GP
               </div>
             </div>
           </div>

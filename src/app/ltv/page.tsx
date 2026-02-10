@@ -234,16 +234,16 @@ export default function LTVPage() {
           <h2 className="text-2xl font-bold text-white mb-6">💡 Key Insights</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/20 rounded-xl p-6 border border-cyan-700/30">
-              <h3 className="text-cyan-400 font-bold mb-2">Top 5 = 50% of LTV</h3>
-              <p className="text-slate-300 text-sm">Gilead, Kite, Amgen, Genentech, and Abbott alone represent over half of total LTV. Critical to retain.</p>
+              <h3 className="text-cyan-400 font-bold mb-2">Top 5 = 60%+ of LTV</h3>
+              <p className="text-slate-300 text-sm">Abbott, Bausch, Takeda, J&J, and Regeneron represent the majority of total East LTV. Critical to retain.</p>
             </div>
             <div className="bg-gradient-to-br from-green-900/30 to-emerald-900/20 rounded-xl p-6 border border-green-700/30">
-              <h3 className="text-green-400 font-bold mb-2">9 Growing Accounts</h3>
-              <p className="text-slate-300 text-sm">Jazz, BioMarin, Vertex, Sarepta showing strong upward trends. Expand service footprint.</p>
+              <h3 className="text-green-400 font-bold mb-2">Growing Accounts</h3>
+              <p className="text-slate-300 text-sm">Abbott (+213.8%), Takeda (+88.2%), Bausch (+46.1%), Regeneron (new) showing strong upward trends. Expand service footprint.</p>
             </div>
             <div className="bg-gradient-to-br from-red-900/30 to-orange-900/20 rounded-xl p-6 border border-red-700/30">
-              <h3 className="text-red-400 font-bold mb-2">3 Declining Accounts</h3>
-              <p className="text-slate-300 text-sm">Amgen, Enovis, Illumina trending down. Intervention needed - see Churn Signals page.</p>
+              <h3 className="text-red-400 font-bold mb-2">Declining Accounts</h3>
+              <p className="text-slate-300 text-sm">J&J, Integra, Spectranetics trending down. Intervention needed - see Churn Signals page.</p>
             </div>
           </div>
         </section>

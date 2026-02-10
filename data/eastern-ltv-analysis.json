@@ -1,0 +1,1148 @@
+{
+  "eastern_region_summary": {
+    "total_accounts": 109,
+    "total_dataset_accounts": 375,
+    "eastern_pct_of_total": 29.1,
+    "total_revenue_2025": 7055924.95,
+    "total_revenue_2024": 5568514.82,
+    "yoy_revenue_growth_pct": 26.7,
+    "total_ltv": 18293123.74,
+    "weighted_avg_gp_pct": 51.5,
+    "total_ltv_all_accounts": 47901102,
+    "eastern_ltv_pct_of_total": 38.2
+  },
+  "territories": {
+    "Genetown": {
+      "count": 53,
+      "revenue_2025": 2479739.29,
+      "revenue_2024": 2338921,
+      "yoy_growth_pct": 6,
+      "ltv": 7124362.07,
+      "weighted_gp_pct": 56
+    },
+    "NJ Pharma": {
+      "count": 16,
+      "revenue_2025": 2751661.36,
+      "revenue_2024": 2061241.51,
+      "yoy_growth_pct": 33.5,
+      "ltv": 6541021.01,
+      "weighted_gp_pct": 37.3
+    },
+    "NY/Eastern": {
+      "count": 11,
+      "revenue_2025": 754260.67,
+      "revenue_2024": 318048.6,
+      "yoy_growth_pct": 137.2,
+      "ltv": 1472133.76,
+      "weighted_gp_pct": 63.8
+    },
+    "Research Triangle": {
+      "count": 4,
+      "revenue_2025": 77053.07,
+      "revenue_2024": 189700.62,
+      "yoy_growth_pct": -59.4,
+      "ltv": 597008.07,
+      "weighted_gp_pct": 87.2
+    },
+    "Mid-Atlantic": {
+      "count": 25,
+      "revenue_2025": 993210.56,
+      "revenue_2024": 660603.09,
+      "yoy_growth_pct": 50.3,
+      "ltv": 2558598.83,
+      "weighted_gp_pct": 67.3
+    }
+  },
+  "accounts": [
+    {
+      "account_name": "Takeda Pharmaceuticals U.S.A.",
+      "territory": "Genetown",
+      "location": "Cambridge, MA",
+      "lifetime_value_raw": 1217007.22,
+      "revenue_2025_raw": 701554.12,
+      "revenue_2024_raw": 372853.1,
+      "gross_profit_pct_raw": 14.5,
+      "yoy_growth_pct_raw": 88.2
+    },
+    {
+      "account_name": "Black Diamond Therapeutics Inc",
+      "territory": "Genetown",
+      "location": "Cambridge, MA",
+      "lifetime_value_raw": 330126.01999999996,
+      "revenue_2025_raw": 119152.48,
+      "revenue_2024_raw": 146836.26999999996,
+      "gross_profit_pct_raw": 76.4,
+      "yoy_growth_pct_raw": -18.9
+    },
+    {
+      "account_name": "Seaport Therapeutics",
+      "territory": "Genetown",
+      "location": "Boston, MA",
+      "lifetime_value_raw": 112475.68999999999,
+      "revenue_2025_raw": 112475.68999999999,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": 67.8,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "Alnylam Pharmaceuticals",
+      "territory": "Genetown",
+      "location": "Cambridge, MA",
+      "lifetime_value_raw": 250703.01,
+      "revenue_2025_raw": 109863.01000000001,
+      "revenue_2024_raw": 100845.98999999999,
+      "gross_profit_pct_raw": 71.5,
+      "yoy_growth_pct_raw": 8.9
+    },
+    {
+      "account_name": "Ironwood Pharmaceuticals",
+      "territory": "Genetown",
+      "location": "Boston, MA",
+      "lifetime_value_raw": 199455.47999999998,
+      "revenue_2025_raw": 101955.48,
+      "revenue_2024_raw": 52579.049999999996,
+      "gross_profit_pct_raw": 79.1,
+      "yoy_growth_pct_raw": 93.9
+    },
+    {
+      "account_name": "Praxis Precision Medicines, Inc.",
+      "territory": "Genetown",
+      "location": "Cambridge, MA",
+      "lifetime_value_raw": 97225,
+      "revenue_2025_raw": 97225,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": 68.8,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "Astellas Gene Therapies",
+      "territory": "Genetown",
+      "location": "Cambridge, MA",
+      "lifetime_value_raw": 260600.66999999998,
+      "revenue_2025_raw": 93001.25,
+      "revenue_2024_raw": 82832.5,
+      "gross_profit_pct_raw": 40.2,
+      "yoy_growth_pct_raw": 12.3
+    },
+    {
+      "account_name": "USWM CT, LLC",
+      "territory": "Genetown",
+      "location": "CT",
+      "lifetime_value_raw": 92620,
+      "revenue_2025_raw": 92620,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": 48.5,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "Sail Biomedicines",
+      "territory": "Genetown",
+      "location": "Cambridge, MA",
+      "lifetime_value_raw": 301279.49,
+      "revenue_2025_raw": 86675,
+      "revenue_2024_raw": 89885.18000000001,
+      "gross_profit_pct_raw": 94.1,
+      "yoy_growth_pct_raw": -3.6
+    },
+    {
+      "account_name": "Abcuro",
+      "territory": "Genetown",
+      "location": "Newton, MA",
+      "lifetime_value_raw": 175680.83000000002,
+      "revenue_2025_raw": 77961.65,
+      "revenue_2024_raw": 89514.46,
+      "gross_profit_pct_raw": 71.9,
+      "yoy_growth_pct_raw": -12.9
+    },
+    {
+      "account_name": "New England Cell Therapeutics, Inc.",
+      "territory": "Genetown",
+      "location": "MA",
+      "lifetime_value_raw": 154100.00000000003,
+      "revenue_2025_raw": 69414.86000000002,
+      "revenue_2024_raw": 84685.14000000001,
+      "gross_profit_pct_raw": 65.4,
+      "yoy_growth_pct_raw": -18
+    },
+    {
+      "account_name": "Hologic, Inc.",
+      "territory": "Genetown",
+      "location": "Marlborough, MA",
+      "lifetime_value_raw": 82580,
+      "revenue_2025_raw": 69330,
+      "revenue_2024_raw": 687.5,
+      "gross_profit_pct_raw": 49.4,
+      "yoy_growth_pct_raw": 9984.4
+    },
+    {
+      "account_name": "Scholar Rock, Inc.",
+      "territory": "Genetown",
+      "location": "Cambridge, MA",
+      "lifetime_value_raw": 94637.99000000002,
+      "revenue_2025_raw": 60761.90000000001,
+      "revenue_2024_raw": 8012.889999999999,
+      "gross_profit_pct_raw": 55.2,
+      "yoy_growth_pct_raw": 658.3
+    },
+    {
+      "account_name": "Loftware, Inc.",
+      "territory": "Genetown",
+      "location": "Portsmouth, NH",
+      "lifetime_value_raw": 208042.5,
+      "revenue_2025_raw": 57302.5,
+      "revenue_2024_raw": 65410,
+      "gross_profit_pct_raw": 93.2,
+      "yoy_growth_pct_raw": -12.4
+    },
+    {
+      "account_name": "Electra Therapeutics, Inc.",
+      "territory": "Genetown",
+      "location": "Boston, MA",
+      "lifetime_value_raw": 50000,
+      "revenue_2025_raw": 50000,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": 73.1,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "Mersana Therapeutics",
+      "territory": "Genetown",
+      "location": "Cambridge, MA",
+      "lifetime_value_raw": 222739.13,
+      "revenue_2025_raw": 44000.00000000001,
+      "revenue_2024_raw": 62927.65000000001,
+      "gross_profit_pct_raw": 81.9,
+      "yoy_growth_pct_raw": -30.1
+    },
+    {
+      "account_name": "Replimune",
+      "territory": "Genetown",
+      "location": "Woburn, MA",
+      "lifetime_value_raw": 180081.25,
+      "revenue_2025_raw": 44000,
+      "revenue_2024_raw": 44090.9,
+      "gross_profit_pct_raw": 76.3,
+      "yoy_growth_pct_raw": -0.2
+    },
+    {
+      "account_name": "Boehringer Ingelheim GmbH",
+      "territory": "Genetown",
+      "location": "Ridgefield, CT",
+      "lifetime_value_raw": 132000,
+      "revenue_2025_raw": 44000,
+      "revenue_2024_raw": 44000.00000000001,
+      "gross_profit_pct_raw": 53.1,
+      "yoy_growth_pct_raw": 0
+    },
+    {
+      "account_name": "Cardurion Pharmaceuticals",
+      "territory": "Genetown",
+      "location": "Cambridge, MA",
+      "lifetime_value_raw": 133794.52000000002,
+      "revenue_2025_raw": 43996.70000000001,
+      "revenue_2024_raw": 79797.82,
+      "gross_profit_pct_raw": 77.9,
+      "yoy_growth_pct_raw": -44.9
+    },
+    {
+      "account_name": "Bicara Therapeutics",
+      "territory": "Genetown",
+      "location": "Boston, MA",
+      "lifetime_value_raw": 77098.84,
+      "revenue_2025_raw": 42349.41,
+      "revenue_2024_raw": 34749.43,
+      "gross_profit_pct_raw": 67.7,
+      "yoy_growth_pct_raw": 21.9
+    },
+    {
+      "account_name": "Atea Pharmaceuticals",
+      "territory": "Genetown",
+      "location": "Boston, MA",
+      "lifetime_value_raw": 146621.92,
+      "revenue_2025_raw": 41000,
+      "revenue_2024_raw": 41607.94,
+      "gross_profit_pct_raw": 80.4,
+      "yoy_growth_pct_raw": -1.5
+    },
+    {
+      "account_name": "Moderna",
+      "territory": "Genetown",
+      "location": "Cambridge, MA",
+      "lifetime_value_raw": 74200,
+      "revenue_2025_raw": 37200,
+      "revenue_2024_raw": 37000,
+      "gross_profit_pct_raw": 92.8,
+      "yoy_growth_pct_raw": 0.5
+    },
+    {
+      "account_name": "Relay Therapeutics, Inc.",
+      "territory": "Genetown",
+      "location": "Cambridge, MA",
+      "lifetime_value_raw": 244120,
+      "revenue_2025_raw": 37150,
+      "revenue_2024_raw": 28250,
+      "gross_profit_pct_raw": 55.2,
+      "yoy_growth_pct_raw": 31.5
+    },
+    {
+      "account_name": "Intellia Therapeutics, Inc.",
+      "territory": "Genetown",
+      "location": "Cambridge, MA",
+      "lifetime_value_raw": 126600,
+      "revenue_2025_raw": 37000,
+      "revenue_2024_raw": 37026.28,
+      "gross_profit_pct_raw": 96.6,
+      "yoy_growth_pct_raw": -0.1
+    },
+    {
+      "account_name": "Alexion Pharmaceuticals, Inc.",
+      "territory": "Genetown",
+      "location": "New Haven, CT",
+      "lifetime_value_raw": 99242.06,
+      "revenue_2025_raw": 33740.47,
+      "revenue_2024_raw": 33272.26,
+      "gross_profit_pct_raw": 100,
+      "yoy_growth_pct_raw": 1.4
+    },
+    {
+      "account_name": "Cogent Biosciences",
+      "territory": "Genetown",
+      "location": "Waltham, MA",
+      "lifetime_value_raw": 81000,
+      "revenue_2025_raw": 27000.000000000004,
+      "revenue_2024_raw": 27061.240000000005,
+      "gross_profit_pct_raw": 91.9,
+      "yoy_growth_pct_raw": -0.2
+    },
+    {
+      "account_name": "Ipsen Pharma",
+      "territory": "Genetown",
+      "location": "Cambridge, MA",
+      "lifetime_value_raw": 99820.5,
+      "revenue_2025_raw": 25999.999999999993,
+      "revenue_2024_raw": 26000.000000000004,
+      "gross_profit_pct_raw": 88.6,
+      "yoy_growth_pct_raw": 0
+    },
+    {
+      "account_name": "Associates of Cape Cod",
+      "territory": "Genetown",
+      "location": "East Falmouth, MA",
+      "lifetime_value_raw": 52915.07,
+      "revenue_2025_raw": 17995.82,
+      "revenue_2024_raw": 17919.25,
+      "gross_profit_pct_raw": 90.1,
+      "yoy_growth_pct_raw": 0.4
+    },
+    {
+      "account_name": "Disc Medicine, Inc.",
+      "territory": "Genetown",
+      "location": "Cambridge, MA",
+      "lifetime_value_raw": 53667.12,
+      "revenue_2025_raw": 16640.82,
+      "revenue_2024_raw": 29055.350000000002,
+      "gross_profit_pct_raw": 88.5,
+      "yoy_growth_pct_raw": -42.7
+    },
+    {
+      "account_name": "Trevi Therapeutics",
+      "territory": "Genetown",
+      "location": "New Haven, CT",
+      "lifetime_value_raw": 15494.519999999999,
+      "revenue_2025_raw": 15494.519999999999,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": 77,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "OpenBiome",
+      "territory": "Genetown",
+      "location": "Cambridge, MA",
+      "lifetime_value_raw": 99878.80000000002,
+      "revenue_2025_raw": 12554.349999999999,
+      "revenue_2024_raw": 35000,
+      "gross_profit_pct_raw": 98.9,
+      "yoy_growth_pct_raw": -64.1
+    },
+    {
+      "account_name": "Leap Therapeutics",
+      "territory": "Genetown",
+      "location": "Cambridge, MA",
+      "lifetime_value_raw": 71424.66,
+      "revenue_2025_raw": 11424.66,
+      "revenue_2024_raw": 30050.75,
+      "gross_profit_pct_raw": 92.4,
+      "yoy_growth_pct_raw": -62
+    },
+    {
+      "account_name": "Lyra Therapeutics Inc",
+      "territory": "Genetown",
+      "location": "Watertown, MA",
+      "lifetime_value_raw": 28640.489999999998,
+      "revenue_2025_raw": 9000,
+      "revenue_2024_raw": 9004.18,
+      "gross_profit_pct_raw": 95.5,
+      "yoy_growth_pct_raw": 0
+    },
+    {
+      "account_name": "Stoke Therapeutics",
+      "territory": "Genetown",
+      "location": "Bedford, MA",
+      "lifetime_value_raw": 99717.06999999999,
+      "revenue_2025_raw": 8741.64,
+      "revenue_2024_raw": 56722.979999999996,
+      "gross_profit_pct_raw": 78.3,
+      "yoy_growth_pct_raw": -84.6
+    },
+    {
+      "account_name": "Anthos Therapeutics",
+      "territory": "Genetown",
+      "location": "Cambridge, MA",
+      "lifetime_value_raw": 32645.21,
+      "revenue_2025_raw": 7997.67,
+      "revenue_2024_raw": 24647.54,
+      "gross_profit_pct_raw": 88.1,
+      "yoy_growth_pct_raw": -67.6
+    },
+    {
+      "account_name": "Pyxis Oncology",
+      "territory": "Genetown",
+      "location": "Cambridge, MA",
+      "lifetime_value_raw": 22372.6,
+      "revenue_2025_raw": 7905.0599999999995,
+      "revenue_2024_raw": 7001.78,
+      "gross_profit_pct_raw": 94.7,
+      "yoy_growth_pct_raw": 12.9
+    },
+    {
+      "account_name": "Incendia Therapeutics",
+      "territory": "Genetown",
+      "location": "Boston, MA",
+      "lifetime_value_raw": 25235.62,
+      "revenue_2025_raw": 7509.589999999999,
+      "revenue_2024_raw": 7004.869999999999,
+      "gross_profit_pct_raw": 91.6,
+      "yoy_growth_pct_raw": 7.2
+    },
+    {
+      "account_name": "Ikena Oncology",
+      "territory": "Genetown",
+      "location": "Boston, MA",
+      "lifetime_value_raw": 65506.84999999999,
+      "revenue_2025_raw": 5506.849999999999,
+      "revenue_2024_raw": 30066.92,
+      "gross_profit_pct_raw": 100,
+      "yoy_growth_pct_raw": -81.7
+    },
+    {
+      "account_name": "Karuna Therapeutics",
+      "territory": "Genetown",
+      "location": "Boston, MA",
+      "lifetime_value_raw": 47783.55999999999,
+      "revenue_2025_raw": 1225.13,
+      "revenue_2024_raw": 26020.769999999997,
+      "gross_profit_pct_raw": 94.1,
+      "yoy_growth_pct_raw": -95.3
+    },
+    {
+      "account_name": "Cerevel Therapeutics",
+      "territory": "Genetown",
+      "location": "Cambridge, MA",
+      "lifetime_value_raw": 255851.61000000002,
+      "revenue_2025_raw": 1013.66,
+      "revenue_2024_raw": 107759.01999999997,
+      "gross_profit_pct_raw": 57.5,
+      "yoy_growth_pct_raw": -99.1
+    },
+    {
+      "account_name": "Loxo Oncology, Inc.",
+      "territory": "Genetown",
+      "location": "Stamford, CT",
+      "lifetime_value_raw": 556022.5,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 201280,
+      "gross_profit_pct_raw": 30.7,
+      "yoy_growth_pct_raw": -100
+    },
+    {
+      "account_name": "Dyne Therapeutics",
+      "territory": "Genetown",
+      "location": "Waltham, MA",
+      "lifetime_value_raw": 149400,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 149400,
+      "gross_profit_pct_raw": 47.7,
+      "yoy_growth_pct_raw": -100
+    },
+    {
+      "account_name": "UniQure, Inc.",
+      "territory": "Genetown",
+      "location": "Lexington, MA",
+      "lifetime_value_raw": 66200,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": 72.8,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "Bose Corporation",
+      "territory": "Genetown",
+      "location": "Framingham, MA",
+      "lifetime_value_raw": 57917.5,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": 41,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "C4 Therapeutics Inc",
+      "territory": "Genetown",
+      "location": "Watertown, MA",
+      "lifetime_value_raw": 42493.75,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": 52,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "Landmark Bio",
+      "territory": "Genetown",
+      "location": "Watertown, MA",
+      "lifetime_value_raw": 40500,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": 40,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "Verax Biomedical Incorporated",
+      "territory": "Genetown",
+      "location": "Marlborough, MA",
+      "lifetime_value_raw": 36200.03999999999,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 11715,
+      "gross_profit_pct_raw": 56,
+      "yoy_growth_pct_raw": -100
+    },
+    {
+      "account_name": "Puritan Medical Products Inc.",
+      "territory": "Genetown",
+      "location": "Guilford, ME",
+      "lifetime_value_raw": 29195.559999999998,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": 75.2,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "Ipsen Pharma",
+      "territory": "Genetown",
+      "location": "Cambridge, MA",
+      "lifetime_value_raw": 9958.900000000001,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 2426.23,
+      "gross_profit_pct_raw": 96.7,
+      "yoy_growth_pct_raw": -100
+    },
+    {
+      "account_name": "Keros Therapeutics Inc",
+      "territory": "Genetown",
+      "location": "Lexington, MA",
+      "lifetime_value_raw": 9761.639999999998,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 2773.22,
+      "gross_profit_pct_raw": 99.8,
+      "yoy_growth_pct_raw": -100
+    },
+    {
+      "account_name": "Amylyx Pharmaceuticals",
+      "territory": "Genetown",
+      "location": "Cambridge, MA",
+      "lifetime_value_raw": 8131.509999999999,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 1147.54,
+      "gross_profit_pct_raw": 95.1,
+      "yoy_growth_pct_raw": -100
+    },
+    {
+      "account_name": "Finch Therapeutics, Inc.",
+      "territory": "Genetown",
+      "location": "Somerville, MA",
+      "lifetime_value_raw": 3595.37,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": 98.9,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "Gelesis, Inc.",
+      "territory": "Genetown",
+      "location": "Boston, MA",
+      "lifetime_value_raw": 0,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": null,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "argenx BV",
+      "territory": "NJ Pharma",
+      "location": "Branchburg, NJ",
+      "lifetime_value_raw": 1272672.17,
+      "revenue_2025_raw": 1213312.17,
+      "revenue_2024_raw": 59360,
+      "gross_profit_pct_raw": 45.5,
+      "yoy_growth_pct_raw": 1944
+    },
+    {
+      "account_name": "Bausch Health US, LLC",
+      "territory": "NJ Pharma",
+      "location": "Bridgewater, NJ",
+      "lifetime_value_raw": 1303130,
+      "revenue_2025_raw": 738910,
+      "revenue_2024_raw": 505730,
+      "gross_profit_pct_raw": 29.4,
+      "yoy_growth_pct_raw": 46.1
+    },
+    {
+      "account_name": "Johnson & Johnson",
+      "territory": "NJ Pharma",
+      "location": "New Brunswick, NJ",
+      "lifetime_value_raw": 1533746.82,
+      "revenue_2025_raw": 408437.82,
+      "revenue_2024_raw": 500005.49,
+      "gross_profit_pct_raw": 32.4,
+      "yoy_growth_pct_raw": -18.3
+    },
+    {
+      "account_name": "Integra Lifesciences Holdings Corporation",
+      "territory": "NJ Pharma",
+      "location": "Princeton, NJ",
+      "lifetime_value_raw": 1287156.25,
+      "revenue_2025_raw": 265680,
+      "revenue_2024_raw": 516841.25,
+      "gross_profit_pct_raw": 37,
+      "yoy_growth_pct_raw": -48.6
+    },
+    {
+      "account_name": "Nuvectis Pharma, Inc.",
+      "territory": "NJ Pharma",
+      "location": "Fort Lee, NJ",
+      "lifetime_value_raw": 118342.4,
+      "revenue_2025_raw": 30000.000000000004,
+      "revenue_2024_raw": 26535.590000000004,
+      "gross_profit_pct_raw": 98.9,
+      "yoy_growth_pct_raw": 13.1
+    },
+    {
+      "account_name": "Johnson & Johnson Medical Inc.",
+      "territory": "NJ Pharma",
+      "location": "New Brunswick, NJ",
+      "lifetime_value_raw": 24220,
+      "revenue_2025_raw": 24220,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": 46,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "Provention Bio, Inc., a Sanofi Company",
+      "territory": "NJ Pharma",
+      "location": "Red Bank, NJ",
+      "lifetime_value_raw": 99353.42,
+      "revenue_2025_raw": 23753.42,
+      "revenue_2024_raw": 30017.070000000003,
+      "gross_profit_pct_raw": 86.3,
+      "yoy_growth_pct_raw": -20.9
+    },
+    {
+      "account_name": "Genmab A/S",
+      "territory": "NJ Pharma",
+      "location": "Princeton, NJ",
+      "lifetime_value_raw": 72356.44,
+      "revenue_2025_raw": 18805.479999999996,
+      "revenue_2024_raw": 26671.29,
+      "gross_profit_pct_raw": -305.6,
+      "yoy_growth_pct_raw": -29.5
+    },
+    {
+      "account_name": "SK Life Science, Inc.",
+      "territory": "NJ Pharma",
+      "location": "Paramus, NJ",
+      "lifetime_value_raw": 284539,
+      "revenue_2025_raw": 7999.999999999999,
+      "revenue_2024_raw": 119122.00000000001,
+      "gross_profit_pct_raw": 53.3,
+      "yoy_growth_pct_raw": -93.3
+    },
+    {
+      "account_name": "Alvogen",
+      "territory": "NJ Pharma",
+      "location": "Pine Brook, NJ",
+      "lifetime_value_raw": 30126.030000000002,
+      "revenue_2025_raw": 7999.999999999999,
+      "revenue_2024_raw": 20732.730000000003,
+      "gross_profit_pct_raw": 81.8,
+      "yoy_growth_pct_raw": -61.4
+    },
+    {
+      "account_name": "Atlantic Health System",
+      "territory": "NJ Pharma",
+      "location": "Morristown, NJ",
+      "lifetime_value_raw": 27638.36,
+      "revenue_2025_raw": 7000.000000000002,
+      "revenue_2024_raw": 8518.36,
+      "gross_profit_pct_raw": 85.2,
+      "yoy_growth_pct_raw": -17.8
+    },
+    {
+      "account_name": "Amarin Pharma Inc.",
+      "territory": "NJ Pharma",
+      "location": "Bridgewater, NJ",
+      "lifetime_value_raw": 26001.370000000003,
+      "revenue_2025_raw": 5542.47,
+      "revenue_2024_raw": 7003.98,
+      "gross_profit_pct_raw": 92.8,
+      "yoy_growth_pct_raw": -20.9
+    },
+    {
+      "account_name": "embecta Medical II LLC",
+      "territory": "NJ Pharma",
+      "location": "Parsippany, NJ",
+      "lifetime_value_raw": 232635,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 33650,
+      "gross_profit_pct_raw": 49.1,
+      "yoy_growth_pct_raw": -100
+    },
+    {
+      "account_name": "Genmab US INC",
+      "territory": "NJ Pharma",
+      "location": "Princeton, NJ",
+      "lifetime_value_raw": 222478.75,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 206678.75,
+      "gross_profit_pct_raw": 56.9,
+      "yoy_growth_pct_raw": -100
+    },
+    {
+      "account_name": "Bausch & Lomb",
+      "territory": "NJ Pharma",
+      "location": "Bridgewater, NJ",
+      "lifetime_value_raw": 6250,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": 59.3,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "Bausch & Lomb",
+      "territory": "NJ Pharma",
+      "location": "Bridgewater, NJ",
+      "lifetime_value_raw": 375,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 375,
+      "gross_profit_pct_raw": 58.8,
+      "yoy_growth_pct_raw": -100
+    },
+    {
+      "account_name": "Regeneron Pharmaceuticals Inc",
+      "territory": "NY/Eastern",
+      "location": "Tarrytown, NY",
+      "lifetime_value_raw": 435511.11,
+      "revenue_2025_raw": 435511.11,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": 63,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "Axsome Therapeutics Inc.",
+      "territory": "NY/Eastern",
+      "location": "New York, NY",
+      "lifetime_value_raw": 357237.25,
+      "revenue_2025_raw": 110957.25,
+      "revenue_2024_raw": 124492.62999999999,
+      "gross_profit_pct_raw": 26.1,
+      "yoy_growth_pct_raw": -10.9
+    },
+    {
+      "account_name": "Columbia University Irving Medical Center",
+      "territory": "NY/Eastern",
+      "location": "New York, NY",
+      "lifetime_value_raw": 156282.19,
+      "revenue_2025_raw": 47537.67,
+      "revenue_2024_raw": 30842.879999999997,
+      "gross_profit_pct_raw": 87.4,
+      "yoy_growth_pct_raw": 54.1
+    },
+    {
+      "account_name": "Protara Therapeutics, Inc.",
+      "territory": "NY/Eastern",
+      "location": "New York, NY",
+      "lifetime_value_raw": 120000,
+      "revenue_2025_raw": 39999.99999999999,
+      "revenue_2024_raw": 40000,
+      "gross_profit_pct_raw": 100,
+      "yoy_growth_pct_raw": 0
+    },
+    {
+      "account_name": "Aetion Inc.",
+      "territory": "NY/Eastern",
+      "location": "New York, NY",
+      "lifetime_value_raw": 51910,
+      "revenue_2025_raw": 39410,
+      "revenue_2024_raw": 12500,
+      "gross_profit_pct_raw": 73.4,
+      "yoy_growth_pct_raw": 215.3
+    },
+    {
+      "account_name": "Schrodinger",
+      "territory": "NY/Eastern",
+      "location": "New York, NY",
+      "lifetime_value_raw": 112175.34,
+      "revenue_2025_raw": 38000,
+      "revenue_2024_raw": 37193.07,
+      "gross_profit_pct_raw": 97.8,
+      "yoy_growth_pct_raw": 2.2
+    },
+    {
+      "account_name": "The Estee Lauder Companies Inc.",
+      "territory": "NY/Eastern",
+      "location": "New York, NY",
+      "lifetime_value_raw": 135826.29,
+      "revenue_2025_raw": 24257.539999999997,
+      "revenue_2024_raw": 24008.44,
+      "gross_profit_pct_raw": 74.1,
+      "yoy_growth_pct_raw": 1
+    },
+    {
+      "account_name": "Prestige Consumer Healthcare Inc.",
+      "territory": "NY/Eastern",
+      "location": "Tarrytown, NY",
+      "lifetime_value_raw": 7810,
+      "revenue_2025_raw": 7810,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": 43.9,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "AngioDynamics",
+      "territory": "NY/Eastern",
+      "location": "Latham, NY",
+      "lifetime_value_raw": 21737.739999999998,
+      "revenue_2025_raw": 7143.220000000001,
+      "revenue_2024_raw": 14001.619999999999,
+      "gross_profit_pct_raw": 94.3,
+      "yoy_growth_pct_raw": -49
+    },
+    {
+      "account_name": "Carestream Health",
+      "territory": "NY/Eastern",
+      "location": "Rochester, NY",
+      "lifetime_value_raw": 73643.84,
+      "revenue_2025_raw": 3633.88,
+      "revenue_2024_raw": 35009.96,
+      "gross_profit_pct_raw": 60.4,
+      "yoy_growth_pct_raw": -89.6
+    },
+    {
+      "account_name": "Kadmon Pharmaceuticals, LLC",
+      "territory": "NY/Eastern",
+      "location": "New York, NY",
+      "lifetime_value_raw": 0,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": null,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "BioCryst Pharmaceuticals, Inc.",
+      "territory": "Research Triangle",
+      "location": "Durham, NC",
+      "lifetime_value_raw": 137078.07,
+      "revenue_2025_raw": 41178.06999999999,
+      "revenue_2024_raw": 45010.46000000001,
+      "gross_profit_pct_raw": 90.5,
+      "yoy_growth_pct_raw": -8.5
+    },
+    {
+      "account_name": "BioAgilytix Labs",
+      "territory": "Research Triangle",
+      "location": "Durham, NC",
+      "lifetime_value_raw": 81000,
+      "revenue_2025_raw": 26999.999999999996,
+      "revenue_2024_raw": 27000,
+      "gross_profit_pct_raw": 91.9,
+      "yoy_growth_pct_raw": 0
+    },
+    {
+      "account_name": "Humacyte Global",
+      "territory": "Research Triangle",
+      "location": "Durham, NC",
+      "lifetime_value_raw": 228430.00000000003,
+      "revenue_2025_raw": 8875,
+      "revenue_2024_raw": 116221.67000000003,
+      "gross_profit_pct_raw": 57.2,
+      "yoy_growth_pct_raw": -92.4
+    },
+    {
+      "account_name": "Precision BioSciences, Inc.",
+      "territory": "Research Triangle",
+      "location": "Durham, NC",
+      "lifetime_value_raw": 150499.99999999997,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 1468.49,
+      "gross_profit_pct_raw": 71.2,
+      "yoy_growth_pct_raw": -100
+    },
+    {
+      "account_name": "Immunome, Inc.",
+      "territory": "Mid-Atlantic",
+      "location": "Exton, PA",
+      "lifetime_value_raw": 404728.23,
+      "revenue_2025_raw": 404728.23,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": 57.5,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "Harmony Biosciences Management, Inc.",
+      "territory": "Mid-Atlantic",
+      "location": "Plymouth Meeting, PA",
+      "lifetime_value_raw": 399563.12,
+      "revenue_2025_raw": 127236.83000000002,
+      "revenue_2024_raw": 124153.4,
+      "gross_profit_pct_raw": 81.6,
+      "yoy_growth_pct_raw": 2.5
+    },
+    {
+      "account_name": "Altimmune, Inc.",
+      "territory": "Mid-Atlantic",
+      "location": "Gaithersburg, MD",
+      "lifetime_value_raw": 355194.73,
+      "revenue_2025_raw": 126980.83,
+      "revenue_2024_raw": 61886.479999999996,
+      "gross_profit_pct_raw": 76,
+      "yoy_growth_pct_raw": 105.2
+    },
+    {
+      "account_name": "Canon Virginia, Inc.",
+      "territory": "Mid-Atlantic",
+      "location": "Newport News, VA",
+      "lifetime_value_raw": 179740,
+      "revenue_2025_raw": 82176.25,
+      "revenue_2024_raw": 97563.75,
+      "gross_profit_pct_raw": 51.2,
+      "yoy_growth_pct_raw": -15.8
+    },
+    {
+      "account_name": "Ocugen",
+      "territory": "Mid-Atlantic",
+      "location": "Malvern, PA",
+      "lifetime_value_raw": 304670,
+      "revenue_2025_raw": 39657.53,
+      "revenue_2024_raw": 112885.18000000002,
+      "gross_profit_pct_raw": 65.9,
+      "yoy_growth_pct_raw": -64.9
+    },
+    {
+      "account_name": "Formation Bio",
+      "territory": "Mid-Atlantic",
+      "location": "Philadelphia, PA",
+      "lifetime_value_raw": 142388.56,
+      "revenue_2025_raw": 30000,
+      "revenue_2024_raw": 17180,
+      "gross_profit_pct_raw": 27.9,
+      "yoy_growth_pct_raw": 74.6
+    },
+    {
+      "account_name": "REGENXBIO Inc.",
+      "territory": "Mid-Atlantic",
+      "location": "Rockville, MD",
+      "lifetime_value_raw": 90000,
+      "revenue_2025_raw": 29999.999999999996,
+      "revenue_2024_raw": 30066.92,
+      "gross_profit_pct_raw": 100,
+      "yoy_growth_pct_raw": -0.2
+    },
+    {
+      "account_name": "Champions Oncology",
+      "territory": "Mid-Atlantic",
+      "location": "Rockville, MD",
+      "lifetime_value_raw": 89979.22,
+      "revenue_2025_raw": 29979.22,
+      "revenue_2024_raw": 30000,
+      "gross_profit_pct_raw": 100,
+      "yoy_growth_pct_raw": -0.1
+    },
+    {
+      "account_name": "Inovio Pharmaceuticals, Inc.",
+      "territory": "Mid-Atlantic",
+      "location": "Plymouth Meeting, PA",
+      "lifetime_value_raw": 77432.36,
+      "revenue_2025_raw": 24000,
+      "revenue_2024_raw": 33177.63,
+      "gross_profit_pct_raw": 92.7,
+      "yoy_growth_pct_raw": -27.7
+    },
+    {
+      "account_name": "American Red Cross-General Counsel & SE",
+      "territory": "Mid-Atlantic",
+      "location": "Washington, DC",
+      "lifetime_value_raw": 70294.52,
+      "revenue_2025_raw": 19286.890000000003,
+      "revenue_2024_raw": 26000,
+      "gross_profit_pct_raw": 91.4,
+      "yoy_growth_pct_raw": -25.8
+    },
+    {
+      "account_name": "ASTRAZENECA UK LIMITED",
+      "territory": "Mid-Atlantic",
+      "location": "Wilmington, DE",
+      "lifetime_value_raw": 45969.17999999999,
+      "revenue_2025_raw": 15969.179999999997,
+      "revenue_2024_raw": 15000,
+      "gross_profit_pct_raw": 93.8,
+      "yoy_growth_pct_raw": 6.5
+    },
+    {
+      "account_name": "Senseonics, Inc.",
+      "territory": "Mid-Atlantic",
+      "location": "Germantown, MD",
+      "lifetime_value_raw": 13200,
+      "revenue_2025_raw": 13200,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": 65,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "Foundation Fighting Blindness",
+      "territory": "Mid-Atlantic",
+      "location": "Columbia, MD",
+      "lifetime_value_raw": 26260.270000000004,
+      "revenue_2025_raw": 10397.260000000002,
+      "revenue_2024_raw": 15863.010000000002,
+      "gross_profit_pct_raw": 74.8,
+      "yoy_growth_pct_raw": -34.5
+    },
+    {
+      "account_name": "Prelude Therapeutics Incorporated",
+      "territory": "Mid-Atlantic",
+      "location": "Wilmington, DE",
+      "lifetime_value_raw": 46427.5,
+      "revenue_2025_raw": 8798.75,
+      "revenue_2024_raw": 37628.75,
+      "gross_profit_pct_raw": 60.8,
+      "yoy_growth_pct_raw": -76.6
+    },
+    {
+      "account_name": "Medstar Health Research Institute, Inc.",
+      "territory": "Mid-Atlantic",
+      "location": "Washington, DC",
+      "lifetime_value_raw": 79503.48999999999,
+      "revenue_2025_raw": 7999.999999999999,
+      "revenue_2024_raw": 19830.789999999997,
+      "gross_profit_pct_raw": 66.1,
+      "yoy_growth_pct_raw": -59.7
+    },
+    {
+      "account_name": "Georgetown University",
+      "territory": "Mid-Atlantic",
+      "location": "Washington, DC",
+      "lifetime_value_raw": 29241.1,
+      "revenue_2025_raw": 7999.999999999999,
+      "revenue_2024_raw": 17790.28,
+      "gross_profit_pct_raw": 84.5,
+      "yoy_growth_pct_raw": -55
+    },
+    {
+      "account_name": "Mallinckrodt, LLC dba ST Shared Services",
+      "territory": "Mid-Atlantic",
+      "location": "Wilmington, DE",
+      "lifetime_value_raw": 29075,
+      "revenue_2025_raw": 7800,
+      "revenue_2024_raw": 13075,
+      "gross_profit_pct_raw": 59.3,
+      "yoy_growth_pct_raw": -40.3
+    },
+    {
+      "account_name": "Cartesian Therapeutics",
+      "territory": "Mid-Atlantic",
+      "location": "Gaithersburg, MD",
+      "lifetime_value_raw": 34846.58,
+      "revenue_2025_raw": 6999.590000000001,
+      "revenue_2024_raw": 7110,
+      "gross_profit_pct_raw": 84.3,
+      "yoy_growth_pct_raw": -1.6
+    },
+    {
+      "account_name": "Supernus Pharmaceuticals, Inc.",
+      "territory": "Mid-Atlantic",
+      "location": "Rockville, MD",
+      "lifetime_value_raw": 50117.5,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 200,
+      "gross_profit_pct_raw": 65.7,
+      "yoy_growth_pct_raw": -100
+    },
+    {
+      "account_name": "Westat",
+      "territory": "Mid-Atlantic",
+      "location": "Rockville, MD",
+      "lifetime_value_raw": 27452.05,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": 100,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "Astrazeneca LP",
+      "territory": "Mid-Atlantic",
+      "location": "Wilmington, DE",
+      "lifetime_value_raw": 20112.079999999998,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": 95.3,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "HealthVerity",
+      "territory": "Mid-Atlantic",
+      "location": "Philadelphia, PA",
+      "lifetime_value_raw": 20000,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": 54.1,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "Booz Allen Hamilton",
+      "territory": "Mid-Atlantic",
+      "location": "McLean, VA",
+      "lifetime_value_raw": 11629.369999999999,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 1191.9,
+      "gross_profit_pct_raw": 43.2,
+      "yoy_growth_pct_raw": -100
+    },
+    {
+      "account_name": "International Partnership For Microbicides, Inc.",
+      "territory": "Mid-Atlantic",
+      "location": "Silver Spring, MD",
+      "lifetime_value_raw": 8904.11,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": 100,
+      "yoy_growth_pct_raw": null
+    },
+    {
+      "account_name": "HR Pharmaceuticals Inc",
+      "territory": "Mid-Atlantic",
+      "location": "Bethesda, MD",
+      "lifetime_value_raw": 1869.86,
+      "revenue_2025_raw": 0,
+      "revenue_2024_raw": 0,
+      "gross_profit_pct_raw": 100,
+      "yoy_growth_pct_raw": null
+    }
+  ]
+}

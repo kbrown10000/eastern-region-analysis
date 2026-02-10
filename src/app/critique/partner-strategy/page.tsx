@@ -4,11 +4,11 @@ import Link from 'next/link';
 
 /**
  * CRITIQUE: PARTNER STRATEGY
- * 
+ *
  * Critical analysis of Partner strategy pages and assumptions
  * HIGH SEVERITY - Major assumptions need validation
- * 
- * Source Pages: /partner-overview, /partner-plays, /partner-ecosystem, /partner-west
+ *
+ * Source Pages: /partner-overview, /partner-plays, /partner-ecosystem, /partner-east
  */
 
 const executiveSummary = {
@@ -48,9 +48,9 @@ const criticalGaps = [
   },
   {
     severity: 'MEDIUM',
-    gap: 'Cascadia Partner-First Strategy Risky',
+    gap: 'Research Triangle Partner-First Strategy Risky',
     detail: '$150K investment in a market with ZERO current presence. Partners typically want to see vendor success before investing in referrals. Chicken-and-egg problem.',
-    question: 'Will partners refer to a vendor with no local track record?',
+    question: 'Will partners refer to a vendor with no local track record in NC?',
     recommendation: 'Consider hybrid: 1 direct hire + partner development simultaneously',
   },
   {
@@ -136,7 +136,7 @@ const recommendations = [
   },
   {
     priority: 5,
-    action: 'Reduce Cascadia investment to $75K with hybrid model',
+    action: 'Reduce Research Triangle investment to $75K with hybrid model',
     rationale: '$150K for partner-only entry in zero-presence market is risky',
     effort: 'Low - budget reallocation',
   },
@@ -162,7 +162,7 @@ const riskAssessment = [
     mitigation: 'Focus on smaller tech partners first (Veeva, Box)',
   },
   {
-    risk: 'Cascadia investment yields nothing',
+    risk: 'Research Triangle investment yields nothing',
     likelihood: 'MEDIUM',
     impact: 'LOW',
     mitigation: 'Reduce investment, require milestone-based funding',
@@ -173,7 +173,7 @@ const challengeQuestions = [
   'If the partner function has 7.5% win rate today, why would it perform better at 3x the investment?',
   'What makes USDM more attractive to AWS than Deloitte, Accenture, or specialized life sciences SIs?',
   'Can you name ONE comparable life sciences consulting firm that gets 28% of revenue from partners?',
-  'If Cascadia partners won\'t refer without local presence, and we won\'t hire without partners, how do we break the deadlock?',
+  'If Research Triangle partners won\'t refer without local presence, and we won\'t hire without partners, how do we break the deadlock?',
   'The ROI assumptions are based on SaaS benchmarks. How do professional services partner economics differ?',
 ];
 
