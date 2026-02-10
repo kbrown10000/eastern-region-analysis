@@ -203,11 +203,11 @@ const roadmap = [
     quarter: 'Q4 2026',
     initiatives: [
       'Annual partner summit (virtual)',
-      'Partner-sourced revenue target: 10% of West bookings',
+      'Partner-sourced revenue target: 10% of East bookings',
       '2027 partner program budget approval'
     ],
     investment: '$50K',
-    targetPipeline: '$3M cumulative (5% of West target)'
+    targetPipeline: '$3M cumulative (5% of East target)'
   }
 ];
 
@@ -235,7 +235,7 @@ export default function PartnerStrategy() {
           <Link href="/" className="text-blue-400 hover:text-blue-300">← Back</Link>
         </div>
         <p className="text-slate-300 mb-8 max-w-3xl">
-          Building the partner channel from 1% to 10% of Western Region pipeline
+          Building the partner channel from 1% to 10% of Eastern Region pipeline
         </p>
 
         {/* Current State */}
@@ -454,7 +454,7 @@ export default function PartnerStrategy() {
             <div className="space-y-2">
               <h3 className="text-green-400 font-semibold">2026 Target</h3>
               <ul className="text-sm text-slate-300 space-y-1">
-                <li>• Partner-sourced: 10% of West pipeline</li>
+                <li>• Partner-sourced: 10% of East Pipeline</li>
                 <li>• $3M cumulative partner pipeline</li>
                 <li>• 5+ active partner relationships</li>
               </ul>
@@ -465,3 +465,5 @@ export default function PartnerStrategy() {
     </div>
   );
 }
+
+

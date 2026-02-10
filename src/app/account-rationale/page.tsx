@@ -268,7 +268,7 @@ export default function AccountRationale() {
       <main className="max-w-7xl mx-auto px-6 py-12">
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-white mb-2">💎 Account Value & Rationale</h1>
-          <p className="text-xl text-slate-400">Strategic prioritization of Western region targets</p>
+          <p className="text-xl text-slate-400">Strategic prioritization of Eastern Region targets</p>
         </div>
 
         {/* Scoring Methodology */}
@@ -479,3 +479,4 @@ function AccountCard({ account }: { account: AccountScore }) {
     </div>
   );
 }
+

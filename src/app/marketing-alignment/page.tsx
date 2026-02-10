@@ -9,7 +9,7 @@ interface CampaignTheme {
   contentAssets: string[];
   pardotJourney: string;
   callToAction: string;
-  westernTargets: string[];
+  EasternTargets: string[];
   leadScoreBoost: number;
 }
 
@@ -26,7 +26,7 @@ const campaignThemes: CampaignTheme[] = [
     ],
     pardotJourney: 'AI Governance Nurture → Assessment Offer → Sales Handoff',
     callToAction: 'Free AI Risk Assessment',
-    westernTargets: ['Numerion Labs (ex-Atomwise)', 'Deep Genomics', 'Insitro', 'Recursion', 'GRAIL', 'Freenome'],
+    EasternTargets: ['Numerion Labs (ex-Atomwise)', 'Deep Genomics', 'Insitro', 'Recursion', 'GRAIL', 'Freenome'],
     leadScoreBoost: 25,
   },
   {
@@ -41,7 +41,7 @@ const campaignThemes: CampaignTheme[] = [
     ],
     pardotJourney: 'Scale-Up Content → Manufacturing Assessment → Consultation',
     callToAction: 'Manufacturing Readiness Assessment',
-    westernTargets: ['Cellares', 'Tune Therapeutics', 'Sana Bio', 'Fate Therapeutics', 'Allogene', 'Kyverna'],
+    EasternTargets: ['Cellares', 'Tune Therapeutics', 'Sana Bio', 'Fate Therapeutics', 'Allogene', 'Kyverna'],
     leadScoreBoost: 30,
   },
   {
@@ -56,7 +56,7 @@ const campaignThemes: CampaignTheme[] = [
     ],
     pardotJourney: 'Veeva Pain Point → Value Assessment → MS Proposal',
     callToAction: 'Veeva Health Check',
-    westernTargets: ['All existing Veeva customers', 'Emerging biotechs post-Series B'],
+    EasternTargets: ['All existing Veeva customers', 'Emerging biotechs post-Series B'],
     leadScoreBoost: 20,
   },
   {
@@ -71,12 +71,12 @@ const campaignThemes: CampaignTheme[] = [
     ],
     pardotJourney: 'Pain Point Content → Demo Request → Pilot Proposal',
     callToAction: 'ProcessX Demo',
-    westernTargets: ['Gilead', 'Amgen', 'Large pharma with ServiceNow'],
+    EasternTargets: ['Gilead', 'Amgen', 'Large pharma with ServiceNow'],
     leadScoreBoost: 35,
   },
   {
     gtmPillar: 'Seattle Market Entry',
-    campaignName: 'Pacific Northwest Life Sciences',
+    campaignName: 'Pacific NorthEast Life Sciences',
     targetSegment: 'Seattle/PNW biotech companies',
     contentAssets: [
       'Report: "Cascadia Corridor: Biotech Opportunity Analysis"',
@@ -86,7 +86,7 @@ const campaignThemes: CampaignTheme[] = [
     ],
     pardotJourney: 'Regional Content → Event Invite → Consultation',
     callToAction: 'Seattle Event RSVP',
-    westernTargets: ['Tune', 'Sana', 'Outpace', 'Umoja', 'A-Alpha Bio', 'Aurion'],
+    EasternTargets: ['Tune', 'Sana', 'Outpace', 'Umoja', 'A-Alpha Bio', 'Aurion'],
     leadScoreBoost: 15,
   },
 ];
@@ -120,7 +120,7 @@ const abmTiers = [
   },
   {
     tier: '1:Many ABM',
-    accounts: ['All other Western targets (50+ companies)'],
+    accounts: ['All other Eastern targets (50+ companies)'],
     tactics: [
       'Programmatic display ads',
       'Email nurture campaigns',
@@ -143,7 +143,7 @@ const zoomInfoFilters = [
 ];
 
 const leadScoringModel = [
-  { category: 'Firmographic', criteria: 'Western region biotech/pharma', points: 10 },
+  { category: 'Firmographic', criteria: 'Eastern Region biotech/pharma', points: 10 },
   { category: 'Firmographic', criteria: 'Series B+ or Public', points: 15 },
   { category: 'Firmographic', criteria: 'Cell/gene therapy focus', points: 20 },
   { category: 'Firmographic', criteria: 'Veeva customer (known)', points: 15 },
@@ -162,12 +162,12 @@ const leadScoringModel = [
 ];
 
 const salesforceFields = [
-  { object: 'Account', field: 'Western_GTM_Score__c', description: 'Composite GTM alignment score (0-100)' },
+  { object: 'Account', field: 'Eastern_GTM_Score__c', description: 'Composite GTM alignment score (0-100)' },
   { object: 'Account', field: 'Primary_GTM_Pillar__c', description: 'Best-fit GTM pillar for account' },
   { object: 'Account', field: 'Service_Expansion_Potential__c', description: 'One Trick Pony / Multi-Service' },
   { object: 'Account', field: 'Recent_News__c', description: 'Latest funding/leadership/clinical news' },
   { object: 'Account', field: 'Target_Tier__c', description: 'Platinum / Gold / Silver' },
-  { object: 'Lead', field: 'Western_Target_Account__c', description: 'Boolean: Is on Western target list' },
+  { object: 'Lead', field: 'Eastern_Target_Account__c', description: 'Boolean: Is on Eastern target list' },
   { object: 'Lead', field: 'GTM_Trigger_Match__c', description: 'Which GTM triggers matched' },
   { object: 'Opportunity', field: 'GTM_Pillar__c', description: 'Which GTM pillar the opp aligns to' },
   { object: 'Opportunity', field: 'Service_Type__c', description: 'Staffing / Project / Managed Services' },
@@ -180,7 +180,7 @@ export default function MarketingAlignment() {
       <main className="max-w-7xl mx-auto px-6 py-12">
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-white mb-2">📣 Marketing Alignment</h1>
-          <p className="text-xl text-slate-400">Salesforce + Pardot + ZoomInfo → Western Growth</p>
+          <p className="text-xl text-slate-400">Salesforce + Pardot + ZoomInfo → Eastern Growth</p>
         </div>
 
         {/* Tech Stack Overview */}
@@ -194,7 +194,7 @@ export default function MarketingAlignment() {
               </div>
               <ul className="space-y-2 text-slate-300 text-sm">
                 <li>• Account scoring with GTM alignment</li>
-                <li>• Custom fields for Western targets</li>
+                <li>• Custom fields for Eastern targets</li>
                 <li>• Opportunity tracking by service type</li>
                 <li>• Dashboard for regional pipeline</li>
                 <li>• Integration with Pardot engagement</li>
@@ -225,7 +225,7 @@ export default function MarketingAlignment() {
                 <li>• Contact enrichment for targets</li>
                 <li>• Technographic data (Veeva, ServiceNow)</li>
                 <li>• Funding/leadership alerts</li>
-                <li>• Western region targeting</li>
+                <li>• Eastern Region targeting</li>
               </ul>
             </div>
           </div>
@@ -308,13 +308,13 @@ export default function MarketingAlignment() {
                     <span className="bg-cyan-900/50 text-cyan-300 text-sm px-3 py-1 rounded">{campaign.callToAction}</span>
                   </div>
                   <div>
-                    <h4 className="text-slate-400 text-sm font-semibold mb-2">Western Targets</h4>
+                    <h4 className="text-slate-400 text-sm font-semibold mb-2">Eastern Targets</h4>
                     <div className="flex flex-wrap gap-1">
-                      {campaign.westernTargets.slice(0, 5).map((target, i) => (
+                      {campaign.EasternTargets.slice(0, 5).map((target, i) => (
                         <span key={i} className="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">{target}</span>
                       ))}
-                      {campaign.westernTargets.length > 5 && (
-                        <span className="text-slate-500 text-xs">+{campaign.westernTargets.length - 5} more</span>
+                      {campaign.EasternTargets.length > 5 && (
+                        <span className="text-slate-500 text-xs">+{campaign.EasternTargets.length - 5} more</span>
                       )}
                     </div>
                   </div>
@@ -364,7 +364,7 @@ export default function MarketingAlignment() {
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-white mb-6">🔍 ZoomInfo Targeting Filters</h2>
           <div className="bg-purple-900/20 rounded-xl p-6 border border-purple-700/30">
-            <p className="text-slate-300 mb-4">Recommended filters for Western region target list building:</p>
+            <p className="text-slate-300 mb-4">Recommended filters for Eastern Region target list building:</p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {zoomInfoFilters.map((filter, idx) => (
                 <div key={idx} className="bg-slate-800/50 rounded-lg p-4">
@@ -388,7 +388,7 @@ export default function MarketingAlignment() {
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-white mb-6">☁️ Salesforce Custom Fields</h2>
           <div className="bg-blue-900/20 rounded-xl p-6 border border-blue-700/30">
-            <p className="text-slate-300 mb-4">Recommended custom fields to support Western growth tracking:</p>
+            <p className="text-slate-300 mb-4">Recommended custom fields to support Eastern growth tracking:</p>
             <div className="overflow-x-auto">
               <table className="w-full text-left text-sm">
                 <thead>
@@ -427,7 +427,7 @@ export default function MarketingAlignment() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-purple-400">🎯</span>
-                  <span>ZoomInfo list build for Western targets</span>
+                  <span>ZoomInfo list build for Eastern targets</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-400">📝</span>
@@ -491,7 +491,7 @@ export default function MarketingAlignment() {
           <h2 className="text-2xl font-bold text-white mb-6">📊 Marketing Success Metrics</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 text-center">
-              <p className="text-slate-400 text-sm mb-1">MQLs from Western</p>
+              <p className="text-slate-400 text-sm mb-1">MQLs from Eastern</p>
               <p className="text-4xl font-bold text-cyan-400">50</p>
               <p className="text-slate-500 text-xs">Target Q1 2026</p>
             </div>
@@ -525,3 +525,5 @@ export default function MarketingAlignment() {
     </div>
   );
 }
+
+

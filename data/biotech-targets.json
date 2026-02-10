@@ -96,7 +96,7 @@
   "researchNotes": "Atomwise rebranded to Numerion Labs (CHURNED - win back!). Sana Biotechnology has active securities fraud litigation - monitor closely.",
   "dataSource": "Live MCP data from Finance MCP (get_customer_ltv) - Feb 3, 2026",
   "keyInsights": {
-    "totalWesternCustomers": 16,
+    "totalEasternCustomers": 16,
     "hotExpansion": ["Kyverna (+175.6%)", "Caribou (+59.3%)", "Protagonist (+32.4%)"],
     "atRisk": ["Maze (-62.2%)", "VIR Bio (-61.9%)"],
     "churned": ["Numerion Labs", "Ultragenyx"],
@@ -105,3 +105,4 @@
     "seattleGap": "$0 revenue from 15 PNW targets"
   }
 }
+

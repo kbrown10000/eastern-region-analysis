@@ -6,7 +6,7 @@ import Image from 'next/image';
 /**
  * VISUAL SUMMARY PAGE
  * 
- * Infographics summarizing the Western Region Growth Strategy
+ * Infographics summarizing the Eastern Region Growth Strategy
  * Generated using Nano Banana Pro (Gemini 3 Pro Image)
  * 
  * Last Updated: 2026-02-04
@@ -16,7 +16,7 @@ const infographics = [
   {
     id: 1,
     title: 'Territory Engine',
-    subtitle: 'The 4 Pistons of the Western Region',
+    subtitle: 'The 4 Pistons of the Eastern Region',
     filename: '01-territory-engine.png',
     description: 'Each territory operates like a piston in the regional engine. Biotech Beach is high-performing, LA BioMed needs margin fixes, Biotech Bay is underpenetrated, Cascadia is greenfield.',
     linkedPage: '/territories',
@@ -54,7 +54,7 @@ const infographics = [
     title: 'Margin Erosion',
     subtitle: 'The LA BioMed Problem',
     filename: '05-margin-problem.png',
-    description: '4 mega-accounts are dragging West GP from 50%+ to 36.5%. Gilead, Kite, Amgen, and Enovis together represent $6.73M at just 20.5% GP.',
+    description: '4 mega-accounts are dragging East GP from 50%+ to 36.5%. Gilead, Kite, Amgen, and Enovis together represent $6.73M at just 20.5% GP.',
     linkedPage: '/margin-analysis',
     keyMetrics: ['Problem revenue: $6.73M', 'Problem GP: 20.5%', 'Star GP: 40%+', 'Impact: -15 points'],
   },
@@ -81,7 +81,7 @@ const infographics = [
     title: 'Partner Investment ROI',
     subtitle: '$300K Investment → $4.8M Pipeline',
     filename: '08-investment-roi.png',
-    description: 'The ask: $300K investment across 4 territories. Expected return: $4.8M partner-sourced pipeline. Target: 10% of West from partners by end of 2026.',
+    description: 'The ask: $300K investment across 4 territories. Expected return: $4.8M partner-sourced pipeline. Target: 10% of East from partners by end of 2026.',
     linkedPage: '/partner-west',
     keyMetrics: ['Investment: $300K', 'Return: $4.8M', 'ROI: 16x', 'Target: 10% share'],
   },
@@ -97,7 +97,7 @@ export default function VisualSummary() {
           <Link href="/" className="text-blue-400 hover:text-blue-300">← Back</Link>
         </div>
         <p className="text-slate-300 mb-4 max-w-3xl text-lg">
-          Key concepts from the Western Region Growth Strategy visualized for clarity.
+          Key concepts from the Eastern Region Growth Strategy visualized for clarity.
         </p>
         <p className="text-slate-400 mb-12 max-w-3xl text-sm">
           Generated with Nano Banana Pro (Gemini 3 Pro Image) • Click any infographic for detailed analysis
@@ -178,3 +178,5 @@ export default function VisualSummary() {
     </div>
   );
 }
+
+

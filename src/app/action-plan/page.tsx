@@ -9,7 +9,7 @@ export default function ActionPlan() {
       <main className="max-w-7xl mx-auto px-6 py-12">
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-white mb-2">📋 Action Plan</h1>
-          <p className="text-slate-400">90-day roadmap to reverse win rate decline and capture Western growth</p>
+          <p className="text-slate-400">90-day roadmap to reverse win rate decline and capture Eastern growth</p>
         </div>
 
         {/* Priority Matrix */}
@@ -176,7 +176,7 @@ export default function ActionPlan() {
               <p className="text-slate-500 text-xs">+2.4 pts from current</p>
             </div>
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 text-center">
-              <p className="text-slate-400 text-sm mb-2">West GP% Target</p>
+              <p className="text-slate-400 text-sm mb-2">East GP% Target</p>
               <p className="text-3xl font-bold text-green-400">42%</p>
               <p className="text-slate-500 text-xs">+5.5 pts from current</p>
             </div>
@@ -248,3 +248,5 @@ export default function ActionPlan() {
     </div>
   );
 }
+
+

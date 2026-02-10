@@ -75,9 +75,9 @@ const partnerSections = [
     highlight: null,
   },
   {
-    title: 'Western Partner Plan',
+    title: 'Eastern Partner Plan',
     href: '/partner-west',
-    description: 'Territory-specific partner strategy for West region',
+    description: 'Territory-specific partner strategy for East Region',
     icon: '🗺️',
     highlight: null,
   },
@@ -177,7 +177,7 @@ export default function PartnerOverview() {
         </p>
         <p className="text-slate-400 mb-12 max-w-3xl">
           This section outlines our strategy to build a world-class partner channel that drives revenue, opens new logos, 
-          and strengthens our market position in the Western region.
+          and strengthens our market position in the Eastern Region.
         </p>
 
         {/* Industry Benchmark Hero */}
@@ -290,14 +290,14 @@ export default function PartnerOverview() {
 
         {/* The Opportunity */}
         <section className="mb-12 bg-gradient-to-r from-green-900/30 to-blue-900/30 rounded-xl p-8 border border-green-700/50">
-          <h2 className="text-2xl font-bold text-white mb-4">🚀 The Opportunity: Western Region Partner-Led Growth</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">🚀 The Opportunity: Eastern Region Partner-Led Growth</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-lg font-semibold text-green-400 mb-3">What Success Looks Like (2026)</h3>
               <ul className="space-y-2 text-slate-300">
                 <li className="flex items-start gap-2">
                   <span className="text-green-400">✓</span>
-                  <span><strong>10% of West pipeline</strong> ($6M+) from partner-sourced deals</span>
+                  <span><strong>10% of East Pipeline</strong> ($6M+) from partner-sourced deals</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-400">✓</span>
@@ -381,3 +381,5 @@ export default function PartnerOverview() {
     </div>
   );
 }
+
+

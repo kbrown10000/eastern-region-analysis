@@ -80,7 +80,7 @@ export default function MarketAnalysis() {
 
       <main className="max-w-7xl mx-auto px-6 py-12">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-white mb-2">📊 Western Market Analysis</h1>
+          <h1 className="text-4xl font-bold text-white mb-2">📊 Eastern Market Analysis</h1>
           <p className="text-xl text-slate-400 mb-3">Three biotech powerhouses. $150B+ combined market. One unified strategy.</p>
           <div className="bg-slate-800/30 rounded-lg px-4 py-2 text-xs text-slate-400 inline-block">
             Targets: <code className="text-slate-500">biotech-targets.json</code> | 
@@ -242,7 +242,7 @@ export default function MarketAnalysis() {
             
             <div className="bg-gradient-to-br from-yellow-900/30 to-orange-900/20 rounded-xl p-6 border border-yellow-700/30">
               <h3 className="text-yellow-400 font-bold text-lg mb-3">CDMO/CRDMO Expansion</h3>
-              <p className="text-slate-300 mb-3">San Diego becoming the manufacturing hub of the West. National Resilience ($2B), BioDuro-Sundia, and emerging players building capacity.</p>
+              <p className="text-slate-300 mb-3">San Diego becoming the manufacturing hub of the East. National Resilience ($2B), BioDuro-Sundia, and emerging players building capacity.</p>
               <p className="text-slate-500 text-sm">Key targets: National Resilience, Cellares, Boundless Bio</p>
             </div>
           </div>
@@ -259,7 +259,7 @@ export default function MarketAnalysis() {
             
             <div className="bg-red-900/30 rounded-xl p-6 border border-red-700/50">
               <h3 className="text-red-400 font-bold mb-2">⚠️ Margin Recovery Needed: San Diego</h3>
-              <p className="text-slate-300">Four mega-customers (Gilead, Kite, Amgen, Enovis) at ~20% GP dragging down West region. $1M+ margin recovery potential through rate review and managed services migration.</p>
+              <p className="text-slate-300">Four mega-customers (Gilead, Kite, Amgen, Enovis) at ~20% GP dragging down East Region. $1M+ margin recovery potential through rate review and managed services migration.</p>
             </div>
             
             <div className="bg-cyan-900/30 rounded-xl p-6 border border-cyan-700/50">
@@ -281,3 +281,5 @@ export default function MarketAnalysis() {
     </div>
   );
 }
+
+

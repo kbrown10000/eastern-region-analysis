@@ -26,7 +26,7 @@ The Financial Model page is the strongest analytical tool in the presentation, w
 ## Critical Gaps
 
 ### 1. **Baseline Revenue Doesn't Match Other Pages** — SEVERITY: HIGH
-| Source | 2025 West Revenue |
+| Source | 2025 East Revenue |
 |--------|-------------------|
 | Financial Model "baseline2025" | $17.19M |
 | Homepage Metric Card | $17.19M |
@@ -97,8 +97,8 @@ The formula `FTEs × 2,080 hrs × Utilization%` assumes all capacity converts to
 | Delivery Utilization | 83.3% | ~83% (Labor MCP) | ✅ VERIFIED |
 | Total Pipeline | $54.8M | $54.8M (Sales MCP company-wide) | ✅ VERIFIED |
 | Win Rate | 41.6% | 41.6% (Sales MCP company-wide) | ✅ VERIFIED |
-| West Revenue | $17.19M | $17.19M (stated, territories don't match) | ⚠️ DISCREPANCY |
-| West GP | $6.19M | $5.90M on homepage (34.3%) | ⚠️ MINOR MISMATCH |
+| East Revenue | $17.19M | $17.19M (stated, territories don't match) | ⚠️ DISCREPANCY |
+| East GP | $6.19M | $5.90M on homepage (34.3%) | ⚠️ MINOR MISMATCH |
 
 ---
 
@@ -132,3 +132,4 @@ The formula `FTEs × 2,080 hrs × Utilization%` assumes all capacity converts to
 | Hire ROI overstated | Medium | Medium | Update cost assumptions |
 
 **Overall Assessment:** The Financial Model is the most sophisticated tool in the presentation but suffers from optimism bias. The "Target" scenario requires winning on 6 fronts simultaneously with no margin for error. The board should demand a probability-weighted forecast (e.g., 30% Conservative, 50% Target, 20% Aggressive blend) and explicit pipeline generation plan to close the $32M gap between current pipeline and target requirements.
+

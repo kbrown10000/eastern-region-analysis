@@ -12,7 +12,7 @@ interface GTMPillar {
   entryPoint: string;
   expansion: string;
   targetCriteria: string[];
-  westernTargets: string[];
+  EasternTargets: string[];
   existingCustomerPlay: string;
 }
 
@@ -26,7 +26,7 @@ const gtmPillars: GTMPillar[] = [
     entryPoint: 'AI Risk Assessment',
     expansion: 'Policy → Validation Framework → Ongoing AI PMO',
     targetCriteria: ['AI drug discovery companies', 'ML/AI in job postings', 'Using platforms with embedded AI'],
-    westernTargets: ['Numerion Labs (ex-Atomwise)', 'Deep Genomics', 'Anagenex', 'A-Alpha Bio', 'Arzeda', 'GRAIL', 'Color Health'],
+    EasternTargets: ['Numerion Labs (ex-Atomwise)', 'Deep Genomics', 'Anagenex', 'A-Alpha Bio', 'Arzeda', 'GRAIL', 'Color Health'],
     existingCustomerPlay: 'Cross-reference with Veeva/Box/ServiceNow customers for embedded AI exposure',
   },
   {
@@ -38,7 +38,7 @@ const gtmPillars: GTMPillar[] = [
     entryPoint: 'Platform AI Assessment',
     expansion: 'Feature Validation → AI Change Control → Ongoing Governance',
     targetCriteria: ['Veeva customers', 'Box customers', 'ServiceNow customers', 'M365 heavy users'],
-    westernTargets: ['All existing Veeva customers', 'Gilead', 'Amgen', 'Neurocrine', 'BioMarin'],
+    EasternTargets: ['All existing Veeva customers', 'Gilead', 'Amgen', 'Neurocrine', 'BioMarin'],
     existingCustomerPlay: 'Audit all MSA accounts for Veeva/Box/ServiceNow — high correlation with opportunity',
   },
   {
@@ -50,7 +50,7 @@ const gtmPillars: GTMPillar[] = [
     entryPoint: 'Process Assessment',
     expansion: 'Use Case ID → POC → Production → Optimization',
     targetCriteria: ['Companies with process inefficiencies', 'Prior USDM process consulting clients', 'Firms frustrated with generic AI vendors'],
-    westernTargets: ['National Resilience', 'Cellares', '64x Bio', 'Allogene'],
+    EasternTargets: ['National Resilience', 'Cellares', '64x Bio', 'Allogene'],
     existingCustomerPlay: 'Target accounts where USDM has delivered process consulting — foundation for AI enablement',
   },
   {
@@ -62,7 +62,7 @@ const gtmPillars: GTMPillar[] = [
     entryPoint: 'Advisory Engagement',
     expansion: 'Health Check → Optimization Roadmap → Retainer → Managed Services',
     targetCriteria: ['Emerging/mid-size pharma (<$1B)', '12-24 months post-implementation', 'Low module utilization'],
-    westernTargets: ['Emerging biotechs scaling past Series C', 'Tune Therapeutics', 'Sana Biotechnology', 'Fate Therapeutics'],
+    EasternTargets: ['Emerging biotechs scaling past Series C', 'Tune Therapeutics', 'Sana Biotechnology', 'Fate Therapeutics'],
     existingCustomerPlay: 'Segment MSA accounts by size and Veeva footprint — identify renewal dates',
   },
   {
@@ -74,7 +74,7 @@ const gtmPillars: GTMPillar[] = [
     entryPoint: 'Support Assessment',
     expansion: 'Pilot (3-6 mo) → Full MS → Additional Products',
     targetCriteria: ['Current Veeva MS customers', 'Frustrated with Veeva pricing', 'Internal capability gaps'],
-    westernTargets: ['All existing Veeva customers in West'],
+    EasternTargets: ['All existing Veeva customers in East'],
     existingCustomerPlay: 'Develop competitive pricing analysis vs. Veeva managed services',
   },
   {
@@ -86,7 +86,7 @@ const gtmPillars: GTMPillar[] = [
     entryPoint: 'AI Readiness Assessment',
     expansion: 'Veeva AI Validation → Governance Integration → Ongoing Enablement',
     targetCriteria: ['Veeva customers on modern Vault', 'AI governance initiatives', 'Postponed AI feature enablement'],
-    westernTargets: ['All Veeva customers planning upgrades'],
+    EasternTargets: ['All Veeva customers planning upgrades'],
     existingCustomerPlay: 'Cross-reference Veeva accounts with AI governance opportunities',
   },
   {
@@ -98,7 +98,7 @@ const gtmPillars: GTMPillar[] = [
     entryPoint: 'Oversight Assessment',
     expansion: 'Framework Design → CTMS Config → Ongoing Support',
     targetCriteria: ['Sponsors with CRO-outsourced clinical ops', 'Active clinical programs', 'Vault Clinical implementations'],
-    westernTargets: ['Sana Biotechnology', 'Fate Therapeutics', 'Tune Therapeutics', 'Allogene', 'Artiva', 'Boundless Bio'],
+    EasternTargets: ['Sana Biotechnology', 'Fate Therapeutics', 'Tune Therapeutics', 'Allogene', 'Artiva', 'Boundless Bio'],
     existingCustomerPlay: 'Identify MSA accounts with active clinical programs and CRO relationships',
   },
   {
@@ -110,7 +110,7 @@ const gtmPillars: GTMPillar[] = [
     entryPoint: 'Readiness Assessment',
     expansion: 'Gap Analysis → Remediation → Implementation → Training',
     targetCriteria: ['Established eTMF operations', 'Large active TMF portfolios', 'System upgrades 2025-2027'],
-    westernTargets: ['All clinical-stage biotechs with active trials'],
+    EasternTargets: ['All clinical-stage biotechs with active trials'],
     existingCustomerPlay: 'Target accounts with Veeva Vault Clinical or other eTMF systems',
   },
   {
@@ -122,7 +122,7 @@ const gtmPillars: GTMPillar[] = [
     entryPoint: 'Process Assessment',
     expansion: 'Single Workflow Pilot → Additional Workflows → Enterprise → MS',
     targetCriteria: ['ServiceNow deployments', 'Manual GxP IT processes', 'Upcoming computer system inspections'],
-    westernTargets: ['Large pharma with ServiceNow (Gilead, Amgen)', 'Scale-ups building IT infrastructure'],
+    EasternTargets: ['Large pharma with ServiceNow (Gilead, Amgen)', 'Scale-ups building IT infrastructure'],
     existingCustomerPlay: 'Map MSA accounts with ServiceNow deployments',
   },
   {
@@ -134,7 +134,7 @@ const gtmPillars: GTMPillar[] = [
     entryPoint: 'MS Assessment',
     expansion: 'Single Platform → Portfolio → Strategic Advisory',
     targetCriteria: ['Small internal teams vs. large system portfolio', 'Retention challenges', 'Post-implementation customers'],
-    westernTargets: ['All implementation customers', 'National Resilience', 'Cellares'],
+    EasternTargets: ['All implementation customers', 'National Resilience', 'Cellares'],
     existingCustomerPlay: 'Natural extension from USDM implementation work',
   },
   {
@@ -146,7 +146,7 @@ const gtmPillars: GTMPillar[] = [
     entryPoint: 'Operating Model Assessment',
     expansion: 'Target State Design → Roadmap → Execution → Advisory',
     targetCriteria: ['Regulatory deadline exposure', 'Recent inspection observations', 'Organizational transformation'],
-    westernTargets: ['Cell therapy companies facing complex regulatory path', 'Tune', 'Outpace', 'Umoja', 'Sana'],
+    EasternTargets: ['Cell therapy companies facing complex regulatory path', 'Tune', 'Outpace', 'Umoja', 'Sana'],
     existingCustomerPlay: 'Track regulatory deadlines (ICH E6(R3), EU AI Act) against account priorities',
   },
   {
@@ -158,7 +158,7 @@ const gtmPillars: GTMPillar[] = [
     entryPoint: 'Data Foundation Assessment',
     expansion: 'Architecture → Implementation → Governance → Ongoing',
     targetCriteria: ['Manual data reconciliation', 'Multiple disconnected systems', 'UDI compliance needs'],
-    westernTargets: ['Manufacturing scale-ups', 'National Resilience', 'Cellares', 'Companies with multi-site ops'],
+    EasternTargets: ['Manufacturing scale-ups', 'National Resilience', 'Cellares', 'Companies with multi-site ops'],
     existingCustomerPlay: 'Target accounts with multiple USDM-supported systems',
   },
   {
@@ -170,7 +170,7 @@ const gtmPillars: GTMPillar[] = [
     entryPoint: 'TPRM Assessment',
     expansion: 'Black Kite → vCISO Advisory → AI Vendor Risk → Managed TPRM',
     targetCriteria: ['Limited TPRM maturity', 'Large vendor ecosystems', 'AI adoption with vendor concerns'],
-    westernTargets: ['AI drug discovery companies with multiple AI vendors', 'Numerion Labs', 'Deep Genomics'],
+    EasternTargets: ['AI drug discovery companies with multiple AI vendors', 'Numerion Labs', 'Deep Genomics'],
     existingCustomerPlay: 'Position as bundle with existing compliance or security engagements',
   },
 ];
@@ -220,7 +220,7 @@ export default function GTMStrategy() {
       <main className="max-w-7xl mx-auto px-6 py-12">
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-white mb-2">🎯 GTM Strategy Alignment</h1>
-          <p className="text-xl text-slate-400 mb-3">Mapping Western targets to USDM 2026 Go-To-Market pillars</p>
+          <p className="text-xl text-slate-400 mb-3">Mapping Eastern targets to USDM 2026 Go-To-Market pillars</p>
           <div className="bg-slate-800/30 rounded-lg px-4 py-2 text-xs text-slate-400 inline-block">
             Targets: <code className="text-slate-500">biotech-targets.json</code> (60+ accounts) | 
             Pipeline: <span className="text-blue-400">Sales MCP</span> → <code className="text-slate-500">get_open_pipeline_deals</code> | 
@@ -260,9 +260,9 @@ export default function GTMStrategy() {
           </div>
         </div>
 
-        {/* Priority GTMs for Western Region */}
+        {/* Priority GTMs for Eastern Region */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">🔥 Highest-Impact GTMs for Western Region</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">🔥 Highest-Impact GTMs for Eastern Region</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-gradient-to-br from-purple-900/40 to-pink-900/20 rounded-xl p-6 border border-purple-500/50">
               <div className="flex items-center gap-3 mb-4">
@@ -304,13 +304,13 @@ export default function GTMStrategy() {
               <p className="text-slate-300 mb-4">Existing customers + new targets need SME advisory, managed services, and AI readiness.</p>
               <div className="space-y-2">
                 <p className="text-cyan-400 font-semibold text-sm">Opportunity:</p>
-                <p className="text-slate-400 text-sm">All existing West customers are Veeva opportunities for MS expansion + AI enablement</p>
+                <p className="text-slate-400 text-sm">All existing East Customers are Veeva opportunities for MS expansion + AI enablement</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Western Target → GTM Mapping */}
+        {/* Eastern Target → GTM Mapping */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-white mb-6">📋 Strategic Targets × GTM Alignment</h2>
           <div className="overflow-x-auto">
@@ -375,13 +375,13 @@ export default function GTMStrategy() {
                     </div>
                     
                     <div>
-                      <p className="text-slate-500 text-xs uppercase tracking-wide mb-1">Western Targets</p>
+                      <p className="text-slate-500 text-xs uppercase tracking-wide mb-1">Eastern Targets</p>
                       <div className="flex flex-wrap gap-1">
-                        {pillar.westernTargets.slice(0, 4).map((t, i) => (
+                        {pillar.EasternTargets.slice(0, 4).map((t, i) => (
                           <span key={i} className="bg-slate-700/50 text-slate-300 text-xs px-2 py-0.5 rounded">{t}</span>
                         ))}
-                        {pillar.westernTargets.length > 4 && (
-                          <span className="text-slate-500 text-xs">+{pillar.westernTargets.length - 4} more</span>
+                        {pillar.EasternTargets.length > 4 && (
+                          <span className="text-slate-500 text-xs">+{pillar.EasternTargets.length - 4} more</span>
                         )}
                       </div>
                     </div>
@@ -434,7 +434,7 @@ export default function GTMStrategy() {
 
         {/* Territory Planning Actions */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">📍 Western Territory Planning Actions</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">📍 Eastern Territory Planning Actions</h2>
           <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
             <div className="space-y-4">
               <div className="flex items-start gap-4">
@@ -529,3 +529,5 @@ export default function GTMStrategy() {
     </div>
   );
 }
+
+

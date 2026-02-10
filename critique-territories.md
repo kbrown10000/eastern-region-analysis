@@ -1,4 +1,4 @@
-# Critique: Western Territories
+# Critique: Eastern Territories
 
 **Review Date:** February 4, 2026  
 **Reviewer:** Strategy Review Board  
@@ -8,7 +8,7 @@
 
 ## Executive Summary
 
-The Territories page provides the clearest operational view of Western Region dynamics but reveals a business dangerously concentrated in two sellers. Justin Ott (Biotech Beach) and Mike Campbell (LA BioMed) represent 87% of territory revenue but with wildly different performance profiles. The "pistons in an engine" metaphor is apt — two pistons are firing, two are dead.
+The Territories page provides the clearest operational view of Eastern Region dynamics but reveals a business dangerously concentrated in two sellers. Justin Ott (Biotech Beach) and Mike Campbell (LA BioMed) represent 87% of territory revenue but with wildly different performance profiles. The "pistons in an engine" metaphor is apt — two pistons are firing, two are dead.
 
 ---
 
@@ -26,14 +26,14 @@ The Territories page provides the clearest operational view of Western Region dy
 ## Critical Gaps
 
 ### 1. **Revenue Concentration Risk is Extreme** — SEVERITY: HIGH
-| Territory | Revenue | % of West |
+| Territory | Revenue | % of East |
 |-----------|---------|-----------|
 | Biotech Beach | $7.98M | 48.6% |
 | LA BioMed | $6.47M | 39.4% |
 | Biotech Bay | $1.35M | 8.2% |
 | Cascadia | $0.60M | 3.7% |
 
-Justin Ott and Mike Campbell control 88% of Western revenue. If either leaves, the region collapses. **No succession plan is mentioned.**
+Justin Ott and Mike Campbell control 88% of Eastern revenue. If either leaves, the region collapses. **No succession plan is mentioned.**
 
 ### 2. **LA BioMed GP% is Actually Worse Than Shown** — SEVERITY: HIGH
 Page shows LA at 23.9% GP, but the key accounts reveal the damage:
@@ -63,7 +63,7 @@ Mike has:
 - $2.94M pipeline
 - $1.47M closed won Q4
 - 38.2% win rate (below company 41.6%)
-- 23.9% territory GP (well below 34.3% West average)
+- 23.9% territory GP (well below 34.3% East average)
 
 This isn't a "coaching" situation — this is a performance management conversation. The 4 problem accounts are all in his territory.
 
@@ -74,10 +74,10 @@ Justin Ott's Biotech Beach shows:
 - $6.92M pipeline
 - $5.13M closed won Q4
 
-But if Justin Ott leaves, 49% of West revenue and the only healthy territory disappears. What's the retention strategy? What's the succession plan?
+But if Justin Ott leaves, 49% of East revenue and the only healthy territory disappears. What's the retention strategy? What's the succession plan?
 
 ### 7. **Territory Revenue Adds to $16.4M, Not $17.19M** — SEVERITY: LOW
-Homepage shows West revenue as $17.19M but territories sum to $16.4M ($7.98 + $6.47 + $1.35 + $0.60). Where's the $790K discrepancy?
+Homepage shows East revenue as $17.19M but territories sum to $16.4M ($7.98 + $6.47 + $1.35 + $0.60). Where's the $790K discrepancy?
 
 ---
 
@@ -89,7 +89,7 @@ Homepage shows West revenue as $17.19M but territories sum to $16.4M ($7.98 + $6
 | Justin Ott Win Rate | 60.9% | ~60.9% (get_team_performance) | ✅ VERIFIED |
 | Mike Campbell Pipeline | $2.94M | ~$2.94M (get_pipeline_by_owner) | ✅ VERIFIED |
 | Mike Campbell Win Rate | 38.2% | ~38.2% (get_team_performance) | ✅ VERIFIED |
-| Total West Pipeline | $10.95M | Sum of territories | ⚠️ BELOW $14.05M TOTAL |
+| Total East Pipeline | $10.95M | Sum of territories | ⚠️ BELOW $14.05M TOTAL |
 | Biotech Bay Pipeline | $1.09M | Plausible | ✅ REASONABLE |
 
 **Note:** Territory pipeline totals ($10.95M) don't match homepage pipeline ($14.05M). Discrepancy may be unassigned opportunities.
@@ -99,7 +99,7 @@ Homepage shows West revenue as $17.19M but territories sum to $16.4M ($7.98 + $6
 ## Recommendations
 
 ### Immediate (Week 1-2)
-1. **Justin Ott retention package** — whatever it costs, retain this person. They ARE the Western region.
+1. **Justin Ott retention package** — whatever it costs, retain this person. They ARE the Eastern region.
 2. **Mike Campbell performance review** — 38.2% win rate + 23.9% GP on $6.47M revenue requires accountability, not just coaching.
 3. **Account margin review** — can Gilead, Kite, Amgen, Enovis contracts be renegotiated or should they be de-prioritized?
 
@@ -126,3 +126,4 @@ Homepage shows West revenue as $17.19M but territories sum to $16.4M ($7.98 + $6
 | Cascadia partner investment fails | Medium | Medium | Staged funding with milestones |
 
 **Overall Assessment:** The Territories page is the most operationally honest in the presentation, revealing a region dependent on a single star performer (Justin Ott) while carrying a significant margin liability (LA BioMed). The two "opportunity" territories (Bay and Cascadia) are presented optimistically when they may represent markets already lost to competitors. The board should demand retention and succession plans before approving any expansion investments.
+

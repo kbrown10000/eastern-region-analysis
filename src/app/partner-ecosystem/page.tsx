@@ -34,7 +34,7 @@ const cloudPartners = [
       { play: 'AI Governance', fit: 'HIGH', notes: 'SageMaker + AI validation' },
       { play: 'Data Lake Compliance', fit: 'MEDIUM', notes: 'S3/Glue + data integrity' },
     ],
-    westernTargets: [
+    EasternTargets: [
       'Recursion (AI-native, AWS-first)',
       'Insitro (ML platform)',
       'Freenome (genomics)',
@@ -67,7 +67,7 @@ const cloudPartners = [
       { play: 'Microsoft 365 Compliance', fit: 'HIGH', notes: 'SharePoint/Teams GxP' },
       { play: 'Copilot Governance', fit: 'EMERGING', notes: 'AI governance for M365 Copilot' },
     ],
-    westernTargets: [
+    EasternTargets: [
       'Large pharma (Gilead, Amgen - existing Azure)',
       'Enterprise biotech on M365',
       'Companies with Azure OpenAI interest',
@@ -97,7 +97,7 @@ const industryPartners = [
       { play: 'QMS Implementation', fit: 'HIGH', notes: 'Vault QMS + CSV bundle' },
       { play: 'Regulatory Compliance', fit: 'HIGH', notes: 'RIM + submissions' },
     ],
-    westernTargets: [
+    EasternTargets: [
       'LA BioMed large accounts already on Veeva',
       'New Vault implementations',
       'QMS modernization projects',
@@ -122,7 +122,7 @@ const industryPartners = [
       { play: 'Box Shield Compliance', fit: 'HIGH', notes: 'Security + compliance' },
       { play: 'ECM Migration', fit: 'MEDIUM', notes: 'Legacy ECM → Box' },
     ],
-    westernTargets: ['Biotech companies standardizing on Box'],
+    EasternTargets: ['Biotech companies standardizing on Box'],
     investmentRequired: '$15K/year',
     expectedReturn: '$400K pipeline',
     nextSteps: ['Maintain current relationship', 'Case study development'],
@@ -139,7 +139,7 @@ const industryPartners = [
       { play: '21 CFR Part 11 Signatures', fit: 'PERFECT', notes: 'E-sig compliance' },
       { play: 'Quality Agreement Workflows', fit: 'MEDIUM', notes: 'Supplier QA' },
     ],
-    westernTargets: ['Any biotech needing compliant e-signatures'],
+    EasternTargets: ['Any biotech needing compliant e-signatures'],
     investmentRequired: '$10K/year',
     expectedReturn: '$250K pipeline',
     nextSteps: ['Maintain relationship', 'Joint webinar'],
@@ -157,7 +157,7 @@ const emergingPartners = [
     description: 'Automated cell therapy manufacturing platform',
     opportunitySize: '$500K-1M/year',
     relevance: 'USDM provides QA/validation for Cellares implementations',
-    westernPresence: 'South San Francisco HQ',
+    EasternPresence: 'South San Francisco HQ',
     priority: 'HIGH',
     action: 'Initiate partnership discussion in Q1 2026',
   },
@@ -169,7 +169,7 @@ const emergingPartners = [
     description: 'Robotic systems for pharmaceutical manufacturing',
     opportunitySize: '$300-500K/year',
     relevance: 'USDM validates robotic manufacturing systems',
-    westernPresence: 'San Francisco',
+    EasternPresence: 'San Francisco',
     priority: 'MEDIUM',
     action: 'Explore partnership through cell therapy cluster',
   },
@@ -181,7 +181,7 @@ const emergingPartners = [
     description: 'R&D platform for biotech (ELN, LIMS, registry)',
     opportunitySize: '$400-700K/year',
     relevance: 'CSV for Benchling implementations',
-    westernPresence: 'San Francisco HQ',
+    EasternPresence: 'San Francisco HQ',
     priority: 'MEDIUM',
     action: 'Partner outreach in Q2 2026',
   },
@@ -194,7 +194,7 @@ const vcPartners = [
     type: 'Venture Capital',
     focus: 'Bio + health tech',
     portfolioCount: '40+',
-    westernPortfolio: ['Freenome', 'Devoted Health', 'Akili'],
+    EasternPortfolio: ['Freenome', 'Devoted Health', 'Akili'],
     opportunityValue: '$500K-1M/year across portfolio',
     approach: 'Portfolio services program',
     priority: 'HIGH',
@@ -204,7 +204,7 @@ const vcPartners = [
     type: 'Venture Capital',
     focus: 'Life sciences',
     portfolioCount: '100+',
-    westernPortfolio: ['Grail', 'Beam', 'Prime Medicine'],
+    EasternPortfolio: ['Grail', 'Beam', 'Prime Medicine'],
     opportunityValue: '$300-600K/year',
     approach: 'Speaking at portfolio days',
     priority: 'HIGH',
@@ -214,7 +214,7 @@ const vcPartners = [
     type: 'Venture Capital',
     focus: 'Biotech crossover',
     portfolioCount: '80+',
-    westernPortfolio: ['Day One Bio', 'Revolution Medicines'],
+    EasternPortfolio: ['Day One Bio', 'Revolution Medicines'],
     opportunityValue: '$300-500K/year',
     approach: 'Compliance advisory service',
     priority: 'MEDIUM',
@@ -224,7 +224,7 @@ const vcPartners = [
     type: 'Venture Capital',
     focus: 'Healthcare + tech',
     portfolioCount: '50+',
-    westernPortfolio: ['Various biotech'],
+    EasternPortfolio: ['Various biotech'],
     opportunityValue: '$200-400K/year',
     approach: 'Due diligence compliance services',
     priority: 'MEDIUM',
@@ -266,7 +266,7 @@ export default function PartnerEcosystem() {
           <Link href="/partner-overview" className="text-purple-400 hover:text-purple-300">← Partner Hub</Link>
         </div>
         <p className="text-slate-300 mb-12 max-w-3xl">
-          Strategic technology partnerships that drive pipeline and enable joint solutions for the Western region.
+          Strategic technology partnerships that drive pipeline and enable joint solutions for the Eastern Region.
         </p>
 
         {/* Cloud Hyperscalers */}
@@ -308,9 +308,9 @@ export default function PartnerEcosystem() {
                       ))}
                     </ul>
 
-                    <h4 className="text-sm font-semibold text-slate-400 mb-2">Western Targets</h4>
+                    <h4 className="text-sm font-semibold text-slate-400 mb-2">Eastern Targets</h4>
                     <ul className="space-y-1">
-                      {partner.westernTargets.map((target, i) => (
+                      {partner.EasternTargets.map((target, i) => (
                         <li key={i} className="text-blue-400 text-sm">• {target}</li>
                       ))}
                     </ul>
@@ -407,7 +407,7 @@ export default function PartnerEcosystem() {
                 <p className="text-slate-400 text-sm mb-2">{partner.description}</p>
                 <div className="space-y-1 text-sm">
                   <div><span className="text-slate-500">Opportunity: </span><span className="text-green-400">{partner.opportunitySize}</span></div>
-                  <div><span className="text-slate-500">Western: </span><span className="text-blue-400">{partner.westernPresence}</span></div>
+                  <div><span className="text-slate-500">Eastern: </span><span className="text-blue-400">{partner.EasternPresence}</span></div>
                   <div><span className="text-slate-500">Action: </span><span className="text-yellow-400">{partner.action}</span></div>
                 </div>
               </div>
@@ -428,7 +428,7 @@ export default function PartnerEcosystem() {
                   <th className="text-left p-4 text-slate-400">VC Partner</th>
                   <th className="text-left p-4 text-slate-400">Focus</th>
                   <th className="text-left p-4 text-slate-400">Portfolio Size</th>
-                  <th className="text-left p-4 text-blue-400">Western Portfolio</th>
+                  <th className="text-left p-4 text-blue-400">Eastern Portfolio</th>
                   <th className="text-left p-4 text-green-400">Opportunity</th>
                   <th className="text-center p-4 text-slate-400">Priority</th>
                 </tr>
@@ -439,7 +439,7 @@ export default function PartnerEcosystem() {
                     <td className="p-4 text-white font-medium">{vc.name}</td>
                     <td className="p-4 text-slate-400 text-sm">{vc.focus}</td>
                     <td className="p-4 text-slate-300">{vc.portfolioCount}</td>
-                    <td className="p-4 text-blue-400 text-sm">{vc.westernPortfolio.join(', ')}</td>
+                    <td className="p-4 text-blue-400 text-sm">{vc.EasternPortfolio.join(', ')}</td>
                     <td className="p-4 text-green-400">{vc.opportunityValue}</td>
                     <td className="p-4 text-center">
                       <span className={`px-2 py-1 rounded text-xs font-bold ${
@@ -499,3 +499,5 @@ export default function PartnerEcosystem() {
     </div>
   );
 }
+
+

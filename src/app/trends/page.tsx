@@ -64,7 +64,7 @@ export default function TrendsPage() {
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-white mb-4">Multi-Year Trend Analysis</h1>
           <p className="text-lg text-slate-300">
-            Historical performance data (2022-2025) and 2026 targets for the Western Region
+            Historical performance data (2022-2025) and 2026 targets for the Eastern Region
           </p>
           <div className="mt-4 flex flex-wrap gap-3 text-xs">
             <span className="bg-cyan-900/30 px-3 py-1.5 rounded-full text-slate-300 border border-cyan-700/50">
@@ -505,3 +505,4 @@ export default function TrendsPage() {
     </div>
   );
 }
+

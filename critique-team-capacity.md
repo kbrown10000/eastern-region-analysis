@@ -19,7 +19,7 @@ The Team Capacity page is the most data-rich and operationally honest section of
 - **Seller leaderboard** with status badging (star, coaching) drives accountability
 - **Pipeline health alert** correctly flags 77% stale pipeline as crisis
 - **LTE win rate insight** (89.1%) identifies expansion strategy that works
-- **Western territory alignment grid** shows coverage gaps clearly
+- **Eastern territory alignment grid** shows coverage gaps clearly
 - **Partner channel performance** honestly shows anemic results
 
 ---
@@ -73,7 +73,7 @@ But there's no:
 - Succession plan
 - Risk mitigation if he leaves
 
-The Western region literally depends on one person.
+The Eastern region literally depends on one person.
 
 ### 6. **Partner Channel is Negligible** — SEVERITY: MEDIUM
 Kim Guihen: $70K pipeline, $70K won (1 deal)
@@ -132,3 +132,4 @@ The "Coaching Priorities" section highlights Mike Campbell (38.2%), Avani Macwan
 | Coaching fails to improve win rates | Medium | Medium | Escalation path to separation |
 
 **Overall Assessment:** The Team Capacity page is the most operationally honest section and deserves credit for surfacing uncomfortable truths. However, it frames performance failures as "coaching opportunities" when the data suggests harder decisions are required. A 17% win rate is not a coaching issue — it's a hiring mistake or role misfit. The board should demand specific performance milestones with consequences for non-achievement, not open-ended coaching commitments.
+

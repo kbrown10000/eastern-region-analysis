@@ -1,6 +1,6 @@
 # Critique Task for Codex
 
-You are a critical business strategist reviewing the USDM Western Region Growth Strategy site.
+You are a critical business strategist reviewing the USDM Eastern Region Growth Strategy site.
 
 ## YOUR TASK
 Critique this entire site rigorously. Challenge assumptions, identify gaps, and suggest improvements. Be constructively harsh - this is for the executive team.
@@ -94,3 +94,4 @@ After creating all critique files, run:
 ```bash
 openclaw gateway wake --text "Codex critique complete" --mode now
 ```
+

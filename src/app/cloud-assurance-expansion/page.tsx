@@ -100,7 +100,7 @@ export default function CloudAssuranceExpansionPlaybook() {
         <div className="mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-900/30 border border-cyan-700/40 text-cyan-300 text-xs font-semibold">
             <span>☁️</span>
-            <span>Western US Expansion Playbook</span>
+            <span>Eastern US Expansion Playbook</span>
             <span className="text-slate-400">|</span>
             <span>Cloud Assurance → AI Expansion</span>
           </div>
@@ -607,3 +607,4 @@ function TierCard({ tier, who, how, bullets }: { tier: string; who: string; how:
     </div>
   );
 }
+

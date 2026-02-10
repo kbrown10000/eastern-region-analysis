@@ -3,7 +3,7 @@
 import Link from 'next/link';
 
 const executiveSummary = {
-  assessment: 'Territory analysis is solid with good data backing. Main gap is the single-seller dependency in key territories (Mike Campbell controls 38% of West pipeline with lowest win rate).',
+  assessment: 'Territory analysis is solid with good data backing. Main gap is the single-seller dependency in key territories (Mike Campbell controls 38% of East Pipeline with loEast win rate).',
   severity: 'MEDIUM',
 };
 
@@ -18,7 +18,7 @@ const criticalGaps = [
   {
     severity: 'HIGH',
     gap: 'Mike Campbell Risk Concentration',
-    detail: 'Mike holds $5.42M (38%) of West pipeline but has lowest win rate (14.9%). If he underperforms, West misses target by 40%.',
+    detail: 'Mike holds $5.42M (38%) of East Pipeline but has loEast win rate (14.9%). If he underperforms, East misses target by 40%.',
     question: 'What\'s the contingency if Mike\'s pipeline doesn\'t convert?',
     recommendation: 'Add pipeline coverage model showing risk scenarios',
   },
@@ -39,7 +39,7 @@ const criticalGaps = [
 ];
 
 const dataValidation = [
-  { claim: 'West pipeline: $14.05M', mcpResult: '$14.05M (194 opps)', status: 'VALIDATED' },
+  { claim: 'East Pipeline: $14.05M', mcpResult: '$14.05M (194 opps)', status: 'VALIDATED' },
   { claim: 'Justin Ott: $4.42M pipeline', mcpResult: '$6.9M in Q4 data', status: 'DISCREPANCY' },
   { claim: 'Mike Campbell: $5.42M pipeline', mcpResult: '$2.94M in Q4 data', status: 'DISCREPANCY' },
   { claim: 'LA BioMed GP: 23.9%', mcpResult: 'Confirmed via Finance MCP', status: 'VALIDATED' },
@@ -148,3 +148,5 @@ export default function CritiqueTerritories() {
     </div>
   );
 }
+
+

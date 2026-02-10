@@ -74,7 +74,7 @@ export default function Appendix() {
                 <li>• <span className="text-yellow-400">B-Tier (30-40%)</span> — Acceptable, room to improve</li>
                 <li>• <span className="text-red-400">C-Tier (&lt;30%)</span> — Below target, action needed</li>
               </ul>
-              <p className="text-slate-500 text-xs mt-3">West average: 36.5% | East average: 51.5%</p>
+              <p className="text-slate-500 text-xs mt-3">East average: 36.5% | East average: 51.5%</p>
             </div>
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
               <h3 className="text-cyan-400 font-bold mb-3">Churn Risk Scoring</h3>
@@ -97,7 +97,7 @@ export default function Appendix() {
                 <li>• <span className="text-yellow-400">1,000-2,500</span> — Moderate concentration</li>
                 <li>• <span className="text-red-400">&gt;2,500</span> — High concentration (risky)</li>
               </ul>
-              <p className="text-slate-500 text-xs mt-3">USDM West HHI: 164 (very healthy)</p>
+              <p className="text-slate-500 text-xs mt-3">USDM East HHI: 164 (very healthy)</p>
             </div>
           </div>
         </section>
@@ -199,3 +199,5 @@ export default function Appendix() {
     </div>
   );
 }
+
+

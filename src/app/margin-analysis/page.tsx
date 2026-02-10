@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell, ComposedChart, Line } from 'recharts';
 
-// CORRECTED 2025 DATA - All 160 West customers
+// CORRECTED 2025 DATA - All 160 East Customers
 // Problem customers - TOP revenue, LOW margin (Tier C dominance)
 const problemCustomers = [
   { name: 'Kite Pharma', revenue: 1962685, gp: 19.1, gpDollars: 374141, hours: 14313, trend: '+94%', territory: 'LA BioMed' },
@@ -74,14 +74,14 @@ export default function MarginAnalysis() {
         {/* Key Metrics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <div className="bg-red-900/30 rounded-xl p-6 border border-red-700/50">
-            <p className="text-red-400 text-sm mb-1">West Blended GP</p>
+            <p className="text-red-400 text-sm mb-1">East Blended GP</p>
             <p className="text-4xl font-bold text-red-400">34.3%</p>
             <p className="text-slate-500 text-sm mt-1">$5.90M / $17.19M</p>
           </div>
           <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
             <p className="text-slate-400 text-sm mb-1">Tier C Revenue</p>
             <p className="text-4xl font-bold text-white">$9.11M</p>
-            <p className="text-slate-500 text-sm mt-1">53% of West total</p>
+            <p className="text-slate-500 text-sm mt-1">53% of East total</p>
           </div>
           <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
             <p className="text-slate-400 text-sm mb-1">Tier C GP%</p>
@@ -245,7 +245,7 @@ export default function MarginAnalysis() {
 
         {/* The Math */}
         <div className="bg-gradient-to-r from-cyan-900/30 to-blue-900/30 rounded-xl p-6 border border-cyan-700/50 mb-8">
-          <h2 className="text-xl font-bold text-white mb-4">📊 The Math: Why West GP Is Low</h2>
+          <h2 className="text-xl font-bold text-white mb-4">📊 The Math: Why East GP Is Low</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
               <p className="text-slate-400 mb-2">Tier C Revenue</p>
@@ -311,3 +311,5 @@ export default function MarginAnalysis() {
     </div>
   );
 }
+
+

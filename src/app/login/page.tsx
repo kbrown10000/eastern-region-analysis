@@ -64,7 +64,7 @@ export default function LoginPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 flex items-center justify-center px-4">
       <div className="bg-slate-800/80 rounded-xl p-8 border border-slate-700 w-full max-w-md">
         <div className="text-center mb-8">
-          <h1 className="text-2xl font-bold text-white mb-2">USDM Western Region</h1>
+          <h1 className="text-2xl font-bold text-white mb-2">USDM Eastern Region</h1>
           <p className="text-slate-400 text-sm">Enter password to access</p>
         </div>
 
@@ -79,3 +79,4 @@ export default function LoginPage() {
     </div>
   );
 }
+

@@ -43,7 +43,7 @@ const territories: Territory[] = [
     aka: 'San Diego',
     geography: ['San Diego', 'Irvine', 'Orange County'],
     seller: 'Justin Ott',
-    sellerRole: 'EVP West',
+    sellerRole: 'EVP East',
     sellerStatus: 'star',
     revenue2025: 7.98,
     gpPercent: 70.8,
@@ -227,7 +227,7 @@ export default function TerritoriesPage() {
         {/* Header */}
         <div className="flex justify-between items-start mb-4">
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white">Western Territories</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white">Eastern Territories</h1>
             <p className="text-xl text-cyan-400 mt-2">Pistons in the Regional Engine</p>
           </div>
           <span className="text-xs text-green-400 bg-green-900/30 px-3 py-1 rounded border border-green-700/50">
@@ -475,3 +475,5 @@ export default function TerritoriesPage() {
     </div>
   );
 }
+
+

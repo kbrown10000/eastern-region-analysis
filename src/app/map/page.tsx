@@ -34,7 +34,7 @@ const LayerGroup = dynamic(
 );
 
 import biotechData from '../../../data/biotech-targets.json';
-import customerData from '../../../data/west-customers.json';
+import customerData from '../../../data/east-customers.json';
 
 const priorityColors: Record<string, string> = {
   strategic: '#a855f7',
@@ -94,12 +94,12 @@ export default function MapPage() {
   }, [regionFilter, priorityFilter]);
 
   const filteredCustomers = useMemo(() => {
-    return customerData.westCustomers.filter(c => {
+    return customerData.eastCustomers.filter(c => {
       return regionFilter === 'All' || c.region === regionFilter;
     });
   }, [regionFilter]);
 
-  const existingCustomers = customerData.westCustomers;
+  const existingCustomers = customerData.eastCustomers;
 
   const stats = useMemo(() => {
     const filtered = filteredTargets;
@@ -122,7 +122,7 @@ export default function MapPage() {
       <main className="max-w-7xl mx-auto px-6 py-8">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-6">
           <div>
-            <h1 className="text-4xl font-bold text-white mb-2">Western Region Map</h1>
+            <h1 className="text-4xl font-bold text-white mb-2">Eastern Region Map</h1>
             <p className="text-slate-400">55+ biotech target companies across NorCal, SoCal & PNW</p>
           </div>
           
@@ -329,7 +329,7 @@ export default function MapPage() {
           </div>
           <div className="mt-4 pt-4 border-t border-slate-700">
             <p className="text-slate-400 text-sm">
-              <span className="text-cyan-400 font-semibold">{stats.customers} West customers</span> shown: 
+              <span className="text-cyan-400 font-semibold">{stats.customers} East Customers</span> shown: 
               <span className="text-green-400 ml-2">{stats.customersA} Tier A</span>,
               <span className="text-yellow-400 ml-2">{stats.customersB} Tier B</span>,
               <span className="text-red-400 ml-2">{stats.customersC} Tier C</span>
@@ -392,3 +392,5 @@ function createCustomerIcon(tierColor: string) {
     popupAnchor: [0, -16],
   });
 }
+
+

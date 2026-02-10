@@ -10,7 +10,7 @@ export default function SellerPerformance() {
   const sellers = [
     {
       name: 'Justin Ott',
-      role: 'EVP West',
+      role: 'EVP East',
       territory: 'Biotech Beach',
       opportunities: 69,
       wonDeals: 42,
@@ -152,7 +152,7 @@ export default function SellerPerformance() {
       status: 'coaching',
       statusIcon: '🎯',
       coachingNeeds: [
-        'Lowest win rate on team - urgent attention',
+        'LoEast win rate on team - urgent attention',
         'Europe market challenges',
         'Large pipeline not converting',
         'Review territory strategy',
@@ -174,7 +174,7 @@ export default function SellerPerformance() {
       status: 'coaching',
       statusIcon: '🎯',
       coachingNeeds: [
-        'Lowest win rate on team',
+        'LoEast win rate on team',
         'Strong pipeline but poor conversion',
         'Opportunity scoring needed',
         'Weekly deal reviews required',
@@ -430,3 +430,5 @@ export default function SellerPerformance() {
     </div>
   );
 }
+
+

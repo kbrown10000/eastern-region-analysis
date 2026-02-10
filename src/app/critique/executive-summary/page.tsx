@@ -47,9 +47,9 @@ const criticalGaps = [
   },
   {
     severity: 'MEDIUM',
-    gap: 'West vs East Comparison Missing',
-    detail: 'Western Region presented in isolation. No benchmark against East region (51.5% GP vs West 36.5%) or Europe.',
-    question: 'Is West underperforming relative to other regions?',
+    gap: 'East vs East Comparison Missing',
+    detail: 'Eastern Region presented in isolation. No benchmark against East region (51.5% GP vs East 36.5%) or Europe.',
+    question: 'Is East underperforming relative to other regions?',
     recommendation: 'Add regional comparison table',
   },
   {
@@ -65,7 +65,7 @@ const dataValidation = [
   {
     claim: 'Open Pipeline: $14.05M (West)',
     mcpResult: '$14.05M (194 opps)',
-    source: 'Sales MCP → DAX query with West region filter',
+    source: 'Sales MCP → DAX query with East Region filter',
     status: 'VALIDATED',
   },
   {
@@ -75,7 +75,7 @@ const dataValidation = [
     status: 'VALIDATED',
   },
   {
-    claim: 'West GP: ~36.5%',
+    claim: 'East GP: ~36.5%',
     mcpResult: 'Blended 43.6%, but LA BioMed at 23.9%',
     source: 'Finance MCP → analyze_customer_profitability',
     status: 'PARTIALLY VALIDATED - Territory variance needs detail',
@@ -275,3 +275,5 @@ export default function CritiqueExecutiveSummary() {
     </div>
   );
 }
+
+

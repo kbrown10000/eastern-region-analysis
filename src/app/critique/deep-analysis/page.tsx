@@ -5,7 +5,7 @@ import Link from 'next/link';
 /**
  * DEEP CRITIQUE ANALYSIS
  * 
- * Comprehensive, unfiltered analysis of the Western Region Growth Strategy
+ * Comprehensive, unfiltered analysis of the Eastern Region Growth Strategy
  * Synthesizes AI sub-agent critique with MCP data validation
  * 
  * PURPOSE: Review page before integrating findings into main site
@@ -34,14 +34,14 @@ const realityCheck = {
 const sellerConcentration = {
   title: 'Seller Concentration: Existential Risk',
   severity: 'CRITICAL',
-  finding: '88% of West revenue concentrated in 2 sellers',
+  finding: '88% of East revenue concentrated in 2 sellers',
   detail: [
     {
       seller: 'Justin Ott',
       revenue: 5132813,
       pipelineShare: '49%',
       winRate: 60.9,
-      risk: 'If Justin leaves or underperforms, West loses half its revenue',
+      risk: 'If Justin leaves or underperforms, East loses half its revenue',
       status: 'DEPENDENCY',
     },
     {
@@ -186,14 +186,14 @@ const gtmSprawl = {
   title: 'GTM Strategy: Strategic Sprawl',
   severity: 'HIGH',
   finding: '13 GTM pillars is impossible for a depleted sales team',
-  context: 'West has effectively 2 quota-carrying sellers (Justin, Mike). 13 pillars = 6.5 pillars per seller.',
+  context: 'East has effectively 2 quota-carrying sellers (Justin, Mike). 13 pillars = 6.5 pillars per seller.',
   pillars: [
     'Cloud Migration', 'AI/ML Validation', 'Data Integrity', 'CSV/Computer System Validation',
     'Quality Management', 'Regulatory Submissions', 'Manufacturing QA', 'Clinical Systems',
     'Lab Informatics', 'Training & Compliance', 'Remediation', 'Audit Support', 'Staff Augmentation',
   ],
   analysis: 'Each pillar requires different buyer personas, different messaging, different proof points. Spreading 2 sellers across 13 pillars guarantees mediocrity in all.',
-  recommendation: 'Ruthlessly prioritize to TOP 5 pillars where USDM has differentiation and West has traction',
+  recommendation: 'Ruthlessly prioritize to TOP 5 pillars where USDM has differentiation and East has traction',
   suggestedTop5: [
     { pillar: 'Cloud Migration + Validation', rationale: 'AWS/Azure partnerships, clear ROI story' },
     { pillar: 'AI Governance', rationale: 'Emerging need, limited competition' },
@@ -203,8 +203,8 @@ const gtmSprawl = {
   ],
   dataSource: 'Site analysis: src/app/gtm-strategy/page.tsx',
   questions: [
-    'Which 5 pillars drove 80% of West revenue last year?',
-    'Which pillars have zero West wins?',
+    'Which 5 pillars drove 80% of East revenue last year?',
+    'Which pillars have zero East wins?',
     'What would we stop doing to focus on Top 5?',
   ],
 };
@@ -248,7 +248,7 @@ const financialModelGaps = {
 const marginProblem = {
   title: 'Margin Erosion: The LA BioMed Problem',
   severity: 'HIGH',
-  summary: '4 accounts dragging West GP from 50%+ to 36.5%',
+  summary: '4 accounts dragging East GP from 50%+ to 36.5%',
   accounts: [
     { name: 'Gilead Sciences', revenue: 2130000, gp: 22, trend: 'Expanding', risk: 'More volume at bad margin = worse blended GP' },
     { name: 'Kite Pharma', revenue: 2080000, gp: 20, trend: 'Expanding', risk: 'Gilead subsidiary, same margin pressure' },
@@ -256,7 +256,7 @@ const marginProblem = {
     { name: 'Enovis', revenue: 773000, gp: 18, trend: 'Growing fast', risk: 'Fastest growing account is worst margin' },
   ],
   totalProblemRevenue: 6733000,
-  problemRevenueShare: 42, // % of West
+  problemRevenueShare: 42, // % of East
   blendedProblemGP: 20.5,
   dataSource: 'Finance MCP → analyze_customer_profitability | Site: src/app/margin-analysis/page.tsx',
   options: [
@@ -294,7 +294,7 @@ const actionItems = {
   immediate: [
     { action: 'Pipeline scrub — remove stale opps, reset dates', owner: 'Sales Ops', deadline: '2 weeks' },
     { action: 'Kim Guihen role review', owner: 'CCO', deadline: '1 week' },
-    { action: 'Justin Ott knowledge transfer plan', owner: 'EVP West', deadline: '2 weeks' },
+    { action: 'Justin Ott knowledge transfer plan', owner: 'EVP East', deadline: '2 weeks' },
   ],
   shortTerm: [
     { action: 'GTM pillar prioritization to Top 5', owner: 'CMO/CCO', deadline: '30 days' },
@@ -680,3 +680,5 @@ export default function DeepAnalysis() {
     </div>
   );
 }
+
+

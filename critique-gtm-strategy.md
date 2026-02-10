@@ -41,7 +41,7 @@ The page lists 13 distinct GTM motions:
 12. Data Integration & Digital Foundations
 13. Third-Party Risk Management
 
-With 2 Western sellers (Justin and Mike, since Bay is vacant and Cascadia is partner-only), how do they effectively execute 13 different sales motions? This is strategic incoherence disguised as comprehensiveness.
+With 2 Eastern sellers (Justin and Mike, since Bay is vacant and Cascadia is partner-only), how do they effectively execute 13 different sales motions? This is strategic incoherence disguised as comprehensiveness.
 
 ### 2. **No Prioritization Framework** — SEVERITY: HIGH
 The page shows 3 "highest-impact" GTMs but doesn't explain why these 3 vs. the other 10. What's the:
@@ -87,7 +87,7 @@ This isn't wrong, but it needs account planning to avoid confusing the buyer wit
 | AI Targets Count | "varies by pillar" | 7+ companies listed | ✅ REASONABLE |
 | Cell Therapy Targets | "12+ funded" | Matches target list | ✅ VERIFIED |
 | Numerion Labs (Atomwise) | "Win-Back" | $15K LTV in 2024 | ✅ VERIFIED |
-| Veeva Customer Base | "All existing West customers" | Not directly verifiable | ⚠️ PLAUSIBLE |
+| Veeva Customer Base | "All existing East customers" | Not directly verifiable | ⚠️ PLAUSIBLE |
 | National Resilience | "$2B customer" | $6.7K LTV (Finance MCP) | ❌ MISLEADING |
 
 **Critical Finding:** National Resilience is described as a "$2B customer" on the homepage but Finance MCP shows only $6.7K LTV. They may have $2B in funding, but they're a **$6.7K customer**, not a $2B one. This is misleading.
@@ -103,7 +103,7 @@ This isn't wrong, but it needs account planning to avoid confusing the buyer wit
 
 ### Short-term (Q1 2026)
 4. **Create sales playbooks for top 5 GTMs** — one-pagers with triggers, qualification, demo, pricing
-5. **Map each Western account to ONE primary GTM** — avoid pillar confusion
+5. **Map each Eastern account to ONE primary GTM** — avoid pillar confusion
 6. **Define success metrics per pillar** — pipeline generated, win rate, ACV, GP%
 
 ### Medium-term (Q2-Q3 2026)
@@ -124,3 +124,4 @@ This isn't wrong, but it needs account planning to avoid confusing the buyer wit
 | Win-back targets fail | Medium | Low | Separate win-back strategy |
 
 **Overall Assessment:** The GTM Strategy page is a masterpiece of completeness but a failure of prioritization. Presenting 13 GTM pillars to a depleted sales team in a declining region is strategic overload. The board should demand a "Top 5" shortlist with clear rationale, success metrics, and a sequenced rollout plan. Attempting everything at once will achieve nothing.
+

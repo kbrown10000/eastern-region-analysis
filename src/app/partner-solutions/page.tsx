@@ -36,7 +36,7 @@ const solutionsTeam = [
     avgDealSize: 125000,
     specialties: ['Cell Therapy', 'Manufacturing QA', 'Equipment Validation'],
     partnerAlignment: ['Cellares', 'Multiply Labs'],
-    territory: 'West',
+    territory: 'East',
     status: 'ok',
   },
   {
@@ -47,7 +47,7 @@ const solutionsTeam = [
     avgDealSize: 98000,
     specialties: ['CSV', 'Data Integrity', 'SaaS Validation'],
     partnerAlignment: ['Veeva', 'Box', 'DocuSign'],
-    territory: 'West',
+    territory: 'East',
     status: 'ok',
   },
   {
@@ -58,7 +58,7 @@ const solutionsTeam = [
     avgDealSize: 145000,
     specialties: ['AI Governance', 'ML Ops', 'Data Science Platforms'],
     partnerAlignment: ['AWS SageMaker', 'Azure ML', 'Databricks'],
-    territory: 'West',
+    territory: 'East',
     status: 'ok',
   },
 ];
@@ -437,7 +437,7 @@ export default function PartnerSolutions() {
         <section className="text-center">
           <div className="inline-flex gap-4 flex-wrap justify-center">
             <Link href="/partner-west" className="px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-lg transition-colors">
-              Western Partner Plan →
+              Eastern Partner Plan →
             </Link>
             <Link href="/partner-plays" className="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-bold rounded-lg transition-colors">
               Partner Plays →
@@ -465,3 +465,5 @@ export default function PartnerSolutions() {
     </div>
   );
 }
+
+

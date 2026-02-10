@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend, ComposedChart, Line } from 'recharts';
 
 // CORRECTED 2025 DATA - From Finance MCP customer_ltv_corrected_2025.xlsx
-// 160 West customers, $17.19M revenue, 34.3% blended GP
+// 160 East Customers, $17.19M revenue, 34.3% blended GP
 
 // Revenue by territory (REAL DATA)
 const revenueByTerritory = [
@@ -70,7 +70,7 @@ export default function Dashboard() {
 
       <main className="max-w-7xl mx-auto px-6 py-12">
         <h1 className="text-4xl font-bold text-white mb-2">Financial Dashboard</h1>
-        <p className="text-slate-400 mb-2">Western Region 2025 Performance - Live Data from Fabric Lakehouse</p>
+        <p className="text-slate-400 mb-2">Eastern Region 2025 Performance - Live Data from Fabric Lakehouse</p>
         <div className="bg-slate-800/30 rounded-lg px-4 py-2 text-xs text-slate-400 mb-8 inline-block">
           <span className="text-purple-400">Finance MCP</span> → <code className="text-slate-500">analyze_customer_profitability</code>, <code className="text-slate-500">get_customer_ltv</code> | 
           <span className="text-blue-400 ml-2">Sales MCP</span> → <code className="text-slate-500">get_pipeline_summary</code> |
@@ -234,7 +234,7 @@ export default function Dashboard() {
           <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
             <h2 className="text-xl font-bold text-white mb-4">Open Pipeline</h2>
             <p className="text-5xl font-bold text-green-400 mb-2">${(openPipeline/1000000).toFixed(2)}M</p>
-            <p className="text-slate-400">Active opportunities across West region</p>
+            <p className="text-slate-400">Active opportunities across East Region</p>
             <div className="mt-4 p-3 bg-slate-700/50 rounded-lg">
               <p className="text-slate-300 text-sm">Pipeline Coverage: <span className="text-cyan-400 font-bold">0.63x</span></p>
               <p className="text-slate-500 text-xs">Based on 2025 revenue decline, need 1.5x+ for recovery</p>
@@ -403,3 +403,4 @@ export default function Dashboard() {
     </div>
   );
 }
+

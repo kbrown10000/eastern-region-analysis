@@ -3,14 +3,14 @@
 import Link from 'next/link';
 
 /**
- * WESTERN REGION PARTNER PLAN
+ * Eastern Region PARTNER PLAN
  * 
  * Territory-specific partner strategy with regional flavor
  * 
  * Data Sources:
  * - Labor MCP: get_solutions_team_roster (partner team)
  * - Sales MCP: get_team_performance, get_pipeline_by_owner
- * - Territory analysis from Western Region Strategy
+ * - Territory analysis from Eastern Region Strategy
  * - Industry research on regional biotech ecosystems
  * 
  * Last Updated: 2026-02-04
@@ -118,12 +118,12 @@ const territoryPlans = [
   },
 ];
 
-// Partner team assigned to Western territories
-const westernPartnerTeam = [
+// Partner team assigned to Eastern territories
+const EasternPartnerTeam = [
   {
     name: 'Kim Guihen',
     role: 'Partner Leadership',
-    territories: ['All Western'],
+    territories: ['All Eastern'],
     winRate: 7.5,
     status: 'concern',
     focus: 'Strategic partner relationships, executive alignment',
@@ -140,8 +140,8 @@ const westernPartnerTeam = [
   },
 ];
 
-// Western partner program 2026 roadmap
-const westernRoadmap = [
+// Eastern partner program 2026 roadmap
+const EasternRoadmap = [
   {
     quarter: 'Q1 2026',
     theme: 'Foundation Building',
@@ -172,7 +172,7 @@ const westernRoadmap = [
     focus: ['Partner program formalization', 'Training/certification launch', 'Budget for 2027'],
     targetPipeline: 4000000,
     investment: 50000,
-    kpis: ['$3M total partner pipeline', '10% of West from partners', 'Dedicated partner SE hire'],
+    kpis: ['$3M total partner pipeline', '10% of East from partners', 'Dedicated partner SE hire'],
   },
 ];
 
@@ -200,15 +200,15 @@ export default function PartnerWest() {
       <main className="max-w-7xl mx-auto px-6 py-16">
         {/* Header */}
         <div className="flex justify-between items-center mb-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-white">Western Partner Plan</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white">Eastern Partner Plan</h1>
           <Link href="/partner-overview" className="text-purple-400 hover:text-purple-300">← Partner Hub</Link>
         </div>
         <p className="text-slate-300 mb-4 max-w-3xl text-lg">
-          Territory-by-territory partner strategy for the Western Region.
+          Territory-by-territory partner strategy for the Eastern Region.
           Each market has unique characteristics requiring tailored partner approaches.
         </p>
         <p className="text-emerald-400 mb-12 max-w-3xl font-semibold">
-          🎯 2026 Target: 10% of West pipeline from partners = $6M+ partner-sourced
+          🎯 2026 Target: 10% of East Pipeline from partners = $6M+ partner-sourced
         </p>
 
         {/* Investment Summary */}
@@ -343,9 +343,9 @@ export default function PartnerWest() {
 
         {/* Partner Team */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">👥 Western Partner Team</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">👥 Eastern Partner Team</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            {westernPartnerTeam.map((member, idx) => (
+            {EasternPartnerTeam.map((member, idx) => (
               <div key={idx} className={`bg-slate-800/50 rounded-xl p-6 border ${
                 member.status === 'concern' ? 'border-red-700' : 'border-slate-700'
               }`}>
@@ -373,9 +373,9 @@ export default function PartnerWest() {
 
         {/* 2026 Roadmap */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">📅 2026 Western Partner Roadmap</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">📅 2026 Eastern Partner Roadmap</h2>
           <div className="grid md:grid-cols-4 gap-4">
-            {westernRoadmap.map((q, idx) => (
+            {EasternRoadmap.map((q, idx) => (
               <div key={idx} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
                 <div className="text-xl font-bold text-emerald-400 mb-1">{q.quarter}</div>
                 <div className="text-white font-semibold mb-4">{q.theme}</div>
@@ -411,7 +411,7 @@ export default function PartnerWest() {
 
         {/* Key Success Factors */}
         <section className="mb-12 bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-xl p-8 border border-blue-700/50">
-          <h2 className="text-2xl font-bold text-white mb-4">🔑 Western Partner Success Factors</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">🔑 Eastern Partner Success Factors</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div>
               <h3 className="text-blue-400 font-semibold mb-3">Must Win</h3>
@@ -478,3 +478,5 @@ export default function PartnerWest() {
     </div>
   );
 }
+
+

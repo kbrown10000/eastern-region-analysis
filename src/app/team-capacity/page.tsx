@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 // LIVE DATA from Sales MCP V2 - get_team_performance (Q4 2025) | Feb 4, 2026
 const sellerPerformance = [
-  { name: 'Justin Ott', role: 'EVP West', territory: 'Biotech Beach', pipeline: 6915775, pipelineEGP: 2630270, closedWon: 5132813, closedWonEGP: 1891280, deals: 69, wonDeals: 42, winRate: 60.9, status: 'star' as const },
+  { name: 'Justin Ott', role: 'EVP East', territory: 'Biotech Beach', pipeline: 6915775, pipelineEGP: 2630270, closedWon: 5132813, closedWonEGP: 1891280, deals: 69, wonDeals: 42, winRate: 60.9, status: 'star' as const },
   { name: 'Josh Ertmer', role: 'Staffing AM', territory: 'National', pipeline: 5595852, pipelineEGP: 1442028, closedWon: 3351692, closedWonEGP: 871440, deals: 45, wonDeals: 28, winRate: 62.2, status: 'star' as const },
   { name: 'Scott Pallardy', role: 'Account Manager', territory: 'East', pipeline: 3421565, pipelineEGP: 1710799, closedWon: 846565, closedWonEGP: 363049, deals: 36, wonDeals: 12, winRate: 33.3, status: 'ok' as const },
   { name: 'Marcus Dinan', role: 'Account Manager', territory: 'Europe', pipeline: 3845900, pipelineEGP: 1832965, closedWon: 227000, closedWonEGP: 163500, deals: 39, wonDeals: 7, winRate: 17.9, status: 'coaching' as const },
@@ -298,7 +298,7 @@ export default function TeamCapacity() {
               <ul className="text-xs text-slate-300 space-y-2">
                 <li>• $2.9M pipeline, $1M closed</li>
                 <li>• Only 6/35 deals won (17%)</li>
-                <li>• Lowest win rate on team</li>
+                <li>• LoEast win rate on team</li>
                 <li>• Focus: Opportunity scoring</li>
               </ul>
             </div>
@@ -315,9 +315,9 @@ export default function TeamCapacity() {
           </div>
         </section>
 
-        {/* Western Territory Alignment */}
+        {/* Eastern Territory Alignment */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-cyan-400 mb-6">Western Territory Strategy</h2>
+          <h2 className="text-2xl font-bold text-cyan-400 mb-6">Eastern Territory Strategy</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="bg-gradient-to-br from-green-900/30 to-green-800/30 rounded-xl p-5 border border-green-700/50">
               <div className="text-green-400 font-bold mb-2">Biotech Beach</div>
@@ -437,3 +437,5 @@ export default function TeamCapacity() {
     </div>
   );
 }
+
+

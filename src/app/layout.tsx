@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "USDM Western Region Analysis",
-  description: "USDM Life Sciences Western Region Growth Strategy 2025-2026 - Market analysis, target companies, financial dashboards, and strategic recommendations",
+  title: "USDM Eastern Region Analysis",
+  description: "USDM Life Sciences Eastern Region Growth Strategy 2025-2026 - Market analysis, target companies, financial dashboards, and strategic recommendations",
 };
 
 export default function RootLayout({
@@ -34,3 +34,4 @@ export default function RootLayout({
     </html>
   );
 }
+

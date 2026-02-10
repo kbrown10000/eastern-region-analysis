@@ -7,10 +7,10 @@ type Metric = { label: string; value: string; note: string; tone?: 'good' | 'war
 type Seller = { name: string; opps: number; pipeline: number; verified: boolean };
 
 // VERIFIED DATA - Source: Sales MCP (localhost:3001)
-// Query: GROUPBY on dim_opportunity with IsClosed=FALSE, AccountId IN West accounts
-// West filter: DIM_Account_Min[Sales_Region] = "West"
+// Query: GROUPBY on dim_opportunity with IsClosed=FALSE, AccountId IN East accounts
+// East filter: DIM_Account_Min[Sales_Region] = "East"
 // Last verified: 2026-02-04
-const westSellers: Seller[] = [
+const EastSellers: Seller[] = [
   { name: 'Mike Campbell', opps: 87, pipeline: 5419949.90, verified: true },
   { name: 'Justin Ott', opps: 61, pipeline: 4419340.03, verified: true },
   { name: 'Scott Pallardy', opps: 6, pipeline: 716000, verified: false },
@@ -31,8 +31,8 @@ const westSellers: Seller[] = [
 ];
 
 // Computed totals from verified data
-const westTotalOpps = westSellers.reduce((sum, s) => sum + s.opps, 0); // 194
-const westTotalPipeline = westSellers.reduce((sum, s) => sum + s.pipeline, 0); // 14,052,189.93
+const EastTotalOpps = EastSellers.reduce((sum, s) => sum + s.opps, 0); // 194
+const EastTotalPipeline = EastSellers.reduce((sum, s) => sum + s.pipeline, 0); // 14,052,189.93
 const companyTotalOpps = 583;
 const companyTotalPipeline = 54823843.74;
 
@@ -45,9 +45,9 @@ type Motion = {
 };
 
 const topMetrics: Metric[] = [
-  { label: 'West Open Opps', value: westTotalOpps.toString(), note: `${Math.round(westTotalOpps/companyTotalOpps*100)}% of company (${companyTotalOpps} total)`, tone: 'good' },
-  { label: 'West Pipeline', value: `$${(westTotalPipeline/1000000).toFixed(1)}M`, note: `${Math.round(westTotalPipeline/companyTotalPipeline*100)}% of company ($${(companyTotalPipeline/1000000).toFixed(1)}M total)`, tone: 'good' },
-  { label: 'Active Sellers', value: westSellers.length.toString(), note: 'Opportunity owners with open West pipeline', tone: 'neutral' },
+  { label: 'East Open Opps', value: EastTotalOpps.toString(), note: `${Math.round(EastTotalOpps/companyTotalOpps*100)}% of company (${companyTotalOpps} total)`, tone: 'good' },
+  { label: 'East Pipeline', value: `$${(EastTotalPipeline/1000000).toFixed(1)}M`, note: `${Math.round(EastTotalPipeline/companyTotalPipeline*100)}% of company ($${(companyTotalPipeline/1000000).toFixed(1)}M total)`, tone: 'good' },
+  { label: 'Active Sellers', value: EastSellers.length.toString(), note: 'Opportunity owners with open East Pipeline', tone: 'neutral' },
   { label: 'Top 2 Concentration', value: '70%', note: 'Mike Campbell + Justin Ott own $9.84M of $14.05M', tone: 'warn' },
 ];
 
@@ -94,7 +94,7 @@ export default function SalesMomentum() {
             <span className="text-slate-400">|</span>
             <span>Offense + Defense</span>
           </div>
-          <h1 className="text-4xl font-bold text-white mt-4 mb-2">Sales Momentum (Western Region)</h1>
+          <h1 className="text-4xl font-bold text-white mt-4 mb-2">Sales Momentum (Eastern Region)</h1>
           <p className="text-xl text-slate-400 max-w-4xl">
             If we have a strong GTM and good plays, we should see an expanding pipeline. If we don’t have qualified opportunities against existing customers,
             it’s often a leading indicator of churn. This section operationalizes <span className="text-white font-semibold">both offense and defense</span>.
@@ -128,7 +128,7 @@ export default function SalesMomentum() {
 
         {/* Metrics */}
         <section className="mb-10">
-          <h2 className="text-2xl font-bold text-white mb-4">West Region Pipeline (Live from Fabric)</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">East Region Pipeline (Live from Fabric)</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {topMetrics.map((m) => (
               <MetricCard key={m.label} {...m} />
@@ -140,7 +140,7 @@ export default function SalesMomentum() {
         <section className="mb-10">
           <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-2xl font-bold text-white">West Seller Leaderboard</h2>
+              <h2 className="text-2xl font-bold text-white">East Seller Leaderboard</h2>
               <span className="text-xs text-slate-500">Verified 2026-02-04 | Open opps only</span>
             </div>
             <div className="overflow-x-auto">
@@ -152,11 +152,11 @@ export default function SalesMomentum() {
                     <th className="py-3 px-4 text-slate-400 font-medium text-right">Open Opps</th>
                     <th className="py-3 px-4 text-slate-400 font-medium text-right">Pipeline</th>
                     <th className="py-3 px-4 text-slate-400 font-medium text-right">Avg Deal</th>
-                    <th className="py-3 px-4 text-slate-400 font-medium text-right">% of West</th>
+                    <th className="py-3 px-4 text-slate-400 font-medium text-right">% of East</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {westSellers.map((s, i) => (
+                  {EastSellers.map((s, i) => (
                     <tr key={s.name} className={`border-b border-slate-700/50 ${i < 2 ? 'bg-emerald-900/10' : ''}`}>
                       <td className="py-3 px-4 text-slate-500">{i + 1}</td>
                       <td className="py-3 px-4 text-white font-medium">
@@ -171,7 +171,7 @@ export default function SalesMomentum() {
                         ${Math.round(s.pipeline / s.opps / 1000)}K
                       </td>
                       <td className="py-3 px-4 text-right text-slate-400">
-                        {(s.pipeline / westTotalPipeline * 100).toFixed(1)}%
+                        {(s.pipeline / EastTotalPipeline * 100).toFixed(1)}%
                       </td>
                     </tr>
                   ))}
@@ -180,9 +180,9 @@ export default function SalesMomentum() {
                   <tr className="border-t-2 border-slate-600 bg-slate-900/40">
                     <td className="py-3 px-4"></td>
                     <td className="py-3 px-4 text-white font-bold">TOTAL</td>
-                    <td className="py-3 px-4 text-right text-white font-bold">{westTotalOpps}</td>
-                    <td className="py-3 px-4 text-right text-emerald-400 font-bold">${(westTotalPipeline/1000000).toFixed(2)}M</td>
-                    <td className="py-3 px-4 text-right text-slate-400">${Math.round(westTotalPipeline / westTotalOpps / 1000)}K</td>
+                    <td className="py-3 px-4 text-right text-white font-bold">{EastTotalOpps}</td>
+                    <td className="py-3 px-4 text-right text-emerald-400 font-bold">${(EastTotalPipeline/1000000).toFixed(2)}M</td>
+                    <td className="py-3 px-4 text-right text-slate-400">${Math.round(EastTotalPipeline / EastTotalOpps / 1000)}K</td>
                     <td className="py-3 px-4 text-right text-white font-bold">100%</td>
                   </tr>
                 </tfoot>
@@ -190,7 +190,7 @@ export default function SalesMomentum() {
             </div>
             <div className="mt-4 p-4 bg-amber-900/20 rounded-lg border border-amber-700/30">
               <p className="text-amber-200 text-sm">
-                <span className="font-semibold">⚠️ Concentration Risk:</span> Top 2 sellers (Mike Campbell + Justin Ott) own 70% of West pipeline.
+                <span className="font-semibold">⚠️ Concentration Risk:</span> Top 2 sellers (Mike Campbell + Justin Ott) own 70% of East Pipeline.
                 If either leaves or underperforms, region is exposed.
               </p>
             </div>
@@ -215,30 +215,30 @@ export default function SalesMomentum() {
                 <ul className="text-slate-400 text-sm space-y-1 font-mono">
                   <li>• Region: <span className="text-cyan-400">DIM_Account_Min[Sales_Region] = &quot;West&quot;</span></li>
                   <li>• Status: <span className="text-cyan-400">dim_opportunity[IsClosed] = FALSE</span></li>
-                  <li>• Join: <span className="text-cyan-400">AccountId IN WestAccountList</span></li>
+                  <li>• Join: <span className="text-cyan-400">AccountId IN EastAccountList</span></li>
                 </ul>
               </div>
             </div>
             <div className="mt-4 p-4 bg-slate-800/50 rounded-lg border border-slate-700/50">
               <h3 className="text-white font-semibold mb-2">DAX Query Used</h3>
-              <pre className="text-xs text-slate-400 overflow-x-auto font-mono whitespace-pre-wrap">{`VAR WestAccountList = CALCULATETABLE(
+              <pre className="text-xs text-slate-400 overflow-x-auto font-mono whitespace-pre-wrap">{`VAR EastAccountList = CALCULATETABLE(
     VALUES(DIM_Account_Min[AccountId]), 
-    DIM_Account_Min[Sales_Region] = "West"
+    DIM_Account_Min[Sales_Region] = "East"
 )
-VAR WestOpenOpps = FILTER(
+VAR EastOpenOpps = FILTER(
     dim_opportunity, 
     dim_opportunity[IsClosed] = FALSE 
-    && dim_opportunity[AccountId] IN WestAccountList
+    && dim_opportunity[AccountId] IN EastAccountList
 )
 RETURN GROUPBY(
-    WestOpenOpps,
+    EastOpenOpps,
     dim_opportunity[OpportunityOwner],
     "Opps", COUNTX(CURRENTGROUP(), 1),
     "Pipeline", SUMX(CURRENTGROUP(), dim_opportunity[Amount])
 )`}</pre>
             </div>
             <p className="text-slate-500 text-xs mt-3">
-              ✓ Triple-verified: Seller sums match total (194 opps, $14.05M) | Sample accounts confirmed West (Halozyme, Neurocrine, Crinetics, Edwards, Ionis - all CA)
+              ✓ Triple-verified: Seller sums match total (194 opps, $14.05M) | Sample accounts confirmed East (Halozyme, Neurocrine, Crinetics, Edwards, Ionis - all CA)
             </p>
           </div>
         </section>
@@ -369,3 +369,6 @@ function Mini({ title, items }: { title: string; items: string[] }) {
     </div>
   );
 }
+
+
+

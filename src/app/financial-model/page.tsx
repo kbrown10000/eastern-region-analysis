@@ -22,8 +22,8 @@ const baseline2025 = {
   closedWonQ4: 6.76, // $M
   
   // Revenue & GP
-  westRevenue: 17.19, // $M
-  westGP: 6.19, // $M (36% margin)
+  EastRevenue: 17.19, // $M
+  EastGP: 6.19, // $M (36% margin)
   companyRevenue: 50.0, // $M (estimated)
   
   // Ratios
@@ -67,7 +67,7 @@ export default function FinancialModelPage() {
     const laborRevenueGain = (additionalCapacity * avgBillRate) / 1000000;
     
     // Sales-driven revenue
-    const baseRevenue = baseline2025.westRevenue;
+    const baseRevenue = baseline2025.EastRevenue;
     const expansionRevenue = baseRevenue * (expansionRate / 100);
     const newLogoRevenue = (newLogos * baseline2025.avgDealSize) / 1000;
     const projectedBookings = baseRevenue + expansionRevenue + newLogoRevenue;
@@ -80,7 +80,7 @@ export default function FinancialModelPage() {
     // GP calculations
     const newGpMargin = baseline2025.gpMargin + marginGain;
     const projectedGP = projectedBookings * (newGpMargin / 100);
-    const gpGain = projectedGP - baseline2025.westGP;
+    const gpGain = projectedGP - baseline2025.EastGP;
     
     // Revenue recognition (bookings → revenue over 12 months)
     const projectedRevenue = projectedBookings * 0.85; // ~85% recognized in year
@@ -180,13 +180,13 @@ export default function FinancialModelPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             <div className="text-center">
               <div className="text-xs text-slate-400 mb-1">Bookings</div>
-              <div className="text-slate-500 text-sm">{formatCurrency(baseline2025.westRevenue)} → </div>
+              <div className="text-slate-500 text-sm">{formatCurrency(baseline2025.EastRevenue)} → </div>
               <div className="text-cyan-400 font-bold text-xl">{formatCurrency(projections.projectedBookings)}</div>
-              <div className="text-green-400 text-xs">+{((projections.projectedBookings / baseline2025.westRevenue - 1) * 100).toFixed(0)}%</div>
+              <div className="text-green-400 text-xs">+{((projections.projectedBookings / baseline2025.EastRevenue - 1) * 100).toFixed(0)}%</div>
             </div>
             <div className="text-center">
               <div className="text-xs text-slate-400 mb-1">Gross Profit</div>
-              <div className="text-slate-500 text-sm">{formatCurrency(baseline2025.westGP)} → </div>
+              <div className="text-slate-500 text-sm">{formatCurrency(baseline2025.EastGP)} → </div>
               <div className="text-green-400 font-bold text-xl">{formatCurrency(projections.projectedGP)}</div>
               <div className="text-green-400 text-xs">+{formatCurrency(projections.gpGain)}</div>
             </div>
@@ -559,7 +559,7 @@ export default function FinancialModelPage() {
             <div className="text-center">
               <div className="text-3xl font-bold text-green-400">{formatCurrency(projections.projectedBookings)}</div>
               <div className="text-sm text-slate-300">2026 Bookings</div>
-              <div className="text-xs text-slate-400">+{((projections.projectedBookings / baseline2025.westRevenue - 1) * 100).toFixed(0)}% vs 2025</div>
+              <div className="text-xs text-slate-400">+{((projections.projectedBookings / baseline2025.EastRevenue - 1) * 100).toFixed(0)}% vs 2025</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-purple-400">{formatCurrency(projections.projectedGP)}</div>
@@ -608,3 +608,7 @@ export default function FinancialModelPage() {
     </div>
   );
 }
+
+
+
+

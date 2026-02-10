@@ -65,7 +65,7 @@ export default function ExecutiveSummary() {
               <p className="text-slate-300 leading-relaxed">
                 The Eastern United States represents the <span className="text-emerald-400 font-semibold">largest life sciences market globally</span>, 
                 anchored by Boston's "Genetown" biotech cluster, the NJ Pharma Corridor, and the rapidly growing Research Triangle. 
-                The East region delivers strong performance with 51.5% GP margins — <span className="text-emerald-400 font-semibold">15 points above West</span> — 
+                The East region delivers strong performance with 51.5% GP margins — <span className="text-emerald-400 font-semibold">15 points above East</span> — 
                 driven by high-value managed services and established pharma relationships.
               </p>
             </div>
@@ -227,3 +227,4 @@ export default function ExecutiveSummary() {
     </div>
   );
 }
+

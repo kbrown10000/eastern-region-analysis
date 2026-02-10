@@ -52,7 +52,7 @@ const partnerPlays = [
     winRate: '65%',
     icon: '☁️',
     priority: 'HIGH',
-    westernOpportunity: 'Biotech Bay + Biotech Beach - 50+ targets with legacy on-prem systems'
+    EasternOpportunity: 'Biotech Bay + Biotech Beach - 50+ targets with legacy on-prem systems'
   },
   {
     play: 'Veeva Implementation + CSV',
@@ -64,7 +64,7 @@ const partnerPlays = [
     winRate: '70%',
     icon: '📦',
     priority: 'HIGH',
-    westernOpportunity: 'LA BioMed large pharma accounts already on Veeva'
+    EasternOpportunity: 'LA BioMed large pharma accounts already on Veeva'
   },
   {
     play: 'AI Governance Framework',
@@ -76,7 +76,7 @@ const partnerPlays = [
     winRate: '50%',
     icon: '🤖',
     priority: 'EMERGING',
-    westernOpportunity: 'Recursion, Insitro, 64x Bio - AI-native biotechs'
+    EasternOpportunity: 'Recursion, Insitro, 64x Bio - AI-native biotechs'
   },
   {
     play: 'Cell Therapy Manufacturing QA',
@@ -88,7 +88,7 @@ const partnerPlays = [
     winRate: '60%',
     icon: '🧬',
     priority: 'HIGH',
-    westernOpportunity: 'San Diego cluster - Poseida, Fate, Kite'
+    EasternOpportunity: 'San Diego cluster - Poseida, Fate, Kite'
   },
   {
     play: 'Data Integrity Remediation',
@@ -100,7 +100,7 @@ const partnerPlays = [
     winRate: '80%',
     icon: '⚠️',
     priority: 'MEDIUM',
-    westernOpportunity: 'LA BioMed large accounts with compliance issues'
+    EasternOpportunity: 'LA BioMed large accounts with compliance issues'
   },
   {
     play: 'VC Portfolio Services',
@@ -112,7 +112,7 @@ const partnerPlays = [
     winRate: '75%',
     icon: '💰',
     priority: 'HIGH',
-    westernOpportunity: 'Biotech Bay VC ecosystem - a16z, Arch, RA Capital'
+    EasternOpportunity: 'Biotech Bay VC ecosystem - a16z, Arch, RA Capital'
   },
 ];
 
@@ -217,7 +217,7 @@ export default function PartnerPlays() {
           <Link href="/partner-overview" className="text-purple-400 hover:text-purple-300">← Partner Hub</Link>
         </div>
         <p className="text-slate-300 mb-12 max-w-3xl">
-          Joint solution plays, co-sell motions, and strategies to drive partner-originated revenue in the Western region.
+          Joint solution plays, co-sell motions, and strategies to drive partner-originated revenue in the Eastern Region.
         </p>
 
         {/* Deal Type Definitions */}
@@ -258,7 +258,7 @@ export default function PartnerPlays() {
 
         {/* Core Partner Plays */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">🎮 Core Partner Plays (Western Region)</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">🎮 Core Partner Plays (Eastern Region)</h2>
           <div className="space-y-4">
             {partnerPlays.map((play, idx) => (
               <div key={idx} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-colors">
@@ -298,8 +298,8 @@ export default function PartnerPlays() {
                   </div>
                 </div>
                 <div className="mt-3 pt-3 border-t border-slate-700">
-                  <span className="text-slate-500 text-sm">🗺️ Western Opportunity: </span>
-                  <span className="text-purple-300 text-sm">{play.westernOpportunity}</span>
+                  <span className="text-slate-500 text-sm">🗺️ Eastern Opportunity: </span>
+                  <span className="text-purple-300 text-sm">{play.EasternOpportunity}</span>
                 </div>
               </div>
             ))}
@@ -406,7 +406,7 @@ export default function PartnerPlays() {
               Solutions Alignment →
             </Link>
             <Link href="/partner-west" className="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-bold rounded-lg transition-colors">
-              Western Plan →
+              Eastern Plan →
             </Link>
           </div>
         </section>
@@ -414,3 +414,5 @@ export default function PartnerPlays() {
     </div>
   );
 }
+
+
