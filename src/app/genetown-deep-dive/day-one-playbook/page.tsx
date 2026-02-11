@@ -9,35 +9,39 @@ export default function DayOnePlaybook() {
         <Link href="/genetown-deep-dive" className="text-emerald-400 hover:text-emerald-300 mb-8 inline-block">← Back to Genetown</Link>
 
         <div className="flex items-center gap-4 mb-2">
-          <h1 className="text-4xl font-bold text-white">Day 1 Playbook</h1>
-          <span className="px-3 py-1 bg-red-500/20 text-red-400 text-sm font-medium rounded-full border border-red-500/30">🚨 URGENT</span>
+          <h1 className="text-4xl font-bold text-white">Territory Activation Playbook</h1>
+          <span className="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-sm font-medium rounded-full border border-emerald-500/30">🎯 PRIORITY</span>
         </div>
-        <p className="text-emerald-400 text-xl mb-4">New Boston Account Manager — Critical First 30 Days</p>
+        <p className="text-emerald-400 text-xl mb-4">Boston Account Manager — Territory Research & Activation Guide</p>
         <p className="text-slate-500 text-xs mb-8">📊 Salesforce data verified Feb 11, 2026 | Prepared by David, AI Sales Intelligence Agent</p>
 
-        {/* Critical Context Banner */}
-        <div className="bg-red-900/40 rounded-xl p-6 mb-8 border-2 border-red-500/50">
+        {/* Territory Overview Banner */}
+        <div className="bg-emerald-900/40 rounded-xl p-6 mb-8 border-2 border-emerald-500/50">
           <div className="flex items-start gap-4">
-            <span className="text-4xl">⚠️</span>
+            <span className="text-4xl">🎯</span>
             <div>
-              <h2 className="text-xl font-bold text-red-400 mb-2">Critical Context: Jeff Burton Resigned</h2>
+              <h2 className="text-xl font-bold text-emerald-400 mb-2">Territory Activation Opportunity</h2>
               <p className="text-slate-300 mb-3">
-                Jeff Burton owned <span className="text-white font-bold">~800+ of 1,000 GeneTown accounts</span>. 
-                These accounts are now <span className="text-red-400 font-bold">ORPHANED</span>. You're not starting from scratch — 
-                you're inheriting a massive book of unworked accounts with existing relationships.
+                GeneTown has <span className="text-white font-bold">~800+ orphaned accounts</span> ready for activation. 
+                These aren't cold prospects — they have <span className="text-emerald-400 font-bold">existing Salesforce history and relationships</span>. 
+                The playbook: deep account research → tier prioritization → ABM campaigns → Gong outreach sequences.
               </p>
-              <div className="grid md:grid-cols-3 gap-4 mt-4">
+              <div className="grid md:grid-cols-4 gap-4 mt-4">
                 <div className="bg-slate-800/50 rounded-lg p-4">
-                  <p className="text-red-400 font-bold text-2xl">$1.17M</p>
-                  <p className="text-slate-400 text-sm">Pipeline at risk (no owner)</p>
+                  <p className="text-emerald-400 font-bold text-2xl">$1.17M</p>
+                  <p className="text-slate-400 text-sm">Open pipeline to close</p>
                 </div>
                 <div className="bg-slate-800/50 rounded-lg p-4">
-                  <p className="text-red-400 font-bold text-2xl">11</p>
-                  <p className="text-slate-400 text-sm">Active revenue accounts to save</p>
+                  <p className="text-emerald-400 font-bold text-2xl">11</p>
+                  <p className="text-slate-400 text-sm">Active revenue accounts</p>
                 </div>
                 <div className="bg-slate-800/50 rounded-lg p-4">
-                  <p className="text-red-400 font-bold text-2xl">30 days</p>
-                  <p className="text-slate-400 text-sm">Competitor poaching window</p>
+                  <p className="text-blue-400 font-bold text-2xl">24+</p>
+                  <p className="text-slate-400 text-sm">Dormant with existing MSAs</p>
+                </div>
+                <div className="bg-slate-800/50 rounded-lg p-4">
+                  <p className="text-purple-400 font-bold text-2xl">800+</p>
+                  <p className="text-slate-400 text-sm">Total accounts to research</p>
                 </div>
               </div>
             </div>
@@ -46,74 +50,74 @@ export default function DayOnePlaybook() {
 
         {/* Week 1 Priorities */}
         <section className="bg-slate-800/50 rounded-xl p-8 mb-8 border border-slate-700">
-          <h2 className="text-2xl font-bold text-white mb-6">📅 Week 1: Stop the Bleeding</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">📅 Week 1: Research & Prioritization</h2>
           <div className="space-y-4">
             <PriorityItem 
               number={1}
-              title="Call Harmony Bio IMMEDIATELY"
+              title="Deep Account Research — Pull Salesforce History"
               urgency="critical"
-              description="81.6% GP star account. Jeff had the relationship. Get face-to-face within 48 hours. This is your template customer — protect it at all costs."
-              action="Schedule in-person meeting, confirm delivery team continuity, get testimonial commitment"
+              description="800+ accounts have existing SF data. Export all accounts, analyze win/loss patterns, identify accounts with recent activity or high historical value."
+              action="Salesforce export → sort by LTV + recent activity → create tiered target list"
             />
             <PriorityItem 
               number={2}
-              title="Rescue $1.17M Orphaned Pipeline"
+              title="Triage Open Pipeline ($1.17M)"
               urgency="critical"
-              description="Deals in motion with no owner. These will die within 2 weeks without intervention. Pull Salesforce report, triage by close date, call every active opp."
-              action="Salesforce pipeline review → sort by close date → call top 5 today"
+              description="Prioritize by close date and deal size. Research each opportunity in Gong for call history and stakeholder context before outreach."
+              action="Pipeline review → Gong research → prioritize top 10 → build outreach sequences"
             />
             <PriorityItem 
               number={3}
-              title="Takeda Stakeholder Mapping"
+              title="Tier Account Prioritization"
               urgency="high"
-              description="$702K account at 14.5% GP. DO NOT accept new staffing orders at current margins. Map all active engagements and identify managed services conversion opportunities."
-              action="Get consultant roster from delivery, identify project leads, schedule executive sponsor meeting"
+              description="Segment accounts: Tier 1 (active revenue + high LTV), Tier 2 (dormant with MSAs), Tier 3 (new logos with intent signals). Different playbooks for each."
+              action="Create account tiers in Salesforce → tag for ABM campaigns → assign outreach cadences"
             />
             <PriorityItem 
               number={4}
-              title="Alnylam & Ironwood Check-ins"
+              title="Gong Intelligence Review"
               urgency="high"
-              description="High-margin accounts ($110K @ 71.5% GP, $102K @ 79.1% GP) that need relationship continuity calls. These are your 'easy wins' to protect."
-              action="15-min intro calls with primary contacts, confirm satisfaction, note any concerns"
+              description="Review call recordings for top 20 accounts. Understand relationship history, key stakeholders, past objections, and competitor mentions."
+              action="Gong search by account → document key contacts → note competitive intel"
             />
           </div>
         </section>
 
         {/* Week 2-4 */}
         <section className="bg-slate-800/50 rounded-xl p-8 mb-8 border border-slate-700">
-          <h2 className="text-2xl font-bold text-white mb-6">📅 Weeks 2-4: Stabilize & Expand</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">📅 Weeks 2-4: ABM Activation & Outreach</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-emerald-900/20 rounded-lg p-6 border border-emerald-700/30">
-              <h3 className="text-emerald-400 font-semibold mb-3">Expansion Plays</h3>
+            <div className="bg-purple-900/20 rounded-lg p-6 border border-purple-700/30">
+              <h3 className="text-purple-400 font-semibold mb-3">🎯 ABM Campaign Execution</h3>
               <ul className="space-y-3 text-slate-300 text-sm">
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-400">→</span>
-                  <span><strong className="text-white">Moderna</strong>: $387K open pipeline across 5 deals. 8:1 loss rate historically — understand why and fix the pitch.</span>
+                  <span className="text-purple-400">→</span>
+                  <span><strong className="text-white">Tier 1 (Active Revenue)</strong>: Personalized 1:1 outreach, executive meetings, expansion proposals</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-400">→</span>
-                  <span><strong className="text-white">Intellia</strong>: $211K open pipeline. Lost $1.26M vs won $285K — competitor displacement issue.</span>
+                  <span className="text-purple-400">→</span>
+                  <span><strong className="text-white">Tier 2 (Dormant MSAs)</strong>: "We miss you" campaigns, reactivation offers, case study sharing</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-400">→</span>
-                  <span><strong className="text-white">Alnylam</strong>: $30B company, we have $110K. Dramatic whitespace. Develop Q2 expansion proposal.</span>
+                  <span className="text-purple-400">→</span>
+                  <span><strong className="text-white">Tier 3 (New Logos)</strong>: Intent-based targeting, thought leadership content, event invites</span>
                 </li>
               </ul>
             </div>
             <div className="bg-blue-900/20 rounded-lg p-6 border border-blue-700/30">
-              <h3 className="text-blue-400 font-semibold mb-3">Dormant Account Reactivation</h3>
+              <h3 className="text-blue-400 font-semibold mb-3">📞 Gong Outreach Sequences</h3>
               <ul className="space-y-3 text-slate-300 text-sm">
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400">→</span>
-                  <span><strong className="text-white">Biogen</strong>: $11.8M won historically, $1M open. MASSIVE dormant. See dedicated playbook.</span>
+                  <span><strong className="text-white">Biogen</strong>: $11.8M won historically, $1M open. Research Gong for champion contacts, build multi-threaded sequence.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400">→</span>
-                  <span><strong className="text-white">Sarepta</strong>: $265K historical, $0 open. Gene therapy leader — AI governance wedge.</span>
+                  <span><strong className="text-white">Moderna</strong>: $387K pipeline. Review lost deal calls in Gong — understand objections before outreach.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400">→</span>
-                  <span><strong className="text-white">Blueprint Medicines</strong>: $892K historical, $162K open. Active but underweight.</span>
+                  <span><strong className="text-white">Sarepta/Blueprint</strong>: Dormant with history. Use Gong to find last contacts, restart conversations.</span>
                 </li>
               </ul>
             </div>
@@ -203,7 +207,7 @@ export default function DayOnePlaybook() {
         <section className="bg-emerald-900/30 rounded-xl p-8 mb-8 border-2 border-emerald-500/50">
           <div className="flex items-center gap-3 mb-6">
             <span className="text-3xl">🎯</span>
-            <h2 className="text-2xl font-bold text-white">Biogen: The $25M Elephant</h2>
+            <h2 className="text-2xl font-bold text-white">Biogen: Priority Reactivation Target</h2>
           </div>
           
           <div className="grid md:grid-cols-4 gap-4 mb-6">
@@ -220,86 +224,86 @@ export default function DayOnePlaybook() {
               <p className="text-slate-400 text-sm">Open Pipeline</p>
             </div>
             <div className="bg-slate-800/50 rounded-lg p-4">
-              <p className="text-yellow-400 font-bold text-2xl">218</p>
-              <p className="text-slate-400 text-sm">Lost Deals (!!)</p>
+              <p className="text-yellow-400 font-bold text-2xl">90 / 218</p>
+              <p className="text-slate-400 text-sm">Deals Won / Lost</p>
             </div>
           </div>
           
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h3 className="text-lg font-semibold text-emerald-400 mb-3">What Happened?</h3>
+              <h3 className="text-lg font-semibold text-emerald-400 mb-3">The Opportunity</h3>
               <p className="text-slate-300 text-sm mb-3">
-                Biogen ($9.8B revenue) was a major USDM customer. We've won 90 deals totaling $11.8M historically. 
-                But we've LOST 218 deals totaling $25.7M. Someone else is winning this business.
+                Biogen ($9.8B revenue) has <span className="text-white font-bold">deep USDM history</span> — 90 won deals totaling $11.8M. 
+                But we've lost 218 deals totaling $25.7M. Competitive intelligence needed: who's winning and why?
               </p>
               <p className="text-slate-300 text-sm">
-                Current status: <span className="text-yellow-400 font-semibold">Dormant with $1M open pipeline</span>. 
-                The relationship exists but isn't being worked.
+                Current status: <span className="text-emerald-400 font-semibold">$1M open pipeline ready to work</span>. 
+                Gong research will reveal stakeholder history and entry points.
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-emerald-400 mb-3">The Play</h3>
+              <h3 className="text-lg font-semibold text-emerald-400 mb-3">Research & Activation Play</h3>
               <ul className="space-y-2 text-slate-300 text-sm">
                 <li className="flex items-start gap-2">
                   <span className="text-emerald-400">1.</span>
-                  <span>Pull all 218 lost deal records — categorize by loss reason</span>
+                  <span><strong>Salesforce</strong>: Pull 218 lost deals — categorize by loss reason, identify patterns</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-emerald-400">2.</span>
-                  <span>Identify the competitor(s) winning this business</span>
+                  <span><strong>Gong</strong>: Review call history from 90 won deals — find champions still at company</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-emerald-400">3.</span>
-                  <span>Find your champions from the 90 won deals — are they still there?</span>
+                  <span><strong>Competitive Intel</strong>: Identify who's winning the $25.7M we're losing</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-emerald-400">4.</span>
-                  <span>AI governance + Leqembi launch = new entry point</span>
+                  <span><strong>ABM</strong>: AI governance + Leqembi launch = fresh messaging angle</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-emerald-400">5.</span>
-                  <span>Close the $1M open pipeline as proof of reactivation</span>
+                  <span><strong>Outreach</strong>: Multi-threaded sequence to $1M open pipeline contacts</span>
                 </li>
               </ul>
             </div>
           </div>
         </section>
 
-        {/* Takeda Margin Fix */}
-        <section className="bg-red-900/20 rounded-xl p-8 mb-8 border border-red-700/50">
+        {/* Takeda Margin Optimization */}
+        <section className="bg-yellow-900/20 rounded-xl p-8 mb-8 border border-yellow-700/50">
           <div className="flex items-center gap-3 mb-6">
-            <span className="text-3xl">⚠️</span>
-            <h2 className="text-2xl font-bold text-white">Takeda: The Margin Crisis</h2>
+            <span className="text-3xl">📊</span>
+            <h2 className="text-2xl font-bold text-white">Takeda: Margin Optimization Opportunity</h2>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-lg font-semibold text-red-400 mb-3">The Problem</h3>
+              <h3 className="text-lg font-semibold text-yellow-400 mb-3">Current State</h3>
               <div className="space-y-3 text-slate-300">
-                <p><strong className="text-white">$702K revenue</strong> but only <strong className="text-red-400">14.5% GP</strong></p>
+                <p><strong className="text-white">$702K revenue</strong> at <strong className="text-yellow-400">14.5% GP</strong></p>
                 <p>This generates ~$102K gross profit — the same as a $125K account at 80% GP.</p>
-                <p>Almost certainly staffing-dominant engagement where USDM is providing bodies at near-cost.</p>
-                <p className="text-red-400 font-semibold">53% of territory revenue in one low-margin account = concentration risk</p>
+                <p>Likely staffing-dominant engagement. Opportunity to transition to managed services model.</p>
+                <p className="text-slate-400">Largest territory account — worth optimizing.</p>
               </div>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-emerald-400 mb-3">The Fix</h3>
+              <h3 className="text-lg font-semibold text-emerald-400 mb-3">Research & Optimization Play</h3>
               <ul className="space-y-2 text-slate-300">
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-400">✓</span>
-                  <span><strong className="text-white">DO NOT</strong> accept new staffing orders at current margins</span>
+                  <span className="text-emerald-400">1.</span>
+                  <span><strong>Research</strong>: Map all active consultants and current engagements</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-400">✓</span>
-                  <span>Map all active consultants/engagements</span>
+                  <span className="text-emerald-400">2.</span>
+                  <span><strong>Gong</strong>: Review account calls for expansion signals and stakeholder map</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-400">✓</span>
-                  <span>Identify projects convertible to managed services</span>
+                  <span className="text-emerald-400">3.</span>
+                  <span><strong>Identify</strong>: Projects convertible to managed services model</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-400">✓</span>
-                  <span>Schedule executive sponsor meeting within 2 weeks</span>
+                  <span className="text-emerald-400">4.</span>
+                  <span><strong>ABM</strong>: Position AI governance + Cloud as value-add services</span>
                 </li>
               </ul>
               <div className="mt-4 bg-emerald-900/30 rounded-lg p-3 border border-emerald-700/30">
@@ -312,30 +316,30 @@ export default function DayOnePlaybook() {
 
         {/* 30-60-90 Plan */}
         <section className="bg-slate-800/50 rounded-xl p-8 mb-8 border border-slate-700">
-          <h2 className="text-2xl font-bold text-white mb-6">📅 30-60-90 Day Targets</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">📅 30-60-90 Day Milestones</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-red-900/20 rounded-lg p-6 border border-red-700/30">
-              <h3 className="text-red-400 font-semibold mb-3">Day 30: Stabilize</h3>
+            <div className="bg-purple-900/20 rounded-lg p-6 border border-purple-700/30">
+              <h3 className="text-purple-400 font-semibold mb-3">Day 30: Research Complete</h3>
               <ul className="space-y-2 text-slate-300 text-sm">
-                <li>✓ All 11 active accounts contacted</li>
-                <li>✓ $1.17M pipeline triaged & owned</li>
-                <li>✓ Harmony Bio relationship secured</li>
-                <li>✓ Takeda stakeholder map complete</li>
-                <li>✓ Zero churn from transition</li>
+                <li>✓ 800+ accounts researched & tiered</li>
+                <li>✓ Gong history reviewed for top 20</li>
+                <li>✓ $1.17M pipeline prioritized</li>
+                <li>✓ Competitive intel documented</li>
+                <li>✓ ABM campaign targets identified</li>
               </ul>
               <div className="mt-4 pt-4 border-t border-slate-700">
                 <p className="text-slate-400 text-xs">Success Metric</p>
-                <p className="text-white font-semibold">$1.32M revenue protected</p>
+                <p className="text-white font-semibold">Tiered target list ready</p>
               </div>
             </div>
-            <div className="bg-yellow-900/20 rounded-lg p-6 border border-yellow-700/30">
-              <h3 className="text-yellow-400 font-semibold mb-3">Day 60: Expand</h3>
+            <div className="bg-blue-900/20 rounded-lg p-6 border border-blue-700/30">
+              <h3 className="text-blue-400 font-semibold mb-3">Day 60: Outreach Active</h3>
               <ul className="space-y-2 text-slate-300 text-sm">
-                <li>✓ Biogen reactivation meeting held</li>
-                <li>✓ Moderna win-back strategy defined</li>
-                <li>✓ Alnylam expansion proposal delivered</li>
-                <li>✓ 2 dormant accounts reactivated</li>
-                <li>✓ New logo list qualified (5+)</li>
+                <li>✓ ABM campaigns live for all tiers</li>
+                <li>✓ Gong sequences running on Tier 1</li>
+                <li>✓ Biogen multi-threaded outreach</li>
+                <li>✓ 3+ dormant accounts re-engaged</li>
+                <li>✓ New logo meetings scheduled (5+)</li>
               </ul>
               <div className="mt-4 pt-4 border-t border-slate-700">
                 <p className="text-slate-400 text-xs">Success Metric</p>
@@ -343,12 +347,12 @@ export default function DayOnePlaybook() {
               </div>
             </div>
             <div className="bg-emerald-900/20 rounded-lg p-6 border border-emerald-700/30">
-              <h3 className="text-emerald-400 font-semibold mb-3">Day 90: Grow</h3>
+              <h3 className="text-emerald-400 font-semibold mb-3">Day 90: Pipeline Built</h3>
               <ul className="space-y-2 text-slate-300 text-sm">
                 <li>✓ First new logo closed</li>
-                <li>✓ Takeda margin improvement started</li>
-                <li>✓ $2M+ total pipeline</li>
                 <li>✓ Biogen re-engaged ($200K+ opp)</li>
+                <li>✓ Takeda expansion proposal live</li>
+                <li>✓ $2M+ total qualified pipeline</li>
                 <li>✓ Q2 forecast committed</li>
               </ul>
               <div className="mt-4 pt-4 border-t border-slate-700">

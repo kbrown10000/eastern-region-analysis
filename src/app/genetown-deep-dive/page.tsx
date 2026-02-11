@@ -15,18 +15,19 @@ export default function GenetownDeepDive() {
         <p className="text-emerald-400 text-xl mb-4">Boston / Cambridge — The Global Biotech Capital</p>
         <p className="text-slate-500 text-xs mb-8">📊 Data verified via Finance MCP | Last updated: Feb 11, 2026</p>
 
-        {/* Critical Alert Banner */}
-        <div className="bg-red-900/40 rounded-xl p-6 mb-8 border-2 border-red-500/50">
+        {/* Territory Opportunity Banner */}
+        <div className="bg-emerald-900/40 rounded-xl p-6 mb-8 border-2 border-emerald-500/50">
           <div className="flex items-start gap-4">
-            <span className="text-3xl">⚠️</span>
+            <span className="text-3xl">🎯</span>
             <div className="flex-1">
-              <h2 className="text-xl font-bold text-red-400 mb-2">Critical: Jeff Burton Resigned — 800+ Accounts Orphaned</h2>
+              <h2 className="text-xl font-bold text-emerald-400 mb-2">Territory Activation: 800+ Accounts Ready to Work</h2>
               <p className="text-slate-300 mb-3">
-                Jeff owned ~800+ of 1,000 GeneTown accounts. These are now <span className="text-red-400 font-bold">ORPHANED</span>. 
-                The new hire inherits a massive book of unworked accounts with <span className="text-white font-bold">$1.17M pipeline at risk</span>.
+                GeneTown has <span className="text-emerald-400 font-bold">800+ orphaned accounts</span> requiring research, prioritization, and activation. 
+                The playbook: deep account research → tier prioritization → ABM campaigns → Gong outreach sequences.
+                <span className="text-white font-bold"> $1.17M open pipeline</span> needs immediate attention.
               </p>
-              <Link href="/genetown-deep-dive/day-one-playbook" className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded-lg font-medium transition-colors">
-                🚨 View Day 1 Playbook →
+              <Link href="/genetown-deep-dive/day-one-playbook" className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                📋 View Territory Activation Playbook →
               </Link>
             </div>
           </div>
