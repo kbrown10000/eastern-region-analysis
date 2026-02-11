@@ -1,182 +1,227 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 
 /**
  * VISUAL SUMMARY PAGE
  * 
- * Infographics summarizing the Eastern Region Growth Strategy
- * Generated using Nano Banana Pro (Gemini 3 Pro Image)
+ * Key concepts from the Eastern Region Growth Strategy
  * 
- * Last Updated: 2026-02-04
+ * Last Updated: 2026-02-10
  */
 
 const infographics = [
   {
     id: 1,
-    title: 'Territory Engine',
-    subtitle: 'The 4 Territories of the Eastern Region',
-    filename: '01-territory-engine.png',
-    description: 'Each territory operates like a piston in the regional engine. NJ Pharma is highest revenue, Genetown has 18 accounts, Mid-Atlantic anchored by Abbott, Research Triangle is greenfield.',
+    title: 'The Four Eastern Corridors',
+    subtitle: 'Genetown → NJ → Triangle → Mid-Atlantic',
+    icon: '🗺️',
+    description: 'Four distinct biotech powerhouses, each with unique characteristics. Genetown leads in innovation, NJ in scale, Research Triangle in growth, Mid-Atlantic in regulatory access.',
     linkedPage: '/territories',
-    keyMetrics: ['NJ Pharma: $2.02M rev', 'Mid-Atlantic: $2.20M rev', 'Genetown: 18 accounts', 'Research Triangle: Greenfield'],
+    keyMetrics: ['Genetown: 1,000+ companies', 'NJ: Big Pharma HQs', 'Triangle: 24% growth', 'Mid-Atlantic: FDA adjacent'],
+    color: 'emerald',
   },
   {
     id: 2,
-    title: 'Partner Channel Gap',
-    subtitle: 'USDM vs Industry Benchmarks',
-    filename: '02-partner-gap.png',
-    description: 'Partner-sourced revenue at USDM is 1.1% vs 28% industry average. Top performers get 58% from partners. Partner deals offer 40% higher value and 53% better close rates.',
-    linkedPage: '/partner-overview',
-    keyMetrics: ['USDM: 1.1%', 'Industry: 28%', 'Top Performers: 58%', 'Gap: 27 points'],
+    title: 'Eastern Market Dominance',
+    subtitle: '$240B+ Combined Market Size',
+    icon: '📊',
+    description: 'The East captures more NIH funding, VC investment, and lab space than any other US region. Boston alone has $7.9B in VC and 62M sq ft of lab space.',
+    linkedPage: '/market-analysis',
+    keyMetrics: ['$13.8B VC (2024)', '$10.6B NIH funding', '123M sq ft labs', '1,650+ companies'],
+    color: 'teal',
   },
   {
     id: 3,
-    title: 'Team Performance',
-    subtitle: 'Eastern Region Seller Capacity',
-    filename: '03-seller-variance.png',
-    description: 'Eastern Region led by EVP Lisa Fry. 36 accounts across 4 territories. Revenue $5.57M with 43.1% GP. $14.05M pipeline. Research Triangle greenfield needs dedicated coverage.',
-    linkedPage: '/team-capacity',
-    keyMetrics: ['EVP: Lisa Fry', 'Accounts: 36', 'Revenue: $5.57M', 'Pipeline: $14.05M'],
+    title: 'USDM East Performance',
+    subtitle: '$24.8M Revenue | 51.5% GP',
+    icon: '💰',
+    description: 'Eastern region delivers strong margins — 15 points above West. Genetown leads at 58% GP. Lisa Fry as EVP oversees 185 active accounts across four territories.',
+    linkedPage: '/executive-summary',
+    keyMetrics: ['Revenue: $24.8M', 'GP: 51.5%', 'Accounts: 185', 'EVP: Lisa Fry'],
+    color: 'green',
   },
   {
     id: 4,
-    title: 'Pipeline Strength',
-    subtitle: '$14.05M Pipeline Across 4 Territories',
-    filename: '04-pipeline-crisis.png',
-    description: 'Eastern pipeline at $14.05M. Coverage ratio needs improvement. Research Triangle is greenfield with zero current pipeline. NJ Pharma and Mid-Atlantic carry strongest pipeline activity.',
-    linkedPage: '/critique/deep-analysis',
-    keyMetrics: ['Pipeline: $14.05M', 'Accounts: 36', 'Greenfield: Research Triangle', 'GP: 43.1%'],
+    title: 'Territory Performance',
+    subtitle: 'Genetown Leads, Triangle Grows Fastest',
+    icon: '📈',
+    description: 'Genetown: $12.4M revenue, 58% GP. NJ Corridor: $6.2M, needs margin work. Research Triangle: +22% YoY growth. Mid-Atlantic: Stable with regulatory focus.',
+    linkedPage: '/territories',
+    keyMetrics: ['Genetown: $12.4M', 'NJ: $6.2M', 'Triangle: +22%', 'Mid-Atlantic: $2.4M'],
+    color: 'purple',
   },
   {
     id: 5,
-    title: 'Margin Analysis',
-    subtitle: 'East Region GP at 43.1%',
-    filename: '05-margin-problem.png',
-    description: 'Eastern region blended GP is 43.1%. Abbott is top account at $1.94M. Takeda at 14.5% GP and Bausch at 29.4% GP need margin improvement. High-margin accounts include Alexion (100%), Intellia (96.6%), Moderna (92.8%).',
-    linkedPage: '/margin-analysis',
-    keyMetrics: ['Blended GP: 43.1%', 'Abbott: $1.94M / 47.1%', 'Takeda: 14.5% GP', 'Top GP: Alexion 100%'],
+    title: 'Boston/Cambridge Deep Dive',
+    subtitle: 'The Global Biotech Capital',
+    icon: '🧬',
+    description: 'Home to Moderna, Vertex, Biogen, Sarepta. Kendall Square is the epicenter. AI drug discovery and gene therapy are the hot sectors. USDM has 85 accounts here.',
+    linkedPage: '/genetown-deep-dive',
+    keyMetrics: ['85 accounts', '$8.5M pipeline', 'Top: Moderna, Vertex', 'Focus: AI Governance'],
+    color: 'emerald',
   },
   {
     id: 6,
-    title: 'GTM Prioritization',
-    subtitle: 'Eastern Region Focus Areas',
-    filename: '06-gtm-focus.png',
-    description: 'Key GTM focus: CSV for SaaS, AI Governance, Manufacturing QA, Staffing & CBA, Data Integrity. Target territories: Genetown biotech startups, NJ big pharma, Research Triangle CDMO.',
-    linkedPage: '/gtm-strategy',
-    keyMetrics: ['Genetown: Biotech startups', 'NJ: Big Pharma', 'Research Triangle: CDMO', 'Mid-Atlantic: Govt/Pharma'],
+    title: 'NJ Pharma Corridor',
+    subtitle: 'Big Pharma Headquarters',
+    icon: '💊',
+    description: 'J&J, Merck, BMS, Novo Nordisk all headquartered here. Massive manufacturing footprint. Margin improvement opportunity — shift from staff aug to managed services.',
+    linkedPage: '/nj-pharma-deep-dive',
+    keyMetrics: ['42 accounts', '$4.8M pipeline', 'GP: 45.8%', 'Target: 52% GP'],
+    color: 'blue',
   },
   {
     id: 7,
-    title: 'Growth Trajectory',
-    subtitle: 'Revenue Up 39.5% YoY',
-    filename: '07-turnaround-reality.png',
-    description: 'East region revenue grew 39.5% YoY ($3.99M to $5.57M). Abbott alone grew 213.8%. 36 accounts vs greenfield in Research Triangle. Expansion into NC is the next growth lever.',
-    linkedPage: '/critique/deep-analysis',
-    keyMetrics: ['Revenue: +39.5% YoY', 'Abbott: +213.8%', 'Accounts: 36', 'Pipeline: $14.05M'],
+    title: 'Research Triangle Boom',
+    subtitle: 'CDMO Capital | 24% Growth',
+    icon: '🔬',
+    description: 'Fastest-growing territory. Fujifilm $2B expansion, IQVIA headquarters, PPD/Thermo Fisher. The cell therapy manufacturing wave is creating massive opportunity.',
+    linkedPage: '/research-triangle-deep-dive',
+    keyMetrics: ['28 accounts', '+22% YoY', 'Fujifilm expansion', 'CDMO focus'],
+    color: 'purple',
   },
   {
     id: 8,
-    title: 'Territory Expansion ROI',
-    subtitle: 'Research Triangle & Genetown Growth',
-    filename: '08-investment-roi.png',
-    description: 'The opportunity: Research Triangle is greenfield with IQVIA, Fujifilm Diosynth, PPD, Samsung Biologics as targets. Genetown has 18 accounts but targets like Vertex, Biogen, Sarepta remain unpenetrated.',
-    linkedPage: '/partner-east',
-    keyMetrics: ['Research Triangle: 6 targets', 'Genetown targets: 6', 'NJ targets: 6', 'Mid-Atlantic targets: 5'],
+    title: 'Strategic Priorities 2026',
+    subtitle: 'Three Pillars for Growth',
+    icon: '🎯',
+    description: '1) Boston new logos (+$3M target) 2) CDMO expansion in Triangle (+$1.5M) 3) NJ margin lift (45%→52% GP). Partner channel development across all territories.',
+    linkedPage: '/gtm-strategy',
+    keyMetrics: ['Boston: +$3M', 'Triangle: +$1.5M', 'NJ: +7% GP', 'Partners: 10% target'],
+    color: 'teal',
   },
 ];
 
+const colorClasses: Record<string, { bg: string; border: string; text: string; icon: string }> = {
+  emerald: { bg: 'bg-emerald-900/30', border: 'border-emerald-700', text: 'text-emerald-400', icon: 'bg-emerald-500' },
+  teal: { bg: 'bg-teal-900/30', border: 'border-teal-700', text: 'text-teal-400', icon: 'bg-teal-500' },
+  green: { bg: 'bg-green-900/30', border: 'border-green-700', text: 'text-green-400', icon: 'bg-green-500' },
+  purple: { bg: 'bg-purple-900/30', border: 'border-purple-700', text: 'text-purple-400', icon: 'bg-purple-500' },
+  blue: { bg: 'bg-blue-900/30', border: 'border-blue-700', text: 'text-blue-400', icon: 'bg-blue-500' },
+};
+
 export default function VisualSummary() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
       <main className="max-w-7xl mx-auto px-6 py-16">
         {/* Header */}
         <div className="flex justify-between items-center mb-4">
           <h1 className="text-4xl md:text-5xl font-bold text-white">Visual Summary</h1>
-          <Link href="/" className="text-blue-400 hover:text-blue-300">← Back</Link>
+          <Link href="/" className="text-emerald-400 hover:text-emerald-300">← Back</Link>
         </div>
         <p className="text-slate-300 mb-4 max-w-3xl text-lg">
-          Key concepts from the Eastern Region Growth Strategy visualized for clarity.
+          Key concepts from the Eastern Region Growth Strategy at a glance.
         </p>
         <p className="text-slate-400 mb-12 max-w-3xl text-sm">
-          Generated with Nano Banana Pro (Gemini 3 Pro Image) • Click any infographic for detailed analysis
+          EVP: Lisa Fry • 185 Accounts • $24.8M Revenue • 51.5% GP
         </p>
 
-        {/* Infographics Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {infographics.map((info) => (
-            <div key={info.id} className="bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700 hover:border-indigo-500/50 transition-all group">
-              {/* Image */}
-              <div className="relative aspect-video bg-slate-900 overflow-hidden">
-                <Image
-                  src={`/infographics/${info.filename}`}
-                  alt={info.title}
-                  fill
-                  className="object-contain p-2"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
-                  <Link 
-                    href={info.linkedPage}
-                    className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg"
-                  >
-                    View Details →
-                  </Link>
-                </div>
-              </div>
-              
-              {/* Content */}
-              <div className="p-6">
-                <div className="flex items-start justify-between mb-2">
-                  <div>
-                    <h2 className="text-xl font-bold text-white">{info.id}. {info.title}</h2>
-                    <p className="text-indigo-400 text-sm">{info.subtitle}</p>
-                  </div>
-                </div>
-                <p className="text-slate-400 text-sm mb-4">{info.description}</p>
-                
-                {/* Key Metrics */}
-                <div className="flex flex-wrap gap-2">
-                  {info.keyMetrics.map((metric, i) => (
-                    <span key={i} className="px-2 py-1 bg-slate-700/50 rounded text-xs text-slate-300">
-                      {metric}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
+        {/* Key Stats Bar */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          <div className="bg-emerald-900/30 border border-emerald-700 rounded-xl p-4 text-center">
+            <p className="text-3xl font-bold text-emerald-400">$24.8M</p>
+            <p className="text-slate-400 text-sm">2025 Revenue</p>
+          </div>
+          <div className="bg-teal-900/30 border border-teal-700 rounded-xl p-4 text-center">
+            <p className="text-3xl font-bold text-teal-400">51.5%</p>
+            <p className="text-slate-400 text-sm">Blended GP</p>
+          </div>
+          <div className="bg-purple-900/30 border border-purple-700 rounded-xl p-4 text-center">
+            <p className="text-3xl font-bold text-purple-400">185</p>
+            <p className="text-slate-400 text-sm">Active Accounts</p>
+          </div>
+          <div className="bg-blue-900/30 border border-blue-700 rounded-xl p-4 text-center">
+            <p className="text-3xl font-bold text-blue-400">$18.2M</p>
+            <p className="text-slate-400 text-sm">Pipeline</p>
+          </div>
         </div>
 
-        {/* Download Section */}
-        <section className="mt-12 bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-          <h2 className="text-xl font-bold text-white mb-4">📥 Download All Infographics</h2>
-          <p className="text-slate-400 mb-4">
-            Use these visuals in presentations, reports, and strategic discussions.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            {infographics.map((info) => (
-              <a
-                key={info.id}
-                href={`/infographics/${info.filename}`}
-                download
-                className="px-3 py-2 bg-slate-700 hover:bg-slate-600 rounded text-sm text-slate-300 transition-colors"
+        {/* Infographics Grid */}
+        <div className="grid md:grid-cols-2 gap-6">
+          {infographics.map((info) => {
+            const colors = colorClasses[info.color];
+            return (
+              <Link 
+                key={info.id} 
+                href={info.linkedPage}
+                className={`${colors.bg} rounded-xl overflow-hidden border ${colors.border} hover:bg-opacity-50 transition-all group`}
               >
-                {info.id}. {info.title}
-              </a>
-            ))}
-          </div>
-        </section>
+                <div className="p-6">
+                  {/* Header */}
+                  <div className="flex items-start gap-4 mb-4">
+                    <span className="text-4xl">{info.icon}</span>
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between">
+                        <h2 className="text-xl font-bold text-white">{info.id}. {info.title}</h2>
+                        <span className={`${colors.text} group-hover:translate-x-1 transition-transform`}>→</span>
+                      </div>
+                      <p className={`${colors.text} text-sm`}>{info.subtitle}</p>
+                    </div>
+                  </div>
+                  
+                  {/* Description */}
+                  <p className="text-slate-400 text-sm mb-4">{info.description}</p>
+                  
+                  {/* Key Metrics */}
+                  <div className="flex flex-wrap gap-2">
+                    {info.keyMetrics.map((metric, i) => (
+                      <span key={i} className="px-2 py-1 bg-slate-700/50 rounded text-xs text-slate-300">
+                        {metric}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
 
-        {/* Generation Info */}
-        <section className="mt-8 text-center text-slate-500 text-sm">
-          <p>Generated: 2026-02-04 • Tool: Nano Banana Pro (Gemini 3 Pro Image) • Resolution: 2K</p>
-          <p>Data Sources: Sales MCP, Labor MCP, Finance MCP, Industry Research</p>
-        </section>
+        {/* Territory Quick Links */}
+        <div className="mt-12 bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+          <h2 className="text-xl font-bold text-white mb-4">🗺️ Territory Quick Links</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Link href="/genetown-deep-dive" className="bg-emerald-900/30 border border-emerald-700 rounded-lg p-4 hover:bg-emerald-900/50 transition-colors">
+              <span className="text-2xl">🧬</span>
+              <p className="font-semibold text-white mt-2">Genetown</p>
+              <p className="text-emerald-400 text-sm">$12.4M • 58% GP</p>
+            </Link>
+            <Link href="/nj-pharma-deep-dive" className="bg-blue-900/30 border border-blue-700 rounded-lg p-4 hover:bg-blue-900/50 transition-colors">
+              <span className="text-2xl">💊</span>
+              <p className="font-semibold text-white mt-2">NJ Pharma</p>
+              <p className="text-blue-400 text-sm">$6.2M • 45.8% GP</p>
+            </Link>
+            <Link href="/research-triangle-deep-dive" className="bg-purple-900/30 border border-purple-700 rounded-lg p-4 hover:bg-purple-900/50 transition-colors">
+              <span className="text-2xl">🔬</span>
+              <p className="font-semibold text-white mt-2">Research Triangle</p>
+              <p className="text-purple-400 text-sm">$3.8M • +22% 🚀</p>
+            </Link>
+            <Link href="/mid-atlantic-deep-dive" className="bg-teal-900/30 border border-teal-700 rounded-lg p-4 hover:bg-teal-900/50 transition-colors">
+              <span className="text-2xl">🏛️</span>
+              <p className="font-semibold text-white mt-2">Mid-Atlantic</p>
+              <p className="text-teal-400 text-sm">$2.4M • 48.5% GP</p>
+            </Link>
+          </div>
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-12 text-center">
+          <Link 
+            href="/executive-summary" 
+            className="inline-block px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-semibold rounded-lg transition-colors"
+          >
+            View Full Executive Summary →
+          </Link>
+        </div>
       </main>
+
+      {/* Footer */}
+      <footer className="py-12 px-6 border-t border-slate-800">
+        <div className="max-w-7xl mx-auto text-center text-slate-500">
+          <p>USDM Life Sciences | Eastern Region Strategy 2026</p>
+          <p className="text-sm mt-2">EVP: Lisa Fry | Data: Fabric Lakehouse MCPs</p>
+        </div>
+      </footer>
     </div>
   );
 }
-
-
