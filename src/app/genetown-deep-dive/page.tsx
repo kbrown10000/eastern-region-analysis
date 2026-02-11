@@ -12,7 +12,8 @@ export default function GenetownDeepDive() {
           <h1 className="text-4xl font-bold text-white">Genetown Ultra Deep Dive</h1>
           <span className="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-sm font-medium rounded-full border border-emerald-500/30">🎯 Hiring Priority</span>
         </div>
-        <p className="text-emerald-400 text-xl mb-8">Boston / Cambridge — The Global Biotech Capital</p>
+        <p className="text-emerald-400 text-xl mb-4">Boston / Cambridge — The Global Biotech Capital</p>
+        <p className="text-slate-500 text-xs mb-8">📊 Data verified via Finance MCP | Last updated: Feb 11, 2026</p>
 
         {/* Key Stats */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-12">
