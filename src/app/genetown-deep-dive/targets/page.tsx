@@ -2,73 +2,79 @@
 
 import Link from 'next/link';
 
-// Current customers - from Finance MCP
-const currentCustomers = [
-  { name: 'Takeda Pharmaceuticals', revenue: 702000, gp: 14.5, tier: 'Enterprise', status: 'Fix', notes: 'Largest account, margin recovery needed' },
-  { name: 'Harmony Biosciences', revenue: 127000, gp: 81.6, tier: 'Growth', status: 'Star', notes: 'Managed services, expand SOX' },
-  { name: 'Alnylam Pharmaceuticals', revenue: 110000, gp: 71.5, tier: 'Growth', status: 'Star', notes: 'RNAi leader, mfg QA' },
-  { name: 'Astellas Pharma U.S.', revenue: 111000, gp: 100, tier: 'Growth', status: 'Star', notes: 'New in 2025, 100% GP' },
-  { name: 'Ironwood Pharmaceuticals', revenue: 102000, gp: 79.1, tier: 'Growth', status: 'Star', notes: 'GI franchise, +94% YoY' },
-  { name: 'Astellas Gene Therapies', revenue: 93000, gp: 40.2, tier: 'Growth', status: 'Grow', notes: 'Gene therapy QA' },
-  { name: 'Moderna', revenue: 37000, gp: 92.8, tier: 'Standard', status: 'Expand', notes: 'Massive expansion potential' },
-  { name: 'Intellia Therapeutics', revenue: 37000, gp: 96.6, tier: 'Growth', status: 'Star', notes: 'CRISPR leader' },
-  { name: 'Alexion Pharmaceuticals', revenue: 34000, gp: 100, tier: 'Standard', status: 'Star', notes: 'Rare disease' },
+// COMPLETE list from Finance MCP - 18 active accounts with 2025 revenue
+const activeCustomers = [
+  { name: 'Takeda Pharmaceuticals U.S.A.', ltv: 1220000, revenue2025: 702000, revenue2024: 373000, revenue2023: 143000, gp: 14.5, status: 'Fix' },
+  { name: 'Harmony Biosciences', ltv: 400000, revenue2025: 127000, revenue2024: 124000, revenue2023: 148000, gp: 81.6, status: 'Star' },
+  { name: 'Astellas Pharma U.S.', ltv: 111000, revenue2025: 111000, revenue2024: 0, revenue2023: 0, gp: 100, status: 'Star' },
+  { name: 'Alnylam Pharmaceuticals', ltv: 251000, revenue2025: 110000, revenue2024: 101000, revenue2023: 40000, gp: 71.5, status: 'Star' },
+  { name: 'Ironwood Pharmaceuticals', ltv: 200000, revenue2025: 102000, revenue2024: 53000, revenue2023: 45000, gp: 79.1, status: 'Star' },
+  { name: 'Praxis Precision Medicines', ltv: 97000, revenue2025: 97000, revenue2024: 0, revenue2023: 0, gp: 68.8, status: 'Grow' },
+  { name: 'Astellas Gene Therapies', ltv: 261000, revenue2025: 93000, revenue2024: 83000, revenue2023: 85000, gp: 40.2, status: 'Grow' },
+  { name: 'Schrödinger', ltv: 112000, revenue2025: 38000, revenue2024: 37000, revenue2023: 37000, gp: 97.8, status: 'Star' },
+  { name: 'Moderna', ltv: 74000, revenue2025: 37000, revenue2024: 37000, revenue2023: 0, gp: 92.8, status: 'Expand' },
+  { name: 'Intellia Therapeutics', ltv: 127000, revenue2025: 37000, revenue2024: 37000, revenue2023: 53000, gp: 96.6, status: 'Star' },
+  { name: 'Alexion Pharmaceuticals', ltv: 99000, revenue2025: 34000, revenue2024: 33000, revenue2023: 32000, gp: 100, status: 'Star' },
+  { name: 'Iveric Bio (Astellas)', ltv: 534000, revenue2025: 31000, revenue2024: 135000, revenue2023: 367000, gp: 83, status: 'Watch' },
+  { name: 'Ardelyx', ltv: 125000, revenue2025: 31000, revenue2024: 66000, revenue2023: 28000, gp: 62.4, status: 'Grow' },
+  { name: 'Ipsen Pharma', ltv: 100000, revenue2025: 26000, revenue2024: 26000, revenue2023: 48000, gp: 88.6, status: 'Star' },
+  { name: 'Genmab A/S', ltv: 72000, revenue2025: 19000, revenue2024: 27000, revenue2023: 27000, gp: -306, status: 'Fix' },
+  { name: 'Disc Medicine', ltv: 54000, revenue2025: 17000, revenue2024: 29000, revenue2023: 8000, gp: 88.5, status: 'Star' },
+  { name: 'Lyra Therapeutics', ltv: 29000, revenue2025: 9000, revenue2024: 9000, revenue2023: 11000, gp: 95.5, status: 'Star' },
+  { name: 'Bioatla', ltv: 36000, revenue2025: 8000, revenue2024: 21000, revenue2023: 7000, gp: 87.4, status: 'Watch' },
 ];
 
-// Major Boston biotechs - NOT current customers (prospective)
-const majorBiotechs = [
-  { name: 'Vertex Pharmaceuticals', hq: 'Boston', size: '$8.9B revenue', focus: 'Gene editing, CF, pain', funding: 'Public (VRTX)', priority: 'critical', wedge: 'Casgevy manufacturing QA, CRISPR validation' },
-  { name: 'Biogen', hq: 'Cambridge', size: '$9.8B revenue', focus: 'Neurodegeneration, MS', funding: 'Public (BIIB)', priority: 'critical', wedge: 'AI drug discovery validation, Leqembi manufacturing' },
-  { name: 'Sarepta Therapeutics', hq: 'Cambridge', size: '$1.8B revenue', focus: 'Gene therapy (DMD)', funding: 'Public (SRPT)', priority: 'critical', wedge: 'Elevidys manufacturing QA, gene therapy compliance' },
-  { name: 'Regeneron (Boston hub)', hq: 'Cambridge', size: '$13B revenue', focus: 'Biologics, mAbs', funding: 'Public (REGN)', priority: 'high', wedge: 'Manufacturing validation, AI governance' },
-  { name: 'Blueprint Medicines', hq: 'Cambridge', size: '$500M+ revenue', focus: 'Precision kinase inhibitors', funding: 'Public (BPMC)', priority: 'high', wedge: 'Mast cell therapies, cloud assurance' },
-  { name: 'Bluebird Bio', hq: 'Somerville', size: '$100M revenue', focus: 'Gene therapy (SCD, TDT)', funding: 'Public (BLUE)', priority: 'high', wedge: 'Lyfgenia manufacturing, cell therapy QA' },
-  { name: 'CRISPR Therapeutics', hq: 'Cambridge', size: '$100M revenue', focus: 'Gene editing', funding: 'Public (CRSP)', priority: 'high', wedge: 'Casgevy (with Vertex), ex-vivo manufacturing' },
-  { name: 'Editas Medicine', hq: 'Cambridge', size: 'Pre-revenue', focus: 'In vivo CRISPR', funding: 'Public (EDIT)', priority: 'medium', wedge: 'EDIT-101 clinical trials, GMP validation' },
+// COMPLETE list - 24 dormant accounts (had revenue, $0 in 2025)
+const dormantCustomers = [
+  { name: 'Accumulus Synergy', ltv: 649000, lastYear: '2023', lastRevenue: 648000, gp: 56.9, opportunity: 'Cloud platform expansion' },
+  { name: 'Loxo Oncology (Lilly)', ltv: 556000, lastYear: '2024', lastRevenue: 201000, gp: 30.7, opportunity: 'Lilly integration support' },
+  { name: 'Sierra Oncology', ltv: 278000, lastYear: '2023', lastRevenue: 253000, gp: 78.2, opportunity: 'Oncology pipeline' },
+  { name: 'embecta Medical', ltv: 233000, lastYear: '2023', lastRevenue: 199000, gp: 49.1, opportunity: 'Diabetes devices' },
+  { name: 'Genmab US INC', ltv: 223000, lastYear: '2024', lastRevenue: 207000, gp: 56.9, opportunity: 'BLA submissions' },
+  { name: 'Horizon Therapeutics (Amgen)', ltv: 194000, lastYear: '2024', lastRevenue: 114000, gp: 70.1, opportunity: 'Amgen integration' },
+  { name: 'Baxalta US (Takeda)', ltv: 185000, lastYear: '2023', lastRevenue: 185000, gp: 32.9, opportunity: 'Takeda umbrella' },
+  { name: 'Vial Trials', ltv: 184000, lastYear: '2023', lastRevenue: 181000, gp: 48.4, opportunity: 'Clinical trial systems' },
+  { name: 'Oncternal Therapeutics', ltv: 173000, lastYear: '2024', lastRevenue: 173000, gp: 61.7, opportunity: 'Oncology trials' },
+  { name: 'Tenaya Therapeutics', ltv: 166000, lastYear: '2024', lastRevenue: 122000, gp: 48, opportunity: 'Gene therapy heart' },
+  { name: 'Precision BioSciences', ltv: 151000, lastYear: '2023', lastRevenue: 149000, gp: 71.2, opportunity: 'Gene editing trials' },
+  { name: 'Dyne Therapeutics', ltv: 149000, lastYear: '2024', lastRevenue: 149000, gp: 47.7, opportunity: 'Muscle disease mfg' },
+  { name: 'AbCellera Biologics', ltv: 147000, lastYear: '2023', lastRevenue: 147000, gp: 54.6, opportunity: 'Antibody platform' },
+  { name: 'IAVI', ltv: 138000, lastYear: '2024', lastRevenue: 86000, gp: 42.4, opportunity: 'Vaccine development' },
+  { name: 'Turning Point Therapeutics', ltv: 131000, lastYear: '2024', lastRevenue: 34000, gp: 73.2, opportunity: 'Oncology (BMS)' },
+  { name: 'Canadian Plasma Resources', ltv: 125000, lastYear: '2023', lastRevenue: 106000, gp: 53.1, opportunity: 'Plasma manufacturing' },
+  { name: 'Verily Life Sciences', ltv: 103000, lastYear: '2024', lastRevenue: 39000, gp: 57.7, opportunity: 'AI/ML health' },
+  { name: 'Terran Biosciences', ltv: 96000, lastYear: '2024', lastRevenue: 45000, gp: 48.8, opportunity: 'Psychedelic therapeutics' },
+  { name: 'Takeda International AG', ltv: 51000, lastYear: '2023', lastRevenue: 51000, gp: 17.4, opportunity: 'Consolidate with US' },
+  { name: 'Terran Biosciences Inc', ltv: 38000, lastYear: '2024', lastRevenue: 6000, gp: 98.5, opportunity: 'CNS trials' },
+  { name: 'PTC-Codebeamer', ltv: 25000, lastYear: '2023', lastRevenue: 25000, gp: 99.1, opportunity: 'ALM platform' },
+  { name: 'Resilience, Inc.', ltv: 7000, lastYear: '2023', lastRevenue: 7000, gp: 100, opportunity: 'CDMO expansion' },
 ];
 
-// High-growth startups with recent funding
-const hotStartups = [
-  { name: 'Kriya Therapeutics', hq: 'Cambridge/Redwood City', funding: '$270M total', stage: 'Series B', focus: 'Gene therapy platform', lastRound: '2025', wedge: 'GMP manufacturing validation' },
-  { name: 'Senti Biosciences', hq: 'Cambridge', funding: '$230M total', stage: 'Series C ($105M)', focus: 'Gene circuit therapies', lastRound: '2025', wedge: 'Cell therapy QA, AI-designed circuits' },
-  { name: 'AIRNA Biosciences', hq: 'Cambridge', funding: '$155M', stage: 'Series B', focus: 'RNA editing (ADAR)', lastRound: '2025', wedge: 'RNA therapeutics validation' },
-  { name: 'Dyne Therapeutics', hq: 'Waltham', funding: '$400M+ raised', stage: 'Public (DYN)', focus: 'Muscle diseases', lastRound: 'Dormant customer', wedge: 'Gene therapy manufacturing - REACTIVATE' },
-  { name: 'Generation Bio', hq: 'Cambridge', funding: '$500M+ raised', stage: 'Public (GBIO)', focus: 'Non-viral gene therapy', lastRound: '2024', wedge: 'Novel delivery systems validation' },
-  { name: 'Beam Therapeutics', hq: 'Cambridge', funding: '$700M+ raised', stage: 'Public (BEAM)', focus: 'Base editing', lastRound: '2024', wedge: 'CRISPR alternative, precision editing QA' },
-  { name: 'Prime Medicine', hq: 'Cambridge', funding: '$315M Series B', stage: 'Public (PRME)', focus: 'Prime editing', lastRound: '2024', wedge: 'Platform validation, GMP readiness' },
-  { name: 'Tessera Therapeutics', hq: 'Cambridge', funding: '$350M+', stage: 'Private', focus: 'Gene writing', lastRound: '2023', wedge: 'Novel gene editing platform validation' },
-  { name: 'eGenesis', hq: 'Cambridge', funding: '$300M+', stage: 'Private', focus: 'Xenotransplantation', lastRound: '2024', wedge: 'Organ manufacturing QA, FDA pathway' },
-  { name: 'Verve Therapeutics', hq: 'Boston', funding: '$400M+', stage: 'Public (VERV)', focus: 'Cardiovascular gene editing', lastRound: '2024', wedge: 'In vivo gene editing validation' },
+// Major Boston biotechs NOT in our system yet
+const newLogoTargets = [
+  { name: 'Vertex Pharmaceuticals', hq: 'Boston', size: '$8.9B revenue', focus: 'Gene editing, CF, pain', priority: 'critical', wedge: 'Casgevy manufacturing QA' },
+  { name: 'Biogen', hq: 'Cambridge', size: '$9.8B revenue', focus: 'Neurodegeneration, MS', priority: 'critical', wedge: 'AI drug discovery, Leqembi' },
+  { name: 'Sarepta Therapeutics', hq: 'Cambridge', size: '$1.8B revenue', focus: 'Gene therapy (DMD)', priority: 'critical', wedge: 'Elevidys manufacturing QA' },
+  { name: 'Regeneron (Boston)', hq: 'Cambridge', size: '$13B revenue', focus: 'Biologics', priority: 'high', wedge: 'Manufacturing validation' },
+  { name: 'Blueprint Medicines', hq: 'Cambridge', size: '$500M+', focus: 'Kinase inhibitors', priority: 'high', wedge: 'Mast cell program' },
+  { name: 'Bluebird Bio', hq: 'Somerville', size: '$100M', focus: 'Gene therapy', priority: 'high', wedge: 'Lyfgenia manufacturing' },
+  { name: 'CRISPR Therapeutics', hq: 'Cambridge', size: '$100M', focus: 'Gene editing', priority: 'high', wedge: 'Casgevy (with Vertex)' },
+  { name: 'Editas Medicine', hq: 'Cambridge', size: 'Pre-revenue', focus: 'In vivo CRISPR', priority: 'medium', wedge: 'EDIT-101 trials' },
+  { name: 'Beam Therapeutics', hq: 'Cambridge', size: 'Clinical', focus: 'Base editing', priority: 'high', wedge: 'Precision editing QA' },
+  { name: 'Prime Medicine', hq: 'Cambridge', size: 'Clinical', focus: 'Prime editing', priority: 'medium', wedge: 'Platform validation' },
+  { name: 'Generation Bio', hq: 'Cambridge', size: 'Clinical', focus: 'Non-viral gene therapy', priority: 'medium', wedge: 'Delivery systems' },
+  { name: 'Tessera Therapeutics', hq: 'Cambridge', size: 'Private', focus: 'Gene writing', priority: 'medium', wedge: 'Novel platform' },
+  { name: 'eGenesis', hq: 'Cambridge', size: 'Private', focus: 'Xenotransplantation', priority: 'high', wedge: 'Organ manufacturing' },
+  { name: 'Verve Therapeutics', hq: 'Boston', size: 'Clinical', focus: 'CV gene editing', priority: 'medium', wedge: 'In vivo editing' },
+  { name: 'Kriya Therapeutics', hq: 'Cambridge', size: '$270M raised', focus: 'Gene therapy', priority: 'high', wedge: 'GMP validation' },
+  { name: 'Senti Biosciences', hq: 'Cambridge', size: '$230M raised', focus: 'Gene circuits', priority: 'high', wedge: 'Cell therapy QA' },
+  { name: 'AIRNA Biosciences', hq: 'Cambridge', size: '$155M raised', focus: 'RNA editing', priority: 'high', wedge: 'RNA therapeutics' },
+  { name: 'Tempus', hq: 'Boston office', size: '$1B+ raised', focus: 'AI precision medicine', priority: 'high', wedge: 'AI governance' },
+  { name: 'Valo Health', hq: 'Boston', size: '$700M raised', focus: 'AI drug discovery', priority: 'medium', wedge: 'AI validation' },
 ];
 
-// AI/ML drug discovery - hot segment
-const aiDrugDiscovery = [
-  { name: 'Tempus', hq: 'Boston office', funding: '$1.3B+', focus: 'AI precision medicine', wedge: 'AI validation, data governance' },
-  { name: 'Schrödinger', hq: 'Cambridge office', funding: 'Public (SDGR)', focus: 'Computational drug discovery', wedge: 'AI/ML model validation' },
-  { name: 'Valo Health', hq: 'Boston', funding: '$700M+', focus: 'AI-powered drug dev', wedge: 'Opal platform validation, AI governance' },
-  { name: 'Insilico Medicine', hq: 'Cambridge office', funding: '$400M+', focus: 'AI drug discovery', wedge: 'AI model validation, GxP AI' },
-  { name: 'Q-State Biosciences', hq: 'Cambridge', funding: '$50M+', focus: 'AI + human cell models', wedge: 'ML platform validation' },
-  { name: 'Converge Bio', hq: 'Boston', funding: '$25M Series A (2026)', focus: 'AI drug discovery', wedge: 'Platform validation, AI governance' },
-];
-
-// CDMOs and manufacturing (big opportunity)
-const cdmoManufacturing = [
-  { name: 'Resilience', hq: 'Watertown', funding: '$800M+', focus: 'Biomanufacturing CDMO', wedge: 'Manufacturing QA, CSV, cloud assurance' },
-  { name: 'Catalent (Boston)', hq: 'Burlington', funding: 'Public (CTLT)', focus: 'Cell & gene therapy mfg', wedge: 'GMP validation, batch record systems' },
-  { name: 'Thermo Fisher (Waltham)', hq: 'Waltham', funding: 'Public (TMO)', focus: 'Pharma services', wedge: 'Lab systems validation' },
-];
-
-// Emerging therapeutic areas
-const emergingTherapeutics = [
-  { name: 'Praxis Precision Medicines', hq: 'Boston', funding: '$400M+', stage: 'Clinical', focus: 'Neurological disorders', wedge: 'Gene editing neurotherapies' },
-  { name: 'Pretzel Therapeutics', hq: 'Boston', funding: '$70M+', stage: 'Early', focus: 'Mitochondrial diseases', wedge: 'Rare disease QA' },
-  { name: 'Arkuda Therapeutics', hq: 'Watertown', funding: '$80M+', stage: 'Early', focus: 'Neurodegeneration', wedge: 'Progranulin therapeutics' },
-  { name: 'Ardelyx', hq: 'Waltham', funding: 'Public (ARDX)', stage: 'Commercial', focus: 'GI/Renal disorders', wedge: 'Commercial manufacturing QA' },
-  { name: 'Click Therapeutics', hq: 'Boston office', funding: '$250M+', stage: 'Clinical', focus: 'Digital therapeutics', wedge: 'SaMD validation, FDA 21 CFR Part 11' },
-  { name: 'Treeline Biosciences', hq: 'Watertown', funding: '$200M+', stage: 'Clinical', focus: 'Precision oncology', wedge: 'Clinical trial systems' },
-];
-
-const totalProspects = majorBiotechs.length + hotStartups.length + aiDrugDiscovery.length + cdmoManufacturing.length + emergingTherapeutics.length;
+const total2025Revenue = activeCustomers.reduce((sum, c) => sum + c.revenue2025, 0);
+const totalLTV = activeCustomers.reduce((sum, c) => sum + c.ltv, 0) + dormantCustomers.reduce((sum, c) => sum + c.ltv, 0);
 
 export default function TargetsPage() {
   return (
@@ -76,44 +82,78 @@ export default function TargetsPage() {
       <div className="max-w-7xl mx-auto px-6 py-12">
         <Link href="/genetown-deep-dive" className="text-emerald-400 hover:text-emerald-300 mb-8 inline-block">← Back to Genetown</Link>
 
-        <h1 className="text-4xl font-bold text-white mb-2">Boston Target Accounts</h1>
-        <p className="text-emerald-400 text-xl mb-8">Comprehensive Account List — Current + Prospective</p>
+        <h1 className="text-4xl font-bold text-white mb-2">Boston/Genetown Complete Account List</h1>
+        <p className="text-emerald-400 text-xl mb-8">All Accounts from MCP + New Logo Targets</p>
 
         {/* Key Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
-          <StatCard title="Current Customers" value="9" trend="Active revenue" />
-          <StatCard title="Major Biotechs" value="8" trend="$30B+ combined" highlight />
-          <StatCard title="Hot Startups" value="10" trend="$2B+ funding" />
-          <StatCard title="AI/Drug Discovery" value="6" trend="Emerging segment" />
-          <StatCard title="Total Prospects" value={totalProspects.toString()} trend="New logo targets" />
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-4 mb-8">
+          <StatCard title="Active 2025" value="18" trend={`$${(total2025Revenue/1000).toFixed(0)}K revenue`} highlight />
+          <StatCard title="Dormant" value="24" trend="$4.2M total LTV" />
+          <StatCard title="Total LTV" value={`$${(totalLTV/1000000).toFixed(1)}M`} trend="Historical value" />
+          <StatCard title="New Logo Targets" value="19" trend="Prospects" />
+          <StatCard title="Grand Total" value="61" trend="All accounts" />
+          <StatCard title="High GP Stars" value="10" trend="70%+ margin" />
         </div>
 
-        {/* Current Customers */}
-        <section className="bg-slate-800/50 rounded-xl p-6 mb-8 border border-slate-700">
-          <h2 className="text-xl font-bold text-white mb-4">✅ Current Customers (9 accounts, $1.35M)</h2>
+        {/* Active Customers */}
+        <section className="bg-emerald-900/20 rounded-xl p-6 mb-8 border border-emerald-500/30">
+          <h2 className="text-xl font-bold text-white mb-4">✅ Active Customers — 18 Accounts with 2025 Revenue (${(total2025Revenue/1000).toFixed(0)}K)</h2>
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
               <thead>
                 <tr className="border-b border-slate-600">
                   <th className="py-2 text-slate-400">Account</th>
-                  <th className="py-2 text-slate-400 text-right">2025 Revenue</th>
+                  <th className="py-2 text-slate-400 text-right">LTV</th>
+                  <th className="py-2 text-slate-400 text-right">2025</th>
+                  <th className="py-2 text-slate-400 text-right">2024</th>
+                  <th className="py-2 text-slate-400 text-right">2023</th>
                   <th className="py-2 text-slate-400 text-right">GP%</th>
-                  <th className="py-2 text-slate-400">Tier</th>
                   <th className="py-2 text-slate-400">Status</th>
-                  <th className="py-2 text-slate-400">Expansion Play</th>
                 </tr>
               </thead>
               <tbody>
-                {currentCustomers.map((c) => (
+                {activeCustomers.map((c) => (
+                  <tr key={c.name} className={`border-b border-slate-700 ${c.gp < 30 ? 'bg-red-900/10' : c.gp >= 70 ? 'bg-emerald-900/10' : ''}`}>
+                    <td className="py-2 font-medium text-white">{c.name}</td>
+                    <td className="py-2 text-right text-slate-400">${(c.ltv / 1000).toFixed(0)}K</td>
+                    <td className="py-2 text-right text-white font-medium">${(c.revenue2025 / 1000).toFixed(0)}K</td>
+                    <td className="py-2 text-right text-slate-400">${(c.revenue2024 / 1000).toFixed(0)}K</td>
+                    <td className="py-2 text-right text-slate-500">${(c.revenue2023 / 1000).toFixed(0)}K</td>
+                    <td className={`py-2 text-right font-medium ${c.gp >= 70 ? 'text-emerald-400' : c.gp < 30 ? 'text-red-400' : 'text-yellow-400'}`}>{c.gp}%</td>
+                    <td className="py-2"><StatusBadge status={c.status} /></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-slate-500 text-xs mt-3">Source: Finance MCP get_customer_ltv | Feb 2026</p>
+        </section>
+
+        {/* Dormant Customers */}
+        <section className="bg-yellow-900/20 rounded-xl p-6 mb-8 border border-yellow-500/30">
+          <h2 className="text-xl font-bold text-white mb-4">💤 Dormant Accounts — 24 with MSAs but $0 in 2025</h2>
+          <p className="text-slate-400 text-sm mb-4">These accounts have existing MSAs. Fastest path to revenue for a new rep.</p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-sm">
+              <thead>
+                <tr className="border-b border-slate-600">
+                  <th className="py-2 text-slate-400">Account</th>
+                  <th className="py-2 text-slate-400 text-right">LTV</th>
+                  <th className="py-2 text-slate-400">Last Active</th>
+                  <th className="py-2 text-slate-400 text-right">Last Revenue</th>
+                  <th className="py-2 text-slate-400 text-right">GP%</th>
+                  <th className="py-2 text-slate-400">Reactivation Opportunity</th>
+                </tr>
+              </thead>
+              <tbody>
+                {dormantCustomers.map((c) => (
                   <tr key={c.name} className="border-b border-slate-700">
                     <td className="py-2 font-medium text-white">{c.name}</td>
-                    <td className="py-2 text-right text-slate-300">${(c.revenue / 1000).toFixed(0)}K</td>
-                    <td className={`py-2 text-right ${c.gp >= 50 ? 'text-emerald-400' : 'text-red-400'}`}>{c.gp}%</td>
-                    <td className="py-2 text-slate-400">{c.tier}</td>
-                    <td className="py-2">
-                      <StatusBadge status={c.status} />
-                    </td>
-                    <td className="py-2 text-slate-400 text-xs">{c.notes}</td>
+                    <td className="py-2 text-right text-slate-300">${(c.ltv / 1000).toFixed(0)}K</td>
+                    <td className="py-2 text-slate-400">{c.lastYear}</td>
+                    <td className="py-2 text-right text-slate-400">${(c.lastRevenue / 1000).toFixed(0)}K</td>
+                    <td className={`py-2 text-right ${c.gp >= 70 ? 'text-emerald-400' : 'text-slate-400'}`}>{c.gp}%</td>
+                    <td className="py-2 text-emerald-400 text-xs">{c.opportunity}</td>
                   </tr>
                 ))}
               </tbody>
@@ -121,80 +161,32 @@ export default function TargetsPage() {
           </div>
         </section>
 
-        {/* Major Biotechs */}
+        {/* New Logo Targets */}
         <section className="bg-red-900/20 rounded-xl p-6 mb-8 border border-red-500/30">
-          <h2 className="text-xl font-bold text-white mb-2">🎯 Major Biotechs — High Priority New Logos</h2>
-          <p className="text-slate-400 text-sm mb-4">Large established companies with budget. These are the "whale" accounts.</p>
-          <div className="grid md:grid-cols-2 gap-4">
-            {majorBiotechs.map((b) => (
-              <TargetCard key={b.name} {...b} />
+          <h2 className="text-xl font-bold text-white mb-4">🎯 New Logo Targets — 19 Major Boston Biotechs</h2>
+          <p className="text-slate-400 text-sm mb-4">Companies NOT in our system. Require net-new MSA.</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {newLogoTargets.map((t) => (
+              <TargetCard key={t.name} {...t} />
             ))}
           </div>
         </section>
 
-        {/* Hot Startups */}
-        <section className="bg-emerald-900/20 rounded-xl p-6 mb-8 border border-emerald-500/30">
-          <h2 className="text-xl font-bold text-white mb-2">🚀 Hot Startups with Recent Funding</h2>
-          <p className="text-slate-400 text-sm mb-4">Well-funded companies with fresh capital. Moving fast, need quality support.</p>
-          <div className="grid md:grid-cols-2 gap-4">
-            {hotStartups.map((s) => (
-              <StartupCard key={s.name} {...s} />
-            ))}
-          </div>
-        </section>
-
-        {/* AI Drug Discovery */}
-        <section className="bg-blue-900/20 rounded-xl p-6 mb-8 border border-blue-500/30">
-          <h2 className="text-xl font-bold text-white mb-2">🤖 AI Drug Discovery — Emerging Segment</h2>
-          <p className="text-slate-400 text-sm mb-4">AI governance is our unique differentiator. These companies NEED help validating AI/ML systems.</p>
-          <div className="grid md:grid-cols-3 gap-4">
-            {aiDrugDiscovery.map((a) => (
-              <AICard key={a.name} {...a} />
-            ))}
-          </div>
-        </section>
-
-        {/* CDMO Manufacturing */}
-        <section className="bg-purple-900/20 rounded-xl p-6 mb-8 border border-purple-500/30">
-          <h2 className="text-xl font-bold text-white mb-2">🏭 CDMO / Manufacturing</h2>
-          <p className="text-slate-400 text-sm mb-4">Manufacturing expansion = CSV and cloud assurance opportunities.</p>
-          <div className="grid md:grid-cols-3 gap-4">
-            {cdmoManufacturing.map((c) => (
-              <CDMOCard key={c.name} {...c} />
-            ))}
-          </div>
-        </section>
-
-        {/* Emerging Therapeutics */}
-        <section className="bg-slate-800/50 rounded-xl p-6 mb-8 border border-slate-700">
-          <h2 className="text-xl font-bold text-white mb-2">💊 Emerging Therapeutic Companies</h2>
-          <p className="text-slate-400 text-sm mb-4">Diverse therapeutic areas with clinical programs.</p>
-          <div className="grid md:grid-cols-3 gap-4">
-            {emergingTherapeutics.map((e) => (
-              <EmergingCard key={e.name} {...e} />
-            ))}
-          </div>
-        </section>
-
-        {/* Summary Stats */}
+        {/* Summary */}
         <section className="bg-emerald-900/30 rounded-xl p-6 border border-emerald-500/50">
-          <h2 className="text-xl font-bold text-white mb-4">📊 Target Summary</h2>
-          <div className="grid md:grid-cols-4 gap-4">
-            <div className="text-center">
-              <p className="text-3xl font-bold text-emerald-400">{totalProspects + 9}</p>
-              <p className="text-slate-400 text-sm">Total Accounts</p>
+          <h2 className="text-xl font-bold text-white mb-4">📊 Complete Summary</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div>
+              <h3 className="text-emerald-400 font-semibold mb-2">Active (18)</h3>
+              <p className="text-slate-300 text-sm">Generating revenue now. Focus: margin recovery (Takeda, Genmab) + expansion (Moderna, Praxis)</p>
             </div>
-            <div className="text-center">
-              <p className="text-3xl font-bold text-white">$50B+</p>
-              <p className="text-slate-400 text-sm">Combined Market Cap</p>
+            <div>
+              <h3 className="text-yellow-400 font-semibold mb-2">Dormant (24)</h3>
+              <p className="text-slate-300 text-sm">$4.2M historical LTV. MSAs exist. Week 1 outreach: Accumulus, Genmab US, Dyne, Precision Bio</p>
             </div>
-            <div className="text-center">
-              <p className="text-3xl font-bold text-blue-400">$5B+</p>
-              <p className="text-slate-400 text-sm">VC Funding (startups)</p>
-            </div>
-            <div className="text-center">
-              <p className="text-3xl font-bold text-yellow-400">3</p>
-              <p className="text-slate-400 text-sm">Critical Priority Targets</p>
+            <div>
+              <h3 className="text-red-400 font-semibold mb-2">New Logos (19)</h3>
+              <p className="text-slate-300 text-sm">Net-new targets. Priority: Vertex, Biogen, Sarepta. Wedge: gene therapy QA, AI governance</p>
             </div>
           </div>
         </section>
@@ -219,73 +211,25 @@ function StatusBadge({ status }: { status: string }) {
     Fix: 'bg-red-900/30 text-red-400 border-red-700/30',
     Grow: 'bg-blue-900/30 text-blue-400 border-blue-700/30',
     Expand: 'bg-purple-900/30 text-purple-400 border-purple-700/30',
+    Watch: 'bg-yellow-900/30 text-yellow-400 border-yellow-700/30',
   };
-  return <span className={`text-xs px-2 py-0.5 rounded border ${styles[status] || ''}`}>{status}</span>;
+  return <span className={`text-xs px-2 py-0.5 rounded border ${styles[status] || 'bg-slate-700 text-slate-400'}`}>{status}</span>;
 }
 
 function TargetCard({ name, hq, size, focus, priority, wedge }: { name: string; hq: string; size: string; focus: string; priority: string; wedge: string }) {
   const priorityStyles: Record<string, string> = {
-    critical: 'border-red-500/50',
-    high: 'border-yellow-500/50',
-    medium: 'border-slate-600',
+    critical: 'border-red-500/50 bg-red-900/20',
+    high: 'border-yellow-500/50 bg-yellow-900/10',
+    medium: 'border-slate-600 bg-slate-800/50',
   };
   return (
-    <div className={`bg-slate-800/50 rounded-lg p-4 border ${priorityStyles[priority]}`}>
-      <div className="flex justify-between items-start mb-2">
-        <h3 className="font-semibold text-white">{name}</h3>
-        <span className={`text-xs px-2 py-0.5 rounded ${priority === 'critical' ? 'bg-red-900/30 text-red-400' : priority === 'high' ? 'bg-yellow-900/30 text-yellow-400' : 'bg-slate-700 text-slate-400'}`}>{priority}</span>
+    <div className={`rounded-lg p-3 border ${priorityStyles[priority]}`}>
+      <div className="flex justify-between items-start mb-1">
+        <h3 className="font-semibold text-white text-sm">{name}</h3>
+        <span className={`text-xs px-1.5 py-0.5 rounded ${priority === 'critical' ? 'bg-red-900/50 text-red-400' : priority === 'high' ? 'bg-yellow-900/50 text-yellow-400' : 'bg-slate-700 text-slate-400'}`}>{priority}</span>
       </div>
       <p className="text-slate-500 text-xs">{hq} • {size}</p>
-      <p className="text-slate-400 text-sm mt-1">{focus}</p>
-      <p className="text-emerald-400 text-xs mt-2">→ {wedge}</p>
-    </div>
-  );
-}
-
-function StartupCard({ name, hq, funding, stage, focus, wedge }: { name: string; hq: string; funding: string; stage: string; focus: string; lastRound: string; wedge: string }) {
-  return (
-    <div className="bg-slate-800/50 rounded-lg p-4 border border-emerald-700/30">
-      <div className="flex justify-between items-start mb-2">
-        <h3 className="font-semibold text-white">{name}</h3>
-        <span className="text-xs bg-emerald-900/30 text-emerald-400 px-2 py-0.5 rounded">{stage}</span>
-      </div>
-      <p className="text-slate-500 text-xs">{hq} • {funding}</p>
-      <p className="text-slate-400 text-sm mt-1">{focus}</p>
-      <p className="text-emerald-400 text-xs mt-2">→ {wedge}</p>
-    </div>
-  );
-}
-
-function AICard({ name, hq, funding, focus, wedge }: { name: string; hq: string; funding: string; focus: string; wedge: string }) {
-  return (
-    <div className="bg-slate-800/50 rounded-lg p-3 border border-blue-700/30">
-      <h3 className="font-semibold text-white text-sm">{name}</h3>
-      <p className="text-slate-500 text-xs">{hq}</p>
-      <p className="text-blue-400 text-xs">{funding}</p>
-      <p className="text-slate-400 text-xs mt-1">{focus}</p>
-      <p className="text-emerald-400 text-xs mt-1">→ {wedge}</p>
-    </div>
-  );
-}
-
-function CDMOCard({ name, hq, funding, focus, wedge }: { name: string; hq: string; funding: string; focus: string; wedge: string }) {
-  return (
-    <div className="bg-slate-800/50 rounded-lg p-3 border border-purple-700/30">
-      <h3 className="font-semibold text-white text-sm">{name}</h3>
-      <p className="text-slate-500 text-xs">{hq} • {funding}</p>
-      <p className="text-slate-400 text-xs mt-1">{focus}</p>
-      <p className="text-emerald-400 text-xs mt-1">→ {wedge}</p>
-    </div>
-  );
-}
-
-function EmergingCard({ name, hq, funding, stage, focus, wedge }: { name: string; hq: string; funding: string; stage: string; focus: string; wedge: string }) {
-  return (
-    <div className="bg-slate-700/30 rounded-lg p-3 border border-slate-600">
-      <h3 className="font-semibold text-white text-sm">{name}</h3>
-      <p className="text-slate-500 text-xs">{hq} • {stage}</p>
-      <p className="text-slate-400 text-xs">{funding}</p>
-      <p className="text-slate-400 text-xs mt-1">{focus}</p>
+      <p className="text-slate-400 text-xs">{focus}</p>
       <p className="text-emerald-400 text-xs mt-1">→ {wedge}</p>
     </div>
   );
