@@ -49,6 +49,8 @@ const navItems: NavItem[] = [
       { label: 'Overview', href: '/genetown-deep-dive' },
       { label: 'Account History', href: '/genetown-deep-dive/account-history' },
       { label: 'Current Pipeline', href: '/genetown-deep-dive/pipeline' },
+      { label: 'Services Mix', href: '/genetown-deep-dive/services-mix' },
+      { label: 'Dormant MSAs', href: '/genetown-deep-dive/dormant-msas' },
       { label: 'Target Accounts', href: '/genetown-deep-dive/targets' },
       { label: 'Market Intel', href: '/genetown-deep-dive/market-intel' },
     ],
