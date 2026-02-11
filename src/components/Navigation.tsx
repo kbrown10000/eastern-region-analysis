@@ -38,10 +38,19 @@ const navItems: NavItem[] = [
     label: 'Markets',
     children: [
       { label: 'Regional Overview', href: '/market-analysis' },
-      { label: '🧬 Genetown (Boston)', href: '/genetown-deep-dive' },
       { label: 'NJ Pharma Corridor', href: '/nj-pharma-deep-dive' },
       { label: 'Research Triangle', href: '/research-triangle-deep-dive' },
       { label: 'Mid-Atlantic', href: '/mid-atlantic-deep-dive' },
+    ],
+  },
+  {
+    label: '🧬 Genetown',
+    children: [
+      { label: 'Overview', href: '/genetown-deep-dive' },
+      { label: 'Account History', href: '/genetown-deep-dive/account-history' },
+      { label: 'Current Pipeline', href: '/genetown-deep-dive/pipeline' },
+      { label: 'Target Accounts', href: '/genetown-deep-dive/targets' },
+      { label: 'Market Intel', href: '/genetown-deep-dive/market-intel' },
     ],
   },
   {
