@@ -15,13 +15,30 @@ export default function GenetownDeepDive() {
         <p className="text-emerald-400 text-xl mb-4">Boston / Cambridge — The Global Biotech Capital</p>
         <p className="text-slate-500 text-xs mb-8">📊 Data verified via Finance MCP | Last updated: Feb 11, 2026</p>
 
+        {/* Critical Alert Banner */}
+        <div className="bg-red-900/40 rounded-xl p-6 mb-8 border-2 border-red-500/50">
+          <div className="flex items-start gap-4">
+            <span className="text-3xl">⚠️</span>
+            <div className="flex-1">
+              <h2 className="text-xl font-bold text-red-400 mb-2">Critical: Jeff Burton Resigned — 800+ Accounts Orphaned</h2>
+              <p className="text-slate-300 mb-3">
+                Jeff owned ~800+ of 1,000 GeneTown accounts. These are now <span className="text-red-400 font-bold">ORPHANED</span>. 
+                The new hire inherits a massive book of unworked accounts with <span className="text-white font-bold">$1.17M pipeline at risk</span>.
+              </p>
+              <Link href="/genetown-deep-dive/day-one-playbook" className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                🚨 View Day 1 Playbook →
+              </Link>
+            </div>
+          </div>
+        </div>
+
         {/* Key Stats */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-12">
-          <StatCard title="2025 Revenue" value="$1.35M" trend="+39.4% YoY" />
-          <StatCard title="GP%" value="43.1%" trend="High-margin managed svcs" />
-          <StatCard title="Active Accounts" value="18" trend="of 1,000+ biotechs" />
-          <StatCard title="Open Pipeline" value="$3.8M" trend="2.8x coverage" />
-          <StatCard title="Market Penetration" value="1.8%" trend="Massive upside" highlight />
+          <StatCard title="2025 Revenue" value="$1.32M" trend="+42% YoY" />
+          <StatCard title="Blended GP%" value="49.8%" trend="Target: 55%" />
+          <StatCard title="Active Accounts" value="11" trend="of 1,000+ biotechs" />
+          <StatCard title="Pipeline at Risk" value="$1.17M" trend="Needs owner NOW" highlight />
+          <StatCard title="Historical LTV" value="$2.9M" trend="Proven relationships" />
         </div>
 
         {/* Why We're Hiring Here */}
@@ -226,6 +243,51 @@ export default function GenetownDeepDive() {
           </div>
         </section>
 
+        {/* Win/Loss Intelligence */}
+        <section className="bg-yellow-900/20 rounded-xl p-8 mb-8 border border-yellow-700/50">
+          <h2 className="text-2xl font-bold text-white mb-4">⚔️ Win/Loss Reality Check (Salesforce Data)</h2>
+          <p className="text-slate-300 mb-6">
+            We're not failing to GET meetings — we're <span className="text-yellow-400 font-semibold">losing deals we're already in</span>. 
+            Competitor displacement is the issue, not awareness.
+          </p>
+          <div className="grid md:grid-cols-3 gap-4 mb-6">
+            <div className="bg-slate-800/50 rounded-lg p-4">
+              <p className="text-emerald-400 font-bold text-xl">$20.2M</p>
+              <p className="text-slate-400 text-sm">Total Won (Top 6 Accounts)</p>
+            </div>
+            <div className="bg-slate-800/50 rounded-lg p-4">
+              <p className="text-red-400 font-bold text-xl">$34.1M</p>
+              <p className="text-slate-400 text-sm">Total Lost (Top 6 Accounts)</p>
+            </div>
+            <div className="bg-slate-800/50 rounded-lg p-4">
+              <p className="text-yellow-400 font-bold text-xl">37%</p>
+              <p className="text-slate-400 text-sm">Blended Win Rate</p>
+            </div>
+          </div>
+          <div className="overflow-x-auto mb-4">
+            <table className="w-full text-left text-sm">
+              <thead>
+                <tr className="border-b border-slate-600">
+                  <th className="py-2 text-slate-400 font-medium">Account</th>
+                  <th className="py-2 text-slate-400 font-medium text-right">Won</th>
+                  <th className="py-2 text-slate-400 font-medium text-right">Lost</th>
+                  <th className="py-2 text-slate-400 font-medium text-right">Win Rate</th>
+                </tr>
+              </thead>
+              <tbody className="text-slate-300">
+                <tr className="border-b border-slate-700"><td className="py-2 text-white">Biogen</td><td className="py-2 text-right text-emerald-400">$11.8M</td><td className="py-2 text-right text-red-400">$25.7M</td><td className="py-2 text-right text-red-400">31%</td></tr>
+                <tr className="border-b border-slate-700"><td className="py-2 text-white">Moderna</td><td className="py-2 text-right text-emerald-400">$102K</td><td className="py-2 text-right text-red-400">$504K</td><td className="py-2 text-right text-red-400">17%</td></tr>
+                <tr className="border-b border-slate-700"><td className="py-2 text-white">Intellia</td><td className="py-2 text-right text-emerald-400">$285K</td><td className="py-2 text-right text-red-400">$1.26M</td><td className="py-2 text-right text-red-400">18%</td></tr>
+                <tr className="border-b border-slate-700"><td className="py-2 text-white">Alnylam</td><td className="py-2 text-right text-emerald-400">$479K</td><td className="py-2 text-right text-red-400">$1.59M</td><td className="py-2 text-right text-yellow-400">23%</td></tr>
+                <tr className="border-b border-slate-700"><td className="py-2 text-white">argenx</td><td className="py-2 text-right text-emerald-400">$4.6M</td><td className="py-2 text-right text-red-400">$1.1M</td><td className="py-2 text-right text-emerald-400">81%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <Link href="/genetown-deep-dive/day-one-playbook" className="text-yellow-400 hover:text-yellow-300 text-sm font-medium">
+            See full win/loss analysis in Day 1 Playbook →
+          </Link>
+        </section>
+
         {/* Margin Story */}
         <section className="bg-emerald-900/20 rounded-xl p-8 mb-8 border border-emerald-700/50">
           <h2 className="text-2xl font-bold text-white mb-4">The Genetown Margin Story</h2>
@@ -247,7 +309,7 @@ export default function GenetownDeepDive() {
 
         {/* Key Accounts */}
         <section className="bg-slate-800/50 rounded-xl p-8 mb-8 border border-slate-700">
-          <h2 className="text-2xl font-bold text-white mb-6">Key Accounts (MCP Verified)</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">Active Accounts (Salesforce Verified)</h2>
           <div className="overflow-x-auto">
             <table className="w-full text-left">
               <thead>
@@ -255,100 +317,197 @@ export default function GenetownDeepDive() {
                   <th className="py-3 text-slate-400 font-medium">Account</th>
                   <th className="py-3 text-slate-400 font-medium text-right">2025 Revenue</th>
                   <th className="py-3 text-slate-400 font-medium text-right">GP%</th>
-                  <th className="py-3 text-slate-400 font-medium text-right">YoY</th>
+                  <th className="py-3 text-slate-400 font-medium text-right">Open Pipe</th>
                   <th className="py-3 text-slate-400 font-medium text-right">LTV</th>
-                  <th className="py-3 text-slate-400 font-medium">Tier</th>
-                  <th className="py-3 text-slate-400 font-medium">Expansion Play</th>
+                  <th className="py-3 text-slate-400 font-medium">Owner</th>
+                  <th className="py-3 text-slate-400 font-medium">Priority Action</th>
                 </tr>
               </thead>
               <tbody className="text-slate-300">
                 <tr className="border-b border-slate-700 bg-red-900/10">
                   <td className="py-3 font-medium text-white">Takeda Pharmaceuticals</td>
                   <td className="py-3 text-right">$702K</td>
-                  <td className="py-3 text-right text-red-400">14.5%</td>
-                  <td className="py-3 text-right text-emerald-400">+88.2%</td>
+                  <td className="py-3 text-right text-red-400">14.5% ⚠️</td>
+                  <td className="py-3 text-right">$450K</td>
                   <td className="py-3 text-right">$1.22M</td>
-                  <td className="py-3"><span className="text-xs bg-red-900/30 text-red-400 px-2 py-0.5 rounded border border-red-700/30">Fix</span></td>
-                  <td className="py-3 text-sm text-slate-400">Convert to managed services, AI governance</td>
+                  <td className="py-3 text-xs text-slate-400">De Luca / Fry</td>
+                  <td className="py-3 text-xs"><span className="text-red-400">MARGIN FIX</span> — Convert to managed svcs</td>
                 </tr>
-                <tr className="border-b border-slate-700">
+                <tr className="border-b border-slate-700 bg-emerald-900/10">
                   <td className="py-3 font-medium text-white">Harmony Biosciences</td>
                   <td className="py-3 text-right">$127K</td>
-                  <td className="py-3 text-right text-emerald-400">81.6%</td>
-                  <td className="py-3 text-right text-emerald-400">+2.5%</td>
+                  <td className="py-3 text-right text-emerald-400">81.6% ⭐</td>
+                  <td className="py-3 text-right">$125K</td>
                   <td className="py-3 text-right">$400K</td>
-                  <td className="py-3"><span className="text-xs bg-emerald-900/30 text-emerald-400 px-2 py-0.5 rounded border border-emerald-700/30">Star</span></td>
-                  <td className="py-3 text-sm text-slate-400">Cloud expansion, SOX compliance</td>
+                  <td className="py-3 text-xs text-yellow-400">ORPHANED</td>
+                  <td className="py-3 text-xs"><span className="text-emerald-400">PROTECT</span> — Template account, save NOW</td>
                 </tr>
                 <tr className="border-b border-slate-700">
                   <td className="py-3 font-medium text-white">Alnylam Pharmaceuticals</td>
                   <td className="py-3 text-right">$110K</td>
                   <td className="py-3 text-right text-emerald-400">71.5%</td>
-                  <td className="py-3 text-right text-emerald-400">+8.9%</td>
+                  <td className="py-3 text-right">$205K</td>
                   <td className="py-3 text-right">$251K</td>
-                  <td className="py-3"><span className="text-xs bg-emerald-900/30 text-emerald-400 px-2 py-0.5 rounded border border-emerald-700/30">Star</span></td>
-                  <td className="py-3 text-sm text-slate-400">RNAi manufacturing QA</td>
+                  <td className="py-3 text-xs text-slate-400">Pallardy</td>
+                  <td className="py-3 text-xs"><span className="text-yellow-400">23% win rate</span> — Lost $1.59M, audit why</td>
                 </tr>
                 <tr className="border-b border-slate-700">
                   <td className="py-3 font-medium text-white">Ironwood Pharma</td>
                   <td className="py-3 text-right">$102K</td>
                   <td className="py-3 text-right text-emerald-400">79.1%</td>
-                  <td className="py-3 text-right text-emerald-400">+93.9%</td>
-                  <td className="py-3 text-right">$199K</td>
-                  <td className="py-3"><span className="text-xs bg-emerald-900/30 text-emerald-400 px-2 py-0.5 rounded border border-emerald-700/30">Star</span></td>
-                  <td className="py-3 text-sm text-slate-400">GI franchise data integrity</td>
+                  <td className="py-3 text-right">$88K</td>
+                  <td className="py-3 text-right">$200K</td>
+                  <td className="py-3 text-xs text-yellow-400">ORPHANED</td>
+                  <td className="py-3 text-xs"><span className="text-emerald-400">+93.9% YoY</span> — Fastest grower, upsell</td>
+                </tr>
+                <tr className="border-b border-slate-700">
+                  <td className="py-3 font-medium text-white">Praxis Precision Medicines</td>
+                  <td className="py-3 text-right">$97K</td>
+                  <td className="py-3 text-right text-emerald-400">~55%</td>
+                  <td className="py-3 text-right">$112K</td>
+                  <td className="py-3 text-right">$191K</td>
+                  <td className="py-3 text-xs text-slate-400">Fry</td>
+                  <td className="py-3 text-xs"><span className="text-emerald-400">CLEAN</span> — Zero losses, pure growth</td>
                 </tr>
                 <tr className="border-b border-slate-700">
                   <td className="py-3 font-medium text-white">Astellas Gene Therapies</td>
                   <td className="py-3 text-right">$93K</td>
                   <td className="py-3 text-right text-emerald-400">40.2%</td>
-                  <td className="py-3 text-right text-emerald-400">+12.3%</td>
-                  <td className="py-3 text-right">$261K</td>
-                  <td className="py-3"><span className="text-xs bg-blue-900/30 text-blue-400 px-2 py-0.5 rounded border border-blue-700/30">Grow</span></td>
-                  <td className="py-3 text-sm text-slate-400">Gene therapy QA, ATMP compliance</td>
+                  <td className="py-3 text-right">$84K</td>
+                  <td className="py-3 text-right">$260K</td>
+                  <td className="py-3 text-xs text-yellow-400">ORPHANED</td>
+                  <td className="py-3 text-xs">Gene therapy QA expansion</td>
                 </tr>
-                <tr className="border-b border-slate-700">
+                <tr className="border-b border-slate-700 bg-yellow-900/10">
                   <td className="py-3 font-medium text-white">Moderna</td>
                   <td className="py-3 text-right">$37K</td>
                   <td className="py-3 text-right text-emerald-400">92.8%</td>
-                  <td className="py-3 text-right text-emerald-400">+0.5%</td>
-                  <td className="py-3 text-right">$74K</td>
-                  <td className="py-3"><span className="text-xs bg-purple-900/30 text-purple-400 px-2 py-0.5 rounded border border-purple-700/30">Expand</span></td>
-                  <td className="py-3 text-sm text-slate-400">mRNA platform validation, AI governance</td>
+                  <td className="py-3 text-right">$387K</td>
+                  <td className="py-3 text-right">$102K</td>
+                  <td className="py-3 text-xs text-slate-400">Fry</td>
+                  <td className="py-3 text-xs"><span className="text-red-400">17% win rate</span> — Lost 8:1, fix pitch</td>
                 </tr>
-                <tr className="border-b border-slate-700">
+                <tr className="border-b border-slate-700 bg-yellow-900/10">
                   <td className="py-3 font-medium text-white">Intellia Therapeutics</td>
                   <td className="py-3 text-right">$37K</td>
                   <td className="py-3 text-right text-emerald-400">96.6%</td>
-                  <td className="py-3 text-right text-slate-400">-0.1%</td>
-                  <td className="py-3 text-right">$127K</td>
-                  <td className="py-3"><span className="text-xs bg-emerald-900/30 text-emerald-400 px-2 py-0.5 rounded border border-emerald-700/30">Star</span></td>
-                  <td className="py-3 text-sm text-slate-400">CRISPR manufacturing QC</td>
+                  <td className="py-3 text-right">$211K</td>
+                  <td className="py-3 text-right">$285K</td>
+                  <td className="py-3 text-xs text-slate-400">Kirikian</td>
+                  <td className="py-3 text-xs"><span className="text-red-400">18% win rate</span> — Lost $1.26M, competitor?</td>
                 </tr>
                 <tr className="border-b border-slate-700">
                   <td className="py-3 font-medium text-white">Alexion Pharmaceuticals</td>
                   <td className="py-3 text-right">$34K</td>
                   <td className="py-3 text-right text-emerald-400">100%</td>
-                  <td className="py-3 text-right text-emerald-400">+1.4%</td>
-                  <td className="py-3 text-right">$99K</td>
-                  <td className="py-3"><span className="text-xs bg-emerald-900/30 text-emerald-400 px-2 py-0.5 rounded border border-emerald-700/30">Star</span></td>
-                  <td className="py-3 text-sm text-slate-400">Rare disease pipeline support</td>
+                  <td className="py-3 text-right">$33K</td>
+                  <td className="py-3 text-right">$181K</td>
+                  <td className="py-3 text-xs text-yellow-400">ORPHANED</td>
+                  <td className="py-3 text-xs">Rare disease pipeline support</td>
                 </tr>
               </tbody>
               <tfoot>
                 <tr className="border-t-2 border-emerald-700">
-                  <td className="py-3 font-bold text-white">TOTAL (18 accounts)</td>
-                  <td className="py-3 text-right font-bold text-white">$1.35M</td>
-                  <td className="py-3 text-right font-bold text-emerald-400">43.1%</td>
-                  <td className="py-3 text-right font-bold text-emerald-400">+39.4%</td>
-                  <td className="py-3 text-right font-bold text-white">$3.12M</td>
+                  <td className="py-3 font-bold text-white">TOTAL (11 active)</td>
+                  <td className="py-3 text-right font-bold text-white">$1.32M</td>
+                  <td className="py-3 text-right font-bold text-yellow-400">49.8%</td>
+                  <td className="py-3 text-right font-bold text-red-400">$1.17M</td>
+                  <td className="py-3 text-right font-bold text-white">$2.9M</td>
                   <td className="py-3"></td>
                   <td className="py-3"></td>
                 </tr>
               </tfoot>
             </table>
           </div>
-          <p className="text-slate-500 text-xs mt-3">Source: Finance MCP get_customer_ltv | Feb 2026</p>
+          <p className="text-slate-500 text-xs mt-3">Source: Salesforce + Finance MCP | Feb 11, 2026 | Prepared by David, AI Sales Intelligence Agent</p>
+        </section>
+
+        {/* Dormant Giants */}
+        <section className="bg-blue-900/20 rounded-xl p-8 mb-8 border border-blue-700/50">
+          <h2 className="text-2xl font-bold text-white mb-4">💎 Dormant Giants (Salesforce History)</h2>
+          <p className="text-slate-300 mb-6">
+            These accounts have massive Salesforce history but no current revenue. Existing relationships = no cold calling.
+            <span className="text-blue-400 font-semibold"> Reactivation is faster than new logos.</span>
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-sm">
+              <thead>
+                <tr className="border-b border-slate-600">
+                  <th className="py-2 text-slate-400 font-medium">Account</th>
+                  <th className="py-2 text-slate-400 font-medium text-right">Won (Historical)</th>
+                  <th className="py-2 text-slate-400 font-medium text-right">Lost</th>
+                  <th className="py-2 text-slate-400 font-medium text-right">Open</th>
+                  <th className="py-2 text-slate-400 font-medium text-right"># Deals</th>
+                  <th className="py-2 text-slate-400 font-medium">Status</th>
+                </tr>
+              </thead>
+              <tbody className="text-slate-300">
+                <tr className="border-b border-slate-700 bg-emerald-900/10">
+                  <td className="py-2 font-medium text-white">Biogen 🎯</td>
+                  <td className="py-2 text-right text-emerald-400 font-bold">$11.8M</td>
+                  <td className="py-2 text-right text-red-400">$25.7M</td>
+                  <td className="py-2 text-right text-blue-400">$1.0M</td>
+                  <td className="py-2 text-right">90 won / 218 lost</td>
+                  <td className="py-2"><span className="text-xs bg-emerald-900/30 text-emerald-400 px-2 py-0.5 rounded">PRIORITY REACTIVATE</span></td>
+                </tr>
+                <tr className="border-b border-slate-700">
+                  <td className="py-2 font-medium text-white">Sage Therapeutics</td>
+                  <td className="py-2 text-right text-emerald-400">$5.2M</td>
+                  <td className="py-2 text-right text-red-400">$1.5M</td>
+                  <td className="py-2 text-right">$59K</td>
+                  <td className="py-2 text-right">30 won / 16 lost</td>
+                  <td className="py-2"><span className="text-xs bg-yellow-900/30 text-yellow-400 px-2 py-0.5 rounded">Winding down?</span></td>
+                </tr>
+                <tr className="border-b border-slate-700">
+                  <td className="py-2 font-medium text-white">argenx</td>
+                  <td className="py-2 text-right text-emerald-400">$4.6M</td>
+                  <td className="py-2 text-right text-red-400">$1.1M</td>
+                  <td className="py-2 text-right text-blue-400">$1.3M</td>
+                  <td className="py-2 text-right">15 won / 11 lost</td>
+                  <td className="py-2"><span className="text-xs bg-emerald-900/30 text-emerald-400 px-2 py-0.5 rounded">ACTIVE — EXPAND</span></td>
+                </tr>
+                <tr className="border-b border-slate-700">
+                  <td className="py-2 font-medium text-white">Hologic</td>
+                  <td className="py-2 text-right text-emerald-400">$2.4M</td>
+                  <td className="py-2 text-right text-red-400">$4.0M</td>
+                  <td className="py-2 text-right">$290K</td>
+                  <td className="py-2 text-right">21 won / 34 lost</td>
+                  <td className="py-2"><span className="text-xs bg-yellow-900/30 text-yellow-400 px-2 py-0.5 rounded">Active, losing share</span></td>
+                </tr>
+                <tr className="border-b border-slate-700">
+                  <td className="py-2 font-medium text-white">Sarepta Therapeutics</td>
+                  <td className="py-2 text-right text-emerald-400">$265K</td>
+                  <td className="py-2 text-right text-red-400">$1.1M</td>
+                  <td className="py-2 text-right text-slate-500">$0</td>
+                  <td className="py-2 text-right">4 won / 15 lost</td>
+                  <td className="py-2"><span className="text-xs bg-red-900/30 text-red-400 px-2 py-0.5 rounded">DORMANT</span></td>
+                </tr>
+                <tr className="border-b border-slate-700">
+                  <td className="py-2 font-medium text-white">Blueprint Medicines</td>
+                  <td className="py-2 text-right text-emerald-400">$892K</td>
+                  <td className="py-2 text-right text-red-400">$1.6M</td>
+                  <td className="py-2 text-right">$162K</td>
+                  <td className="py-2 text-right">13 won / 22 lost</td>
+                  <td className="py-2"><span className="text-xs bg-yellow-900/30 text-yellow-400 px-2 py-0.5 rounded">Active, underweight</span></td>
+                </tr>
+                <tr className="border-b border-slate-700">
+                  <td className="py-2 font-medium text-white">Dyne Therapeutics</td>
+                  <td className="py-2 text-right text-emerald-400">$149K</td>
+                  <td className="py-2 text-right text-red-400">$1.35M</td>
+                  <td className="py-2 text-right text-slate-500">$0</td>
+                  <td className="py-2 text-right">1 won / 9 lost</td>
+                  <td className="py-2"><span className="text-xs bg-red-900/30 text-red-400 px-2 py-0.5 rounded">DORMANT</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-4 bg-emerald-900/20 rounded-lg p-4 border border-emerald-700/30">
+            <p className="text-emerald-400 font-semibold">💰 Reactivation Math</p>
+            <p className="text-slate-300 text-sm mt-1">
+              Biogen alone: $11.8M historical wins + $1M open = massive reactivation target.
+              If we close just the $1M open pipe + add 2 new deals = <span className="text-white font-bold">$1.5M+ in 12 months</span>.
+            </p>
+          </div>
         </section>
 
         {/* Target Accounts */}
@@ -486,22 +645,32 @@ export default function GenetownDeepDive() {
         {/* 2026 Priorities */}
         <section className="bg-slate-800/50 rounded-xl p-8 mb-8 border border-slate-700">
           <h2 className="text-2xl font-bold text-white mb-4">2026 Priorities</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-red-900/20 rounded-lg p-6 border border-red-700/30">
-              <h3 className="text-red-400 font-semibold mb-3">Takeda Margin Recovery</h3>
-              <p className="text-slate-300 text-sm mb-3">Largest account at $702K but 14.5% GP. Shift from T&M staffing to managed services model.</p>
-              <p className="text-white font-medium">Target: 14.5% → 40% GP = +$179K</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="bg-red-900/30 rounded-lg p-5 border-2 border-red-500/50">
+              <h3 className="text-red-400 font-semibold mb-2">🚨 #1: Save the Pipeline</h3>
+              <p className="text-slate-300 text-sm mb-3">$1.17M in orphaned deals with no owner. These die in 2 weeks without intervention.</p>
+              <p className="text-white font-medium text-sm">Day 1 action required</p>
             </div>
-            <div className="bg-emerald-900/20 rounded-lg p-6 border border-emerald-700/30">
-              <h3 className="text-emerald-400 font-semibold mb-3">Expand Moderna Footprint</h3>
-              <p className="text-slate-300 text-sm mb-3">92.8% GP but only $37K revenue. Massive expansion opportunity — AI governance, mRNA manufacturing QA.</p>
-              <p className="text-white font-medium">Target: $37K → $200K+</p>
+            <div className="bg-yellow-900/20 rounded-lg p-5 border border-yellow-700/30">
+              <h3 className="text-yellow-400 font-semibold mb-2">🔧 #2: Takeda Margin Fix</h3>
+              <p className="text-slate-300 text-sm mb-3">$702K at 14.5% GP = strategic liability. Convert to managed services.</p>
+              <p className="text-white font-medium text-sm">Target: +$100K GP</p>
             </div>
-            <div className="bg-blue-900/20 rounded-lg p-6 border border-blue-700/30">
-              <h3 className="text-blue-400 font-semibold mb-3">New Logo Acquisition</h3>
-              <p className="text-slate-300 text-sm mb-3">18 of 1,000+ Genetown biotechs. Vertex, Sarepta, Biogen all unaddressed. Gene therapy QA is the wedge.</p>
-              <p className="text-white font-medium">Target: 5+ new logos in 2026</p>
+            <div className="bg-emerald-900/20 rounded-lg p-5 border border-emerald-700/30">
+              <h3 className="text-emerald-400 font-semibold mb-2">🔄 #3: Biogen Reactivation</h3>
+              <p className="text-slate-300 text-sm mb-3">$11.8M historical + $1M open. Someone else is winning $25.7M we lost.</p>
+              <p className="text-white font-medium text-sm">Target: $1.5M Year 1</p>
             </div>
+            <div className="bg-blue-900/20 rounded-lg p-5 border border-blue-700/30">
+              <h3 className="text-blue-400 font-semibold mb-2">🎯 #4: Win Rate Recovery</h3>
+              <p className="text-slate-300 text-sm mb-3">37% blended win rate at top accounts. We're in deals but losing them.</p>
+              <p className="text-white font-medium text-sm">Target: 37% → 50%</p>
+            </div>
+          </div>
+          <div className="mt-6 text-center">
+            <Link href="/genetown-deep-dive/day-one-playbook" className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+              📋 View Complete Day 1 Playbook →
+            </Link>
           </div>
         </section>
 

@@ -47,6 +47,7 @@ const navItems: NavItem[] = [
     label: '🧬 Genetown',
     children: [
       { label: 'Overview', href: '/genetown-deep-dive' },
+      { label: '🚨 Day 1 Playbook', href: '/genetown-deep-dive/day-one-playbook' },
       { label: '📊 Territory Plan', href: '/genetown-deep-dive/territory-plan' },
       { label: '🏢 Company Profiles', href: '/genetown-deep-dive/company-profiles' },
       { label: 'Account History', href: '/genetown-deep-dive/account-history' },
