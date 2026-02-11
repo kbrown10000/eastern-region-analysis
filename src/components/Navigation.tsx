@@ -21,7 +21,7 @@ const navItems: NavItem[] = [
       { label: 'Technology Ecosystem', href: '/partner-ecosystem' },
       { label: 'Solutions Alignment', href: '/partner-solutions' },
       { label: 'Partner Metrics', href: '/partner-strategy' },
-      { label: 'Western Partner Plan', href: '/partner-west' },
+      { label: 'Eastern Partner Plan', href: '/partner-west' },
     ],
   },
   {
@@ -150,7 +150,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <span className="text-xl font-bold text-white">USDM</span>
-            <span className="text-sm text-slate-400">Western Region</span>
+            <span className="text-sm text-emerald-400">Eastern Region</span>
           </Link>
 
           {/* Desktop Navigation */}
