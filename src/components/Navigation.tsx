@@ -38,10 +38,10 @@ const navItems: NavItem[] = [
     label: 'Markets',
     children: [
       { label: 'Regional Overview', href: '/market-analysis' },
-      { label: 'Bay Area Deep Dive', href: '/bay-area-deep-dive' },
-      { label: 'San Diego Deep Dive', href: '/san-diego-deep-dive' },
-      { label: 'LA Deep Dive', href: '/la-deep-dive' },
-      { label: 'Seattle Deep Dive', href: '/seattle-deep-dive' },
+      { label: '🧬 Genetown (Boston)', href: '/genetown-deep-dive' },
+      { label: 'NJ Pharma Corridor', href: '/nj-pharma-deep-dive' },
+      { label: 'Research Triangle', href: '/research-triangle-deep-dive' },
+      { label: 'Mid-Atlantic', href: '/mid-atlantic-deep-dive' },
     ],
   },
   {
