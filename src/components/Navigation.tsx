@@ -47,6 +47,7 @@ const navItems: NavItem[] = [
     label: '🧬 Genetown',
     children: [
       { label: 'Overview', href: '/genetown-deep-dive' },
+      { label: '📊 Territory Plan', href: '/genetown-deep-dive/territory-plan' },
       { label: 'Account History', href: '/genetown-deep-dive/account-history' },
       { label: 'Current Pipeline', href: '/genetown-deep-dive/pipeline' },
       { label: 'Services Mix', href: '/genetown-deep-dive/services-mix' },
