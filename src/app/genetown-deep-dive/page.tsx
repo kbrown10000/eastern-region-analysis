@@ -22,13 +22,18 @@ export default function GenetownDeepDive() {
             <div className="flex-1">
               <h2 className="text-xl font-bold text-emerald-400 mb-2">Territory Activation: 800+ Accounts Ready to Work</h2>
               <p className="text-slate-300 mb-3">
-                GeneTown has <span className="text-emerald-400 font-bold">800+ orphaned accounts</span> requiring research, prioritization, and activation. 
+                GeneTown has <span className="text-emerald-400 font-bold">800+ accounts</span> requiring research, prioritization, and activation. 
                 The playbook: deep account research → tier prioritization → ABM campaigns → Gong outreach sequences.
                 <span className="text-white font-bold"> $1.17M open pipeline</span> needs immediate attention.
               </p>
-              <Link href="/genetown-deep-dive/day-one-playbook" className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-lg font-medium transition-colors">
-                📋 View Territory Activation Playbook →
-              </Link>
+              <div className="flex flex-wrap gap-3">
+                <Link href="/genetown-deep-dive/ma-companies" className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                  🏢 View All MA Companies →
+                </Link>
+                <Link href="/genetown-deep-dive/day-one-playbook" className="inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                  📋 Activation Playbook
+                </Link>
+              </div>
             </div>
           </div>
         </div>
