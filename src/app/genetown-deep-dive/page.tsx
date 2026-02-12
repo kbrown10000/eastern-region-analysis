@@ -529,6 +529,13 @@ export default function GenetownDeepDive() {
               priority="critical"
             />
             <TargetCard 
+              name="Kailera Therapeutics" 
+              size="Late-stage (Waltham)"
+              focus="GLP-1 Obesity Therapeutics" 
+              signal="Hot space post-Ozempic, clinical-stage pipeline" 
+              priority="critical"
+            />
+            <TargetCard 
               name="Sarepta Therapeutics" 
               size="$1.8B revenue"
               focus="Gene therapy (DMD)" 
@@ -540,6 +547,13 @@ export default function GenetownDeepDive() {
               size="$9.8B revenue"
               focus="Neurodegeneration" 
               signal="AI drug discovery investments, Leqembi launch" 
+              priority="high"
+            />
+            <TargetCard 
+              name="ElevateBio" 
+              size="$1.7B raised (Waltham)"
+              focus="Cell & Gene Therapy Platform" 
+              signal="Novo Nordisk + Moderna partnerships" 
               priority="high"
             />
             <TargetCard 
@@ -584,6 +598,18 @@ export default function GenetownDeepDive() {
               signal="EDIT-101 trials, new CEO" 
               priority="medium"
             />
+            <TargetCard 
+              name="Delix Therapeutics" 
+              size="$200M raised"
+              focus="Neuroplastogens (depression)" 
+              signal="Phase 1b MDD trial, DLX-001" 
+              priority="medium"
+            />
+          </div>
+          <div className="mt-4 text-center">
+            <Link href="/genetown-deep-dive/ma-companies" className="text-emerald-400 hover:text-emerald-300 text-sm font-medium">
+              View all 40+ MA companies →
+            </Link>
           </div>
         </section>
 
