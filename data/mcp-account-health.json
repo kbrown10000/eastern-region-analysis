@@ -1,0 +1,519 @@
+{
+  "success": true,
+  "data": {
+    "accounts": [
+      {
+        "accountId": "0011W00001tQ3OnQAK",
+        "accountName": "Humacyte Global",
+        "segment": "2 Emerging (>1M<100M)",
+        "industry": "Pharmaceuticals",
+        "healthScore": 50,
+        "riskCategory": "At Risk",
+        "componentScores": {
+          "revenueTrendScore": 15,
+          "pipelineCoverageScore": 5,
+          "winRateScore": 25,
+          "csatScore": 0,
+          "engagementScore": 5
+        },
+        "rawMetrics": {
+          "currentYearRevenue": 10500,
+          "priorYearRevenue": 0,
+          "pipelineAmount": 0,
+          "trailingRevenue": 10500,
+          "wonDeals": 1,
+          "csatValue": null,
+          "recentActivityCount": 1
+        }
+      },
+      {
+        "accountId": "00130000005dotHAAQ",
+        "accountName": "Xencor, Inc.",
+        "segment": "3 Lower-Midmarket (>100M<500M)",
+        "industry": "Pharmaceuticals",
+        "healthScore": 50,
+        "riskCategory": "At Risk",
+        "componentScores": {
+          "revenueTrendScore": 5,
+          "pipelineCoverageScore": 10,
+          "winRateScore": 25,
+          "csatScore": 0,
+          "engagementScore": 10
+        },
+        "rawMetrics": {
+          "currentYearRevenue": 120000,
+          "priorYearRevenue": 374435,
+          "pipelineAmount": 289750,
+          "trailingRevenue": 494435,
+          "wonDeals": 1,
+          "csatValue": null,
+          "recentActivityCount": 5
+        }
+      },
+      {
+        "accountId": "0014000000yjG5TAAU",
+        "accountName": "Arrowhead Pharmaceuticals",
+        "segment": "5 Upper-Midmarket (>1B<1.5B)",
+        "industry": "Pharmaceuticals",
+        "healthScore": 50,
+        "riskCategory": "At Risk",
+        "componentScores": {
+          "revenueTrendScore": 5,
+          "pipelineCoverageScore": 10,
+          "winRateScore": 25,
+          "csatScore": 0,
+          "engagementScore": 10
+        },
+        "rawMetrics": {
+          "currentYearRevenue": 92000,
+          "priorYearRevenue": 385275,
+          "pipelineAmount": 288690,
+          "trailingRevenue": 351975,
+          "wonDeals": 1,
+          "csatValue": null,
+          "recentActivityCount": 7
+        }
+      },
+      {
+        "accountId": "0011W00002T5NV1QAN",
+        "accountName": "Praxis Precision Medicines, Inc.",
+        "segment": "2 Emerging (>1M<100M)",
+        "industry": "Business Services",
+        "healthScore": 53,
+        "riskCategory": "At Risk",
+        "componentScores": {
+          "revenueTrendScore": 10,
+          "pipelineCoverageScore": 10,
+          "winRateScore": 25,
+          "csatScore": 0,
+          "engagementScore": 8
+        },
+        "rawMetrics": {
+          "currentYearRevenue": 93475,
+          "priorYearRevenue": 97225,
+          "pipelineAmount": 112000,
+          "trailingRevenue": 190700,
+          "wonDeals": 2,
+          "csatValue": null,
+          "recentActivityCount": 4
+        }
+      },
+      {
+        "accountId": "0011W00001tQ3xqQAC",
+        "accountName": "Relay Therapeutics, Inc.",
+        "segment": "2 Emerging (>1M<100M)",
+        "industry": "Business Services",
+        "healthScore": 50,
+        "riskCategory": "At Risk",
+        "componentScores": {
+          "revenueTrendScore": 15,
+          "pipelineCoverageScore": 5,
+          "winRateScore": 25,
+          "csatScore": 0,
+          "engagementScore": 5
+        },
+        "rawMetrics": {
+          "currentYearRevenue": 36000,
+          "priorYearRevenue": 36000,
+          "pipelineAmount": 0,
+          "trailingRevenue": 36000,
+          "wonDeals": 1,
+          "csatValue": null,
+          "recentActivityCount": 1
+        }
+      },
+      {
+        "accountId": "0014000000x247OAAQ",
+        "accountName": "PTC Inc.",
+        "segment": "6 Enterprise (>1.5B)",
+        "industry": "Custom Software & IT Services",
+        "healthScore": 50,
+        "riskCategory": "At Risk",
+        "componentScores": {
+          "revenueTrendScore": 5,
+          "pipelineCoverageScore": 10,
+          "winRateScore": 25,
+          "csatScore": 0,
+          "engagementScore": 10
+        },
+        "rawMetrics": {
+          "currentYearRevenue": 80000,
+          "priorYearRevenue": 1246066,
+          "pipelineAmount": 842500,
+          "trailingRevenue": 1016313,
+          "wonDeals": 1,
+          "csatValue": null,
+          "recentActivityCount": 5
+        }
+      },
+      {
+        "accountId": "0014000001qo70nAAA",
+        "accountName": "Axsome Therapeutics Inc.",
+        "segment": "4 Mid-Midmarket (>500M<1B)",
+        "industry": "Life Sciences",
+        "healthScore": 55,
+        "riskCategory": "At Risk",
+        "componentScores": {
+          "revenueTrendScore": 5,
+          "pipelineCoverageScore": 15,
+          "winRateScore": 25,
+          "csatScore": 0,
+          "engagementScore": 10
+        },
+        "rawMetrics": {
+          "currentYearRevenue": 135000,
+          "priorYearRevenue": 345000,
+          "pipelineAmount": 501000,
+          "trailingRevenue": 345000,
+          "wonDeals": 1,
+          "csatValue": null,
+          "recentActivityCount": 5
+        }
+      },
+      {
+        "accountId": "0011W000025qIyCQAU",
+        "accountName": "MIRUM PHARMACEUTICALS INC.",
+        "segment": "3 Lower-Midmarket (>100M<500M)",
+        "industry": "Research & Development",
+        "healthScore": 60,
+        "riskCategory": "Stable",
+        "componentScores": {
+          "revenueTrendScore": 25,
+          "pipelineCoverageScore": 5,
+          "winRateScore": 25,
+          "csatScore": 0,
+          "engagementScore": 5
+        },
+        "rawMetrics": {
+          "currentYearRevenue": 75950,
+          "priorYearRevenue": 54250,
+          "pipelineAmount": 0,
+          "trailingRevenue": 130200,
+          "wonDeals": 1,
+          "csatValue": null,
+          "recentActivityCount": 1
+        }
+      },
+      {
+        "accountId": "0014000000VziMsAAJ",
+        "accountName": "Fate Therapeutics",
+        "segment": "2 Emerging (>1M<100M)",
+        "industry": "Pharmaceuticals",
+        "healthScore": 60,
+        "riskCategory": "Stable",
+        "componentScores": {
+          "revenueTrendScore": 15,
+          "pipelineCoverageScore": 15,
+          "winRateScore": 25,
+          "csatScore": 0,
+          "engagementScore": 5
+        },
+        "rawMetrics": {
+          "currentYearRevenue": 9500,
+          "priorYearRevenue": 0,
+          "pipelineAmount": 9500,
+          "trailingRevenue": 9500,
+          "wonDeals": 1,
+          "csatValue": null,
+          "recentActivityCount": 2
+        }
+      },
+      {
+        "accountId": "001Vo00000FlLzhIAF",
+        "accountName": "Kailera Therapeutics",
+        "segment": "2 Emerging (>1M<100M)",
+        "industry": "Pharmaceuticals",
+        "healthScore": 50,
+        "riskCategory": "At Risk",
+        "componentScores": {
+          "revenueTrendScore": 5,
+          "pipelineCoverageScore": 10,
+          "winRateScore": 25,
+          "csatScore": 0,
+          "engagementScore": 10
+        },
+        "rawMetrics": {
+          "currentYearRevenue": 16425,
+          "priorYearRevenue": 916258,
+          "pipelineAmount": 396918.99,
+          "trailingRevenue": 641825,
+          "wonDeals": 1,
+          "csatValue": null,
+          "recentActivityCount": 8
+        }
+      },
+      {
+        "accountId": "001Do00000MVzTDIA1",
+        "accountName": "Treeline Biosciences, Inc.",
+        "segment": "2 Emerging (>1M<100M)",
+        "industry": "Research & Development",
+        "healthScore": 63,
+        "riskCategory": "Stable",
+        "componentScores": {
+          "revenueTrendScore": 15,
+          "pipelineCoverageScore": 25,
+          "winRateScore": 15,
+          "csatScore": 0,
+          "engagementScore": 8
+        },
+        "rawMetrics": {
+          "currentYearRevenue": 10800,
+          "priorYearRevenue": 0,
+          "pipelineAmount": 50000,
+          "trailingRevenue": 10800,
+          "wonDeals": 1,
+          "csatValue": null,
+          "recentActivityCount": 4
+        }
+      },
+      {
+        "accountId": "001Do00000R7dawIAB",
+        "accountName": "Bicara Therapeutics",
+        "segment": "2 Emerging (>1M<100M)",
+        "industry": "Research & Development",
+        "healthScore": 75,
+        "riskCategory": "Stable",
+        "componentScores": {
+          "revenueTrendScore": 15,
+          "pipelineCoverageScore": 25,
+          "winRateScore": 25,
+          "csatScore": 0,
+          "engagementScore": 10
+        },
+        "rawMetrics": {
+          "currentYearRevenue": 46920,
+          "priorYearRevenue": 0,
+          "pipelineAmount": 171600,
+          "trailingRevenue": 46920,
+          "wonDeals": 1,
+          "csatValue": null,
+          "recentActivityCount": 6
+        }
+      },
+      {
+        "accountId": "0013000000BPAWmAAP",
+        "accountName": "Takeda Pharmaceuticals",
+        "segment": "6 Enterprise (>1.5B)",
+        "industry": "Manufacturing",
+        "healthScore": 53,
+        "riskCategory": "At Risk",
+        "componentScores": {
+          "revenueTrendScore": 5,
+          "pipelineCoverageScore": 15,
+          "winRateScore": 25,
+          "csatScore": 0,
+          "engagementScore": 8
+        },
+        "rawMetrics": {
+          "currentYearRevenue": 39200,
+          "priorYearRevenue": 168000,
+          "pipelineAmount": 301600,
+          "trailingRevenue": 207200,
+          "wonDeals": 1,
+          "csatValue": null,
+          "recentActivityCount": 4
+        }
+      },
+      {
+        "accountId": "0011W000022GGZeQAO",
+        "accountName": "Autolus Therapeutics",
+        "segment": "2 Emerging (>1M<100M)",
+        "industry": "Research & Development",
+        "healthScore": 55,
+        "riskCategory": "At Risk",
+        "componentScores": {
+          "revenueTrendScore": 15,
+          "pipelineCoverageScore": 10,
+          "winRateScore": 25,
+          "csatScore": 0,
+          "engagementScore": 5
+        },
+        "rawMetrics": {
+          "currentYearRevenue": 22000,
+          "priorYearRevenue": 22000,
+          "pipelineAmount": 22000,
+          "trailingRevenue": 44000,
+          "wonDeals": 1,
+          "csatValue": null,
+          "recentActivityCount": 2
+        }
+      },
+      {
+        "accountId": "0014000000ErF2eAAF",
+        "accountName": "Ironwood Pharmaceuticals",
+        "segment": "3 Lower-Midmarket (>100M<500M)",
+        "industry": "Pharmaceuticals",
+        "healthScore": 60,
+        "riskCategory": "Stable",
+        "componentScores": {
+          "revenueTrendScore": 25,
+          "pipelineCoverageScore": 10,
+          "winRateScore": 15,
+          "csatScore": 0,
+          "engagementScore": 10
+        },
+        "rawMetrics": {
+          "currentYearRevenue": 83250,
+          "priorYearRevenue": 42900,
+          "pipelineAmount": 90000,
+          "trailingRevenue": 126150,
+          "wonDeals": 2,
+          "csatValue": null,
+          "recentActivityCount": 7
+        }
+      },
+      {
+        "accountId": "0011W00001uYhh0QAC",
+        "accountName": "Formation Bio",
+        "segment": "2 Emerging (>1M<100M)",
+        "industry": "Healthcare Software",
+        "healthScore": 65,
+        "riskCategory": "Stable",
+        "componentScores": {
+          "revenueTrendScore": 15,
+          "pipelineCoverageScore": 25,
+          "winRateScore": 15,
+          "csatScore": 0,
+          "engagementScore": 10
+        },
+        "rawMetrics": {
+          "currentYearRevenue": 52000,
+          "priorYearRevenue": 0,
+          "pipelineAmount": 300000,
+          "trailingRevenue": 52000,
+          "wonDeals": 1,
+          "csatValue": null,
+          "recentActivityCount": 5
+        }
+      },
+      {
+        "accountId": "0011W00001vB6v1QAC",
+        "accountName": "Vetter Pharma-Fertigung GmbH & Co. KG",
+        "segment": "5 Upper-Midmarket (>1B<1.5B)",
+        "industry": "Chemicals & Related Products",
+        "healthScore": 65,
+        "riskCategory": "Stable",
+        "componentScores": {
+          "revenueTrendScore": 5,
+          "pipelineCoverageScore": 25,
+          "winRateScore": 25,
+          "csatScore": 0,
+          "engagementScore": 10
+        },
+        "rawMetrics": {
+          "currentYearRevenue": 5120,
+          "priorYearRevenue": 201350,
+          "pipelineAmount": 333850.06,
+          "trailingRevenue": 5120,
+          "wonDeals": 1,
+          "csatValue": null,
+          "recentActivityCount": 5
+        }
+      },
+      {
+        "accountId": "0014000000YCimnAAD",
+        "accountName": "Takeda Pharmaceuticals",
+        "segment": "6 Enterprise (>1.5B)",
+        "industry": "Biotechnology",
+        "healthScore": 65,
+        "riskCategory": "Stable",
+        "componentScores": {
+          "revenueTrendScore": 25,
+          "pipelineCoverageScore": 5,
+          "winRateScore": 25,
+          "csatScore": 0,
+          "engagementScore": 10
+        },
+        "rawMetrics": {
+          "currentYearRevenue": 582400,
+          "priorYearRevenue": 272599.95,
+          "pipelineAmount": 400000,
+          "trailingRevenue": 800399.95,
+          "wonDeals": 2,
+          "csatValue": null,
+          "recentActivityCount": 7
+        }
+      },
+      {
+        "accountId": "0014000000PsUB8AAN",
+        "accountName": "Catalyst Pharmaceuticals",
+        "segment": "4 Mid-Midmarket (>500M<1B)",
+        "industry": "Research & Development",
+        "healthScore": 65,
+        "riskCategory": "Stable",
+        "componentScores": {
+          "revenueTrendScore": 25,
+          "pipelineCoverageScore": 15,
+          "winRateScore": 15,
+          "csatScore": 0,
+          "engagementScore": 10
+        },
+        "rawMetrics": {
+          "currentYearRevenue": 729304,
+          "priorYearRevenue": 272000,
+          "pipelineAmount": 1105497,
+          "trailingRevenue": 926904,
+          "wonDeals": 1,
+          "csatValue": null,
+          "recentActivityCount": 14
+        }
+      },
+      {
+        "accountId": "00130000005dohyAAA",
+        "accountName": "Geron Corporation",
+        "segment": "3 Lower-Midmarket (>100M<500M)",
+        "industry": "Pharmaceuticals",
+        "healthScore": 73,
+        "riskCategory": "Stable",
+        "componentScores": {
+          "revenueTrendScore": 15,
+          "pipelineCoverageScore": 25,
+          "winRateScore": 25,
+          "csatScore": 0,
+          "engagementScore": 8
+        },
+        "rawMetrics": {
+          "currentYearRevenue": 12000,
+          "priorYearRevenue": 0,
+          "pipelineAmount": 142000,
+          "trailingRevenue": 12000,
+          "wonDeals": 1,
+          "csatValue": null,
+          "recentActivityCount": 4
+        }
+      },
+      {
+        "accountId": "0014000000PMelMAAT",
+        "accountName": "Codexis, Inc.",
+        "segment": "2 Emerging (>1M<100M)",
+        "industry": "Chemicals",
+        "healthScore": 60,
+        "riskCategory": "Stable",
+        "componentScores": {
+          "revenueTrendScore": 15,
+          "pipelineCoverageScore": 15,
+          "winRateScore": 25,
+          "csatScore": 0,
+          "engagementScore": 5
+        },
+        "rawMetrics": {
+          "currentYearRevenue": 41050,
+          "priorYearRevenue": 0,
+          "pipelineAmount": 50400,
+          "trailingRevenue": 41050,
+          "wonDeals": 1,
+          "csatValue": null,
+          "recentActivityCount": 2
+        }
+      }
+    ],
+    "summary": {
+      "count": 21,
+      "avgScore": 58.42857142857143,
+      "riskDistribution": {
+        "At Risk": 10,
+        "Stable": 11
+      }
+    }
+  }
+}

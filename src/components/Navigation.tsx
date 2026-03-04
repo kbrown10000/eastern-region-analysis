@@ -72,6 +72,7 @@ const navItems: NavItem[] = [
     label: 'Financial',
     children: [
       { label: 'Dashboard', href: '/dashboard' },
+      { label: '👥 Account Assignments', href: '/account-assignments' },
       { label: 'Margin Analysis', href: '/margin-analysis' },
       { label: 'Customer LTV', href: '/ltv' },
       { label: 'Churn Signals', href: '/churn-signals' },

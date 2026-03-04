@@ -10,8 +10,8 @@ export default function ExecutiveSummary() {
         <Link href="/" className="text-emerald-400 hover:text-emerald-300 mb-8 inline-block">← Back to Home</Link>
         
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Executive Summary</h1>
-        <p className="text-emerald-400 mb-4">Eastern Region | EVP: Lisa Fry | February 2026</p>
-        <p className="text-slate-500 text-xs mb-8">📊 Data verified via Finance MCP | Last updated: Feb 11, 2026</p>
+        <p className="text-emerald-400 mb-4">Eastern Region | EVP: Lisa Fry | March 2026</p>
+        <p className="text-slate-500 text-xs mb-8">📊 Data verified via Sales MCP v32.2.0 + Finance MCP | Last updated: Mar 4, 2026</p>
         
         <div className="mb-8 flex flex-wrap gap-3 text-xs">
           <span className="bg-emerald-900/30 px-3 py-1.5 rounded-full text-slate-300 border border-emerald-700/50">
@@ -52,8 +52,8 @@ export default function ExecutiveSummary() {
 
             <div className="bg-gradient-to-br from-blue-900/50 to-blue-800/50 rounded-xl p-6 border border-blue-700">
               <div className="text-blue-300 text-sm font-semibold mb-2">Open Pipeline</div>
-              <div className="text-4xl font-bold text-white mb-1">$14.1M</div>
-              <div className="text-blue-200 text-sm">2.5x coverage</div>
+              <div className="text-4xl font-bold text-white mb-1">$14.9M</div>
+              <div className="text-blue-200 text-sm">2.7x coverage</div>
             </div>
           </div>
         </section>
