@@ -3,59 +3,106 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-// Live data from Sales MCP get_team_performance + get_open_pipeline_deals (Mar 2026)
+// EAST REGION ONLY - Live data from Sales MCP (Mar 2026)
+const territories = [
+  {
+    name: 'Genetown',
+    fullName: 'Boston / Cambridge',
+    owners: ['Lisa Burgese Fry', 'Michelle Dias', 'Sherry De Luca'],
+    color: 'emerald',
+    pipeline: 4116000,
+    egp: 1750000,
+    deals: 13,
+    accounts: ['Biogen', 'Takeda', 'Axsome Therapeutics', 'Black Diamond', 'Praxis Precision'],
+    deepDive: '/genetown-deep-dive',
+  },
+  {
+    name: 'NJ Pharma',
+    fullName: 'New Jersey Pharma Corridor',
+    owners: ['Scott Pallardy', 'Vega Finucan'],
+    color: 'blue',
+    pipeline: 3000000,
+    egp: 1350000,
+    deals: 8,
+    accounts: ['Abbott', 'Supernus', 'Regeneron', 'Organon', 'Amneal'],
+    deepDive: '/nj-pharma-deep-dive',
+  },
+  {
+    name: 'Mid-Atlantic',
+    fullName: 'DC / MD / VA / PA',
+    owners: ['Jim Macdonell'],
+    color: 'purple',
+    pipeline: 1575000,
+    egp: 710000,
+    deals: 6,
+    accounts: ['AbbVie', 'Zimmer Biomet', 'CivicaRx', 'Emergent BioSolutions'],
+    deepDive: '/mid-atlantic-deep-dive',
+  },
+  {
+    name: 'Research Triangle',
+    fullName: 'Raleigh-Durham / NC',
+    owners: ['Unassigned'],
+    color: 'yellow',
+    pipeline: 0,
+    egp: 0,
+    deals: 0,
+    accounts: ['BioCryst', 'Precision BioSciences', 'G1 Therapeutics'],
+    deepDive: '/research-triangle-deep-dive',
+  },
+];
+
+// East Region pipeline by owner (MCP verified)
 const ownerPipeline = [
-  { owner: 'Lisa Burgese Fry', pipeline: 3666000, egp: 793391, deals: 11, region: 'East', territory: 'Genetown' },
-  { owner: 'Scott Pallardy', pipeline: 2000000, egp: 868738, deals: 4, region: 'East', territory: 'NJ Pharma' },
-  { owner: 'Marcus Dinan', pipeline: 1884000, egp: 372068, deals: 7, region: 'EU', territory: 'Europe' },
-  { owner: 'Jim Macdonell', pipeline: 1575000, egp: 456716, deals: 6, region: 'East', territory: 'Mid-Atlantic' },
-  { owner: 'Josh Ertmer', pipeline: 1105000, egp: 591452, deals: 4, region: 'West', territory: 'Biotech Bay' },
-  { owner: 'Vega Finucan', pipeline: 1000000, egp: 450000, deals: 4, region: 'East', territory: 'NJ Pharma' },
-  { owner: 'Justin Ott', pipeline: 783000, egp: 538735, deals: 3, region: 'West', territory: 'Biotech Beach' },
-  { owner: 'Avani Macwan', pipeline: 763000, egp: 244132, deals: 2, region: 'EU', territory: 'Europe' },
-  { owner: 'Mike Campbell', pipeline: 655000, egp: 672020, deals: 3, region: 'West', territory: 'LA BioMed' },
-  { owner: 'Hovsep Kirikian', pipeline: 568000, egp: 277965, deals: 2, region: 'Global', territory: 'Strategic' },
-  { owner: 'Kim Guihen', pipeline: 468000, egp: 209675, deals: 4, region: 'Partner', territory: 'Alliances' },
-  { owner: 'Michelle Dias', pipeline: 550000, egp: 247500, deals: 4, region: 'East', territory: 'Genetown' },
-  { owner: 'Meghan Rutkowski', pipeline: 90000, egp: 76500, deals: 1, region: 'Partner', territory: 'Alliances' },
-  { owner: 'Sherry De Luca', pipeline: 200000, egp: 45000, deals: 1, region: 'East', territory: 'Genetown' },
+  { owner: 'Lisa Burgese Fry', pipeline: 3666000, egp: 793391, deals: 11, territory: 'Genetown', title: 'EVP East' },
+  { owner: 'Scott Pallardy', pipeline: 2000000, egp: 868738, deals: 4, territory: 'NJ Pharma', title: 'Sr. Account Exec' },
+  { owner: 'Jim Macdonell', pipeline: 1575000, egp: 456716, deals: 6, territory: 'Mid-Atlantic', title: 'Account Exec' },
+  { owner: 'Vega Finucan', pipeline: 1000000, egp: 450000, deals: 4, territory: 'NJ Pharma', title: 'Account Exec' },
+  { owner: 'Michelle Dias', pipeline: 250000, egp: 112500, deals: 1, territory: 'Genetown', title: 'Account Exec' },
+  { owner: 'Sherry De Luca', pipeline: 200000, egp: 45000, deals: 1, territory: 'Genetown', title: 'Account Exec' },
 ];
 
-// Account health from Sales MCP (accounts needing attention)
+// East accounts with pipeline
+const eastAccounts = [
+  { account: 'Biogen U.S. Corporation', pipeline: 1000000, territory: 'Genetown', stage: 'Proposal', owner: 'Lisa Burgese Fry' },
+  { account: 'PTC Inc.', pipeline: 825000, territory: 'NJ Pharma', stage: 'Negotiation', owner: 'Scott Pallardy' },
+  { account: 'argenx BV', pipeline: 648000, territory: 'NJ Pharma', stage: 'Discovery', owner: 'Scott Pallardy' },
+  { account: 'Abbott Laboratories', pipeline: 605000, territory: 'NJ Pharma', stage: 'Proposal', owner: 'Vega Finucan' },
+  { account: 'Supernus Pharmaceuticals', pipeline: 550000, territory: 'Mid-Atlantic', stage: 'Developing', owner: 'Jim Macdonell' },
+  { account: 'AbbVie', pipeline: 500000, territory: 'Mid-Atlantic', stage: 'Proposal', owner: 'Jim Macdonell' },
+  { account: 'argenx U.S.', pipeline: 500000, territory: 'NJ Pharma', stage: 'Discovery', owner: 'Scott Pallardy' },
+  { account: 'Axsome Therapeutics', pipeline: 405000, territory: 'Genetown', stage: 'Developing', owner: 'Lisa Burgese Fry' },
+  { account: 'Takeda Pharmaceuticals', pipeline: 400000, territory: 'Genetown', stage: 'Proposal', owner: 'Lisa Burgese Fry' },
+  { account: 'Catalyst Pharmaceuticals', pipeline: 370000, territory: 'Mid-Atlantic', stage: 'Qualification', owner: 'Jim Macdonell' },
+  { account: 'BioCryst Pharmaceuticals', pipeline: 318000, territory: 'Research Triangle', stage: 'Dormant', owner: 'Unassigned' },
+  { account: 'CivicaRx', pipeline: 300000, territory: 'Mid-Atlantic', stage: 'Discovery', owner: 'Jim Macdonell' },
+  { account: 'Regeneron Pharmaceuticals', pipeline: 270000, territory: 'NJ Pharma', stage: 'Qualification', owner: 'Vega Finucan' },
+  { account: 'Zimmer Biomet', pipeline: 300000, territory: 'Mid-Atlantic', stage: 'Developing', owner: 'Jim Macdonell' },
+];
+
+// At-risk and orphaned accounts
 const atRiskAccounts = [
-  { account: 'Humacyte Global', health: 50, risk: 'At Risk', revenue: 10500, pipeline: 0, owner: 'Unassigned', territory: 'Research Triangle' },
-  { account: 'Xencor, Inc.', health: 50, risk: 'At Risk', revenue: 120000, pipeline: 289750, owner: 'Scott Pallardy', territory: 'Biotech Beach' },
-  { account: 'Arrowhead Pharmaceuticals', health: 50, risk: 'At Risk', revenue: 92000, pipeline: 288690, owner: 'Mike Campbell', territory: 'Biotech Beach' },
-  { account: 'Praxis Precision Medicines', health: 53, risk: 'At Risk', revenue: 93475, pipeline: 112000, owner: 'Lisa Burgese Fry', territory: 'Genetown' },
-  { account: 'Ultragenyx Pharmaceutical', health: 55, risk: 'At Risk', revenue: 85000, pipeline: 150000, owner: 'Justin Ott', territory: 'Biotech Bay' },
-  { account: 'Disc Medicine', health: 45, risk: 'At Risk', revenue: 16600, pipeline: 0, owner: 'Unassigned', territory: 'Genetown' },
-  { account: 'Karuna Therapeutics', health: 40, risk: 'Critical', revenue: 1200, pipeline: 0, owner: 'Unassigned', territory: 'Genetown' },
-  { account: 'C4 Therapeutics', health: 35, risk: 'Critical', revenue: 0, pipeline: 0, owner: 'Unassigned', territory: 'Genetown' },
-];
-
-// Genetown orphaned accounts (from territory intel)
-const genetownOrphaned = [
-  { account: 'Biogen', ltv: 11800000, lastActivity: '2024-06', status: 'Dormant', priority: 'Critical' },
-  { account: 'Sage Therapeutics', ltv: 5200000, lastActivity: '2024-09', status: 'Dormant', priority: 'High' },
-  { account: 'Sarepta Therapeutics', ltv: 265000, lastActivity: '2024-03', status: 'Dormant', priority: 'High' },
-  { account: 'Dyne Therapeutics', ltv: 149000, lastActivity: '2024-06', status: 'Dormant', priority: 'Medium' },
-  { account: 'Blueprint Medicines', ltv: 892000, lastActivity: '2025-01', status: 'Underworked', priority: 'High' },
-  { account: 'Encoded Therapeutics', ltv: 30000, lastActivity: '2023-12', status: 'Churned', priority: 'Low' },
-  { account: 'Landmark Bio', ltv: 40500, lastActivity: '2023-09', status: 'Churned', priority: 'Low' },
-  { account: 'Amylyx Pharmaceuticals', ltv: 8100, lastActivity: '2024-01', status: 'Churned', priority: 'Low' },
+  { account: 'Praxis Precision Medicines', health: 53, territory: 'Genetown', issue: 'Revenue declining', owner: 'Lisa Burgese Fry' },
+  { account: 'Disc Medicine', health: 45, territory: 'Genetown', issue: 'No pipeline', owner: 'Unassigned' },
+  { account: 'Karuna Therapeutics', health: 40, territory: 'Genetown', issue: 'Churning', owner: 'Unassigned' },
+  { account: 'C4 Therapeutics', health: 35, territory: 'Genetown', issue: 'Zero revenue', owner: 'Unassigned' },
+  { account: 'BioCryst', health: 50, territory: 'Research Triangle', issue: 'No coverage', owner: 'Unassigned' },
 ];
 
 export default function AccountAssignments() {
-  const [regionFilter, setRegionFilter] = useState<string>('all');
+  const [selectedTerritory, setSelectedTerritory] = useState<string>('all');
   
-  const filteredOwners = regionFilter === 'all' 
-    ? ownerPipeline 
-    : ownerPipeline.filter(o => o.region === regionFilter);
+  const totalPipeline = territories.reduce((sum, t) => sum + t.pipeline, 0);
+  const totalEGP = territories.reduce((sum, t) => sum + t.egp, 0);
+  const totalDeals = territories.reduce((sum, t) => sum + t.deals, 0);
+  const orphanedCount = atRiskAccounts.filter(a => a.owner === 'Unassigned').length;
 
-  const totalPipeline = ownerPipeline.reduce((sum, o) => sum + o.pipeline, 0);
-  const totalEGP = ownerPipeline.reduce((sum, o) => sum + o.egp, 0);
-  const totalDeals = ownerPipeline.reduce((sum, o) => sum + o.deals, 0);
-  const orphanedLTV = genetownOrphaned.reduce((sum, a) => sum + a.ltv, 0);
+  const filteredOwners = selectedTerritory === 'all' 
+    ? ownerPipeline 
+    : ownerPipeline.filter(o => o.territory === selectedTerritory);
+
+  const filteredAccounts = selectedTerritory === 'all'
+    ? eastAccounts
+    : eastAccounts.filter(a => a.territory === selectedTerritory);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
@@ -63,17 +110,40 @@ export default function AccountAssignments() {
         <Link href="/" className="text-emerald-400 hover:text-emerald-300 mb-8 inline-block">← Back to Home</Link>
 
         <div className="flex items-center gap-4 mb-2">
-          <h1 className="text-4xl font-bold text-white">Account Ownership Dashboard</h1>
-          <span className="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-sm font-medium rounded-full border border-emerald-500/30">📊 Live MCP Data</span>
+          <h1 className="text-4xl font-bold text-white">East Region Command Center</h1>
+          <span className="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-sm font-medium rounded-full border border-emerald-500/30">📊 Live MCP</span>
         </div>
-        <p className="text-emerald-400 text-xl mb-4">Pipeline by Owner | At-Risk Accounts | Orphaned Opportunities</p>
-        <p className="text-slate-500 text-xs mb-8">📊 Sales MCP v32.2.0 | Last updated: Mar 4, 2026</p>
+        <p className="text-emerald-400 text-xl mb-4">Territory Ownership | Pipeline by Owner | Account Assignments</p>
+        <p className="text-slate-500 text-xs mb-8">📊 Sales MCP v32.2.0 | EVP: Lisa Fry | Last updated: Mar 4, 2026</p>
+
+        {/* Territory Cards */}
+        <div className="grid md:grid-cols-4 gap-4 mb-8">
+          {territories.map(t => (
+            <Link 
+              key={t.name}
+              href={t.deepDive}
+              className={`bg-${t.color}-900/30 rounded-xl p-5 border border-${t.color}-700/50 hover:bg-${t.color}-900/50 transition-colors`}
+            >
+              <div className="flex items-center justify-between mb-3">
+                <h3 className={`text-${t.color}-400 font-semibold`}>{t.name}</h3>
+                <span className="text-white text-xs">→</span>
+              </div>
+              <p className="text-2xl font-bold text-white mb-1">${(t.pipeline / 1000000).toFixed(1)}M</p>
+              <p className="text-slate-400 text-sm">{t.deals} deals • {t.fullName}</p>
+              <div className="mt-3 flex flex-wrap gap-1">
+                {t.owners.map(o => (
+                  <span key={o} className="text-xs bg-slate-800/50 text-slate-300 px-2 py-0.5 rounded">{o.split(' ')[0]}</span>
+                ))}
+              </div>
+            </Link>
+          ))}
+        </div>
 
         {/* Summary KPIs */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
           <div className="bg-emerald-900/30 rounded-lg p-4 border border-emerald-700/30">
             <p className="text-emerald-400 font-bold text-2xl">${(totalPipeline / 1000000).toFixed(1)}M</p>
-            <p className="text-slate-400 text-xs">Total Pipeline</p>
+            <p className="text-slate-400 text-xs">East Pipeline</p>
           </div>
           <div className="bg-blue-900/30 rounded-lg p-4 border border-blue-700/30">
             <p className="text-blue-400 font-bold text-2xl">${(totalEGP / 1000000).toFixed(1)}M</p>
@@ -84,72 +154,74 @@ export default function AccountAssignments() {
             <p className="text-slate-400 text-xs">Open Deals</p>
           </div>
           <div className="bg-yellow-900/30 rounded-lg p-4 border border-yellow-700/30">
-            <p className="text-yellow-400 font-bold text-2xl">{atRiskAccounts.length}</p>
-            <p className="text-slate-400 text-xs">At-Risk Accounts</p>
+            <p className="text-yellow-400 font-bold text-2xl">{ownerPipeline.length}</p>
+            <p className="text-slate-400 text-xs">Active Sellers</p>
           </div>
           <div className="bg-red-900/30 rounded-lg p-4 border border-red-700/30">
-            <p className="text-red-400 font-bold text-2xl">{genetownOrphaned.length}</p>
-            <p className="text-slate-400 text-xs">Orphaned (Genetown)</p>
+            <p className="text-red-400 font-bold text-2xl">{orphanedCount}</p>
+            <p className="text-slate-400 text-xs">Orphaned Accounts</p>
           </div>
-          <div className="bg-slate-800/50 rounded-lg p-4 border border-slate-700">
-            <p className="text-white font-bold text-2xl">${(orphanedLTV / 1000000).toFixed(1)}M</p>
-            <p className="text-slate-400 text-xs">Orphaned LTV</p>
-          </div>
+        </div>
+
+        {/* Territory Filter */}
+        <div className="flex gap-2 mb-6">
+          <button
+            onClick={() => setSelectedTerritory('all')}
+            className={`px-4 py-2 rounded-lg text-sm font-medium ${
+              selectedTerritory === 'all' ? 'bg-emerald-600 text-white' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+            }`}
+          >
+            All Territories
+          </button>
+          {territories.map(t => (
+            <button
+              key={t.name}
+              onClick={() => setSelectedTerritory(t.name)}
+              className={`px-4 py-2 rounded-lg text-sm font-medium ${
+                selectedTerritory === t.name ? 'bg-emerald-600 text-white' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+              }`}
+            >
+              {t.name}
+            </button>
+          ))}
         </div>
 
         {/* Pipeline by Owner */}
         <section className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 mb-8">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xl font-bold text-white">Pipeline by Owner</h2>
-            <div className="flex gap-2">
-              {['all', 'East', 'West', 'EU', 'Partner'].map(region => (
-                <button
-                  key={region}
-                  onClick={() => setRegionFilter(region)}
-                  className={`px-3 py-1 rounded text-sm ${
-                    regionFilter === region 
-                      ? 'bg-emerald-600 text-white' 
-                      : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
-                  }`}
-                >
-                  {region === 'all' ? 'All' : region}
-                </button>
-              ))}
-            </div>
-          </div>
+          <h2 className="text-xl font-bold text-white mb-6">Pipeline by Owner</h2>
           
           <div className="overflow-x-auto">
             <table className="w-full text-left">
               <thead>
                 <tr className="border-b border-slate-700">
                   <th className="py-3 px-4 text-slate-400 font-medium">Owner</th>
+                  <th className="py-3 px-4 text-slate-400 font-medium">Title</th>
                   <th className="py-3 px-4 text-slate-400 font-medium">Territory</th>
                   <th className="py-3 px-4 text-slate-400 font-medium text-right">Pipeline</th>
                   <th className="py-3 px-4 text-slate-400 font-medium text-right">EGP</th>
                   <th className="py-3 px-4 text-slate-400 font-medium text-right">Deals</th>
                   <th className="py-3 px-4 text-slate-400 font-medium text-right">Avg Deal</th>
-                  <th className="py-3 px-4 text-slate-400 font-medium">Region</th>
                 </tr>
               </thead>
               <tbody className="text-slate-300">
                 {filteredOwners.sort((a, b) => b.pipeline - a.pipeline).map((owner, i) => (
                   <tr key={i} className="border-b border-slate-700/50 hover:bg-slate-700/30">
                     <td className="py-3 px-4 font-medium text-white">{owner.owner}</td>
-                    <td className="py-3 px-4 text-sm">{owner.territory}</td>
+                    <td className="py-3 px-4 text-sm text-slate-400">{owner.title}</td>
+                    <td className="py-3 px-4">
+                      <span className={`text-xs px-2 py-0.5 rounded ${
+                        owner.territory === 'Genetown' ? 'bg-emerald-900/30 text-emerald-400' :
+                        owner.territory === 'NJ Pharma' ? 'bg-blue-900/30 text-blue-400' :
+                        owner.territory === 'Mid-Atlantic' ? 'bg-purple-900/30 text-purple-400' :
+                        'bg-yellow-900/30 text-yellow-400'
+                      }`}>{owner.territory}</span>
+                    </td>
                     <td className="py-3 px-4 text-right">
                       <span className="text-emerald-400 font-medium">${(owner.pipeline / 1000000).toFixed(2)}M</span>
                     </td>
                     <td className="py-3 px-4 text-right text-blue-400">${(owner.egp / 1000).toFixed(0)}K</td>
                     <td className="py-3 px-4 text-right">{owner.deals}</td>
                     <td className="py-3 px-4 text-right text-slate-400">${(owner.pipeline / owner.deals / 1000).toFixed(0)}K</td>
-                    <td className="py-3 px-4">
-                      <span className={`text-xs px-2 py-0.5 rounded ${
-                        owner.region === 'East' ? 'bg-emerald-900/30 text-emerald-400' :
-                        owner.region === 'West' ? 'bg-blue-900/30 text-blue-400' :
-                        owner.region === 'EU' ? 'bg-purple-900/30 text-purple-400' :
-                        'bg-yellow-900/30 text-yellow-400'
-                      }`}>{owner.region}</span>
-                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -157,164 +229,104 @@ export default function AccountAssignments() {
           </div>
         </section>
 
-        {/* At-Risk Accounts */}
-        <section className="bg-red-900/20 rounded-xl p-6 border border-red-700/50 mb-8">
-          <h2 className="text-xl font-bold text-white mb-4">⚠️ At-Risk Accounts (Health Score &lt;60)</h2>
-          <p className="text-slate-400 text-sm mb-4">Accounts with declining revenue, low pipeline coverage, or engagement issues</p>
+        {/* Accounts with Pipeline */}
+        <section className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 mb-8">
+          <h2 className="text-xl font-bold text-white mb-6">East Accounts with Open Pipeline</h2>
           
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
               <thead>
                 <tr className="border-b border-slate-700">
                   <th className="py-2 px-3 text-slate-400 font-medium">Account</th>
-                  <th className="py-2 px-3 text-slate-400 font-medium text-center">Health</th>
-                  <th className="py-2 px-3 text-slate-400 font-medium">Risk</th>
-                  <th className="py-2 px-3 text-slate-400 font-medium text-right">Revenue</th>
                   <th className="py-2 px-3 text-slate-400 font-medium text-right">Pipeline</th>
-                  <th className="py-2 px-3 text-slate-400 font-medium">Owner</th>
+                  <th className="py-2 px-3 text-slate-400 font-medium">Stage</th>
                   <th className="py-2 px-3 text-slate-400 font-medium">Territory</th>
+                  <th className="py-2 px-3 text-slate-400 font-medium">Owner</th>
                 </tr>
               </thead>
               <tbody className="text-slate-300">
-                {atRiskAccounts.sort((a, b) => a.health - b.health).map((acct, i) => (
-                  <tr key={i} className={`border-b border-slate-700/50 ${acct.owner === 'Unassigned' ? 'bg-red-900/10' : ''}`}>
-                    <td className="py-2 px-3 font-medium text-white">{acct.account}</td>
-                    <td className="py-2 px-3 text-center">
-                      <span className={`inline-block w-10 text-center rounded ${
-                        acct.health < 40 ? 'bg-red-600 text-white' :
-                        acct.health < 55 ? 'bg-yellow-600 text-white' :
-                        'bg-emerald-600 text-white'
-                      }`}>{acct.health}</span>
-                    </td>
-                    <td className="py-2 px-3">
-                      <span className={`text-xs px-2 py-0.5 rounded ${
-                        acct.risk === 'Critical' ? 'bg-red-900/50 text-red-400' : 'bg-yellow-900/50 text-yellow-400'
-                      }`}>{acct.risk}</span>
-                    </td>
-                    <td className="py-2 px-3 text-right">${(acct.revenue / 1000).toFixed(0)}K</td>
-                    <td className="py-2 px-3 text-right">{acct.pipeline > 0 ? `$${(acct.pipeline / 1000).toFixed(0)}K` : '-'}</td>
-                    <td className="py-2 px-3">
-                      {acct.owner === 'Unassigned' ? (
-                        <span className="text-red-400 font-medium">⚠️ Unassigned</span>
-                      ) : acct.owner}
-                    </td>
-                    <td className="py-2 px-3 text-slate-400">{acct.territory}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* Orphaned Genetown Accounts */}
-        <section className="bg-blue-900/20 rounded-xl p-6 border border-blue-700/50 mb-8">
-          <h2 className="text-xl font-bold text-white mb-4">💎 Orphaned Genetown Accounts</h2>
-          <p className="text-slate-400 text-sm mb-4">High-LTV accounts requiring immediate assignment and reactivation outreach</p>
-          
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm">
-              <thead>
-                <tr className="border-b border-slate-700">
-                  <th className="py-2 px-3 text-slate-400 font-medium">Account</th>
-                  <th className="py-2 px-3 text-slate-400 font-medium text-right">Historical LTV</th>
-                  <th className="py-2 px-3 text-slate-400 font-medium">Last Activity</th>
-                  <th className="py-2 px-3 text-slate-400 font-medium">Status</th>
-                  <th className="py-2 px-3 text-slate-400 font-medium">Priority</th>
-                  <th className="py-2 px-3 text-slate-400 font-medium">Action</th>
-                </tr>
-              </thead>
-              <tbody className="text-slate-300">
-                {genetownOrphaned.sort((a, b) => b.ltv - a.ltv).map((acct, i) => (
-                  <tr key={i} className="border-b border-slate-700/50 hover:bg-slate-700/30">
+                {filteredAccounts.sort((a, b) => b.pipeline - a.pipeline).map((acct, i) => (
+                  <tr key={i} className={`border-b border-slate-700/50 hover:bg-slate-700/30 ${acct.owner === 'Unassigned' ? 'bg-red-900/10' : ''}`}>
                     <td className="py-2 px-3 font-medium text-white">{acct.account}</td>
                     <td className="py-2 px-3 text-right">
-                      <span className="text-emerald-400 font-medium">${(acct.ltv / 1000000).toFixed(2)}M</span>
-                    </td>
-                    <td className="py-2 px-3 text-slate-400">{acct.lastActivity}</td>
-                    <td className="py-2 px-3">
-                      <span className={`text-xs px-2 py-0.5 rounded ${
-                        acct.status === 'Dormant' ? 'bg-yellow-900/50 text-yellow-400' :
-                        acct.status === 'Underworked' ? 'bg-blue-900/50 text-blue-400' :
-                        'bg-red-900/50 text-red-400'
-                      }`}>{acct.status}</span>
+                      <span className="text-emerald-400 font-medium">${(acct.pipeline / 1000).toFixed(0)}K</span>
                     </td>
                     <td className="py-2 px-3">
                       <span className={`text-xs px-2 py-0.5 rounded ${
-                        acct.priority === 'Critical' ? 'bg-red-600 text-white' :
-                        acct.priority === 'High' ? 'bg-yellow-600 text-white' :
-                        acct.priority === 'Medium' ? 'bg-blue-600 text-white' :
-                        'bg-slate-600 text-white'
-                      }`}>{acct.priority}</span>
+                        acct.stage === 'Negotiation' ? 'bg-emerald-900/50 text-emerald-400' :
+                        acct.stage === 'Proposal' ? 'bg-blue-900/50 text-blue-400' :
+                        acct.stage === 'Developing' ? 'bg-purple-900/50 text-purple-400' :
+                        acct.stage === 'Discovery' ? 'bg-yellow-900/50 text-yellow-400' :
+                        'bg-slate-700 text-slate-400'
+                      }`}>{acct.stage}</span>
                     </td>
+                    <td className="py-2 px-3 text-slate-400">{acct.territory}</td>
                     <td className="py-2 px-3">
-                      <button className="text-xs bg-emerald-600 hover:bg-emerald-500 text-white px-2 py-1 rounded">
-                        Assign →
-                      </button>
+                      {acct.owner === 'Unassigned' ? (
+                        <span className="text-red-400">⚠️ Unassigned</span>
+                      ) : acct.owner}
                     </td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
+        </section>
+
+        {/* At-Risk / Orphaned */}
+        <section className="bg-red-900/20 rounded-xl p-6 border border-red-700/50 mb-8">
+          <h2 className="text-xl font-bold text-white mb-4">⚠️ At-Risk & Orphaned Accounts</h2>
+          <p className="text-slate-400 text-sm mb-4">Accounts requiring immediate attention — assign owner or intervention needed</p>
           
-          <div className="mt-4 bg-emerald-900/20 rounded-lg p-4 border border-emerald-700/30">
-            <p className="text-emerald-400 font-semibold">💰 Reactivation Opportunity</p>
-            <p className="text-slate-300 text-sm mt-1">
-              Total orphaned LTV: <span className="text-white font-bold">${(orphanedLTV / 1000000).toFixed(1)}M</span>. 
-              Biogen alone has $11.8M historical value. Assign to new Boston AE for immediate reactivation.
-            </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {atRiskAccounts.map((acct, i) => (
+              <div key={i} className={`rounded-lg p-4 border ${
+                acct.owner === 'Unassigned' ? 'bg-red-900/30 border-red-700/50' : 'bg-yellow-900/20 border-yellow-700/50'
+              }`}>
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="font-medium text-white">{acct.account}</h3>
+                  <span className={`text-xs px-2 py-0.5 rounded ${
+                    acct.health < 40 ? 'bg-red-600 text-white' : 'bg-yellow-600 text-white'
+                  }`}>{acct.health}</span>
+                </div>
+                <p className="text-sm text-slate-400 mb-2">{acct.territory} • {acct.issue}</p>
+                {acct.owner === 'Unassigned' ? (
+                  <button className="text-xs bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1 rounded">
+                    Assign Owner →
+                  </button>
+                ) : (
+                  <p className="text-xs text-slate-500">Owner: {acct.owner}</p>
+                )}
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* East Region Summary */}
-        <section className="bg-emerald-900/20 rounded-xl p-6 border border-emerald-700/50 mb-8">
-          <h2 className="text-xl font-bold text-white mb-4">🌿 East Region Pipeline Summary</h2>
-          <div className="grid md:grid-cols-4 gap-4">
-            <div className="bg-slate-800/50 rounded-lg p-4">
-              <p className="text-slate-400 text-sm">Lisa Burgese Fry</p>
-              <p className="text-2xl font-bold text-white">$3.67M</p>
-              <p className="text-emerald-400 text-sm">Genetown • 11 deals</p>
-            </div>
-            <div className="bg-slate-800/50 rounded-lg p-4">
-              <p className="text-slate-400 text-sm">Scott Pallardy</p>
-              <p className="text-2xl font-bold text-white">$2.00M</p>
-              <p className="text-emerald-400 text-sm">NJ Pharma • 4 deals</p>
-            </div>
-            <div className="bg-slate-800/50 rounded-lg p-4">
-              <p className="text-slate-400 text-sm">Jim Macdonell</p>
-              <p className="text-2xl font-bold text-white">$1.58M</p>
-              <p className="text-emerald-400 text-sm">Mid-Atlantic • 6 deals</p>
-            </div>
-            <div className="bg-slate-800/50 rounded-lg p-4">
-              <p className="text-slate-400 text-sm">Vega Finucan</p>
-              <p className="text-2xl font-bold text-white">$1.00M</p>
-              <p className="text-emerald-400 text-sm">NJ Pharma • 4 deals</p>
-            </div>
-          </div>
-          <div className="mt-4 text-center">
-            <p className="text-slate-400">East Region Total: <span className="text-white font-bold">$8.80M</span> pipeline across 29 deals</p>
-          </div>
-        </section>
-
-        {/* Quick Links */}
+        {/* Territory Deep Dives */}
         <section className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-          <h2 className="text-xl font-bold text-white mb-4">Related Pages</h2>
+          <h2 className="text-xl font-bold text-white mb-4">Territory Deep Dives</h2>
+          <p className="text-slate-400 text-sm mb-6">Full playbooks for each Eastern territory — accounts, targets, competitive intel</p>
+          
           <div className="grid md:grid-cols-4 gap-4">
-            <Link href="/genetown-deep-dive/day-one-playbook" className="bg-slate-700/50 rounded-lg p-4 hover:bg-slate-700 transition-colors">
-              <p className="text-emerald-400 font-medium">📋 Activation Playbook</p>
-              <p className="text-slate-400 text-sm">Genetown territory guide</p>
+            <Link href="/genetown-deep-dive" className="bg-emerald-900/30 rounded-lg p-5 border border-emerald-700/50 hover:bg-emerald-900/50 transition-colors">
+              <h3 className="text-emerald-400 font-semibold mb-2">🧬 Genetown</h3>
+              <p className="text-white font-bold text-lg mb-1">$4.1M pipeline</p>
+              <p className="text-slate-400 text-sm">Boston / Cambridge biotech capital</p>
             </Link>
-            <Link href="/genetown-deep-dive/ma-companies" className="bg-slate-700/50 rounded-lg p-4 hover:bg-slate-700 transition-colors">
-              <p className="text-emerald-400 font-medium">🏢 MA Companies</p>
-              <p className="text-slate-400 text-sm">Full Boston account list</p>
+            <Link href="/nj-pharma-deep-dive" className="bg-blue-900/30 rounded-lg p-5 border border-blue-700/50 hover:bg-blue-900/50 transition-colors">
+              <h3 className="text-blue-400 font-semibold mb-2">💊 NJ Pharma</h3>
+              <p className="text-white font-bold text-lg mb-1">$3.0M pipeline</p>
+              <p className="text-slate-400 text-sm">New Jersey pharma corridor</p>
             </Link>
-            <Link href="/churn-signals" className="bg-slate-700/50 rounded-lg p-4 hover:bg-slate-700 transition-colors">
-              <p className="text-emerald-400 font-medium">⚠️ Churn Signals</p>
-              <p className="text-slate-400 text-sm">At-risk account alerts</p>
+            <Link href="/mid-atlantic-deep-dive" className="bg-purple-900/30 rounded-lg p-5 border border-purple-700/50 hover:bg-purple-900/50 transition-colors">
+              <h3 className="text-purple-400 font-semibold mb-2">🏛️ Mid-Atlantic</h3>
+              <p className="text-white font-bold text-lg mb-1">$1.6M pipeline</p>
+              <p className="text-slate-400 text-sm">DC / MD / VA / PA</p>
             </Link>
-            <Link href="/seller-performance" className="bg-slate-700/50 rounded-lg p-4 hover:bg-slate-700 transition-colors">
-              <p className="text-emerald-400 font-medium">📊 Seller Performance</p>
-              <p className="text-slate-400 text-sm">Individual metrics</p>
+            <Link href="/research-triangle-deep-dive" className="bg-yellow-900/30 rounded-lg p-5 border border-yellow-700/50 hover:bg-yellow-900/50 transition-colors">
+              <h3 className="text-yellow-400 font-semibold mb-2">🔬 Research Triangle</h3>
+              <p className="text-white font-bold text-lg mb-1">$0 pipeline</p>
+              <p className="text-slate-400 text-sm">GREENFIELD — needs owner</p>
             </Link>
           </div>
         </section>
